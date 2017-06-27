@@ -1,19 +1,12 @@
 @import "variables.scss";
 
-.fixed-bottom {
-  position: absolute;
+.sticky-top {
+  background: $brand-colors;
 }
 
-.navbar-brand{
-  color: $white;
-  &:hover {
-    color: $white;
-  }
-}
-
-.user-name {
-  margin-left: 5px;
-  vertical-align: text-bottom;  
+.navbar{
+  border-radius: 0px;
+  margin-bottom: 0;
 }
 
 .sidebar-nav {
@@ -23,14 +16,14 @@
 #sidebar-wrapper {
   left: -250px;
   width: 250px;
-  background-color: #5677fc;
+  background-color: $brand-color--light;
   color: white;
   position: fixed;
   height: 100%;
   z-index: 1;
 }
 .sidebar-nav {
-  position: absolute;
+  position: relative;
   top: 0;
   margin: 0;
   padding: 0;
@@ -62,6 +55,54 @@
 #sidebar-wrapper.sidebar-toggle {
   transition: all 0.3s ease-out;
   margin-left: -250px;
+}
+
+.navbar-brand{
+  color: $white;
+  display: block;
+  float: none;
+  height: auto;
+  border: 0;
+  &:hover {
+    color: $white;
+  }
+  .user-details{
+    display: block;
+    margin-top: 5px;
+    .user-name {
+      margin-left: 5px;
+      vertical-align: text-bottom;
+      font-size: 14px; 
+    }
+  }
+}
+
+.fixed-bottom {
+  position: absolute;
+  bottom: 0px;
+  display: block;
+  width: 100%;
+  background: $blue--darker;
+}
+
+.footer-simulator {
+  padding: 12px 15px;
+  background: $brand-colors;
+}
+
+.footer-links {
+  ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+    li {
+      list-style: none;
+      margin: 10px 0;
+      span {
+        margin-left: 10px;
+        vertical-align: text-bottom;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {

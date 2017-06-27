@@ -1,11 +1,9 @@
 <template>
   <div id="wrapper" class="active">
-    <left-sidebar></left-sidebar>
+    <app-left-sidebar></app-left-sidebar>
     <div class="page-content-wrapper">
       <div class="page-content container-fluid"> 
-        <div class="row">
-           <router-view></router-view>
-        </div>
+        <router-view></router-view>
       </div>
     </div>
   </div>
@@ -17,7 +15,7 @@ import LeftSidebar from './components/shared/LeftSidebar.vue'
 
 export default {
   components: {
-    'left-sidebar': LeftSidebar
+    'app-left-sidebar': LeftSidebar
   }
 }
 </script>

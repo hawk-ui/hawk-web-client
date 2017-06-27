@@ -38,7 +38,8 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'css-loader'
+         include: [path.resolve(__dirname, "not_exist_path")],
+        loader: ['css-loader', 'style-loader']
       },
       {
         test: /\.scss$/,
