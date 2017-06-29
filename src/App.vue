@@ -15,7 +15,7 @@ import LeftSidebar from './components/shared/LeftSidebar.vue'
 
 export default {
   components: {
-    'app-left-sidebar': LeftSidebar
+    'appLeftSidebar': LeftSidebar
   }
 }
 </script>

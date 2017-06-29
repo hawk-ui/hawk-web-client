@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <h1>Hello Vue</h1>
+    <h1>Trubleshooting</h1>
   </div>
 </template>
 

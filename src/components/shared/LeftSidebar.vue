@@ -3,16 +3,16 @@
       <app-top-navbar></app-top-navbar>
       <ul class="sidebar-nav">
           <li>
-              <a href="#item1">Monitoring</a>
+              <router-link to="/monitoring">Monitoring</router-link>
           </li>
           <li>
-              <a href="#item2">Trubleshooting</a>
+              <router-link to="/troubleshooting">Trubleshooting</router-link>
           </li>
           <li>
-              <a href="#item3">Cluster Counfiguration</a>
+              <router-link to="/clusterConfiguration">Cluster Configuration</router-link>
           </li>
           <li>
-              <a href="#item1">Add a resource</a>
+              <router-link to="/">Add a resource</router-link>
           </li>
         </ul>
         <app-footer></app-footer>
@@ -25,8 +25,8 @@ import TopNavbar from './TopNavbar.vue'
 
 export default {
   components: {
-    'app-footer': Footer,
-    'app-top-navbar': TopNavbar
+    'appFooter': Footer,
+    'appTopNavbar': TopNavbar
   }
 }
 </script>
