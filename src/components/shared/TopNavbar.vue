@@ -1,7 +1,11 @@
 <template>
   <nav class="navbar sticky-top navbar-light bg-faded">
     <div class="navbar-brand">
-      <div class="logo">Suse HAWK</div>
+      <div class="logo">{{ $t("leftnav_bar.header.hawk") }}</div>
+      <!-- <div>
+        <button @click='$i18n.locale="en"'>en</button>
+        <button @click='$i18n.locale="ja"'>ja</button>
+      </div> -->
       <div class="user-details">
         <icon name="user" scale="1" color="#41b883"></icon>
         <span class="user-name">HAcluste</span>

@@ -1,6 +1,7 @@
 <template>
   <div class="row">
-    <h1>Cluster Configuration</h1>
+    <h1>{{ $t("pages.cluster_config_page.page-title") }}</h1>
+    <p>{{ $t("pages.cluster_config_page.description") }}</p>
   </div>
 </template>
 
