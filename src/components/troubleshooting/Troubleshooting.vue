@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div>
     <h1>{{ $t("pages.trubleshooting_page.page-title") }}</h1>
     <p>{{ $t("pages.trubleshooting_page.description") }}</p>
   </div>

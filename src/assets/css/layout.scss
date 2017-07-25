@@ -21,3 +21,38 @@ html,
   transition: all 0.3s ease-out;
 }
 
+.page-header {
+  background-color: #fff;
+  height: 78px;
+  padding: 10px 40px;
+  margin: 0 -15px;
+
+  .header-cluster-status {
+    width: 180px;
+
+    .cluster-icon {
+      float: left;
+      margin-right: 10px;
+    }
+
+    .header-cluster-details { 
+      width: auto;
+      font-size: 14px;
+      color: #444;
+      margin-left: 15px;
+      line-height: 17px;
+
+      span {
+        display: block;
+        font-size: 11px;
+        color: #666;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #wrapper {
+    padding-left: 0px;
+  }
+}
