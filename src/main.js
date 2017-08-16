@@ -4,19 +4,18 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue.esm'
-import Icon from 'vue-awesome/components/Icon'
-import resource from 'vue-resource'
+import Resource from 'vue-resource'
 import i18n from './i18n'
-
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-import 'vue-awesome/icons'
-Vue.component('icon', Icon)
+Vue.use(VueMaterial)
 Vue.use(BootstrapVue)
 Vue.config.productionTip = false
 
-Vue.use(resource)
+Vue.use(Resource)
 Vue.http.options['emulateJSON'] = true
 
 /* eslint-disable no-new */
