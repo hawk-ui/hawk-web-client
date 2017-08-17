@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar fixed-bottom navbar-light bg-faded">
     <div class="footer-simulator">
-      {{ $t("leftnav_bar.footer.simulator") }} <span class="pull-right"><md-icon class="md-16 brand-colors">visibility</md-icon></span>
+      {{ $t("leftnav_bar.footer.simulator") }} <span class="pull-right"><md-icon class="brand-colors">visibility</md-icon></span>
     </div>
     <div class="footer-links">
       <ul>
@@ -21,4 +21,5 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
   @import '../../assets/css/left-navbar.scss';
+
 </style>

@@ -72,7 +72,7 @@
     margin-top: 5px;
     .user-name {
       margin-left: 5px;
-      vertical-align: text-bottom;
+      vertical-align: super;
       font-size: 14px; 
     }
   }
@@ -100,7 +100,7 @@
       margin: 10px 0;
       span {
         margin-left: 10px;
-        vertical-align: middle;
+        vertical-align: text-bottom;
       }
     }
   }
