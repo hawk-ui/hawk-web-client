@@ -7,7 +7,7 @@
         <button @click='$i18n.locale="ja"'>ja</button>
       </div> -->
       <div class="user-details">
-        <icon name="user" scale="1" color="#41b883"></icon>
+        <md-icon class="md-24">account_circle</md-icon>
         <span class="user-name">HAcluste</span>
       </div>
     </div>

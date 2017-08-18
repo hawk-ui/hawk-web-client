@@ -4,7 +4,9 @@
     <div class="page-content-wrapper">
       <div class="page-content container-fluid">
         <app-page-header></app-page-header>
+        <div class="page-inner">
           <router-view></router-view>
+        </div>
       </div>
     </div>
   </div>
@@ -24,5 +26,6 @@ export default {
 </script>
 
 <style lang="scss">
-     @import 'assets/css/layout.scss'
+     @import 'assets/css/layout.scss';
+     @import 'assets/css/common.scss';
 </style>

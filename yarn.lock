@@ -4038,6 +4038,10 @@ map-obj@^1.0.0, map-obj@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
 
+material-design-icons-iconfont@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/material-design-icons-iconfont/-/material-design-icons-iconfont-3.0.3.tgz#154a1084047d4e27237fa7f5a37e1075ceea6df2"
+
 math-expression-evaluator@^1.2.14:
   version "1.2.17"
   resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.17.tgz#de819fdbcd84dccd8fae59c6aeb79615b9d266ac"
@@ -5547,6 +5551,10 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^2.0.0"
     inherits "^2.0.1"
 
+roboto-fontface-woff@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/roboto-fontface-woff/-/roboto-fontface-woff-0.7.0.tgz#62cc4a2025e9079cbc17c20bfac0476f3dfa9d00"
+
 run-async@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-0.1.0.tgz#c8ad4a5e110661e402a7d21b530e009f25f8e389"
@@ -6411,6 +6419,12 @@ vue-loader@^12.1.0:
     vue-hot-reload-api "^2.1.0"
     vue-style-loader "^3.0.0"
     vue-template-es2015-compiler "^1.2.2"
+
+vue-material@^0.7.4:
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/vue-material/-/vue-material-0.7.4.tgz#51ac621a3fceeba3ea49ffe0858c0b45785efe10"
+  dependencies:
+    vue "^2.3.3"
 
 vue-resource@^1.3.4:
   version "1.3.4"
