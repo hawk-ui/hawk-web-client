@@ -1,23 +1,25 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+  <div id="wrapper" class="active">
+    <app-left-sidebar></app-left-sidebar>
+    <div class="page-content-wrapper">
+      <div class="page-content container-fluid"> 
+        <router-view></router-view>
+      </div>
+    </div>
   </div>
+
 </template>
 
 <script>
+import LeftSidebar from './components/shared/LeftSidebar.vue'
+
 export default {
-  name: 'app'
+  components: {
+    'appLeftSidebar': LeftSidebar
+  }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+     @import 'assets/css/layout.scss'
 </style>

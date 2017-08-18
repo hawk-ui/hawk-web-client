@@ -37,6 +37,15 @@ module.exports = {
         }
       },
       {
+        test: /\.css$/,
+         include: [path.resolve(__dirname, "not_exist_path")],
+        loader: ['css-loader', 'style-loader']
+      },
+      {
+        test: /\.scss$/,
+        loader: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: vueLoaderConfig
