@@ -1,6 +1,7 @@
 <template>
   <div class="row">
-    <h1>Trubleshooting</h1>
+    <h1>{{ $t("pages.trubleshooting_page.page-title") }}</h1>
+    <p>{{ $t("pages.trubleshooting_page.description") }}</p>
   </div>
 </template>
 

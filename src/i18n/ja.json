@@ -1,0 +1,39 @@
+{
+  "leftnav_bar": {
+    "header": {
+      "hawk": "サスホーク"
+    },
+    "links": {
+      "monitoring": "モニタリング",
+      "trubleshooting": "トラブルシューティング",
+      "cluster_configuration": "クラスタ構成",
+      "add_resource": "リソースを追加する"
+    },
+    "footer": {
+      "simulator": "シミュレータ",
+      "links": {
+        "role": "役割",
+        "target": "ターゲット",
+        "help": "助けて"
+      }
+    }
+  },
+  "pages": {
+    "hello_page": {
+      "page-title": "こんにちは",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ex erat, mattis vel consectetur quis, ultricies id metus. "
+    },
+    "cluster_config_page": {
+      "page-title": "クラスタ構成",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ex erat, mattis vel consectetur quis, ultricies id metus. "
+    },
+    "monitoring_page": {
+      "page-title": "モニタリング",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ex erat, mattis vel consectetur quis, ultricies id metus. "
+    },
+    "trubleshooting_page": {
+      "page-title": "トラブルシューティング",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ex erat, mattis vel consectetur quis, ultricies id metus. "
+    }
+  }
+}

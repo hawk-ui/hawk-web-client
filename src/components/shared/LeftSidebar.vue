@@ -3,16 +3,16 @@
       <app-top-navbar></app-top-navbar>
       <ul class="sidebar-nav">
           <li>
-              <router-link to="/monitoring">Monitoring</router-link>
+              <router-link to="/monitoring">{{ $t("leftnav_bar.links.monitoring") }}</router-link>
           </li>
           <li>
-              <router-link to="/troubleshooting">Trubleshooting</router-link>
+              <router-link to="/troubleshooting">{{ $t("leftnav_bar.links.trubleshooting") }}</router-link>
           </li>
           <li>
-              <router-link to="/clusterConfiguration">Cluster Configuration</router-link>
+              <router-link to="/clusterConfiguration">{{ $t("leftnav_bar.links.cluster_configuration") }}</router-link>
           </li>
           <li>
-              <router-link to="/">Add a resource</router-link>
+              <router-link to="/">{{ $t("leftnav_bar.links.add_resource") }}</router-link>
           </li>
         </ul>
         <app-footer></app-footer>

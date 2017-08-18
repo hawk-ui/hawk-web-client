@@ -1,0 +1,39 @@
+{
+  "leftnav_bar": {
+    "header": {
+      "hawk": "Suse HAWK"
+    },
+    "links": {
+      "monitoring": "Monitoring",
+      "trubleshooting": "Trubleshooting",
+      "cluster_configuration": "Cluster Configuration",
+      "add_resource": "Add a Resource"
+    },
+    "footer": {
+      "simulator": "Simulator",
+      "links": {
+        "role": "Role",
+        "target": "Target",
+        "help": "Help"
+      }
+    }
+  },
+  "pages": {
+    "hello_page": {
+      "page-title": "Hello",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ex erat, mattis vel consectetur quis, ultricies id metus. "
+    },
+    "cluster_config_page": {
+      "page-title": "Cluster Configuration",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ex erat, mattis vel consectetur quis, ultricies id metus. "
+    },
+    "monitoring_page": {
+      "page-title": "Monitoring",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ex erat, mattis vel consectetur quis, ultricies id metus. "
+    },
+    "trubleshooting_page": {
+      "page-title": "Trubleshooting",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ex erat, mattis vel consectetur quis, ultricies id metus. "
+    }
+  }
+}
