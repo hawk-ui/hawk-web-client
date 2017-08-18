@@ -18,6 +18,12 @@
       }
     }
   },
+  "page_header": {
+    "cluster-status": {
+      "details": "Cluster is working without any issue",
+      "link": "Click here to see details"
+    }
+  },
   "pages": {
     "hello_page": {
       "page-title": "Hello",
