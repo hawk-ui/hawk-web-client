@@ -11,13 +11,15 @@
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
-    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
+    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
+    "api": "json-server --watch src/api/db.json --port 3004"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
     "bootstrap-sass": "^3.3.7",
     "bootstrap-vue": "^0.16.1",
     "easygettext": "^1.2.2",
+    "json-server": "^0.12.0",
     "material-design-icons-iconfont": "^3.0.3",
     "node-sass": "^4.5.3",
     "roboto-fontface-woff": "^0.7.0",
