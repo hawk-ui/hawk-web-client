@@ -1,0 +1,140 @@
+@import "variables.scss";
+
+.dashboard-container {
+   width: 100%;
+   background: #fff;
+   padding:0;
+   box-shadow: 0px 1px 3px #c1c1c1;
+   margin-top: 30px;
+
+   .dashboard-header {
+      background-color: $brand-color--light;
+      margin: 0;
+      padding: 3px 30px 10px 30px;
+
+      .search {
+        width: 125px;
+        display: inline-block;
+        background-color: transparent;
+        border: 0;
+        color: #fff;
+        border-bottom: 1px solid #eee;
+        border-radius: 0;
+        padding: 0;
+        height: 25px;
+      }
+
+      .filters-settings {
+        margin-bottom: 0;
+        > li {
+          display: inline-block;
+          margin: 5px;
+          vertical-align: middle;
+          color: #fff;
+
+          .md-icon {
+            color: #fff;
+            vertical-align: sub;
+          }
+          
+          &.cluster-ticket {
+            border-right: 1px solid #ccc;
+            padding-right: 15px;
+          }
+
+          .filters-menu-btn {
+            background-color: transparent;
+            padding: 0;
+          }
+          .filters-menu-dropdown {
+            right: 0;
+            left: auto;
+            min-width: 202px;
+            > li {
+              color: $gray--lighter;
+              padding:3px 15px;
+
+              label {
+                font-weight: normal;
+                display: inline-block;
+                max-width: 100%;
+                input {
+                  margin-right: 7px;
+                }
+              }
+            }
+            > .divider {
+              padding:0;
+              margin: 6px 0;
+            }
+            > .heading {
+              color: $gray--darker;
+              font-weight: bold;
+              padding:3px 15px;
+            }
+          }
+          .dropdown-toggle::after {
+            border: 0;
+          }
+        }
+      }
+   }
+
+   .dashboard-table > tbody > tr > th {
+      padding: 16px 10px;
+      font-weight: 400;
+   }
+    .dashboard-table > tbody > tr > td {
+      padding: 10px;
+   }
+
+   .dashboard-table > tbody > tr > td.status-icon-col {
+      width: 40px;
+      padding:14px 0 0 0;
+    }
+}
+
+.resource-status {
+  width: 5px;
+  height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.status-icon {
+  display: inline-block;
+  vertical-align: sub;
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+    }
+  }
+}
+
+.node-circle{
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.node-name {
+  display: inline-block;
+  text-align: left;
+  line-height: 14px;
+  margin-right: 5px;
+  vertical-align: bottom;
+  
+  span {
+    font-size: 11px;
+    color: #888;
+    display: block;
+  }
+}
+

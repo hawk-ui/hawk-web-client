@@ -58,8 +58,8 @@
         
       },
       "is_managed": true,
-      "maintenance": false,
-      "state": "stopped",
+      "maintenance": true,
+      "state": "maintenance",
       "class": "stonith",
       "provider": null,
       "type": "external/sbd",
@@ -90,7 +90,7 @@
       },
       "is_managed": true,
       "maintenance": false,
-      "state": "stopped",
+      "state": "online",
       "type": "clone",
       "children": [
         {
