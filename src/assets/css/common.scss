@@ -1,3 +1,12 @@
+ul, li {
+  list-style: none;
+}
+
+.md-icon.md-14 { 
+  font-size: 14px;
+  width: 14px;
+}
+
 .md-icon.md-16 { 
   font-size: 16px;
 }
@@ -17,3 +26,30 @@
 .brand-colors {
   color: $brand-green;
 }
+.table > thead > tr > th {
+  color: $table-header-color;
+  border-bottom: 0;
+  font-weight: normal;
+}
+
+.table > tbody > tr > td {
+  border-top: 1px solid #ddd;
+  color: $table-text-color;
+}
+
+.open .dropdown-menu {
+  border-radius: 0;
+}
+
+.gray {
+  background-color: #a5a5a5;
+}
+
+.red {
+   background-color: red;
+}
+
+.green {
+   background-color: green;
+}
+
