@@ -1,0 +1,1068 @@
+{
+  "meta": {
+    "crm_feature_set": "3.0.13",
+    "validate_with": "pacemaker-2.9",
+    "epoch": "0:15:19",
+    "num_updates": "19",
+    "admin_epoch": "0",
+    "cib_last_written": "Fri Jun  2 11:05:26 2017",
+    "update_origin": "webui",
+    "update_client": "crm_attribute",
+    "update_user": "hacluster",
+    "have_quorum": "1",
+    "dc_uuid": "168633610",
+    "dc": "webui",
+    "host": "webui",
+    "version": "1.1.16-273.5-ce86684f5",
+    "stack": "corosync",
+    "status": "maintenance"
+  },
+  "errors": [
+    
+  ],
+  "booth": {
+    "sites": [
+      
+    ],
+    "arbitrators": [
+      
+    ],
+    "tickets": [
+      
+    ],
+    "me": null
+  },
+  "crm_config": {
+    "cluster_infrastructure": "corosync",
+    "dc_version": "1.1.16-273.5-ce86684f5",
+    "stonith_enabled": true,
+    "symmetric_cluster": true,
+    "no_quorum_policy": "stop",
+    "have_watchdog": true,
+    "cluster_name": "hacluster",
+    "placement_strategy": "balanced"
+  },
+  "rsc_defaults": {
+    "resource_stickiness": "1",
+    "migration_threshold": "3"
+  },
+  "op_defaults": {
+    "timeout": "600",
+    "record_pending": true
+  },
+  "resources": [
+    {
+      "id": "stonith-sbd",
+      "object_type": "primitive",
+      "attributes": {
+        
+      },
+      "is_managed": true,
+      "maintenance": true,
+      "state": "maintenance",
+      "class": "stonith",
+      "provider": null,
+      "type": "external/sbd",
+      "template": null,
+      "instances": {
+        "default": {
+          "is_managed": true,
+          "maintenance": false,
+          "stopped": [
+            {
+              "node": "webui"
+            }
+          ],
+          "failed_ops": [
+            
+          ]
+        }
+      },
+      "running_on": {
+        
+      }
+    },
+    {
+      "id": "base-clone",
+      "object_type": "clone",
+      "attributes": {
+        "interleave": "true"
+      },
+      "is_managed": true,
+      "maintenance": false,
+      "state": "online",
+      "type": "clone",
+      "children": [
+        {
+          "id": "dlm",
+          "object_type": "primitive",
+          "attributes": {
+            
+          },
+          "is_managed": true,
+          "maintenance": false,
+          "state": "stopped",
+          "class": "ocf",
+          "provider": "pacemaker",
+          "type": "controld",
+          "template": null,
+          "instances": {
+            "0": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            }
+          },
+          "running_on": {
+            
+          }
+        }
+      ],
+      "running_on": {
+        
+      }
+    },
+    {
+      "id": "c-clusterfs",
+      "object_type": "clone",
+      "attributes": {
+        "interleave": "true",
+        "clone-max": "8",
+        "target-role": "Started"
+      },
+      "is_managed": true,
+      "maintenance": false,
+      "state": "stopped",
+      "type": "clone",
+      "children": [
+        {
+          "id": "clusterfs",
+          "object_type": "primitive",
+          "attributes": {
+            
+          },
+          "is_managed": true,
+          "maintenance": false,
+          "state": "stopped",
+          "class": "ocf",
+          "provider": "heartbeat",
+          "type": "Filesystem",
+          "template": null,
+          "instances": {
+            "0": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            },
+            "1": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            },
+            "2": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            },
+            "3": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            },
+            "4": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            },
+            "5": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            },
+            "6": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            },
+            "7": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            }
+          },
+          "running_on": {
+            
+          }
+        }
+      ],
+      "running_on": {
+        
+      }
+    },
+    {
+      "id": "g-proxy",
+      "object_type": "group",
+      "attributes": {
+        
+      },
+      "is_managed": true,
+      "maintenance": false,
+      "state": "stopped",
+      "type": "group",
+      "children": [
+        {
+          "id": "proxy-vip",
+          "object_type": "primitive",
+          "attributes": {
+            
+          },
+          "is_managed": true,
+          "maintenance": false,
+          "state": "stopped",
+          "class": "ocf",
+          "provider": "heartbeat",
+          "type": "IPaddr2",
+          "template": null,
+          "instances": {
+            "default": {
+              "is_managed": true,
+              "maintenance": false,
+              "stopped": [
+                {
+                  "node": "webui"
+                }
+              ],
+              "failed_ops": [
+                
+              ]
+            }
+          },
+          "running_on": {
+            
+          }
+        },
+        {
+          "id": "proxy",
+          "object_type": "primitive",
+          "attributes": {
+            
+          },
+          "is_managed": true,
+          "maintenance": false,
+          "state": "stopped",
+          "class": "systemd",
+          "provider": null,
+          "type": "haproxy",
+          "template": null,
+          "instances": {
+            "default": {
+              "is_managed": true,
+              "maintenance": false,
+              "stopped": [
+                {
+                  "node": "webui"
+                }
+              ],
+              "failed_ops": [
+                
+              ]
+            }
+          },
+          "running_on": {
+            
+          }
+        }
+      ],
+      "running_on": {
+        
+      }
+    },
+    {
+      "id": "cl-servers",
+      "object_type": "clone",
+      "attributes": {
+        "globally-unique": "false",
+        "clone-max": "2",
+        "clone-node-max": "1"
+      },
+      "is_managed": true,
+      "maintenance": false,
+      "state": "stopped",
+      "type": "clone",
+      "children": [
+        {
+          "id": "server-instance",
+          "object_type": "primitive",
+          "attributes": {
+            
+          },
+          "is_managed": true,
+          "maintenance": false,
+          "state": "stopped",
+          "class": null,
+          "provider": null,
+          "type": null,
+          "template": "web-server",
+          "instances": {
+            "0": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            },
+            "1": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            }
+          },
+          "running_on": {
+            
+          }
+        }
+      ],
+      "running_on": {
+        
+      }
+    },
+    {
+      "id": "ms-DRBD",
+      "object_type": "master",
+      "attributes": {
+        "master-max": "1",
+        "master-node-max": "1",
+        "clone-max": "2",
+        "clone-node-max": "1",
+        "notify": "true",
+        "target-role": "Stopped"
+      },
+      "is_managed": true,
+      "maintenance": false,
+      "state": "stopped",
+      "type": "master",
+      "children": [
+        {
+          "id": "DRBD",
+          "object_type": "primitive",
+          "attributes": {
+            
+          },
+          "is_managed": true,
+          "maintenance": false,
+          "state": "stopped",
+          "class": "ocf",
+          "provider": "linbit",
+          "type": "drbd",
+          "template": null,
+          "instances": {
+            "0": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            },
+            "1": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            }
+          },
+          "running_on": {
+            
+          }
+        }
+      ],
+      "running_on": {
+        
+      }
+    }
+  ],
+  "resources_by_id": {
+    "stonith-sbd": {
+      "id": "stonith-sbd",
+      "object_type": "primitive",
+      "attributes": {
+        
+      },
+      "is_managed": true,
+      "maintenance": false,
+      "state": "stopped",
+      "class": "stonith",
+      "provider": null,
+      "type": "external/sbd",
+      "template": null,
+      "instances": {
+        "default": {
+          "is_managed": true,
+          "maintenance": false,
+          "stopped": [
+            {
+              "node": "webui"
+            }
+          ],
+          "failed_ops": [
+            
+          ]
+        }
+      },
+      "running_on": {
+        
+      }
+    },
+    "base-clone": {
+      "id": "base-clone",
+      "object_type": "clone",
+      "attributes": {
+        "interleave": "true"
+      },
+      "is_managed": true,
+      "maintenance": false,
+      "state": "stopped",
+      "type": "clone",
+      "children": [
+        {
+          "id": "dlm",
+          "object_type": "primitive",
+          "attributes": {
+            
+          },
+          "is_managed": true,
+          "maintenance": false,
+          "state": "stopped",
+          "class": "ocf",
+          "provider": "pacemaker",
+          "type": "controld",
+          "template": null,
+          "instances": {
+            "0": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            }
+          },
+          "running_on": {
+            
+          }
+        }
+      ],
+      "running_on": {
+        
+      }
+    },
+    "dlm": {
+      "id": "dlm",
+      "object_type": "primitive",
+      "attributes": {
+        
+      },
+      "is_managed": true,
+      "maintenance": false,
+      "state": "stopped",
+      "class": "ocf",
+      "provider": "pacemaker",
+      "type": "controld",
+      "template": null,
+      "instances": {
+        "0": {
+          "failed_ops": [
+            
+          ],
+          "is_managed": true,
+          "maintenance": false
+        }
+      },
+      "running_on": {
+        
+      }
+    },
+    "c-clusterfs": {
+      "id": "c-clusterfs",
+      "object_type": "clone",
+      "attributes": {
+        "interleave": "true",
+        "clone-max": "8",
+        "target-role": "Started"
+      },
+      "is_managed": true,
+      "maintenance": false,
+      "state": "stopped",
+      "type": "clone",
+      "children": [
+        {
+          "id": "clusterfs",
+          "object_type": "primitive",
+          "attributes": {
+            
+          },
+          "is_managed": true,
+          "maintenance": false,
+          "state": "stopped",
+          "class": "ocf",
+          "provider": "heartbeat",
+          "type": "Filesystem",
+          "template": null,
+          "instances": {
+            "0": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            },
+            "1": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            },
+            "2": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            },
+            "3": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            },
+            "4": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            },
+            "5": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            },
+            "6": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            },
+            "7": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            }
+          },
+          "running_on": {
+            
+          }
+        }
+      ],
+      "running_on": {
+        
+      }
+    },
+    "clusterfs": {
+      "id": "clusterfs",
+      "object_type": "primitive",
+      "attributes": {
+        
+      },
+      "is_managed": true,
+      "maintenance": false,
+      "state": "stopped",
+      "class": "ocf",
+      "provider": "heartbeat",
+      "type": "Filesystem",
+      "template": null,
+      "instances": {
+        "0": {
+          "failed_ops": [
+            
+          ],
+          "is_managed": true,
+          "maintenance": false
+        },
+        "1": {
+          "failed_ops": [
+            
+          ],
+          "is_managed": true,
+          "maintenance": false
+        },
+        "2": {
+          "failed_ops": [
+            
+          ],
+          "is_managed": true,
+          "maintenance": false
+        },
+        "3": {
+          "failed_ops": [
+            
+          ],
+          "is_managed": true,
+          "maintenance": false
+        },
+        "4": {
+          "failed_ops": [
+            
+          ],
+          "is_managed": true,
+          "maintenance": false
+        },
+        "5": {
+          "failed_ops": [
+            
+          ],
+          "is_managed": true,
+          "maintenance": false
+        },
+        "6": {
+          "failed_ops": [
+            
+          ],
+          "is_managed": true,
+          "maintenance": false
+        },
+        "7": {
+          "failed_ops": [
+            
+          ],
+          "is_managed": true,
+          "maintenance": false
+        }
+      },
+      "running_on": {
+        
+      }
+    },
+    "g-proxy": {
+      "id": "g-proxy",
+      "object_type": "group",
+      "attributes": {
+        
+      },
+      "is_managed": true,
+      "maintenance": false,
+      "state": "stopped",
+      "type": "group",
+      "children": [
+        {
+          "id": "proxy-vip",
+          "object_type": "primitive",
+          "attributes": {
+            
+          },
+          "is_managed": true,
+          "maintenance": false,
+          "state": "stopped",
+          "class": "ocf",
+          "provider": "heartbeat",
+          "type": "IPaddr2",
+          "template": null,
+          "instances": {
+            "default": {
+              "is_managed": true,
+              "maintenance": false,
+              "stopped": [
+                {
+                  "node": "webui"
+                }
+              ],
+              "failed_ops": [
+                
+              ]
+            }
+          },
+          "running_on": {
+            
+          }
+        },
+        {
+          "id": "proxy",
+          "object_type": "primitive",
+          "attributes": {
+            
+          },
+          "is_managed": true,
+          "maintenance": false,
+          "state": "stopped",
+          "class": "systemd",
+          "provider": null,
+          "type": "haproxy",
+          "template": null,
+          "instances": {
+            "default": {
+              "is_managed": true,
+              "maintenance": false,
+              "stopped": [
+                {
+                  "node": "webui"
+                }
+              ],
+              "failed_ops": [
+                
+              ]
+            }
+          },
+          "running_on": {
+            
+          }
+        }
+      ],
+      "running_on": {
+        
+      }
+    },
+    "proxy-vip": {
+      "id": "proxy-vip",
+      "object_type": "primitive",
+      "attributes": {
+        
+      },
+      "is_managed": true,
+      "maintenance": false,
+      "state": "stopped",
+      "class": "ocf",
+      "provider": "heartbeat",
+      "type": "IPaddr2",
+      "template": null,
+      "instances": {
+        "default": {
+          "is_managed": true,
+          "maintenance": false,
+          "stopped": [
+            {
+              "node": "webui"
+            }
+          ],
+          "failed_ops": [
+            
+          ]
+        }
+      },
+      "running_on": {
+        
+      }
+    },
+    "proxy": {
+      "id": "proxy",
+      "object_type": "primitive",
+      "attributes": {
+        
+      },
+      "is_managed": true,
+      "maintenance": false,
+      "state": "stopped",
+      "class": "systemd",
+      "provider": null,
+      "type": "haproxy",
+      "template": null,
+      "instances": {
+        "default": {
+          "is_managed": true,
+          "maintenance": false,
+          "stopped": [
+            {
+              "node": "webui"
+            }
+          ],
+          "failed_ops": [
+            
+          ]
+        }
+      },
+      "running_on": {
+        
+      }
+    },
+    "cl-servers": {
+      "id": "cl-servers",
+      "object_type": "clone",
+      "attributes": {
+        "globally-unique": "false",
+        "clone-max": "2",
+        "clone-node-max": "1"
+      },
+      "is_managed": true,
+      "maintenance": false,
+      "state": "stopped",
+      "type": "clone",
+      "children": [
+        {
+          "id": "server-instance",
+          "object_type": "primitive",
+          "attributes": {
+            
+          },
+          "is_managed": true,
+          "maintenance": false,
+          "state": "stopped",
+          "class": null,
+          "provider": null,
+          "type": null,
+          "template": "web-server",
+          "instances": {
+            "0": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            },
+            "1": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            }
+          },
+          "running_on": {
+            
+          }
+        }
+      ],
+      "running_on": {
+        
+      }
+    },
+    "server-instance": {
+      "id": "server-instance",
+      "object_type": "primitive",
+      "attributes": {
+        
+      },
+      "is_managed": true,
+      "maintenance": false,
+      "state": "stopped",
+      "class": null,
+      "provider": null,
+      "type": null,
+      "template": "web-server",
+      "instances": {
+        "0": {
+          "failed_ops": [
+            
+          ],
+          "is_managed": true,
+          "maintenance": false
+        },
+        "1": {
+          "failed_ops": [
+            
+          ],
+          "is_managed": true,
+          "maintenance": false
+        }
+      },
+      "running_on": {
+        
+      }
+    },
+    "ms-DRBD": {
+      "id": "ms-DRBD",
+      "object_type": "master",
+      "attributes": {
+        "master-max": "1",
+        "master-node-max": "1",
+        "clone-max": "2",
+        "clone-node-max": "1",
+        "notify": "true",
+        "target-role": "Stopped"
+      },
+      "is_managed": true,
+      "maintenance": false,
+      "state": "stopped",
+      "type": "master",
+      "children": [
+        {
+          "id": "DRBD",
+          "object_type": "primitive",
+          "attributes": {
+            
+          },
+          "is_managed": true,
+          "maintenance": false,
+          "state": "stopped",
+          "class": "ocf",
+          "provider": "linbit",
+          "type": "drbd",
+          "template": null,
+          "instances": {
+            "0": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            },
+            "1": {
+              "failed_ops": [
+                
+              ],
+              "is_managed": true,
+              "maintenance": false
+            }
+          },
+          "running_on": {
+            
+          }
+        }
+      ],
+      "running_on": {
+        
+      }
+    },
+    "DRBD": {
+      "id": "DRBD",
+      "object_type": "primitive",
+      "attributes": {
+        
+      },
+      "is_managed": true,
+      "maintenance": false,
+      "state": "stopped",
+      "class": "ocf",
+      "provider": "linbit",
+      "type": "drbd",
+      "template": null,
+      "instances": {
+        "0": {
+          "failed_ops": [
+            
+          ],
+          "is_managed": true,
+          "maintenance": false
+        },
+        "1": {
+          "failed_ops": [
+            
+          ],
+          "is_managed": true,
+          "maintenance": false
+        }
+      },
+      "running_on": {
+        
+      }
+    }
+  },
+  "nodes": [
+    {
+      "name": "webui",
+      "uname": "webui",
+      "state": "online",
+      "id": "168633610",
+      "standby": false,
+      "maintenance": true,
+      "remote": false,
+      "fence": true,
+      "fence_history": "",
+      "crm_feature_set": "3.0.13"
+    }
+  ],
+  "tickets": {
+    
+  },
+  "tags": [
+    
+  ],
+  "alerts": [
+    
+  ],
+  "constraints": [
+    {
+      "id": "base-then-clusterfs",
+      "object_type": "order",
+      "children": [
+        "base-clone",
+        "c-clusterfs"
+      ],
+      "score": "INFINITY"
+    },
+    {
+      "id": "clusterfs-with-base",
+      "object_type": "colocation",
+      "children": [
+        "c-clusterfs",
+        "base-clone"
+      ],
+      "score": "INFINITY"
+    },
+    {
+      "id": "clusterfs-then-servers",
+      "object_type": "order",
+      "children": [
+        "c-clusterfs",
+        "cl-servers"
+      ]
+    },
+    {
+      "id": "l-proxy-on-webui",
+      "object_type": "location",
+      "children": [
+        "g-proxy"
+      ],
+      "score": "200",
+      "node": "webui"
+    },
+    {
+      "id": "l-web-on-node1",
+      "object_type": "location",
+      "children": [
+        "cl-servers"
+      ],
+      "score": "200",
+      "node": "node1"
+    },
+    {
+      "id": "l-web-on-node2",
+      "object_type": "location",
+      "children": [
+        "cl-servers"
+      ],
+      "score": "200",
+      "node": "node2"
+    }
+  ],
+  "resource_count": {
+    "count": 16
+  },
+  "fencing_topology": [
+    
+  ]
+}
