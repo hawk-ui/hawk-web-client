@@ -1,31 +1,15 @@
 <template>
-  <div id="wrapper" class="active">
-    <app-left-sidebar></app-left-sidebar>
-    <div class="page-content-wrapper">
-      <div class="page-content container-fluid">
-        <app-page-header></app-page-header>
-        <div class="page-inner">
-          <router-view></router-view>
-        </div>
-      </div>
-    </div>
+  <div id="wrapper">
+    <router-view></router-view>
   </div>
-
 </template>
 
 <script>
-import LeftSidebar from './components/shared/LeftSidebar.vue'
-import PageHeader from './components/shared/PageHeader.vue'
 
 export default {
-  components: {
-    'appLeftSidebar': LeftSidebar,
-    'appPageHeader': PageHeader
-  }
 }
 </script>
 
 <style lang="scss">
-     @import 'assets/css/layout.scss';
-     @import 'assets/css/common.scss';
+
 </style>

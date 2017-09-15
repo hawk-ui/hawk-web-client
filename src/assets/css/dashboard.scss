@@ -8,7 +8,7 @@
    margin-top: 30px;
 
    .dashboard-header {
-      background-color: $brand-color--light;
+      background-color: $brand-blue--light;
       margin: 0;
       padding: 3px 30px 10px 30px;
 
@@ -80,18 +80,18 @@
       }
    }
 
-   .dashboard-table > tbody > tr > th {
-      padding: 16px 10px;
-      font-weight: 400;
-   }
-    .dashboard-table > tbody > tr > td {
-      padding: 10px;
-   }
+  .dashboard-table > tbody > tr > th {
+    padding: 16px 10px;
+    font-weight: 400;
+  }
+  .dashboard-table > tbody > tr > td {
+    padding: 10px;
+  }
 
-   .dashboard-table > tbody > tr > td.status-icon-col {
-      width: 40px;
-      padding:14px 0 0 0;
-    }
+  .dashboard-table > tbody > tr > td.status-icon-col {
+    width: 40px;
+    padding:14px 0 0 0;
+  }
 }
 
 .resource-status {

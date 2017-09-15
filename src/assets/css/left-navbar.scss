@@ -1,7 +1,7 @@
 @import "variables.scss";
 
 .sticky-top {
-  background: $brand-colors;
+  background: $brand-blue;
 }
 
 .navbar{
@@ -17,7 +17,7 @@
 #sidebar-wrapper {
   left: -250px;
   width: 250px;
-  background-color: $brand-color--light;
+  background-color: $brand-blue--light;
   color: white;
   position: fixed;
   height: 100%;
@@ -89,7 +89,7 @@
 
 .footer-simulator {
   padding: 12px 15px;
-  background: $brand-colors;
+  background: $brand-blue;
 }
 
 .footer-links {

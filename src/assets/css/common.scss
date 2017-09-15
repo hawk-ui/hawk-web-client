@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+@import "variables.scss";
+
+body{
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+html,
+.page-content-wrapper,
+.container-fluid {
+  height: 100%;
+}
+
 ul, li {
   list-style: none;
 }
@@ -23,9 +39,16 @@ ul, li {
   font-size: 48px;
 }
 
+#wrapper {
+  height: 100%;
+  background: #eee;
+  transition: all 0.3s ease-out;
+}
+
 .brand-colors {
   color: $brand-green;
 }
+
 .table > thead > tr > th {
   color: $table-header-color;
   border-bottom: 0;
@@ -52,4 +75,48 @@ ul, li {
 .green {
    background-color: green;
 }
+
+.form-control:focus {
+  outline: 0;
+}
+
+.btn:focus, 
+.btn:active:focus, 
+.btn.active:focus, 
+.btn.focus, 
+.btn:active.focus, 
+.btn.active.focus {
+    outline: 0;
+    outline-offset: 0px;
+}
+
+.btn-primary {
+  color: $white;
+  background-color: $brand-green;
+  border-color: $brand-green;
+  font-weight: lighter;
+  
+  &:hover, &:active, &.active{
+    color: $white;
+    background-color: darken($brand-green, 10%);
+    border-color: darken($brand-green, 12%);
+  }
+
+  &.focus, &:focus {
+    color: $white;
+    background-color: darken($brand-green, 10%);
+    border-color: darken($brand-green, 25%);
+  }
+}
+
+.btn-primary:active:hover, .btn-primary.active:hover, 
+.open > .dropdown-toggle.btn-primary:hover, 
+.btn-primary:active:focus, .btn-primary.active:focus, 
+.open > .dropdown-toggle.btn-primary:focus, 
+.btn-primary:active.focus, .btn-primary.active.focus, 
+.open > .dropdown-toggle.btn-primary.focus {
+  background-color: darken($brand-green, 17%);
+  border-color: darken($brand-green, 25%);
+}
+
 
