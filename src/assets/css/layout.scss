@@ -1,24 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
 @import "variables.scss";
 
-body{
-  height: 100%;
-  font-family: 'Lato', sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-}
-
-html,
-.page-content-wrapper,
-.container-fluid {
-  height: 100%;
-}
-
 #wrapper {
-  height: 100%;
   padding-left: 250px;
-  background: #eee;
-  transition: all 0.3s ease-out;
 }
 
 .page-header {

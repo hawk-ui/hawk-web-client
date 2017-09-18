@@ -1,7 +1,7 @@
 
-$brand-colors: #00243e;
-$brand-color--light: #003159;
-$brand-green: #01cb99;
+$brand-blue: #00243e;
+$brand-blue--light: #003258;
+$brand-green: #00c081;
 
 $black: #000000;
 $black--transparent: rgba(0, 0, 0, 0.8);
@@ -11,8 +11,14 @@ $gray--lighter: #5E5E5E;
 $gray--darker: #333;
 $blue--darker: #001523;
 
-$sidenav-header-bg: $brand-colors;
+$sidenav-header-bg: $brand-blue;
 $md-sidenav-color: $white;
 $table-text-color: $gray--lighter;
 $table-header-color: $gray--darker;
 
+$gray-text: #ccc;
+$login-inputbox-bg: #002644;
+$login-inputbox-border: 1px solid #004981;
+$language-btn-bg: #004271;
+$language-btn-bg: #004271;
+$footer-icon-color: #a7a9ac;
