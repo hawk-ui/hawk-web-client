@@ -1,5 +1,5 @@
 <template>
-    <div id="sidebar-wrapper" class="sidebar-toggle">
+    <div id="sidebar-wrapper">
       <app-top-navbar></app-top-navbar>
       <ul class="sidebar-nav">
           <li>

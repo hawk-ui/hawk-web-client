@@ -1,7 +1,7 @@
 {
   "leftnav_bar": {
     "header": {
-      "hawk": "Suse HAWK"
+      "hawk": "SUSE HAWK"
     },
     "links": {
       "monitoring": "Monitoring",
@@ -20,7 +20,7 @@
   },
   "page_header": {
     "cluster-status": {
-      "details": "Cluster is working without any issue",
+      "details": "Working",
       "link": "Click here to see details"
     }
   },

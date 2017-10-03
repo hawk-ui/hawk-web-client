@@ -1,18 +1,103 @@
 
 @import "variables.scss";
 
+body {
+  overflow-x: hidden;
+}
+
 #wrapper {
-  padding-left: 250px;
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow: hidden;
+  background: $brand-blue--light;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+}
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+
+  .logo-header {
+    display: none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
 }
 
 .page-header {
   background-color: #fff;
-  height: 78px;
-  padding: 10px 40px;
+  padding: 10px 20px 8px 20px;
   margin: 0 -15px;
+  height: 50px;
+  border: 0;
+  box-shadow: 0px 0px 2px #c1c1c1;
+
+  .menu-button {
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  > .md-icon{
+    display: inline-block;
+    vertical-align: -webkit-baseline-middle;
+  }
+
+  .logo-header {
+    display: inline-block;
+    font-size: 24px;
+    margin-left: 15px;
+    color: $gray--lighter;
+    font-weight: 400;
+    vertical-align: -webkit-baseline-middle;
+  }
 
   .header-cluster-status {
     width: 180px;
+    display: inline-block;
+    margin-left: 25px;
+    border-left: 1px solid #ccc;
+    padding-left: 20px;
+    vertical-align: top;
 
     .cluster-icon {
       float: left;
@@ -22,25 +107,72 @@
     .header-cluster-details { 
       width: auto;
       font-size: 14px;
-      color: #444;
-      margin-left: 15px;
-      line-height: 17px;
+      color: $gray--lighter;
+      margin-left: 5px;
+      line-height: 16px;
+      display: inline-block;
+      font-weight: 400;
 
       span {
         display: block;
         font-size: 11px;
-        color: #666;
+        color: lighten($gray--lighter, 25%);
+      }
+    }
+  }
+
+  .user-details {
+    margin: 5px 60px 0 0;
+
+    span {
+      vertical-align: text-bottom;
+      color: $gray--darker;
+      margin-left: 3px;
+      font-weight: 400;
+    }
+
+    > .user-details-dropdown {
+      width: 162px;
+      border: 0;
+      box-shadow: 0px 1px 1px #b3b3b3;
+      margin-top: 12px;
+      padding: 0px 20px 10px 20px;
+
+      > li {
+        padding: 4px 0;
+        color: $gray--lighter;
       }
     }
   }
 }
 
-.page-inner {
-  padding: 25px;
+#wrapper.toggled {
+  padding-left: 250px;
 }
 
-@media (max-width: 768px) {
+.page-inner {
+  padding: 25px 60px;
+}
+
+
+@media(min-width:768px) {
   #wrapper {
-    padding-left: 0px;
+    padding-left: 0;
+  }
+  #wrapper.toggled {
+    padding-left: 250px;
+  }
+  #sidebar-wrapper {
+    width: 0;
+  }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+  }
+  #page-content-wrapper {
+    position: relative;
+  }
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
   }
 }

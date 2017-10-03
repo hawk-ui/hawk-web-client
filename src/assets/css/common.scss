@@ -9,7 +9,7 @@ body{
 }
 
 html,
-.page-content-wrapper,
+#page-content-wrapper,
 .container-fluid {
   height: 100%;
 }
@@ -42,7 +42,6 @@ ul, li {
 #wrapper {
   height: 100%;
   background: #eee;
-  transition: all 0.3s ease-out;
 }
 
 .brand-colors {
@@ -78,6 +77,10 @@ ul, li {
 
 .form-control:focus {
   outline: 0;
+}
+
+.md-green {
+  color: green;
 }
 
 .btn:focus, 

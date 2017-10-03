@@ -4,76 +4,59 @@
   background: $brand-blue;
 }
 
-.navbar{
-  border-radius: 0px;
+.navbar {
+  border: 0;
   margin-bottom: 0;
-  min-height: 70px;
-}
-
-.sidebar-nav {
-  position: relative;
-}
-
-#sidebar-wrapper {
-  left: -250px;
+  min-height: 50px;
   width: 250px;
-  background-color: $brand-blue--light;
-  color: white;
-  position: fixed;
-  height: 100%;
-  z-index: 1;
+  border-radius: 0;
+
+  .navbar-brand {
+    color: $white;
+    display: block;
+    float: none;
+    height: auto;
+    border: 0;
+    padding-right: 10px 15px;
+    font-size: 24px;
+    &:hover {
+      color: $white;
+    }
+    .user-details {
+      display: block;
+      margin-top: 5px;
+      .user-name {
+        margin-left: 5px;
+        vertical-align: super;
+        font-size: 14px; 
+      }
+    }
+  }
 }
+
 .sidebar-nav {
   position: relative;
   top: 0;
-  margin: 0;
+  width: 251px;
+  margin: 20px 0 0 0;
   padding: 0;
-  width: 250px;
   list-style: none;
-}
 
-.sidebar-nav li {
-  text-indent: 20px;
-  line-height: 50px;
-}
-
-.sidebar-nav li a {
-  color: white;
-  display: block;
-  text-decoration: none;
-}
-
-.sidebar-nav li a:hover {
-  background: rgba(255,255,255,0.25);
-  color: white;
-  text-decoration: none;
-}
-
-.sidebar-nav li a:active, .sidebar-nav li a:focus {
-  text-decoration: none;
-}
-
-#sidebar-wrapper.sidebar-toggle {
-  transition: all 0.3s ease-out;
-  margin-left: -250px;
-}
-
-.navbar-brand{
-  color: $white;
-  display: block;
-  float: none;
-  height: auto;
-  border: 0;
-  &:hover {
-    color: $white;
-  }
-  .user-details{
-    display: block;
-    margin-top: 5px;
-    .user-name {
-      margin-left: 5px;
-      vertical-align: super;
-      font-size: 14px; 
+  > li {
+    text-indent: 20px;
+    line-height: 50px;
+    > a {
+      color: white;
+      display: block;
+      text-decoration: none;
+      &:hover {
+        background: rgba(255,255,255,0.25);
+        color: white;
+        text-decoration: none;
+      }
+      &:active, &:focus {
+        text-decoration: none;
+      }
     }
   }
 }
@@ -82,7 +65,7 @@
   position: absolute;
   bottom: 0px;
   display: block;
-  width: 100%;
+  width: 250px;
   background: $blue--darker;
   padding: 0; 
 }
@@ -90,26 +73,23 @@
 .footer-simulator {
   padding: 12px 15px;
   background: $brand-blue;
+  width: 249px;
+  color: $white;
 }
 
 .footer-links {
   ul {
     padding-left: 20px;
     margin-bottom: 0;
+    width: 249px;
     li {
       list-style: none;
       margin: 10px 0;
+      color: $white;
       span {
         margin-left: 10px;
         vertical-align: text-bottom;
       }
     }
-  }
-}
-
-@media (min-width: 768px) {
-  #sidebar-wrapper.sidebar-toggle {
-    transition: 0s;
-    left: 250px;
   }
 }
