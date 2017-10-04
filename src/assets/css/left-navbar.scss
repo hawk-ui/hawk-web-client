@@ -18,7 +18,7 @@
     height: auto;
     border: 0;
     padding-right: 10px 15px;
-    font-size: 24px;
+    font-size: 22px;
     &:hover {
       color: $white;
     }
@@ -44,18 +44,26 @@
 
   > li {
     text-indent: 20px;
-    line-height: 50px;
+    line-height: 45px;
+    width: 230px;
     > a {
       color: white;
       display: block;
       text-decoration: none;
       &:hover {
-        background: rgba(255,255,255,0.25);
-        color: white;
+        color: $brand-green;
         text-decoration: none;
       }
       &:active, &:focus {
         text-decoration: none;
+      }
+      &.router-link-active {
+        background: $brand-green;
+        border-bottom-right-radius: 3px;
+        border-top-right-radius: 3px;
+        &:hover {
+          color: white;
+        }
       }
     }
   }

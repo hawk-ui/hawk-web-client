@@ -79,23 +79,23 @@ body {
 
   > .md-icon{
     display: inline-block;
-    vertical-align: -webkit-baseline-middle;
+    padding: 5px;
   }
 
   .logo-header {
     display: inline-block;
-    font-size: 24px;
-    margin-left: 15px;
+    font-size: 22px;
+    margin: 0 0 0 15px;
+    padding-right: 70px;
     color: $gray--lighter;
     font-weight: 400;
-    vertical-align: -webkit-baseline-middle;
+    vertical-align: super;
+    border-right: 1px solid #ccc;
   }
 
   .header-cluster-status {
     width: 180px;
     display: inline-block;
-    margin-left: 25px;
-    border-left: 1px solid #ccc;
     padding-left: 20px;
     vertical-align: top;
 

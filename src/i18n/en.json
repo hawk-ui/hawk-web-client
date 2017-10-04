@@ -1,12 +1,12 @@
 {
   "leftnav_bar": {
     "header": {
-      "hawk": "SUSE HAWK"
+      "hawk": "SUSE Hawk"
     },
     "links": {
       "monitoring": "Monitoring",
       "trubleshooting": "Trubleshooting",
-      "cluster_configuration": "Cluster Configuration",
+      "cluster_configuration": "Configuration",
       "add_resource": "Add a Resource"
     },
     "footer": {

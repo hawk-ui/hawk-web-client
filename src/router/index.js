@@ -4,7 +4,7 @@ import Login from '@/components/Login'
 import MainLayout from '@/components/MainLayout'
 import Monitoring from '@/components/monitoring/Monitoring'
 import Troubleshooting from '@/components/troubleshooting/Troubleshooting'
-import ClusterConfiguration from '@/components/clusterConfiguration/Cluster-configuration.vue'
+import Configuration from '@/components/clusterConfiguration/Cluster-configuration.vue'
 import Hello from '@/components/Hello'
 
 Vue.use(Router)
@@ -29,8 +29,8 @@ export default new Router({
           component: Troubleshooting
         },
         {
-          path: '/clusterConfiguration',
-          component: ClusterConfiguration
+          path: '/configuration',
+          component: Configuration
         },
         {
           path: '/addResource',

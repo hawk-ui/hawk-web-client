@@ -9,10 +9,7 @@
               <router-link to="/troubleshooting">{{ $t("leftnav_bar.links.trubleshooting") }}</router-link>
           </li>
           <li>
-              <router-link to="/clusterConfiguration">{{ $t("leftnav_bar.links.cluster_configuration") }}</router-link>
-          </li>
-          <li>
-              <router-link to="/">{{ $t("leftnav_bar.links.add_resource") }}</router-link>
+              <router-link to="/configuration">{{ $t("leftnav_bar.links.cluster_configuration") }}</router-link>
           </li>
         </ul>
         <app-footer></app-footer>

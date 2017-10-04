@@ -1,7 +1,7 @@
 <template>
     <header class="page-header">
       <md-icon class="md-24 menu-button" id="menu-toggle">menu</md-icon>
-      <div class="logo-header">SUSE HAWK</div>
+      <div class="logo-header">SUSE Hawk</div>
       <div class="header-cluster-status">
         <md-icon class="md-18 md-green">check_circle</md-icon>
         <div class="header-cluster-details">{{ $t("page_header.cluster-status.details") }}
