@@ -22,8 +22,7 @@
                 <li><label><input type="radio">Only maintenance nodes</label></li>
                 <li><label><input type="radio">Only standby nodes</label></li>
               </ul>
-
-              </div>
+            </div>
           </li>
           <li><md-icon class="md-16">settings</md-icon></li>
         </ul>

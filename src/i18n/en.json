@@ -1,15 +1,16 @@
 {
   "leftnav_bar": {
     "header": {
-      "hawk": "Suse HAWK"
+      "hawk": "SUSE Hawk"
     },
     "links": {
       "monitoring": "Monitoring",
       "trubleshooting": "Trubleshooting",
-      "cluster_configuration": "Cluster Configuration",
+      "cluster_configuration": "Configuration",
       "add_resource": "Add a Resource"
     },
     "footer": {
+      "copy_right": "© SUSE 2017",
       "simulator": "Simulator",
       "links": {
         "role": "Role",
@@ -20,7 +21,7 @@
   },
   "page_header": {
     "cluster-status": {
-      "details": "Cluster is working without any issue",
+      "details": "Working",
       "link": "Click here to see details"
     }
   },

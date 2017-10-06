@@ -5,6 +5,7 @@
     <div>
       <button @click='$i18n.locale="en"'>en</button>
       <button @click='$i18n.locale="ja"'>ja</button>
+      <a class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
     </div>
 </div>
 

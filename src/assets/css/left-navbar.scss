@@ -4,112 +4,148 @@
   background: $brand-blue;
 }
 
-.navbar{
-  border-radius: 0px;
-  margin-bottom: 0;
-  min-height: 70px;
-}
-
-.sidebar-nav {
-  position: relative;
-}
-
 #sidebar-wrapper {
-  left: -250px;
-  width: 250px;
-  background-color: $brand-blue--light;
-  color: white;
+  z-index: 1000;
   position: fixed;
+  left: 250px;
+  width: 0;
   height: 100%;
-  z-index: 1;
-}
-.sidebar-nav {
-  position: relative;
-  top: 0;
-  margin: 0;
-  padding: 0;
-  width: 250px;
-  list-style: none;
-}
-
-.sidebar-nav li {
-  text-indent: 20px;
-  line-height: 50px;
-}
-
-.sidebar-nav li a {
-  color: white;
-  display: block;
-  text-decoration: none;
-}
-
-.sidebar-nav li a:hover {
-  background: rgba(255,255,255,0.25);
-  color: white;
-  text-decoration: none;
-}
-
-.sidebar-nav li a:active, .sidebar-nav li a:focus {
-  text-decoration: none;
-}
-
-#sidebar-wrapper.sidebar-toggle {
-  transition: all 0.3s ease-out;
   margin-left: -250px;
-}
-
-.navbar-brand{
-  color: $white;
-  display: block;
-  float: none;
-  height: auto;
-  border: 0;
-  &:hover {
-    color: $white;
-  }
-  .user-details{
-    display: block;
-    margin-top: 5px;
-    .user-name {
-      margin-left: 5px;
-      vertical-align: super;
-      font-size: 14px; 
-    }
-  }
-}
-
-.fixed-bottom {
-  position: absolute;
-  bottom: 0px;
-  display: block;
-  width: 100%;
-  background: $blue--darker;
-  padding: 0; 
-}
-
-.footer-simulator {
-  padding: 12px 15px;
+  overflow: hidden;
   background: $brand-blue;
-}
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 
-.footer-links {
-  ul {
-    padding-left: 20px;
+  .navbar {
+    border: 0;
     margin-bottom: 0;
-    li {
-      list-style: none;
-      margin: 10px 0;
-      span {
-        margin-left: 10px;
-        vertical-align: text-bottom;
+    min-height: 50px;
+    width: 250px;
+    border-radius: 0;
+    border-bottom: 1px solid lighten($brand-blue--light, 2%);
+
+    .navbar-brand {
+      color: $white;
+      display: block;
+      float: none;
+      height: auto;
+      border: 0;
+      padding-right: 10px 15px;
+      font-size: 22px;
+      &:hover {
+        color: $white;
+      }
+      .user-details {
+        display: block;
+        margin-top: 5px;
+        .user-name {
+          margin-left: 5px;
+          vertical-align: super;
+          font-size: 14px; 
+        }
       }
     }
   }
-}
 
-@media (min-width: 768px) {
-  #sidebar-wrapper.sidebar-toggle {
-    transition: 0s;
-    left: 250px;
+  .sidebar-nav {
+    position: relative;
+    top: 0;
+    width: 251px;
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style: none;
+
+    > li {
+      text-indent: 20px;
+      line-height: 45px;
+      width: 230px;
+      > a {
+        color: $gray-text;
+        display: block;
+        text-decoration: none;
+        &:hover {
+          color: $brand-green;
+          text-decoration: none;
+        }
+        &:active, &:focus {
+          text-decoration: none;
+        }
+        &.router-link-active {
+          background: $brand-green;
+          color: white;
+          border-bottom-right-radius: 3px;
+          border-top-right-radius: 3px;
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .fixed-bottom {
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    width: 250px;
+    padding: 0;
+    background: $blue--darker;
+    border: 0;
+
+    .footer-nav {
+      color: $white;
+      padding:14px 10px;
+      background: $blue--darker;
+      height: 50px;
+
+      .footer-copyright {
+        float: left;
+        color: $gray-text;
+        font-size: 12px;
+      }
+
+      .more-btn {
+        cursor: pointer;
+      }
+
+      .footer-dropdown {
+        background: $blue--darker;
+        margin: 0 -10px 0 0;
+        width: 249px;
+        padding: 0 0 20px 0;
+        border: 0;
+
+        li {
+          list-style: none;
+          color: $gray-text;
+          padding: 5px 20px;
+
+          span {
+            margin-left: 10px;
+            vertical-align: text-bottom;
+          }
+
+          &:hover {
+            color: $white; 
+          }
+        }
+
+        .footer-simulator {
+          padding: 12px 15px;
+          background: $blue--darker;
+          width: 249px;
+          color: $gray-text;
+          font-weight: 400;
+          border-bottom: 1px solid $brand-blue--light;
+          margin-bottom: 12px;
+
+          &:hover {
+            color: $gray-text;
+          }
+        }
+      }
+    }
   }
 }

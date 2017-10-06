@@ -1,5 +1,5 @@
 <template>
-    <div id="sidebar-wrapper" class="sidebar-toggle">
+    <div id="sidebar-wrapper">
       <app-top-navbar></app-top-navbar>
       <ul class="sidebar-nav">
           <li>
@@ -9,10 +9,7 @@
               <router-link to="/troubleshooting">{{ $t("leftnav_bar.links.trubleshooting") }}</router-link>
           </li>
           <li>
-              <router-link to="/clusterConfiguration">{{ $t("leftnav_bar.links.cluster_configuration") }}</router-link>
-          </li>
-          <li>
-              <router-link to="/">{{ $t("leftnav_bar.links.add_resource") }}</router-link>
+              <router-link to="/configuration">{{ $t("leftnav_bar.links.cluster_configuration") }}</router-link>
           </li>
         </ul>
         <app-footer></app-footer>

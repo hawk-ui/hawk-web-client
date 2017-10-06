@@ -6,10 +6,6 @@
         <button @click='$i18n.locale="en"'>en</button>
         <button @click='$i18n.locale="ja"'>ja</button>
       </div> -->
-      <div class="user-details">
-        <md-icon class="md-24">account_circle</md-icon>
-        <span class="user-name">HAcluste</span>
-      </div>
     </div>
   </nav>
 </template>

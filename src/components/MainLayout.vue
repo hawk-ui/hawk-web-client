@@ -1,7 +1,7 @@
 <template>
   <div>
     <app-left-sidebar></app-left-sidebar>
-    <div class="page-content-wrapper">
+    <div id="page-content-wrapper">
       <div class="page-content container-fluid">
         <app-page-header></app-page-header>
         <div class="page-inner">
@@ -10,7 +10,6 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -21,11 +20,18 @@ export default {
   components: {
     'appLeftSidebar': LeftSidebar,
     'appPageHeader': PageHeader
+  },
+  mounted: function () {
+    $('#menu-toggle').click(function (e) {
+      e.preventDefault()
+      $('#wrapper').toggleClass('toggled')
+    })
   }
 }
+
 </script>
 
 <style lang="scss">
-     @import '../assets/css/layout.scss';
-     @import '../assets/css/common.scss';
+  @import '../assets/css/layout.scss';
+  @import '../assets/css/common.scss';
 </style>
