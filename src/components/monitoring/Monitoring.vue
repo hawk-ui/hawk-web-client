@@ -53,8 +53,11 @@
             </div>
           </td>
           <td>
-            <span class="resource-status gray" v-bind:class="stateClass(resource.state)"></span>{{ resource.id }}</td>
-          <td><div class="node-circle gray" v-bind:class="stateClass(resource.state)"></div></td>
+            <span class="resource-status gray" v-bind:class="stateClass(resource.state)"></span>{{ resource.id }}
+          </td>
+          <td v-for="node in nodes"> 
+            <div class="node-circle gray" v-bind:class="stateClass(resource.state)"></div>
+          </td>
         </tr>
       </tbody>
     </table>
