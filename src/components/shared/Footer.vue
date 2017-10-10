@@ -11,8 +11,6 @@
             {{ $t("leftnav_bar.footer.simulator") }} 
             <span class="pull-right"><md-icon class="md-16 brand-colors">visibility</md-icon></span>
           </li>
-          <li><md-icon class="md-14">assignment_ind</md-icon><span>{{ $t("leftnav_bar.footer.links.role") }}</span></li>
-          <li><md-icon class="md-14">grade</md-icon><span>{{ $t("leftnav_bar.footer.links.target") }}</span></li>
           <li><md-icon class="md-14">help</md-icon><span>{{ $t("leftnav_bar.footer.links.help") }}</span></li>
         </ul>
       </div>

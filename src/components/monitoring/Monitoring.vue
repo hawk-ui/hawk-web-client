@@ -52,7 +52,7 @@
               </ul>
             </div>
           </td>
-          <td>
+          <td class="resource-name">
             <span class="resource-status gray" v-bind:class="stateClass(resource.state)"></span>{{ resource.id }}
           </td>
           <td v-for="node in nodes"> 

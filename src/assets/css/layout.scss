@@ -80,8 +80,7 @@ body {
   .header-cluster-status {
     width: 180px;
     display: inline-block;
-    padding-left: 20px;
-    vertical-align: top;
+    padding-left: 10px;
 
     .cluster-icon {
       float: left;
@@ -92,10 +91,10 @@ body {
       width: auto;
       font-size: 14px;
       color: $gray--lighter;
-      margin-left: 5px;
       line-height: 16px;
       display: inline-block;
       font-weight: 400;
+      vertical-align: super;
 
       span {
         display: block;
