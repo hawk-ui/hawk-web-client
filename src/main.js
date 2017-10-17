@@ -7,10 +7,6 @@ import router from './router'
 import Resource from 'vue-resource'
 import i18n from './i18n'
 import VueMaterial from 'vue-material'
-import jQuery from 'jquery'
-global.jQuery = jQuery
-var $ = global.jQuery
-window.$ = $
 
 let Bootstrap = require('bootstrap')
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
