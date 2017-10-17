@@ -3,14 +3,13 @@ import VueRouter from 'vue-router'
 import Login from '@/components/Login'
 
 // Main structure
-import TopNavbar from '@/components/TopNavbar'
-import LeftSidebar from '@/components/LeftSidebar'
-import MainLayout from '@/components/MainLayout'
+import LeftSidebar from '@/components/shared/LeftSidebar'
+import PageHeader from '@/components/shared/PageHeader'
 
 // Main sections
 import Monitoring from '@/components/monitoring/Monitoring'
 import Troubleshooting from '@/components/troubleshooting/Troubleshooting'
-import Configuration from '@/components/clusterConfiguration/Cluster-configuration.vue'
+import Configuration from '@/components/clusterConfiguration/Cluster-configuration'
 
 Vue.use(VueRouter)
 
@@ -24,24 +23,34 @@ export default new VueRouter({
     {
       path: '/',
       components: {
-        'top-navbar': TopNavbar,
-        'left-sidebar': LeftSidebar,
-        'main-layout': MainLayout
-      },
-      children: [
-        {
-          path: 'monitoring',
-          component: Monitoring
-        },
-        {
-          path: 'troubleshooting',
-          component: Troubleshooting
-        },
-        {
-          path: '/configuration',
-          component: Configuration
-        }
-      ]
+        default: Monitoring,
+        'page-header': PageHeader,
+        'left-sidebar': LeftSidebar
+      }
+    },
+    {
+      path: '/monitoring',
+      components: {
+        default: Monitoring,
+        'page-header': PageHeader,
+        'left-sidebar': LeftSidebar
+      }
+    },
+    {
+      path: '/troubleshooting',
+      components: {
+        default: Troubleshooting,
+        'page-header': PageHeader,
+        'left-sidebar': LeftSidebar
+      }
+    },
+    {
+      path: '/configuration',
+      components: {
+        default: Configuration,
+        'page-header': PageHeader,
+        'left-sidebar': LeftSidebar
+      }
     }
   ]
 })
