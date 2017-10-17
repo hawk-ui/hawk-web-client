@@ -6,7 +6,7 @@
     "links": {
       "monitoring": "Monitoring",
       "trubleshooting": "Trubleshooting",
-      "cluster_configuration": "Configuration",
+      "configuration": "Configuration",
       "add_resource": "Add a Resource"
     },
     "footer": {
@@ -26,8 +26,8 @@
     }
   },
   "pages": {
-    "cluster_config_page": {
-      "page-title": "Cluster Configuration",
+    "configuration_page": {
+      "page-title": "Configuration",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ex erat, mattis vel consectetur quis, ultricies id metus. "
     },
     "monitoring_page": {

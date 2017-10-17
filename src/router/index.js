@@ -9,7 +9,7 @@ import PageHeader from '@/components/shared/PageHeader'
 // Main sections
 import Monitoring from '@/components/monitoring/Monitoring'
 import Troubleshooting from '@/components/troubleshooting/Troubleshooting'
-import Configuration from '@/components/clusterConfiguration/Cluster-configuration'
+import Configuration from '@/components/configuration/Configuration'
 
 Vue.use(VueRouter)
 

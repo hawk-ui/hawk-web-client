@@ -6,7 +6,7 @@
     "links": {
       "monitoring": "モニタリング",
       "trubleshooting": "トラブルシューティング",
-      "cluster_configuration": "クラスタ構成",
+      "configuration": "クラスタ構成",
       "add_resource": "リソースを追加する"
     },
     "footer": {
@@ -19,7 +19,7 @@
     }
   },
   "pages": {
-    "cluster_config_page": {
+    "configuration_page": {
       "page-title": "クラスタ構成",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ex erat, mattis vel consectetur quis, ultricies id metus. "
     },
