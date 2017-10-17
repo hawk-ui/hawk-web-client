@@ -11,7 +11,6 @@ import MainLayout from '@/components/MainLayout'
 import Monitoring from '@/components/monitoring/Monitoring'
 import Troubleshooting from '@/components/troubleshooting/Troubleshooting'
 import Configuration from '@/components/clusterConfiguration/Cluster-configuration.vue'
-import Hello from '@/components/Hello'
 
 Vue.use(VueRouter)
 
@@ -41,10 +40,6 @@ export default new VueRouter({
         {
           path: '/configuration',
           component: Configuration
-        },
-        {
-          path: '/addResource',
-          component: Hello
         }
       ]
     }

@@ -26,10 +26,6 @@
     }
   },
   "pages": {
-    "hello_page": {
-      "page-title": "Hello",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ex erat, mattis vel consectetur quis, ultricies id metus. "
-    },
     "cluster_config_page": {
       "page-title": "Cluster Configuration",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ex erat, mattis vel consectetur quis, ultricies id metus. "
