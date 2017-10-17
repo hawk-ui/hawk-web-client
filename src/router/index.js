@@ -3,8 +3,8 @@ import VueRouter from 'vue-router'
 import Login from '@/components/Login'
 
 // Main structure
-import LeftSidebar from '@/components/shared/LeftSidebar'
-import PageHeader from '@/components/shared/PageHeader'
+import LeftSidebar from '@/components/shared/left_sidebar/Main'
+import TopNavbar from '@/components/shared/top_navbar/Main'
 
 // Main sections
 import Monitoring from '@/components/monitoring/Monitoring'
@@ -24,7 +24,7 @@ export default new VueRouter({
       path: '/',
       components: {
         default: Monitoring,
-        'page-header': PageHeader,
+        'top-navbar': TopNavbar,
         'left-sidebar': LeftSidebar
       }
     },
@@ -32,7 +32,7 @@ export default new VueRouter({
       path: '/monitoring',
       components: {
         default: Monitoring,
-        'page-header': PageHeader,
+        'top-navbar': TopNavbar,
         'left-sidebar': LeftSidebar
       }
     },
@@ -40,7 +40,7 @@ export default new VueRouter({
       path: '/troubleshooting',
       components: {
         default: Troubleshooting,
-        'page-header': PageHeader,
+        'top-navbar': TopNavbar,
         'left-sidebar': LeftSidebar
       }
     },
@@ -48,7 +48,7 @@ export default new VueRouter({
       path: '/configuration',
       components: {
         default: Configuration,
-        'page-header': PageHeader,
+        'top-navbar': TopNavbar,
         'left-sidebar': LeftSidebar
       }
     }

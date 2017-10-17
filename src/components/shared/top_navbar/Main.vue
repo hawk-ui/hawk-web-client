@@ -1,5 +1,5 @@
 <template>
-    <header class="page-header">
+    <header class="top-navbar">
       <md-icon class="md-24 menu-button" id="menu-toggle">menu</md-icon>
       <div class="logo-header">SUSE Hawk</div>
       <div class="header-cluster-status">

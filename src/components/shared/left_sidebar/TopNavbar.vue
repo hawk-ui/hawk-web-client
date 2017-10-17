@@ -17,5 +17,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-  @import '../../assets/css/left-navbar.scss';
+  @import '../../../assets/css/left-navbar.scss';
 </style>
