@@ -1,7 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '@/components/Login'
+
+// Main structure
+import TopNavbar from '@/components/TopNavbar'
+import LeftSidebar from '@/components/LeftSidebar'
 import MainLayout from '@/components/MainLayout'
+
+// Main sections
 import Monitoring from '@/components/monitoring/Monitoring'
 import Troubleshooting from '@/components/troubleshooting/Troubleshooting'
 import Configuration from '@/components/clusterConfiguration/Cluster-configuration.vue'
@@ -18,7 +24,11 @@ export default new VueRouter({
     },
     {
       path: '/',
-      component: MainLayout,
+      components: {
+        'top-navbar': TopNavbar,
+        'left-sidebar': LeftSidebar,
+        'main-layout': MainLayout
+      },
       children: [
         {
           path: 'monitoring',
