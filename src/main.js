@@ -8,13 +8,13 @@ import Resource from 'vue-resource'
 import i18n from './i18n'
 import VueMaterial from 'vue-material'
 
-let Bootstrap = require('bootstrap')
-import 'material-design-icons-iconfont/dist/material-design-icons.css'
-// import 'roboto-fontface-woff/css/roboto/roboto-fontface.css'
+//  Twitter Bootstrap
 import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap.js'
+
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
 Vue.use(VueMaterial)
-Vue.use(Bootstrap)
 Vue.config.productionTip = false
 
 Vue.use(Resource)

@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
+// Login page
 import Login from '@/components/Login'
 
-// Main structure
+// Main structure (once logged in)
 import LeftSidebar from '@/components/shared/left_sidebar/Main'
 import TopNavbar from '@/components/shared/top_navbar/Main'
 
