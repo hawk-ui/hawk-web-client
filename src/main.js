@@ -17,8 +17,8 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css'
 Vue.use(VueMaterial)
 Vue.use(Resource)
 
-/* eslint-disable no-new */
-new Vue({
+/* eslint-disable no-unused-vars */
+var app = new Vue({
   el: '#app',
   template: '<App/>',
   components: { App },
