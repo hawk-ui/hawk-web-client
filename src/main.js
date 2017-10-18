@@ -15,7 +15,6 @@ import 'bootstrap/dist/js/bootstrap.js'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
 Vue.use(VueMaterial)
-Vue.config.productionTip = false
 
 Vue.use(Resource)
 Vue.http.options['emulateJSON'] = true
