@@ -17,13 +17,19 @@
 
 
 <script>
-  import Service from './service/service.js'
+  import { mapGetters, mapActions } from 'vuex'
   export default {
     data: function () {
       return {
       }
     },
+    computed: {
+      ...mapGetters(['cib'])
+    },
     methods: {
+      ...mapActions({
+        updateCib: 'updateCib'
+      }),
       toggleMenu: function () {
         if ($('#menu-toggle')) {
           $('#menu-toggle').click(function (e) {
@@ -34,7 +40,7 @@
       }
     },
     mounted: function () {
-      Service.getCib('/db').then(/* should be the logic of storing the data here */)
+      this.updateCib()
       this.toggleMenu()
     }
   }

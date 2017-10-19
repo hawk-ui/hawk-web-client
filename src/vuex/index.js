@@ -2,15 +2,28 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 Vue.use(Vuex)
+import Service from '../service/service.js'
 
 const state = {
-  api: 'http://localhost:3004/db'
+  cib: {}
 }
 
 const store = new Vuex.Store({
   state,
   getters: {
-
+    cib: (state) => {
+      return state.cib
+    }
+  },
+  actions: {
+    updateCib (context) {
+      Service.getCib('/db').then((data) => context.commit('updateCib', data))
+    }
+  },
+  mutations: {
+    updateCib (state, data) {
+      state.cib = data
+    }
   }
 })
 
