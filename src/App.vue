@@ -20,8 +20,7 @@
   import { mapGetters, mapActions } from 'vuex'
   export default {
     data: function () {
-      return {
-      }
+      // Local data goes here
     },
     computed: {
       ...mapGetters(['cib'])
@@ -29,19 +28,10 @@
     methods: {
       ...mapActions({
         updateCib: 'updateCib'
-      }),
-      toggleMenu: function () {
-        if ($('#menu-toggle')) {
-          $('#menu-toggle').click(function (e) {
-            e.preventDefault()
-            $('#wrapper').toggleClass('toggled')
-          })
-        }
-      }
+      })
     },
     mounted: function () {
       this.updateCib()
-      this.toggleMenu()
     }
   }
 </script>
