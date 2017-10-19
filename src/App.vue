@@ -20,7 +20,9 @@
   import { mapGetters, mapActions } from 'vuex'
   export default {
     data: function () {
-      // Local data goes here
+      return {
+        // Local data goes here
+      }
     },
     computed: {
       ...mapGetters(['cib'])

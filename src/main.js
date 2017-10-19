@@ -2,9 +2,9 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 
 import Vue from 'vue'
-import router from './router'
-import store from './vuex/index.js'
-import i18n from './i18n'
+import router from './router/route.js'
+import store from './vuex/store.js'
+import i18n from './i18n/local.js'
 import VueMaterial from 'vue-material'
 
 //  Twitter Bootstrap

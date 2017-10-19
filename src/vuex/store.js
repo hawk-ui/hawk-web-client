@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 Vue.use(Vuex)
-import Service from '../service/service.js'
+import Service from '../service/app_service.js'
 
 const state = {
   cib: {}
