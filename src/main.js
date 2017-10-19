@@ -20,22 +20,11 @@ import App from './App'
 Vue.use(VueMaterial)
 Vue.use(Resource)
 
-var vm = new Vue({
+/* eslint-disable no-new */
+new Vue({
   el: '#app',
-  data: {
-    api: 'http://localhost:3004/db',
-    cib: {}
-  },
-  mounted: function () {
-    fetch(this.api)
-      .then(stream => stream.json())
-      .then(data => { this.cib = data })
-  },
   template: '<App/>',
   components: { App },
   router,
   i18n
 })
-
-// For debugging
-global.vm = vm

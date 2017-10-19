@@ -11,20 +11,37 @@
           </div>
         </div>
       </div>
-    </div>    
+    </div>
   </div>
 </template>
 
 
 <script>
   export default {
-    mounted: function () {
-      if ($('#menu-toggle')) {
-        $('#menu-toggle').click(function (e) {
-          e.preventDefault()
-          $('#wrapper').toggleClass('toggled')
-        })
+    data: function () {
+      return {
+        api: 'http://localhost:3004/db',
+        cib: {}
       }
+    },
+    methods: {
+      fetchData: function (api) {
+        fetch(api)
+          .then(stream => stream.json())
+          .then(data => { this.cib = data })
+      },
+      toggleMenu: function () {
+        if ($('#menu-toggle')) {
+          $('#menu-toggle').click(function (e) {
+            e.preventDefault()
+            $('#wrapper').toggleClass('toggled')
+          })
+        }
+      }
+    },
+    mounted: function () {
+      this.fetchData(this.api)
+      this.toggleMenu()
     }
   }
 </script>
