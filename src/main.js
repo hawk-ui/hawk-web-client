@@ -4,7 +4,6 @@
 import Vue from 'vue'
 import router from './router'
 import store from './vuex/index.js'
-import Resource from 'vue-resource'
 import i18n from './i18n'
 import VueMaterial from 'vue-material'
 
@@ -19,7 +18,6 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import App from './App'
 
 Vue.use(VueMaterial)
-Vue.use(Resource)
 
 /* eslint-disable no-new */
 new Vue({

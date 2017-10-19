@@ -17,19 +17,13 @@
 
 
 <script>
+  import Service from './service/service.js'
   export default {
     data: function () {
       return {
-        api: 'http://localhost:3004/db',
-        cib: {}
       }
     },
     methods: {
-      fetchData: function (api) {
-        fetch(api)
-          .then(stream => stream.json())
-          .then(data => { this.cib = data })
-      },
       toggleMenu: function () {
         if ($('#menu-toggle')) {
           $('#menu-toggle').click(function (e) {
@@ -40,7 +34,7 @@
       }
     },
     mounted: function () {
-      this.fetchData(this.api)
+      Service.getCib('/db').then(/* should be the logic of storing the data here */)
       this.toggleMenu()
     }
   }

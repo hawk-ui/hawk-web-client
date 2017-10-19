@@ -8,7 +8,10 @@ const state = {
 }
 
 const store = new Vuex.Store({
-  state
+  state,
+  getters: {
+
+  }
 })
 
 export default store
