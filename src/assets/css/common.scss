@@ -18,24 +18,24 @@ ul, li {
   list-style: none;
 }
 
-.md-icon.md-14 { 
+.md-icon.md-14 {
   font-size: 14px;
   width: 14px;
 }
 
-.md-icon.md-16 { 
+.md-icon.md-16 {
   font-size: 16px;
 }
 
-.md-icon.md-24 { 
+.md-icon.md-24 {
   font-size: 24px;
 }
 
-.md-icon.md-32 { 
+.md-icon.md-32 {
   font-size: 32px;
 }
 
-.md-icon.md-48 { 
+.md-icon.md-48 {
   font-size: 48px;
 }
 
@@ -75,6 +75,18 @@ ul, li {
    background-color: green;
 }
 
+// temporary style for dashboard table
+.blue {
+  background-color: #83afe4;
+}
+
+.yellow {
+   background-color: rgb(196, 171, 31);
+}
+// End temporary style for dashboard table
+
+
+
 .form-control:focus {
   outline: 0;
 }
@@ -83,11 +95,11 @@ ul, li {
   color: green;
 }
 
-.btn:focus, 
-.btn:active:focus, 
-.btn.active:focus, 
-.btn.focus, 
-.btn:active.focus, 
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
 .btn.active.focus {
     outline: 0;
     outline-offset: 0px;
@@ -98,7 +110,7 @@ ul, li {
   background-color: $brand-green;
   border-color: $brand-green;
   font-weight: lighter;
-  
+
   &:hover, &:active, &.active{
     color: $white;
     background-color: darken($brand-green, 10%);
@@ -112,11 +124,11 @@ ul, li {
   }
 }
 
-.btn-primary:active:hover, .btn-primary.active:hover, 
-.open > .dropdown-toggle.btn-primary:hover, 
-.btn-primary:active:focus, .btn-primary.active:focus, 
-.open > .dropdown-toggle.btn-primary:focus, 
-.btn-primary:active.focus, .btn-primary.active.focus, 
+.btn-primary:active:hover, .btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus, .btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus, .btn-primary.active.focus,
 .open > .dropdown-toggle.btn-primary.focus {
   background-color: darken($brand-green, 17%);
   border-color: darken($brand-green, 25%);

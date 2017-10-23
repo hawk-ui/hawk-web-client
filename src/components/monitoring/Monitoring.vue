@@ -8,7 +8,6 @@
         <li>{{ error.type }} {{ error.msg }}</li>
       </ul>
     </h4>
-
     <div class="dashboard-container">
       <div class="dashboard-header">
         <input class="form-control search" type="text" value="search...">
@@ -39,8 +38,6 @@
       </div>
       <table class="table dashboard-table">
         <tbody>
-
-
         <!-- Nodes Row -->
         <tr>
           <th colspan="2"></th>
@@ -62,11 +59,6 @@
           </th>
         </tr>
         <!-- End Nodes Row -->
-
-
-
-
-
         <tr v-for="resource in cib.resources">
           <td class="status-icon-col">
             <div class="status-icon pull-right">
@@ -77,20 +69,15 @@
             </div>
           </td>
           <td>
-            <span class="resource-status gray" v-bind:class="ResourceStateClass(resource)"></span>{{ resource.id }}</td>
+            <span class="resource-status gray" v-bind:class="resourceBarStyle(resource)"></span>{{ resource.id }}</td>
           <!-- TODO Append keys in the list (computed properties) -->
-
-
-          <td v-for="node in cib.nodes"><div class="node-circle gray" v-bind:class="ResourceStateClass(resource)"></div></td>
-
-
+          <td v-for="node in cib.nodes"><div class="node-circle gray" v-bind:class="ResourceStateClass(resource, node)"></div></td>
         </tr>
       </tbody>
     </table>
   </div>
   </div>
 </template>
-
 
 <script>
   import { mapGetters } from 'vuex'
@@ -117,13 +104,30 @@
           return 'red'
         }
       },
-      ResourceStateClass: function (resource) {
+      resourceBarStyle: function (resource) {
         if (resource.state === 'stopped' && resource['attributes']['target-role'] === 'Stopped') {
           return 'gray'
         } else if (resource.state === 'stopped') {
           return 'red'
-        } else {
+        } else if (resource.state !== 'stopped') {
           return 'green'
+        }
+      },
+      ResourceStateClass: function (resource, node = '') {
+        if (resource.state === 'stopped' && resource['attributes']['target-role'] === 'Stopped') {
+          return 'gray'
+        } else if (resource.state === 'stopped') {
+          return 'red'
+        } else if (resource.state === 'offline') {
+          return 'gray'
+        } else if (node.name in resource.running_on && resource.running_on[node.name] === 'started') {
+          return 'green'
+        } else if (node.name in resource.running_on && resource.running_on[node.name] === 'slave') {
+          return 'yellow'
+        } else if (node.name in resource.running_on && resource.running_on[node.name] === 'master') {
+          return 'blue'
+        } else if (node.name in resource.running_on && resource.running_on[node.name] === 'not_running') {
+          return 'gray'
         }
       }
     }
