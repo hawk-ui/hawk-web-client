@@ -1,13 +1,23 @@
 <template>
   <div>
     <h3>{{ $t("pages.monitoring_page.page-title") }}</h3>
-    <!-- <h4>{{ errors.status }} {{ errors.statusText }}</h4> -->
+    <h4>
+      <!-- TODO Append keys in the list (computed properties) -->
+      <br>
+      <ul v-for="error in cib.errors">
+        <li>{{ error.type }} {{ error.msg }}</li>
+      </ul>
+    </h4>
 
     <div class="dashboard-container">
       <div class="dashboard-header">
         <input class="form-control search" type="text" value="search...">
         <ul class="pull-right filters-settings">
-          <li class="cluster-ticket">Tickets</li>
+          <li class="cluster-ticket" v-for="ticket in cib.tickets">
+            <!-- TODO Apped keys in the list (computed properties) -->
+            <!--  TODO Missing the ticket parmas to show here -->
+            Tickets
+          </li>
           <li>
             <div class="btn-group">
               <button type="button" class="btn filters-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -29,20 +39,34 @@
       </div>
       <table class="table dashboard-table">
         <tbody>
+
+
+        <!-- Nodes Row -->
         <tr>
           <th colspan="2"></th>
           <th v-for="node in cib.nodes">
-            <span class="resource-status gray" v-bind:class="stateClass(node.state)"></span>
-            <div class="node-name">{{ node.name }} <span class="table-cluster-name">hacluster
-              <i class="fa fa-info-circle" aria-hidden="true"></i></span>
+            <span class="resource-status gray" v-bind:class="NodeStateClass(node.state)"></span>
+            <div class="node-name" v-bind:title="'Node id: ' + node.id">{{ node.name }}
+              <span class="table-cluster-name">
+                {{ cib.crm_config.cluster_name}}
+                <md-icon v-if="node.name === cib.meta.dc" class="md-14">home</md-icon>
+              </span>
             </div>
             <div class="status-icon">
               <ul>
                 <li v-if="node.maintenance == true"><md-icon class="md-14">build</md-icon></li>
+                <li v-if="node.remote == true"><md-icon class="md-14">cloud_queue</md-icon></li>
+                <li v-if="node.fence_history !== ''"><md-icon class="md-14">cached</md-icon></li>
               </ul>
             </div>
           </th>
         </tr>
+        <!-- End Nodes Row -->
+
+
+
+
+
         <tr v-for="resource in cib.resources">
           <td class="status-icon-col">
             <div class="status-icon pull-right">
@@ -53,8 +77,13 @@
             </div>
           </td>
           <td>
-            <span class="resource-status gray" v-bind:class="stateClass(resource.state)"></span>{{ resource.id }}</td>
-          <td><div class="node-circle gray" v-bind:class="stateClass(resource.state)"></div></td>
+            <span class="resource-status gray" v-bind:class="ResourceStateClass(resource)"></span>{{ resource.id }}</td>
+          <!-- TODO Append keys in the list (computed properties) -->
+
+
+          <td v-for="node in cib.nodes"><div class="node-circle gray" v-bind:class="ResourceStateClass(resource)"></div></td>
+
+
         </tr>
       </tbody>
     </table>
@@ -75,11 +104,26 @@
       ...mapGetters(['cib'])
     },
     methods: {
-      stateClass: function (state) {
-        if (state === 'online') {
-          return 'green'
-        } else if (state === 'maintenance') {
+      NodeStateClass: function (state) {
+        if (state === 'unclean') {
           return 'red'
+        } else if (state === 'online') {
+          return 'green'
+        } else if (state === 'offline') {
+          return 'gray'
+        } else if (state === 'standby') {
+          return 'red'
+        } else if (state === 'pending') {
+          return 'red'
+        }
+      },
+      ResourceStateClass: function (resource) {
+        if (resource.state === 'stopped' && resource['attributes']['target-role'] === 'Stopped') {
+          return 'gray'
+        } else if (resource.state === 'stopped') {
+          return 'red'
+        } else {
+          return 'green'
         }
       }
     }
