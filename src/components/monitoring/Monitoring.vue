@@ -4,7 +4,7 @@
     <h4>
       <!-- TODO Append keys in the list (computed properties) -->
       <br>
-      <ul v-for="error in cib.errors">
+      <ul v-for="(error, index) in cib.errors" v-bind:key="index">
         <li>{{ error.type }} {{ error.msg }}</li>
       </ul>
     </h4>
@@ -12,7 +12,7 @@
       <div class="dashboard-header">
         <input class="form-control search" type="text" value="search...">
         <ul class="pull-right filters-settings">
-          <li class="cluster-ticket" v-for="ticket in cib.tickets">
+          <li class="cluster-ticket" v-for="(ticket, index) in cib.tickets" v-bind:key="index">
             <!-- TODO Apped keys in the list (computed properties) -->
             <!--  TODO Missing the ticket parmas to show here -->
             Tickets
@@ -41,7 +41,7 @@
         <!-- Nodes Row -->
         <tr>
           <th colspan="2"></th>
-          <th v-for="node in cib.nodes">
+          <th v-for="node in cib.nodes" v-bind:key="node.id">
             <span class="resource-status gray" v-bind:class="NodeStateClass(node.state)"></span>
             <div class="node-name" v-bind:title="'Node id: ' + node.id">{{ node.name }}
               <span class="table-cluster-name">
@@ -59,7 +59,7 @@
           </th>
         </tr>
         <!-- End Nodes Row -->
-        <tr v-for="resource in cib.resources">
+        <tr v-for="resource in cib.resources" v-bind:key="resource.id">
           <td class="status-icon-col">
             <div class="status-icon pull-right">
               <ul>
@@ -71,7 +71,7 @@
           <td>
             <span class="resource-status gray" v-bind:class="resourceBarStyle(resource)"></span>{{ resource.id }}</td>
           <!-- TODO Append keys in the list (computed properties) -->
-          <td v-for="node in cib.nodes"><div class="node-circle gray" v-bind:class="ResourceStateClass(resource, node)"></div></td>
+          <td v-for="node in cib.nodes" v-bind:key="node.id"><div class="node-circle gray" v-bind:class="ResourceStateClass(resource, node)"></div></td>
         </tr>
       </tbody>
     </table>
