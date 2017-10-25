@@ -1,8 +1,7 @@
 <template>
   <div>
     <h3>{{ $t("pages.monitoring_page.page-title") }}</h3>
-    <h4>
-      <!-- TODO Append keys in the list (computed properties) -->
+    <h4 class="error-section">
       <br>
       <ul v-for="(error, index) in cib.errors" v-bind:key="index">
         <li>{{ error.type }} {{ error.msg }}</li>
@@ -12,11 +11,21 @@
       <div class="dashboard-header">
         <input class="form-control search" type="text" value="search...">
         <ul class="pull-right filters-settings">
-          <li class="cluster-ticket" v-for="(ticket, index) in cib.tickets" v-bind:key="index">
-            <!-- TODO Apped keys in the list (computed properties) -->
-            <!--  TODO Missing the ticket parmas to show here -->
-            Tickets
+          <!-- Tickets section -->
+          <li>
+            <div class="btn-group cluster-ticket">
+                <button type="button" class="btn filters-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Tickets
+                </button>
+              <ul  v-if='cib.tickets' class="dropdown-menu filters-menu-dropdown">
+                <li class="cluster-ticket" v-for="(ticket, index) in cib.tickets" v-bind:key="index">
+                  {{ ticket.id + ":" + " " + ticket.state}}
+                  {{  ticket.standby? "standby: true": "standby: false"  }}
+                </li>
+              </ul>
+            </div>
           </li>
+          <!-- End Ticket Section -->
           <li>
             <div class="btn-group">
               <button type="button" class="btn filters-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -59,25 +68,27 @@
           </th>
         </tr>
         <!-- End Nodes Row -->
+        <!-- Resources Row -->
         <tr v-for="resource in cib.resources" v-bind:key="resource.id">
           <td class="status-icon-col">
             <div class="status-icon pull-right">
               <ul>
-                <li v-if="resource.object_type == 'master'"><md-icon class="md-14">star_rate</md-icon></li>
+                <li v-if="resource.type == 'master'"><md-icon class="md-14">star_rate</md-icon></li>
                 <li v-if="resource.maintenance == true"><md-icon class="md-14">build</md-icon></li>
               </ul>
             </div>
           </td>
           <td>
             <span class="resource-status gray" v-bind:class="resourceBarStyle(resource)"></span>{{ resource.id }}</td>
-          <!-- TODO Append keys in the list (computed properties) -->
           <td v-for="node in cib.nodes" v-bind:key="node.id"><div class="node-circle gray" v-bind:class="ResourceStateClass(resource, node)"></div></td>
         </tr>
+        <!-- End Resources Row -->
       </tbody>
     </table>
   </div>
   </div>
 </template>
+
 
 <script>
   import { mapGetters } from 'vuex'
@@ -114,8 +125,8 @@
         }
       },
       ResourceStateClass: function (resource, node = '') {
-        if (resource.state === 'stopped' && resource['attributes']['target-role'] === 'Stopped') {
-          return 'gray'
+        if (node.state === 'unclean') {
+          return 'red'
         } else if (resource.state === 'stopped') {
           return 'red'
         } else if (resource.state === 'offline') {
