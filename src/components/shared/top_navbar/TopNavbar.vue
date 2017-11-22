@@ -1,16 +1,16 @@
 <template>
     <header class="top-navbar">
-      <md-icon class="md-24 menu-button" id="menu-toggle">menu</md-icon>
+      <i class="material-icons md-18" id="menu-toggle">menu</i>
       <div class="logo-header">SUSE Hawk</div>
       <div class="header-cluster-status">
-        <md-icon class="md-18 md-green">check_circle</md-icon>
+        <i class="material-icons md-18">check_circle</i>
         <div class="header-cluster-details">{{ $t("page_header.cluster-status.details") }}
           <span>({{ $t("page_header.cluster-status.link") }})</span>
         </div>
       </div>
       <div class="dropdown user-details pull-right">
         <div class="dropdown-toggle" data-toggle="dropdown">
-          <md-icon class="md-16">account_circle</md-icon>
+          <i class="material-icons md-16">account_circle</i>
           <span class="user-name">Hacluste</span>
         </div>
         <ul class="dropdown-menu user-details-dropdown">
