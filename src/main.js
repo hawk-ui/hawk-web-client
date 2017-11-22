@@ -5,7 +5,6 @@ import Vue from 'vue'
 import router from './router/route.js'
 import store from './vuex/store.js'
 import i18n from './i18n/local.js'
-import VueMaterial from 'vue-material'
 
 //  Twitter Bootstrap
 import 'bootstrap/dist/css/bootstrap.css'
@@ -16,8 +15,6 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
 // Load the Main component
 import App from './App'
-
-Vue.use(VueMaterial)
 
 /* eslint-disable no-new */
 new Vue({

@@ -29,7 +29,7 @@
           <li>
             <div class="btn-group">
               <button type="button" class="btn filters-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <md-icon class="md-16">menu</md-icon>
+                <i class="material-icons md-18">filter_list</i>
               </button>
               <ul class="dropdown-menu filters-menu-dropdown">
                 <li class="heading">Show</li>
@@ -42,7 +42,7 @@
               </ul>
             </div>
           </li>
-          <li><md-icon class="md-16">settings</md-icon></li>
+          <li><i class="material-icons md-16">settings</i></li>
         </ul>
       </div>
       <table class="table dashboard-table">
@@ -55,14 +55,14 @@
             <div class="node-name" v-bind:title="'Node id: ' + node.id">{{ node.name }}
               <span class="table-cluster-name">
                 {{ cib.crm_config.cluster_name}}
-                <md-icon v-if="node.name === cib.meta.dc" class="md-14">home</md-icon>
+                <i v-if="node.name === cib.meta.dc" class="material-icons md-14">home</i>
               </span>
             </div>
             <div class="status-icon">
               <ul>
-                <li v-if="node.maintenance == true"><md-icon class="md-14">build</md-icon></li>
-                <li v-if="node.remote == true"><md-icon class="md-14">cloud_queue</md-icon></li>
-                <li v-if="node.fence_history !== ''"><md-icon class="md-14">cached</md-icon></li>
+                <li v-if="node.maintenance == true"><i class="material-icons md-14">build</i></li>
+                <li v-if="node.remote == true"><i class="material-icons md-14">cloud_queue</i></li>
+                <li v-if="node.fence_history !== ''"><i class="material-icons md-14">cached</i></li>
               </ul>
             </div>
           </th>
@@ -73,8 +73,8 @@
           <td class="status-icon-col">
             <div class="status-icon pull-right">
               <ul>
-                <li v-if="resource.type == 'master'"><md-icon class="md-14">star_rate</md-icon></li>
-                <li v-if="resource.maintenance == true"><md-icon class="md-14">build</md-icon></li>
+                <li v-if="resource.type == 'master'"><i class="material-icons md-14">star_rate</i></li>
+                <li v-if="resource.maintenance == true"><i class="material-icons md-14">build</i></li>
               </ul>
             </div>
           </td>
