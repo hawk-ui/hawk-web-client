@@ -56,11 +56,11 @@
           <div class="col-sm-9">
             <div class="other-links">
               <a href="https://github.com/ClusterLabs/hawk" target="_blank">
-                <md-icon class="md-16">assignment_turned_in</md-icon></a>
+                <i class="material-icons md-16">device_hub</i></a>
               <a href="http://hawk-ui.github.io/" target="_blank">
-                <md-icon class="md-16">book</md-icon></a>
+                <i class="material-icons md-16">description</i></a>
               <a href="http://hawk-guide.readthedocs.io/en/latest/" target="_blank">
-                <md-icon class="md-16">description</md-icon></a>
+                <i class="material-icons md-16">book</i></a>
             </div>
             <div class="copyright">Copyright © 2009-2017. SUSE, LLC</div>
           </div>
