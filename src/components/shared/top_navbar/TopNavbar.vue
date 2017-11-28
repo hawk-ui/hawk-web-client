@@ -1,11 +1,9 @@
 <template>
     <header class="top-navbar">
-      <i class="material-icons md-18" id="menu-toggle">menu</i>
-      <div class="logo-header">SUSE Hawk</div>
+      <i class="material-icons md-18 menu-btn" id="menu-toggle">menu</i>
       <div class="header-cluster-status">
-        <i class="material-icons md-18">check_circle</i>
+        <i class="material-icons md-18 cluster-icon">check_circle</i>
         <div class="header-cluster-details">{{ $t("page_header.cluster-status.details") }}
-          <span>({{ $t("page_header.cluster-status.link") }})</span>
         </div>
       </div>
       <div class="dropdown user-details pull-right">

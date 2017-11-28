@@ -50,20 +50,16 @@ body {
 
 .top-navbar {
   background-color: #fff;
-  padding: 10px 20px 8px 20px;
+  padding: 15px 20px 0px 20px;
   margin: 0 -15px;
   height: 50px;
   border: 0;
   box-shadow: 0px 0px 2px #c1c1c1;
 
-  .menu-button {
+  .menu-btn {
     cursor: pointer;
     display: inline-block;
-  }
-
-  > .md-icon{
-    display: inline-block;
-    padding: 5px;
+    vertical-align: text-top;
   }
 
   .logo-header {
@@ -81,32 +77,23 @@ body {
     width: 180px;
     display: inline-block;
     padding-left: 20px;
-    vertical-align: top;
 
     .cluster-icon {
       float: left;
-      margin-right: 10px;
+      margin-right: 5px;
     }
 
     .header-cluster-details { 
       width: auto;
       font-size: 14px;
       color: $gray--lighter;
-      margin-left: 5px;
-      line-height: 16px;
-      display: inline-block;
+      line-height: 18px;
       font-weight: 400;
-
-      span {
-        display: block;
-        font-size: 11px;
-        color: lighten($gray--lighter, 25%);
-      }
     }
   }
 
   .user-details {
-    margin: 5px 60px 0 0;
+    margin: 0 60px 0 0;
 
     span {
       vertical-align: text-bottom;
@@ -141,7 +128,7 @@ body {
 
 @media(min-width:768px) {
   #wrapper {
-    padding-left: 0;
+    padding-left: 55px;
   }
   #wrapper.toggled {
     padding-left: 250px;

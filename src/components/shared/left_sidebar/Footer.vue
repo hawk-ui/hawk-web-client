@@ -1,10 +1,10 @@
 <template>
   <nav class="navbar fixed-bottom">
     <div class="footer-nav">
-      <div class="footer-copyright">{{ $t("leftnav_bar.footer.copy_right") }}</div>
-      <div class="dropup pull-right">
+      <div class="footer-copyright"><span>©</span> {{ $t("leftnav_bar.footer.copy_right") }}</div>
+      <div class="dropup more-btn pull-right">
         <div class="dropdown-toggle" data-toggle="dropdown">
-          <i class="material-icons pull-right">more_vert</i>
+          <i class="material-icons md-18 pull-right">more_vert</i>
         </div>
         <ul class="dropdown-menu footer-dropdown">
           <li class="footer-simulator">
