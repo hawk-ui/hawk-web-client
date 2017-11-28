@@ -8,7 +8,7 @@
   z-index: 1000;
   position: fixed;
   left: 250px;
-  width: 0;
+  width: 55px;
   height: 100%;
   margin-left: -250px;
   overflow: hidden;
@@ -32,19 +32,15 @@
       float: none;
       height: auto;
       border: 0;
-      padding-right: 10px 15px;
+      padding: 10px 15px;
       font-size: 22px;
+      line-height: 28px;
       &:hover {
         color: $white;
       }
-      .user-details {
-        display: block;
-        margin-top: 5px;
-        .user-name {
-          margin-left: 5px;
-          vertical-align: super;
-          font-size: 14px; 
-        }
+      .hawk-logo {
+        float: left;
+        margin-right: 12px;
       }
     }
   }
@@ -53,18 +49,34 @@
     position: relative;
     top: 0;
     width: 251px;
-    margin: 20px 0 0 0;
+    margin: 45px 0 0 0;
     padding: 0;
     list-style: none;
+    text-indent: initial;
 
     > li {
       text-indent: 20px;
-      line-height: 45px;
       width: 230px;
+      margin-bottom: 18px;
+
       > a {
         color: $gray-text;
         display: block;
         text-decoration: none;
+        padding: 11px 0;
+        
+        > .leftnav_icon{
+          display: inline-block;
+          text-indent: initial;
+          margin: 0 15px 0 0;
+        }
+
+        span {
+          vertical-align: text-bottom;
+          display: inline-block;
+          text-indent: initial;
+        }
+
         &:hover {
           color: $brand-green;
           text-decoration: none;
@@ -104,6 +116,11 @@
         float: left;
         color: $gray-text;
         font-size: 12px;
+
+        span {
+          margin: 0 14px;
+          font-size: 16px;
+        }
       }
 
       .more-btn {

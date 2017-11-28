@@ -1,7 +1,8 @@
 <template>
   <nav class="navbar sticky-top navbar-light bg-faded">
     <div class="navbar-brand">
-      <div class="logo">{{ $t("leftnav_bar.header.hawk") }}</div>
+      <img src="../../../assets/images/hawk-logo.png" class="hawk-logo">
+      {{ $t("leftnav_bar.header.hawk") }}
       <!-- <div>
         <button @click='$i18n.locale="en"'>en</button>
         <button @click='$i18n.locale="ja"'>ja</button>
