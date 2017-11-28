@@ -1,15 +1,24 @@
 <template>
-    <div id="sidebar-wrapper">
+    <div id="sidebar-wrapper" class="menu-side">
       <app-top-navbar></app-top-navbar>
       <ul class="sidebar-nav">
           <li>
-              <router-link to="/monitoring">{{ $t("leftnav_bar.links.monitoring") }}</router-link>
+            <router-link to="/monitoring">
+              <i class="material-icons md-18 leftnav_icon">desktop_mac</i>
+              <span>{{ $t("leftnav_bar.links.monitoring") }}</span>
+            </router-link>
           </li>
           <li>
-              <router-link to="/troubleshooting">{{ $t("leftnav_bar.links.trubleshooting") }}</router-link>
+            <router-link to="/troubleshooting">
+              <i class="material-icons md-18 leftnav_icon">tune</i>
+              <span>{{ $t("leftnav_bar.links.trubleshooting") }}</span>
+            </router-link>
           </li>
           <li>
-              <router-link to="/configuration">{{ $t("leftnav_bar.links.configuration") }}</router-link>
+            <router-link to="/configuration">
+              <i class="material-icons md-18 leftnav_icon">settings</i>
+              <span>{{ $t("leftnav_bar.links.configuration") }}</span>
+            </router-link>
           </li>
         </ul>
         <app-footer></app-footer>
