@@ -1,76 +1,161 @@
 @import "variables.scss";
 
+
+.default-tabs {
+  background: none;
+
+  > ul.nav-pills {
+    display: inline-block;
+    float: left;
+
+    li {
+
+      a { 
+        color: lighten($black, 60%);
+        font-weight: 400;
+        border-radius: 4px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: 0;
+
+        > span {
+          margin-left: 5px;
+        }
+      }
+      &:first-child {
+        margin-left: 15px;
+      }
+
+      &.active > a {
+        background-color: white;
+        color: $black;
+        border: 1px solid $border-color;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: 0;
+        margin-bottom: -1px;
+      }
+    }
+  }
+}
+
+.add-cluster-bt {
+  float: left;
+  margin-left: 25px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.legend {
+  float: right;
+  position: relative;
+  margin-right: 10px;
+
+  .legend-btn {
+    height: 40px;
+  }
+
+  .legend-options {
+    left: auto;
+    right: 5px;
+    width: 440px;
+    margin: 0;
+    padding: 15px 0 15px 25px;
+
+    li {
+      width: 44%;
+      display: inline-block;
+      margin: 4px 18px 4px 0;
+      padding: 0;
+
+      > .node-circle {
+        width: 10px;
+        height: 10px;
+        margin-right: 10px;
+      }
+      > .material-icons {
+        vertical-align: bottom;
+        margin-right: 10px
+      }
+    }
+  }
+}
+
+
+.tab-content {
+  clear: both;
+  border-top: 1px solid $border-color;
+  padding: 40px 0 20px 0;
+}
+
 .dashboard-container {
-   width: 100%;
-   background: #fff;
-   padding:0;
-   box-shadow: 0px 1px 3px #c1c1c1;
-   margin-top: 30px;
 
    .dashboard-header {
-      background-color: $brand-blue--light;
       margin: 0;
-      padding: 3px 30px 10px 30px;
+      padding: 0 30px 10px 30px;
+      border-style: none none double none;
+      border-color: $border-color;
+      margin-bottom: 5px;
 
       .search {
-        width: 125px;
+        width: 200px;
         display: inline-block;
         background-color: transparent;
-        border: 0;
-        color: #fff;
-        border-bottom: 1px solid #eee;
-        border-radius: 0;
-        padding: 0;
-        height: 25px;
+        border: 1px solid #ccc;
+        color: #ccc;
+        border-radius: 3px;
+        padding: 6px 10px;
+        line-height: 18px;
+        height: auto;
       }
 
       .filters-settings {
         margin-bottom: 0;
+        margin-top: 8px;
+
         > li {
           display: inline-block;
-          margin: 5px;
+          margin: 0 5px;
           vertical-align: middle;
-          color: #fff;
-
-          .md-icon {
-            color: #fff;
-            vertical-align: sub;
-          }
           
           &.cluster-ticket {
-            border-right: 1px solid #ccc;
+            border-right: 1px solid $border-color;
             padding-right: 15px;
           }
+
+          span {
+              font-weight: 600;
+            }
 
           .filters-menu-btn {
             background-color: transparent;
             padding: 0;
+            
+            > .filter-list { 
+              vertical-align: sub;
+            }
           }
           .filters-menu-dropdown {
             right: 0;
             left: auto;
-            min-width: 202px;
+            min-width: 185px;
+            padding: 15px 15px 10px 15px;
+
             > li {
-              color: $gray--lighter;
-              padding:3px 15px;
+              margin-bottom: 12px;
 
               label {
                 font-weight: normal;
                 display: inline-block;
                 max-width: 100%;
+                margin-bottom: 0px;
+                
                 input {
                   margin-right: 7px;
                 }
               }
-            }
-            > .divider {
-              padding:0;
-              margin: 6px 0;
-            }
-            > .heading {
-              color: $gray--darker;
-              font-weight: bold;
-              padding:3px 15px;
             }
           }
           .dropdown-toggle::after {
@@ -83,6 +168,7 @@
   .dashboard-table > tbody > tr > th {
     padding: 16px 10px;
     font-weight: 400;
+    border-top: none;
   }
   .dashboard-table > tbody > tr > td {
     padding: 10px;
@@ -92,6 +178,13 @@
     width: 40px;
     padding:14px 0 0 0;
   }
+}
+
+
+.right-side-container {
+  background: #fff;
+  box-shadow: 0px 1px 3px #c1c1c1;
+  padding-top: 20px;
 }
 
 .resource-status {
@@ -113,15 +206,6 @@
       display: inline-block;
     }
   }
-}
-
-.node-circle{
-  border-radius: 50%;
-  width: 13px;
-  height: 13px;
-  transition: all 0.3s ease;
-  display: inline-block;
-  vertical-align: middle;
 }
 
 .node-name {

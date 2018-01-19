@@ -1,91 +1,151 @@
 <template>
   <div>
-    <h3>{{ $t("pages.monitoring_page.page-title") }}</h3>
-    <h4 class="error-section">
-      <br>
-      <ul v-for="(error, index) in cib.errors" v-bind:key="index">
-        <li>{{ error.type }} {{ error.msg }}</li>
-      </ul>
-    </h4>
-    <div class="dashboard-container">
-      <div class="dashboard-header">
-        <input class="form-control search" type="text" value="search...">
-        <ul class="pull-right filters-settings">
-          <!-- Tickets section -->
-          <li>
-            <div class="btn-group cluster-ticket">
-                <button type="button" class="btn filters-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Tickets
-                </button>
-              <ul  v-if='cib.tickets' class="dropdown-menu filters-menu-dropdown">
-                <li class="cluster-ticket" v-for="(ticket, index) in cib.tickets" v-bind:key="index">
-                  {{ ticket.id + ":" + " " + ticket.state}}
-                  {{  ticket.standby? "standby: true": "standby: false"  }}
-                </li>
-              </ul>
-            </div>
-          </li>
-          <!-- End Ticket Section -->
-          <li>
-            <div class="btn-group">
-              <button type="button" class="btn filters-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="material-icons md-18">filter_list</i>
-              </button>
-              <ul class="dropdown-menu filters-menu-dropdown">
-                <li class="heading">Show</li>
-                <li role="separator" class="divider"></li>
-                <li><label><input type="radio">Show all nodes</label></li>
-                <li><label><input type="radio">Only Online nodes</label></li>
-                <li><label><input type="radio">Only Offline nodes</label></li>
-                <li><label><input type="radio">Only maintenance nodes</label></li>
-                <li><label><input type="radio">Only standby nodes</label></li>
-              </ul>
-            </div>
-          </li>
-          <li><i class="material-icons md-16">settings</i></li>
+    <div class="page-title">
+      <h3>{{ $t("pages.monitoring_page.page-title") }}</h3>
+    </div>
+    <div class="inner">
+      <h4 class="error-section">
+        <br>
+        <ul v-for="(error, index) in cib.errors" v-bind:key="index">
+          <li>{{ error.type }} {{ error.msg }}</li>
         </ul>
+      </h4>
+
+      <div class="right-side-container">
+        <!-- Tabs start -->
+        <div id="exTab1" class="default-tabs"> 
+          <ul  class="nav nav-pills">
+            <li class="active">
+              <a href="#1a" data-toggle="tab">Overview<span class="status-circle status-green"></span></a>
+            </li>
+            <li>
+              <a href="#2a" data-toggle="tab">Using nav-pills<span class="status-circle status-gray"></span></a>
+            </li>
+          </ul>
+
+          <div class="add-cluster-bt" data-toggle="modal" data-target="#exampleModal">+ Add Cluster</div>
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">+ Add Cluster</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn-group legend">
+            <button type="button" class="btn legend-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Legend <span class="caret"></span>
+            </button>
+              <ul class="dropdown-menu legend-options">
+                <li><div class="node-circle green"></div>Working resource/node</li>
+                <li><i class="material-icons md-16">settings_remote</i>Remote node</li>
+                <li><div class="node-circle red"></div>Failing resource/node</li>
+                <li><i class="material-icons md-16">build</i>Maintenance mode</li>
+                <li><div class="node-circle gray"></div>Offline/standby mode</li>
+                <li><i class="material-icons md-16">star</i>Double state (master/slave)</li>
+                <li><div class="node-circle gray"></div>Not working resource/node</li>
+                <li><i class="material-icons md-16">linear_scale</i>Designated coordinator</li>
+              </ul>
+            </div>
+
+          <div class="tab-content clearfix">
+            <div class="tab-pane active" id="1a">
+              <div class="dashboard-container">
+                <div class="dashboard-header">
+                  <input class="form-control search" type="text" value="search...">
+                  <ul class="pull-right filters-settings">
+                    <!-- Tickets section -->
+                    <li>
+                      <div class="btn-group cluster-ticket">
+                          <button type="button" class="btn filters-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tickets
+                          </button>
+                        <ul  v-if='cib.tickets' class="dropdown-menu filters-menu-dropdown">
+                          <li class="cluster-ticket" v-for="(ticket, index) in cib.tickets" v-bind:key="index">
+                            <span>{{ ticket.id }} </span> : {{ ticket.state }} <br>
+                            <span>standby : </span> {{ ticket.standby? "true": "false" }}
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <!-- End Ticket Section -->
+                    <li>
+                      <div class="btn-group">
+                        <button type="button" class="btn filters-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="material-icons md-18 filter-list">filter_list</i>
+                        </button>
+                        <ul class="dropdown-menu filters-menu-dropdown">
+                          <li>Show all nodes</li>
+                          <li><label><input type="radio">Online nodes</label></li>
+                          <li><label><input type="radio">Offline nodes</label></li>
+                          <li><label><input type="radio">Maintenance nodes</label></li>
+                          <li><label><input type="radio">Standby nodes</label></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <table class="table dashboard-table">
+                  <tbody>
+                    <!-- Nodes Row -->
+                    <tr>
+                      <th colspan="2"></th>
+                      <th v-for="node in cib.nodes" v-bind:key="node.id">
+                        <span class="resource-status gray" v-bind:class="NodeStateClass(node.state)"></span>
+                        <div class="node-name" data-toggle="dropdown" v-bind:title="'Node id: ' + node.id">{{ node.name }}
+                          <span class="table-cluster-name">
+                            {{ cib.crm_config.cluster_name}}
+                            <i v-if="node.name === cib.meta.dc" class="material-icons md-14">home</i>
+                          </span>
+                        </div>
+                        <div class="status-icon">
+                          <ul>
+                            <li v-if="node.maintenance == true"><i class="material-icons md-14">build</i></li>
+                            <li v-if="node.remote == true"><i class="material-icons md-14">cloud_queue</i></li>
+                            <li v-if="node.fence_history !== ''"><i class="material-icons md-14">cached</i></li>
+                          </ul>
+                        </div>
+                      </th>
+                    </tr>
+                    <!-- End Nodes Row -->
+                    <!-- Resources Row -->
+                    <tr v-for="resource in cib.resources" v-bind:key="resource.id">
+                      <td class="status-icon-col">
+                        <div class="status-icon pull-right">
+                          <ul>
+                            <li v-if="resource.type == 'master'"><i class="material-icons md-14">star_rate</i></li>
+                            <li v-if="resource.maintenance == true"><i class="material-icons md-14">build</i></li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="resource-status gray" v-bind:class="resourceBarStyle(resource)"></span>{{ resource.id }}</td>
+                      <td v-for="node in cib.nodes" v-bind:key="node.id"><div class="node-circle gray" v-bind:class="ResourceStateClass(resource, node)"></div></td>
+                    </tr>
+                  <!-- End Resources Row -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane" id="2a">
+              <p>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab</p>
+            </div>
+          </div>
+        </div>
+         <!-- Tabs end -->
       </div>
-      <table class="table dashboard-table">
-        <tbody>
-        <!-- Nodes Row -->
-        <tr>
-          <th colspan="2"></th>
-          <th v-for="node in cib.nodes" v-bind:key="node.id">
-            <span class="resource-status gray" v-bind:class="NodeStateClass(node.state)"></span>
-            <div class="node-name" v-bind:title="'Node id: ' + node.id">{{ node.name }}
-              <span class="table-cluster-name">
-                {{ cib.crm_config.cluster_name}}
-                <i v-if="node.name === cib.meta.dc" class="material-icons md-14">home</i>
-              </span>
-            </div>
-            <div class="status-icon">
-              <ul>
-                <li v-if="node.maintenance == true"><i class="material-icons md-14">build</i></li>
-                <li v-if="node.remote == true"><i class="material-icons md-14">cloud_queue</i></li>
-                <li v-if="node.fence_history !== ''"><i class="material-icons md-14">cached</i></li>
-              </ul>
-            </div>
-          </th>
-        </tr>
-        <!-- End Nodes Row -->
-        <!-- Resources Row -->
-        <tr v-for="resource in cib.resources" v-bind:key="resource.id">
-          <td class="status-icon-col">
-            <div class="status-icon pull-right">
-              <ul>
-                <li v-if="resource.type == 'master'"><i class="material-icons md-14">star_rate</i></li>
-                <li v-if="resource.maintenance == true"><i class="material-icons md-14">build</i></li>
-              </ul>
-            </div>
-          </td>
-          <td>
-            <span class="resource-status gray" v-bind:class="resourceBarStyle(resource)"></span>{{ resource.id }}</td>
-          <td v-for="node in cib.nodes" v-bind:key="node.id"><div class="node-circle gray" v-bind:class="ResourceStateClass(resource, node)"></div></td>
-        </tr>
-        <!-- End Resources Row -->
-      </tbody>
-    </table>
-  </div>
+
+      
+    </div>
   </div>
 </template>
 
