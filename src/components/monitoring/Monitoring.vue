@@ -26,16 +26,38 @@
           <div class="add-cluster-bt" data-toggle="modal" data-target="#exampleModal">+ Add Cluster</div>
 
           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-add-cluster" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">+ Add Cluster</h5>
+                  <h5 class="modal-title" id="exampleModalLabel"><i class="material-icons">add</i> Add Cluster</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  ...
+                  <div class="form-group row">
+                    <label for="colFormLabelSm" class="col-sm-3 col-form-label col-form-label-sm">Cluster Name<span>*</span></label>
+                    <div class="col-sm-9">
+                      <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="West Coast(Example)">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="colFormLabelSm" class="col-sm-3 col-form-label col-form-label-sm">Hostname<span>*</span></label>
+                    <div class="col-sm-9">
+                      <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Node1.west.example.com">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="colFormLabelSm" class="col-sm-3 col-form-label col-form-label-sm">Server port</label>
+                    <div class="col-sm-9">
+                      <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="7630">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-12">
+                      <button type="submit" class="btn btn-primary pull-right">Add</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -100,18 +122,26 @@
                     <tr>
                       <th colspan="2"></th>
                       <th v-for="node in cib.nodes" v-bind:key="node.id">
-                        <span class="resource-status gray" v-bind:class="NodeStateClass(node.state)"></span>
-                        <div class="node-name" data-toggle="dropdown" v-bind:title="'Node id: ' + node.id">{{ node.name }}
-                          <span class="table-cluster-name">
-                            {{ cib.crm_config.cluster_name}}
-                            <i v-if="node.name === cib.meta.dc" class="material-icons md-14">home</i>
-                          </span>
-                        </div>
-                        <div class="status-icon">
-                          <ul>
-                            <li v-if="node.maintenance == true"><i class="material-icons md-14">build</i></li>
-                            <li v-if="node.remote == true"><i class="material-icons md-14">cloud_queue</i></li>
-                            <li v-if="node.fence_history !== ''"><i class="material-icons md-14">cached</i></li>
+                        <div class="btn-group">
+                          <span class="resource-status gray" v-bind:class="NodeStateClass(node.state)"></span>
+                          <div class="node-name btn dropdown-toggle" data-toggle="dropdown" v-bind:title="'Node id: ' + node.id">{{ node.name }}
+                            <span class="table-cluster-name">
+                              {{ cib.crm_config.cluster_name}}
+                              <i v-if="node.name === cib.meta.dc" class="material-icons md-14">home</i>
+                            </span>
+                          </div>
+                          <div class="status-icon">
+                            <ul>
+                              <li v-if="node.maintenance == true"><i class="material-icons md-14">build</i></li>
+                              <li v-if="node.remote == true"><i class="material-icons md-14">cloud_queue</i></li>
+                              <li v-if="node.fence_history !== ''"><i class="material-icons md-14">cached</i></li>
+                            </ul>
+                          </div>
+                          <ul class="dropdown-menu nodes-menu-dropdown">
+                            <li><i class="material-icons md-14">info</i>Details</li>
+                            <li><i class="material-icons md-14">build</i>Maintenance</li>
+                            <li><i class="material-icons md-14">power_settings_new</i>Standby</li>
+                            <li><i class="material-icons md-14">delete_forever</i>Cleanup</li>
                           </ul>
                         </div>
                       </th>
@@ -128,7 +158,19 @@
                         </div>
                       </td>
                       <td>
-                        <span class="resource-status gray" v-bind:class="resourceBarStyle(resource)"></span>{{ resource.id }}</td>
+                        <div class="btn-group">
+                          <div class="btn dropdown-toggle" data-toggle="dropdown">
+                            <span class="resource-status gray" v-bind:class="resourceBarStyle(resource)"></span>{{ resource.id }}
+                          </div>
+                          <ul class="dropdown-menu nodes-menu-dropdown">
+                            <li><i class="material-icons md-14">stop</i>Stop</li>
+                            <li><i class="material-icons md-14">info</i>Details</li>
+                            <li><i class="material-icons md-14">build</i>Maintenance</li>
+                            <li><i class="material-icons md-14">power_settings_new</i>Migrate</li>
+                            <li><i class="material-icons md-14">delete_forever</i>Cleanup</li>
+                          </ul>
+                        </div>
+                      </td>
                       <td v-for="node in cib.nodes" v-bind:key="node.id"><div class="node-circle gray" v-bind:class="ResourceStateClass(resource, node)"></div></td>
                     </tr>
                   <!-- End Resources Row -->
@@ -137,7 +179,7 @@
               </div>
             </div>
             <div class="tab-pane" id="2a">
-              <p>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab</p>
+              <p>Tab 2</p>
             </div>
           </div>
         </div>

@@ -193,11 +193,12 @@
   display: inline-block;
   vertical-align: middle;
   margin-right: 5px;
+  float: left;
 }
 
 .status-icon {
-  display: inline-block;
   vertical-align: sub;
+  float: left;
   ul {
     margin: 0;
     padding: 0;
@@ -214,6 +215,7 @@
   line-height: 14px;
   margin-right: 5px;
   vertical-align: bottom;
+  padding: 0;
   
   span {
     font-size: 11px;
@@ -221,4 +223,51 @@
     display: block;
   }
 }
+
+.modal-dialog {
+  .modal-header {
+    > h5 {
+      font-size: 18px;
+      color: $gray--darker;
+
+      > .material-icons {
+        display: inline-block;
+        margin-right: 8px;
+        vertical-align: text-bottom;
+      }
+    }
+
+    .close {
+      opacity: 1;
+    }
+  }
+  .modal-body {
+    padding: 15px 35px;
+
+    .form-group > label {
+      color: $gray--lighter;
+      font-weight: 400;
+
+      span {
+        color: red;
+      }
+    }
+  }
+}
+
+
+.nodes-menu-dropdown{
+  li {
+    margin-bottom: 10px;
+      > i {
+        margin-right: 8px;
+        vertical-align: sub;
+      }
+    }
+  }
+
+
+
+
+
 
