@@ -67,16 +67,7 @@
             <button type="button" class="btn legend-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Legend <span class="caret"></span>
             </button>
-              <ul class="dropdown-menu legend-options">
-                <li><div class="node-circle green"></div>Working resource/node</li>
-                <li><i class="material-icons md-16">settings_remote</i>Remote node</li>
-                <li><div class="node-circle red"></div>Failing resource/node</li>
-                <li><i class="material-icons md-16">build</i>Maintenance mode</li>
-                <li><div class="node-circle gray"></div>Offline/standby mode</li>
-                <li><i class="material-icons md-16">star</i>Double state (master/slave)</li>
-                <li><div class="node-circle gray"></div>Not working resource/node</li>
-                <li><i class="material-icons md-16">linear_scale</i>Designated coordinator</li>
-              </ul>
+              <app-dropdown class="legend-options" :lists="legendList"></app-dropdown>
             </div>
 
           <div class="tab-content clearfix">
@@ -105,13 +96,7 @@
                         <button type="button" class="btn filters-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <i class="material-icons md-18 filter-list">filter_list</i>
                         </button>
-                        <ul class="dropdown-menu filters-menu-dropdown">
-                          <li>Show all nodes</li>
-                          <li><label><input type="radio">Online nodes</label></li>
-                          <li><label><input type="radio">Offline nodes</label></li>
-                          <li><label><input type="radio">Maintenance nodes</label></li>
-                          <li><label><input type="radio">Standby nodes</label></li>
-                        </ul>
+                        <app-dropdown :lists="filterList"></app-dropdown>
                       </div>
                     </li>
                   </ul>
@@ -137,12 +122,7 @@
                               <li v-if="node.fence_history !== ''"><i class="material-icons md-14">cached</i></li>
                             </ul>
                           </div>
-                          <ul class="dropdown-menu nodes-menu-dropdown">
-                            <li><i class="material-icons md-14">info</i>Details</li>
-                            <li><i class="material-icons md-14">build</i>Maintenance</li>
-                            <li><i class="material-icons md-14">power_settings_new</i>Standby</li>
-                            <li><i class="material-icons md-14">delete_forever</i>Cleanup</li>
-                          </ul>
+                          <app-dropdown :lists="nodeList"></app-dropdown>
                         </div>
                       </th>
                     </tr>
@@ -162,16 +142,12 @@
                           <div class="btn dropdown-toggle" data-toggle="dropdown">
                             <span class="resource-status gray" v-bind:class="resourceBarStyle(resource)"></span>{{ resource.id }}
                           </div>
-                          <ul class="dropdown-menu nodes-menu-dropdown">
-                            <li><i class="material-icons md-14">stop</i>Stop</li>
-                            <li><i class="material-icons md-14">info</i>Details</li>
-                            <li><i class="material-icons md-14">build</i>Maintenance</li>
-                            <li><i class="material-icons md-14">power_settings_new</i>Migrate</li>
-                            <li><i class="material-icons md-14">delete_forever</i>Cleanup</li>
-                          </ul>
+                          <app-dropdown :lists="resourceList"></app-dropdown>
                         </div>
                       </td>
-                      <td v-for="node in cib.nodes" v-bind:key="node.id"><div class="node-circle gray" v-bind:class="ResourceStateClass(resource, node)"></div></td>
+                      <td v-for="node in cib.nodes" v-bind:key="node.id">
+                        <i class="material-icons md-18 gray" v-bind:class="ResourceStateClass(resource, node)">fiber_manual_record</i>
+                      </td>
                     </tr>
                   <!-- End Resources Row -->
                   </tbody>
@@ -185,20 +161,66 @@
         </div>
          <!-- Tabs end -->
       </div>
-
-      
     </div>
   </div>
 </template>
 
-
 <script>
   import { mapGetters } from 'vuex'
+  import Dropdown from '../shared/dropdown.vue'
+
   export default {
     data: function () {
       return {
-        // Local data goes here
+        filterList: {
+          radioList: true,
+          iconList: false,
+          liItems: [
+            { listItem: 'Online nodes' },
+            { listItem: 'Offline nodes' },
+            { listItem: 'Maintenance nodes' },
+            { listItem: 'Standby nodes' }
+          ]
+        },
+        nodeList: {
+          radioList: false,
+          iconList: true,
+          liItems: [
+            { listIcion: 'info', listItem: 'Details' },
+            { listIcion: 'build', listItem: 'Maintenance' },
+            { listIcion: 'power_settings_new', listItem: 'Standby' },
+            { listIcion: 'delete_forever', listItem: 'Cleanup' }
+          ]
+        },
+        resourceList: {
+          radioList: false,
+          iconList: true,
+          liItems: [
+            { listIcion: 'stop', listItem: 'Stop' },
+            { listIcion: 'info', listItem: 'Details' },
+            { listIcion: 'build', listItem: 'Maintenance' },
+            { listIcion: 'power_settings_new', listItem: 'Migrate' },
+            { listIcion: 'delete_forever', listItem: 'Cleanup' }
+          ]
+        },
+        legendList: {
+          radioList: false,
+          iconList: true,
+          liItems: [
+            { listIcion: 'fiber_manual_record', colorClass: 'green', listItem: 'Working resource/node' },
+            { listIcion: 'settings_remote', listItem: 'Remote node' },
+            { listIcion: 'fiber_manual_record', colorClass: 'red', listItem: 'Failing resource/node' },
+            { listIcion: 'build', listItem: 'Maintenance mode' },
+            { listIcion: 'fiber_manual_record', colorClass: 'gray', listItem: 'Offline/standby mode' },
+            { listIcion: 'star', listItem: 'Double state (master/slave)' },
+            { listIcion: 'fiber_manual_record', colorClass: 'gray', listItem: 'Not working resource/node' },
+            { listIcion: 'linear_scale', listItem: 'Designated coordinator' }
+          ]
+        }
       }
+    },
+    components: {
+      'app-dropdown': Dropdown
     },
     computed: {
       ...mapGetters(['cib'])
@@ -249,5 +271,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-   @import '../../assets/css/dashboard.scss';
+  @import '../../assets/css/dashboard.scss';
 </style>

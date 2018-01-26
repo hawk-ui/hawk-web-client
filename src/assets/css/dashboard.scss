@@ -1,6 +1,5 @@
 @import "variables.scss";
 
-
 .default-tabs {
   background: none;
 
@@ -60,7 +59,7 @@
   .legend-options {
     left: auto;
     right: 5px;
-    width: 440px;
+    width: 455px;
     margin: 0;
     padding: 15px 0 15px 25px;
 
@@ -82,7 +81,6 @@
     }
   }
 }
-
 
 .tab-content {
   clear: both;
@@ -180,7 +178,6 @@
   }
 }
 
-
 .right-side-container {
   background: #fff;
   box-shadow: 0px 1px 3px #c1c1c1;
@@ -254,7 +251,6 @@
     }
   }
 }
-
 
 .nodes-menu-dropdown{
   li {
