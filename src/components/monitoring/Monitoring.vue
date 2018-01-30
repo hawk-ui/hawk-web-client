@@ -73,6 +73,12 @@
           <div class="tab-content clearfix">
             <div class="tab-pane active" id="1a">
               <div class="dashboard-container">
+                <div class="error-container">
+                  <ul class="error-list">
+                    <li><i class="material-icons md-16">error</i>2017-10-06 15:43: <span>Operation monitor</span>  failed for resource <span>ted</span> on node webui: call-id=96, rc-code=not running (7), exit-reason=</li>
+                    <li><i class="material-icons md-16">error</i>2017-10-06 15:43: <span>Operation monitor</span>  failed for resource <span>ted</span> on node webui: call-id=96, rc-code=not running (7), exit-reason=</li>
+                  </ul>
+                </div>
                 <div class="dashboard-header">
                   <input class="form-control search" type="text" value="search...">
                   <ul class="pull-right filters-settings">
