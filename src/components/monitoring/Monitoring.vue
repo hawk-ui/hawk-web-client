@@ -67,7 +67,7 @@
             <button type="button" class="btn legend-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Legend <span class="caret"></span>
             </button>
-              <app-dropdown class="legend-options" :lists="legendList"></app-dropdown>
+              <app-dropdown class="legend-options" :lists="legendList" :listType="listType"></app-dropdown>
             </div>
 
           <div class="tab-content clearfix">
@@ -102,7 +102,7 @@
                         <button type="button" class="btn filters-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <i class="material-icons md-18 filter-list">filter_list</i>
                         </button>
-                        <app-dropdown :lists="filterList"></app-dropdown>
+                        <app-dropdown :lists="filterList" :listType="listType"></app-dropdown>
                       </div>
                     </li>
                   </ul>
@@ -128,7 +128,7 @@
                               <li v-if="node.fence_history !== ''"><i class="material-icons md-14">cached</i></li>
                             </ul>
                           </div>
-                          <app-dropdown :lists="nodeList"></app-dropdown>
+                          <app-dropdown :lists="nodeList" :listType="listType"></app-dropdown>
                         </div>
                       </th>
                     </tr>
@@ -148,7 +148,7 @@
                           <div class="btn dropdown-toggle" data-toggle="dropdown">
                             <span class="resource-status gray" v-bind:class="resourceBarStyle(resource)"></span>{{ resource.id }}
                           </div>
-                          <app-dropdown :lists="resourceList"></app-dropdown>
+                          <app-dropdown :lists="resourceList" :listType="listType"></app-dropdown>
                         </div>
                       </td>
                       <td v-for="node in cib.nodes" v-bind:key="node.id">
@@ -179,8 +179,7 @@
     data: function () {
       return {
         filterList: {
-          radioList: true,
-          iconList: false,
+          listType: 'radioList',
           liItems: [
             { listItem: 'Online nodes' },
             { listItem: 'Offline nodes' },
@@ -189,8 +188,7 @@
           ]
         },
         nodeList: {
-          radioList: false,
-          iconList: true,
+          listType: 'iconList',
           liItems: [
             { listIcion: 'info', listItem: 'Details' },
             { listIcion: 'build', listItem: 'Maintenance' },
@@ -199,8 +197,7 @@
           ]
         },
         resourceList: {
-          radioList: false,
-          iconList: true,
+          listType: 'iconList',
           liItems: [
             { listIcion: 'stop', listItem: 'Stop' },
             { listIcion: 'info', listItem: 'Details' },
@@ -210,8 +207,7 @@
           ]
         },
         legendList: {
-          radioList: false,
-          iconList: true,
+          listType: 'iconList',
           liItems: [
             { listIcion: 'fiber_manual_record', colorClass: 'green', listItem: 'Working resource/node' },
             { listIcion: 'settings_remote', listItem: 'Remote node' },
