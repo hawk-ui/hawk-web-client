@@ -23,45 +23,8 @@
             </li>
           </ul>
 
-          <div class="add-cluster-bt" data-toggle="modal" data-target="#exampleModal">+ Add Cluster</div>
-
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-add-cluster" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel"><i class="material-icons">add</i> Add Cluster</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <div class="form-group row">
-                    <label for="colFormLabelSm" class="col-sm-3 col-form-label col-form-label-sm">Cluster Name<span>*</span></label>
-                    <div class="col-sm-9">
-                      <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="West Coast(Example)">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="colFormLabelSm" class="col-sm-3 col-form-label col-form-label-sm">Hostname<span>*</span></label>
-                    <div class="col-sm-9">
-                      <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Node1.west.example.com">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="colFormLabelSm" class="col-sm-3 col-form-label col-form-label-sm">Server port</label>
-                    <div class="col-sm-9">
-                      <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="7630">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col-sm-12">
-                      <button type="submit" class="btn btn-primary pull-right">Add</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="add-cluster-bt" data-toggle="modal" data-target="#addCluster">+ Add Cluster</div>
+          <app-add-cluster id="addCluster"></app-add-cluster>
 
           <div class="btn-group legend">
             <button type="button" class="btn legend-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -174,6 +137,7 @@
 <script>
   import { mapGetters } from 'vuex'
   import Dropdown from '../shared/dropdown.vue'
+  import AddCluster from './add-cluster.vue'
 
   export default {
     data: function () {
@@ -222,7 +186,8 @@
       }
     },
     components: {
-      'app-dropdown': Dropdown
+      'app-dropdown': Dropdown,
+      'app-add-cluster': AddCluster
     },
     computed: {
       ...mapGetters(['cib'])
