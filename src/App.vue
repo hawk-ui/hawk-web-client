@@ -6,9 +6,7 @@
       <div id="page-content-wrapper">
         <div class="page-content container-fluid">
           <router-view name="top-navbar"></router-view>
-          <div class="page-inner">
             <router-view></router-view>
-          </div>
         </div>
       </div>
     </div>
