@@ -75,7 +75,7 @@
                       <th colspan="2"></th>
                       <th v-for="node in cib.nodes" v-bind:key="node.id">
                         <div class="dropdown">
-                          <span class="resource-status gray" v-bind:class="NodeStateClass(node.state)"></span>
+                          <span class="resource-status gray" v-bind:class="NodeBarClass(node.state)"></span>
                           <div class="node-name btn dropdown-toggle" data-toggle="dropdown" v-bind:title="'Node id: ' + node.id">{{ node.name }}
                             <span class="table-cluster-name">
                               {{ cib.crm_config.cluster_name}}
@@ -99,7 +99,7 @@
                   <tbody>
                     <tr v-for="resource in cib.resources" v-bind:key="resource.id">
                       <td class="status-icon-col">
-                        <div class="status-icon pull-right">
+                        <div class="status-icon">
                           <ul>
                             <li v-if="resource.type == 'master'"><i class="material-icons md-14">star_rate</i></li>
                             <li v-if="resource.maintenance == true"><i class="material-icons md-14">build</i></li>
@@ -107,7 +107,7 @@
                         </div>
                       </td>
                       <td>
-                        <div class="btn-group">
+                        <div class="dropdown">
                           <div class="btn dropdown-toggle" data-toggle="dropdown">
                             <span class="resource-status gray" v-bind:class="resourceBarStyle(resource)"></span>{{ resource.id }}
                           </div>
@@ -196,26 +196,26 @@
       ...mapGetters(['cib'])
     },
     methods: {
-      NodeStateClass: function (state) {
+      NodeBarClass: function (state) {
         if (state === 'unclean') {
-          return 'red'
+          return 'red-bar'
         } else if (state === 'online') {
-          return 'green'
+          return 'green-bar'
         } else if (state === 'offline') {
-          return 'gray'
+          return 'gray-bar'
         } else if (state === 'standby') {
-          return 'red'
+          return 'red-bar'
         } else if (state === 'pending') {
-          return 'red'
+          return 'red-bar'
         }
       },
       resourceBarStyle: function (resource) {
         if (resource.state === 'stopped' && resource['attributes']['target-role'] === 'Stopped') {
-          return 'gray'
+          return 'gray-bar'
         } else if (resource.state === 'stopped') {
-          return 'red'
+          return 'red-bar'
         } else if (resource.state !== 'stopped') {
-          return 'green'
+          return 'green-bar'
         }
       },
       ResourceStateClass: function (resource, node = '') {

@@ -1,13 +1,15 @@
 <template>
   <div>
     <app-page-header :pageTitle="pageTitle">
-    <div class="dropdown text-right">
-      <button class="btn btn-default">Back</button>
-      <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="material-icons md-16">settings</i>
-      </button>
-      <app-dropdown class="legend-options" :lists="nodeList" :listType="iconList"></app-dropdown>
-    </div>
+      <div class="back-btn-group">
+        <button class="btn btn-default">Back</button>
+        <div class="dropdown pull-right">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="material-icons md-16">settings</i>
+          </button>
+          <app-dropdown :lists="nodeList" :listType="iconList"></app-dropdown>
+        </div>
+      </div>
     </app-page-header>
     <div class="inner">
       <div class="panel panel-danger">
@@ -15,7 +17,7 @@
           <h3 class="panel-title">Errors</h3>
         </div>
         <div class="panel-body">
-          Panel content
+          panel content
         </div>
       </div>
       <!-- node cluster and resources status start -->
