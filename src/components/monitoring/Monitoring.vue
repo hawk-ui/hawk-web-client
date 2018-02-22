@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div class="page-title">
-      <h3>{{ $t("pages.monitoring_page.page-title") }}</h3>
-    </div>
+    <app-page-header :pageTitle="pageTitle"></app-page-header>
     <div class="inner">
       <h4 class="error-section">
         <br>
@@ -11,7 +9,7 @@
         </ul>
       </h4>
 
-      <div class="right-side-container">
+      <div class="panel panel-default">
         <!-- Tabs start -->
         <div id="exTab1" class="default-tabs"> 
           <ul  class="nav nav-pills">
@@ -71,7 +69,7 @@
                   </ul>
                 </div>
                 <table class="table dashboard-table">
-                  <tbody>
+                  <thead>
                     <!-- Nodes Row -->
                     <tr>
                       <th colspan="2"></th>
@@ -95,8 +93,10 @@
                         </div>
                       </th>
                     </tr>
+                   </thead>
                     <!-- End Nodes Row -->
                     <!-- Resources Row -->
+                  <tbody>
                     <tr v-for="resource in cib.resources" v-bind:key="resource.id">
                       <td class="status-icon-col">
                         <div class="status-icon pull-right">
@@ -136,12 +136,14 @@
 
 <script>
   import { mapGetters } from 'vuex'
-  import Dropdown from '../shared/dropdown.vue'
-  import AddCluster from './add-cluster.vue'
+  import PageHeader from '../shared/page_header/PageHeader.vue'
+  import Dropdown from '../shared/Dropdown.vue'
+  import AddCluster from './AddCluster.vue'
 
   export default {
     data: function () {
       return {
+        pageTitle: this.$t('pages.monitoring_page.page-title'),
         filterList: {
           listType: 'radioList',
           liItems: [
@@ -186,6 +188,7 @@
       }
     },
     components: {
+      'app-page-header': PageHeader,
       'app-dropdown': Dropdown,
       'app-add-cluster': AddCluster
     },

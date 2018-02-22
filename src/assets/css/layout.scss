@@ -124,6 +124,10 @@ html {
 .page-title {
   background: $page-heading-bg;
   padding: 40px 60px;
+
+  h1 {
+    font-size: 24px;
+  }
 }
 
 .inner {

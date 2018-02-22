@@ -2,6 +2,7 @@
 
 .default-tabs {
   background: none;
+  margin-top: 20px;
 
   > ul.nav-pills {
     display: inline-block;
@@ -95,7 +96,6 @@
       padding: 0 30px 10px 30px;
       border-style: none none double none;
       border-color: $border-color;
-      margin-bottom: 5px;
 
       .search {
         width: 200px;
@@ -176,12 +176,6 @@
     width: 40px;
     padding:14px 0 0 0;
   }
-}
-
-.right-side-container {
-  background: #fff;
-  box-shadow: 0px 1px 3px #c1c1c1;
-  padding-top: 20px;
 }
 
 .resource-status {
@@ -284,7 +278,6 @@
     }
   }
 }
-
 
 
 

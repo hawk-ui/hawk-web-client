@@ -12,6 +12,7 @@ import TopNavbar from '@/components/shared/top_navbar/TopNavbar'
 import Monitoring from '@/components/monitoring/Monitoring'
 import Troubleshooting from '@/components/troubleshooting/Troubleshooting'
 import Configuration from '@/components/configuration/Configuration'
+import NodeStatus from '@/components/node/NodeStatus'
 
 Vue.use(VueRouter)
 
@@ -50,6 +51,14 @@ export default new VueRouter({
       path: '/configuration',
       components: {
         default: Configuration,
+        'top-navbar': TopNavbar,
+        'left-sidebar': LeftSidebar
+      }
+    },
+    {
+      path: '/nodeStatus',
+      components: {
+        default: NodeStatus,
         'top-navbar': TopNavbar,
         'left-sidebar': LeftSidebar
       }
