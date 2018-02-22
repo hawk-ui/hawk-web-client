@@ -94,12 +94,18 @@ h1, .h1, h2, .h2, h3, .h3 {
   border-radius: 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
-  padding: 15px;
 
-  li {
+  > li {
     color: $gray--darker;
     font-weight: 400;
     font-size: 13px;
+
+    > a {
+      padding: 5px 20px;
+      > .material-icons {
+        margin-right: 5px;
+      }
+    }
   }
 }
 
@@ -144,18 +150,18 @@ h1, .h1, h2, .h2, h3, .h3 {
   color: green;
 }
 
-.btn-group {
-  .btn:focus,
-  .btn:active:focus,
-  .btn.active:focus,
-  .btn.focus,
-  .btn:active.focus,
-  .btn.active.focus {
-    outline: 0;
-    outline-offset: 0px;
-    box-shadow: none;
-  }
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: 0;
+  outline-offset: 0px;
+  box-shadow: none;
 }
+
 
 .btn-group.open .dropdown-toggle {
   box-shadow: none;
@@ -179,18 +185,19 @@ h1, .h1, h2, .h2, h3, .h3 {
   &.focus, &:focus {
     color: $white;
     background-color: darken($brand-green, 10%);
-    border-color: darken($brand-green, 25%);
+    border-color: darken($brand-green, 12%);
   }
 }
 
+.btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary,
 .btn-primary:active:hover, .btn-primary.active:hover,
 .open > .dropdown-toggle.btn-primary:hover,
 .btn-primary:active:focus, .btn-primary.active:focus,
 .open > .dropdown-toggle.btn-primary:focus,
 .btn-primary:active.focus, .btn-primary.active.focus,
 .open > .dropdown-toggle.btn-primary.focus {
-  background-color: darken($brand-green, 17%);
-  border-color: darken($brand-green, 25%);
+  background-color: darken($brand-green, 15%);
+  border-color: darken($brand-green, 16%);
 }
 
 .status-circle {

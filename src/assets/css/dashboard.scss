@@ -64,20 +64,24 @@
     margin: 0;
     padding: 15px 0 15px 25px;
 
-    li {
+    > li {
       width: 44%;
       display: inline-block;
       margin: 4px 18px 4px 0;
       padding: 0;
 
-      > .node-circle {
-        width: 10px;
-        height: 10px;
-        margin-right: 10px;
-      }
-      > .material-icons {
-        vertical-align: bottom;
-        margin-right: 10px
+      a {
+        padding: 0;
+
+        > .node-circle {
+          width: 10px;
+          height: 10px;
+          margin-right: 10px;
+        }
+        > .material-icons {
+          vertical-align: bottom;
+          margin-right: 10px
+        }
       }
     }
   }
@@ -242,16 +246,6 @@
       span {
         color: red;
       }
-    }
-  }
-}
-
-.nodes-menu-dropdown{
-  li {
-    margin-bottom: 10px;
-    > i {
-      margin-right: 8px;
-      vertical-align: sub;
     }
   }
 }

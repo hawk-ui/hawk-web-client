@@ -1,7 +1,7 @@
 <template>
   <div>
     <app-page-header :pageTitle="pageTitle">
-    <div class="btn-group legend">
+    <div class="dropdown text-right">
       <button class="btn btn-default">Back</button>
       <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="material-icons md-16">settings</i>

@@ -24,7 +24,7 @@
           <div class="add-cluster-bt" data-toggle="modal" data-target="#addCluster">+ Add Cluster</div>
           <app-add-cluster id="addCluster"></app-add-cluster>
 
-          <div class="btn-group legend">
+          <div class="dropdown legend">
             <button type="button" class="btn legend-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Legend <span class="caret"></span>
             </button>
@@ -45,7 +45,7 @@
                   <ul class="pull-right filters-settings">
                     <!-- Tickets section -->
                     <li>
-                      <div class="btn-group cluster-ticket">
+                      <div class="dropdown cluster-ticket">
                           <button type="button" class="btn filters-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Tickets
                           </button>
@@ -59,7 +59,7 @@
                     </li>
                     <!-- End Ticket Section -->
                     <li>
-                      <div class="btn-group">
+                      <div class="dropdown">
                         <button type="button" class="btn filters-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <i class="material-icons md-18 filter-list">filter_list</i>
                         </button>
@@ -74,7 +74,7 @@
                     <tr>
                       <th colspan="2"></th>
                       <th v-for="node in cib.nodes" v-bind:key="node.id">
-                        <div class="btn-group">
+                        <div class="dropdown">
                           <span class="resource-status gray" v-bind:class="NodeStateClass(node.state)"></span>
                           <div class="node-name btn dropdown-toggle" data-toggle="dropdown" v-bind:title="'Node id: ' + node.id">{{ node.name }}
                             <span class="table-cluster-name">
