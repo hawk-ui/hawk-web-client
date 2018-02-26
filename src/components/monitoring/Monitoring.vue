@@ -1,9 +1,8 @@
 <template>
   <div>
     <app-page-header :pageTitle="pageTitle"></app-page-header>
-    <div class="inner">
+    <div class="container-fluid">
       <h4 class="error-section">
-        <br>
         <ul v-for="(error, index) in cib.errors" v-bind:key="index">
           <li>{{ error.type }} {{ error.msg }}</li>
         </ul>

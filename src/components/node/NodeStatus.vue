@@ -11,7 +11,7 @@
         </div>
       </div>
     </app-page-header>
-    <div class="inner">
+    <div class="container-fluid">
       <div class="panel panel-danger">
         <div class="panel-heading">
           <h3 class="panel-title">Errors</h3>
