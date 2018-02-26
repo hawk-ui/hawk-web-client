@@ -11,22 +11,6 @@
     a {
       text-decoration: none;
       margin-top: -3px;
-
-      .icon-down {
-        display: none;
-      }
-      .icon-up {
-        display: block;
-      }
-      &.collapsed{
-        
-        .icon-down {
-          display: block;
-        }
-        .icon-up {
-          display: none;
-        }
-      }
       
       &:hover {
         text-decoration: none;

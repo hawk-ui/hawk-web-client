@@ -55,8 +55,8 @@
               <h4 class="panel-title">
                 <span>CPU Usage</span>
                 <a data-toggle="collapse" href="#graph1" class='pull-right'>
-                  <i class="material-icons icon-down">keyboard_arrow_down</i>
-                  <i class="material-icons icon-up">keyboard_arrow_up</i></a>
+                  <i class="material-icons icon-up">keyboard_arrow_up</i>
+                </a>
               </h4>
             </div>
             <div id="graph1" class="panel-collapse collapse text-center in">
@@ -70,8 +70,8 @@
               <h4 class="panel-title">
                 <span>Disk & Memory Usage</span>
                 <a data-toggle="collapse" href="#graph2" class='pull-right'>
-                  <i class="material-icons icon-down">keyboard_arrow_down</i>
-                  <i class="material-icons icon-up">keyboard_arrow_up</i></a>
+                  <i class="material-icons icon-up">keyboard_arrow_up</i>
+                </a>
               </h4>
             </div>
             <div id="graph2" class="panel-collapse collapse text-center in">
