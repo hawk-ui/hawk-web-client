@@ -7,7 +7,7 @@
   <ul class="dropdown-menu nodes-menu-dropdown" v-else-if="lists.listType == 'iconList'">
     <li v-for="item in lists.liItems">
       <a href="#">
-        <i class="material-icons md-14" :class="item.colorClass">{{ item.listIcion }}</i> 
+        <i class="material-icons md-16" :class="item.colorClass">{{ item.listIcion }}</i> 
         {{ item.listItem }}
       </a>
     </li>
