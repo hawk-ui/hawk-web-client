@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
-@import url(//fonts.googleapis.com/icon?family=Material+Icons);
 @import "variables.scss";
 
 body{
@@ -21,9 +20,16 @@ h1, .h1, h2, .h2, h3, .h3 {
 
 .panel {
   border-radius: 3px;
+
   .panel-body {
     padding: 15px 25px;
   }
+}
+
+.panel-heading a.collapsed .icon-up{
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .node-status {
@@ -35,12 +41,6 @@ h1, .h1, h2, .h2, h3, .h3 {
   p {
     margin-bottom: 0;
   }
-}
-
-.panel-heading a.collapsed .icon-up{
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  transform: rotate(180deg);
 }
 
 .material-icons.md-14 {
