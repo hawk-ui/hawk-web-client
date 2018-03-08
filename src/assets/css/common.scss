@@ -29,7 +29,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 .panel-heading a.collapsed .icon-up{
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
 }
 
 .node-status {

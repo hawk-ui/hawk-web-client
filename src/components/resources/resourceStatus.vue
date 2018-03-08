@@ -49,13 +49,13 @@
                 <span><i class="material-icons md-18">location_on</i>Location</span>
                 <div class='rightside-icon'>
                   <span>2</span>
-                  <a data-toggle="collapse" href="#location" >
+                  <a data-toggle="collapse" class="collapsed" href="#location" >
                     <i class="material-icons icon-up">keyboard_arrow_up</i>
                   </a>
                 </div>
               </h4>
             </div>
-            <div id="location" class="panel-collapse collapse in">
+            <div id="location" class="panel-collapse collapse">
              <div class="panel-body">
               <ul>
                 <li>base-colone@web-server <a href=""><i class="material-icons md-16">mode_edit</i></a></li>
@@ -74,8 +74,8 @@
                 <span><i class="material-icons md-18">swap_vert</i>Order</span>
                 <div class='rightside-icon'>
                   <span>0</span>
-                  <a data-toggle="collapse" href="#order" >
-                    <i class="material-icons icon-up">keyboard_arrow_down</i>
+                  <a data-toggle="collapse" class="collapsed" href="#order" >
+                    <i class="material-icons icon-up">keyboard_arrow_up</i>
                   </a>
                 </div>
               </h4>
@@ -94,8 +94,8 @@
                 <span><i class="material-icons md-18">add_location</i>Collocation</span>
                 <div class='rightside-icon'>
                   <span>0</span>
-                  <a data-toggle="collapse" href="#collocation" >
-                    <i class="material-icons icon-up">keyboard_arrow_down</i>
+                  <a data-toggle="collapse" class="collapsed" href="#collocation" >
+                    <i class="material-icons icon-up">keyboard_arrow_up</i>
                   </a>
                 </div>
               </h4>
@@ -113,8 +113,8 @@
                 <span><i class="material-icons md-18">local_activity</i>Ticket</span>
                 <div class='rightside-icon'>
                   <span>0</span>
-                  <a data-toggle="collapse" href="#ticket" >
-                    <i class="material-icons icon-up">keyboard_arrow_down</i>
+                  <a data-toggle="collapse" class="collapsed" href="#ticket" >
+                    <i class="material-icons icon-up">keyboard_arrow_up</i>
                   </a>
                 </div>
               </h4>
