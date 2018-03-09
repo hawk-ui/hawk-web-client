@@ -2,6 +2,7 @@
 
 .default-tabs {
   background: none;
+  margin-top: 20px;
 
   > ul.nav-pills {
     display: inline-block;
@@ -63,20 +64,24 @@
     margin: 0;
     padding: 15px 0 15px 25px;
 
-    li {
+    > li {
       width: 44%;
       display: inline-block;
       margin: 4px 18px 4px 0;
       padding: 0;
 
-      > .node-circle {
-        width: 10px;
-        height: 10px;
-        margin-right: 10px;
-      }
-      > .material-icons {
-        vertical-align: bottom;
-        margin-right: 10px
+      a {
+        padding: 0;
+
+        > .node-circle {
+          width: 10px;
+          height: 10px;
+          margin-right: 10px;
+        }
+        > .material-icons {
+          vertical-align: bottom;
+          margin-right: 10px
+        }
       }
     }
   }
@@ -95,7 +100,6 @@
       padding: 0 30px 10px 30px;
       border-style: none none double none;
       border-color: $border-color;
-      margin-bottom: 5px;
 
       .search {
         width: 200px;
@@ -174,18 +178,11 @@
 
   .dashboard-table > tbody > tr > td.status-icon-col {
     width: 40px;
-    padding:14px 0 0 0;
   }
 }
 
-.right-side-container {
-  background: #fff;
-  box-shadow: 0px 1px 3px #c1c1c1;
-  padding-top: 20px;
-}
-
 .resource-status {
-  width: 5px;
+  width: 4px;
   height: 25px;
   display: inline-block;
   vertical-align: middle;
@@ -194,22 +191,17 @@
 }
 
 .status-icon {
-  vertical-align: sub;
-  float: left;
+  display: inline-block;
   ul {
     margin: 0;
     padding: 0;
-
-    li {
-      display: inline-block;
-    }
   }
 }
 
 .node-name {
   display: inline-block;
   text-align: left;
-  line-height: 14px;
+  line-height: 13px;
   margin-right: 5px;
   vertical-align: bottom;
   padding: 0;
@@ -218,6 +210,10 @@
     font-size: 11px;
     color: #888;
     display: block;
+
+    > .material-icons {
+      vertical-align: middle;
+    }
   }
 }
 
@@ -252,16 +248,6 @@
   }
 }
 
-.nodes-menu-dropdown{
-  li {
-    margin-bottom: 10px;
-    > i {
-      margin-right: 8px;
-      vertical-align: sub;
-    }
-  }
-}
-
 .error-container {
   padding: 0 25px 20px 25px;
   border-bottom: 1px solid $border-color;
@@ -284,7 +270,6 @@
     }
   }
 }
-
 
 
 

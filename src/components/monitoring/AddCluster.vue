@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import Modal from '../shared/model.vue'
+import Modal from '../shared/Model.vue'
 
 export default {
   components: {

@@ -1,17 +1,14 @@
 <template>
   <div>
-    <div class="page-title">
-      <h3>{{ $t("pages.monitoring_page.page-title") }}</h3>
-    </div>
-    <div class="inner">
+    <app-page-header :pageTitle="pageTitle"></app-page-header>
+    <div class="container-fluid">
       <h4 class="error-section">
-        <br>
         <ul v-for="(error, index) in cib.errors" v-bind:key="index">
           <li>{{ error.type }} {{ error.msg }}</li>
         </ul>
       </h4>
 
-      <div class="right-side-container">
+      <div class="panel panel-default">
         <!-- Tabs start -->
         <div id="exTab1" class="default-tabs"> 
           <ul  class="nav nav-pills">
@@ -26,7 +23,7 @@
           <div class="add-cluster-bt" data-toggle="modal" data-target="#addCluster">+ Add Cluster</div>
           <app-add-cluster id="addCluster"></app-add-cluster>
 
-          <div class="btn-group legend">
+          <div class="dropdown legend">
             <button type="button" class="btn legend-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Legend <span class="caret"></span>
             </button>
@@ -47,7 +44,7 @@
                   <ul class="pull-right filters-settings">
                     <!-- Tickets section -->
                     <li>
-                      <div class="btn-group cluster-ticket">
+                      <div class="dropdown cluster-ticket">
                           <button type="button" class="btn filters-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Tickets
                           </button>
@@ -61,7 +58,7 @@
                     </li>
                     <!-- End Ticket Section -->
                     <li>
-                      <div class="btn-group">
+                      <div class="dropdown">
                         <button type="button" class="btn filters-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <i class="material-icons md-18 filter-list">filter_list</i>
                         </button>
@@ -71,13 +68,13 @@
                   </ul>
                 </div>
                 <table class="table dashboard-table">
-                  <tbody>
+                  <thead>
                     <!-- Nodes Row -->
                     <tr>
                       <th colspan="2"></th>
                       <th v-for="node in cib.nodes" v-bind:key="node.id">
-                        <div class="btn-group">
-                          <span class="resource-status gray" v-bind:class="NodeStateClass(node.state)"></span>
+                        <div class="dropdown">
+                          <span class="resource-status gray" v-bind:class="NodeBarClass(node.state)"></span>
                           <div class="node-name btn dropdown-toggle" data-toggle="dropdown" v-bind:title="'Node id: ' + node.id">{{ node.name }}
                             <span class="table-cluster-name">
                               {{ cib.crm_config.cluster_name}}
@@ -95,11 +92,13 @@
                         </div>
                       </th>
                     </tr>
+                   </thead>
                     <!-- End Nodes Row -->
                     <!-- Resources Row -->
+                  <tbody>
                     <tr v-for="resource in cib.resources" v-bind:key="resource.id">
                       <td class="status-icon-col">
-                        <div class="status-icon pull-right">
+                        <div class="status-icon">
                           <ul>
                             <li v-if="resource.type == 'master'"><i class="material-icons md-14">star_rate</i></li>
                             <li v-if="resource.maintenance == true"><i class="material-icons md-14">build</i></li>
@@ -107,7 +106,7 @@
                         </div>
                       </td>
                       <td>
-                        <div class="btn-group">
+                        <div class="dropdown">
                           <div class="btn dropdown-toggle" data-toggle="dropdown">
                             <span class="resource-status gray" v-bind:class="resourceBarStyle(resource)"></span>{{ resource.id }}
                           </div>
@@ -136,12 +135,14 @@
 
 <script>
   import { mapGetters } from 'vuex'
-  import Dropdown from '../shared/dropdown.vue'
-  import AddCluster from './add-cluster.vue'
+  import PageHeader from '../shared/page_header/PageHeader.vue'
+  import Dropdown from '../shared/Dropdown.vue'
+  import AddCluster from './AddCluster.vue'
 
   export default {
     data: function () {
       return {
+        pageTitle: this.$t('pages.monitoring_page.page-title'),
         filterList: {
           listType: 'radioList',
           liItems: [
@@ -186,6 +187,7 @@
       }
     },
     components: {
+      'app-page-header': PageHeader,
       'app-dropdown': Dropdown,
       'app-add-cluster': AddCluster
     },
@@ -193,26 +195,26 @@
       ...mapGetters(['cib'])
     },
     methods: {
-      NodeStateClass: function (state) {
+      NodeBarClass: function (state) {
         if (state === 'unclean') {
-          return 'red'
+          return 'red-bar'
         } else if (state === 'online') {
-          return 'green'
+          return 'green-bar'
         } else if (state === 'offline') {
-          return 'gray'
+          return 'gray-bar'
         } else if (state === 'standby') {
-          return 'red'
+          return 'red-bar'
         } else if (state === 'pending') {
-          return 'red'
+          return 'red-bar'
         }
       },
       resourceBarStyle: function (resource) {
         if (resource.state === 'stopped' && resource['attributes']['target-role'] === 'Stopped') {
-          return 'gray'
+          return 'gray-bar'
         } else if (resource.state === 'stopped') {
-          return 'red'
+          return 'red-bar'
         } else if (resource.state !== 'stopped') {
-          return 'green'
+          return 'green-bar'
         }
       },
       ResourceStateClass: function (resource, node = '') {

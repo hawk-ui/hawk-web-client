@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+@import url(//fonts.googleapis.com/icon?family=Material+Icons);
 @import "variables.scss";
 
 body{
@@ -14,7 +15,32 @@ ul, li {
 
 h1, .h1, h2, .h2, h3, .h3 {
     margin-top: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+}
+
+
+.panel {
+  border-radius: 3px;
+  .panel-body {
+    padding: 15px 25px;
+  }
+}
+
+.node-status {
+  h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.panel-heading a.collapsed .icon-up{
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .material-icons.md-14 {
@@ -48,25 +74,46 @@ h1, .h1, h2, .h2, h3, .h3 {
 
 .table > thead > tr > th {
   color: $table-header-color;
-  border-bottom: 0;
   font-weight: normal;
+  border-bottom: 2px solid $border-color;
+  background-color: #fafafa;
+  padding: 10px 8px 10px 20px;
+  height: 50px;
 }
 
 .table > tbody > tr > td {
   border-top: 1px solid #ddd;
-  color: $table-text-color;
+    color: #5E5E5E;
+    padding: 10px 8px 10px 20px;
+    height: 50px;
+    vertical-align: middle;
+
+  > span {
+    margin-right: 20px;
+  }
+
+  .material-icons {
+    vertical-align: bottom;
+  }
 }
 
 .open .dropdown-menu {
   border-radius: 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
-  padding: 15px;
 
-  li {
+  > li {
     color: $gray--darker;
     font-weight: 400;
     font-size: 13px;
+
+    > a {
+      padding: 6px 20px;
+      > .material-icons {
+        margin-right: 8px;
+        vertical-align: bottom;
+      }
+    }
   }
 }
 
@@ -99,6 +146,23 @@ h1, .h1, h2, .h2, h3, .h3 {
 .yellow {
    color: rgb(196, 171, 31);
 }
+.yellow-bar {
+  background-color: rgb(196, 171, 31);
+}
+.green-bar {
+  background-color: green;
+}
+.red-bar {
+  background-color: red;
+}
+.gray-bar {
+  background-color: #a5a5a5;
+}
+.blue-bar {
+  background-color: #83afe4;
+}
+
+
 // End temporary style for dashboard table
 
 
@@ -111,18 +175,18 @@ h1, .h1, h2, .h2, h3, .h3 {
   color: green;
 }
 
-.btn-group {
-  .btn:focus,
-  .btn:active:focus,
-  .btn.active:focus,
-  .btn.focus,
-  .btn:active.focus,
-  .btn.active.focus {
-    outline: 0;
-    outline-offset: 0px;
-    box-shadow: none;
-  }
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: 0;
+  outline-offset: 0px;
+  box-shadow: none;
 }
+
 
 .btn-group.open .dropdown-toggle {
   box-shadow: none;
@@ -133,6 +197,9 @@ h1, .h1, h2, .h2, h3, .h3 {
   background-color: $brand-green;
   border-color: $brand-green;
   font-weight: lighter;
+  > .material-icons {
+    vertical-align: sub;
+  }
 
   &:hover, &:active, &.active{
     color: $white;
@@ -143,18 +210,19 @@ h1, .h1, h2, .h2, h3, .h3 {
   &.focus, &:focus {
     color: $white;
     background-color: darken($brand-green, 10%);
-    border-color: darken($brand-green, 25%);
+    border-color: darken($brand-green, 12%);
   }
 }
 
+.btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary,
 .btn-primary:active:hover, .btn-primary.active:hover,
 .open > .dropdown-toggle.btn-primary:hover,
 .btn-primary:active:focus, .btn-primary.active:focus,
 .open > .dropdown-toggle.btn-primary:focus,
 .btn-primary:active.focus, .btn-primary.active.focus,
 .open > .dropdown-toggle.btn-primary.focus {
-  background-color: darken($brand-green, 17%);
-  border-color: darken($brand-green, 25%);
+  background-color: darken($brand-green, 15%);
+  border-color: darken($brand-green, 16%);
 }
 
 .status-circle {
@@ -180,7 +248,6 @@ h1, .h1, h2, .h2, h3, .h3 {
 .modal-title {
   display: inline-block;
 }
-
 
 .btn:active, .btn.active {box-shadow: none;}
 

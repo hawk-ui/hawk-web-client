@@ -4,7 +4,7 @@
     <div class="dashboard-view" v-else>
       <router-view name="left-sidebar"></router-view>
       <div id="page-content-wrapper">
-        <div class="page-content container-fluid">
+        <div class="page-content">
           <router-view name="top-navbar"></router-view>
             <router-view></router-view>
         </div>

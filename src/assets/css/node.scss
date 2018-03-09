@@ -1,0 +1,44 @@
+@import "variables.scss";
+
+.panel-graphs {
+  background-color: transparent;
+  border-bottom: 0;
+  padding: 15px 15px;
+
+  > h4 {
+   font-size: 14px;
+   font-weight: bold;
+    a {
+      text-decoration: none;
+      margin-top: -3px;
+      
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  } 
+} 
+  
+.status-text {
+  color: $gray--darker;
+  font-weight: normal;
+}
+
+.graphs {
+  > .panel-heading {
+    background-color: transparent;
+    border-bottom: 0;
+  }
+}
+
+.back-btn-group {
+  float: right;
+  > .btn {
+    margin-right: 10px
+  }
+}
+
+
+
+
+
