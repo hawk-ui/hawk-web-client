@@ -13,6 +13,7 @@ import Monitoring from '@/components/monitoring/Monitoring'
 import Troubleshooting from '@/components/troubleshooting/Troubleshooting'
 import Configuration from '@/components/configuration/Configuration'
 import NodeStatus from '@/components/node/NodeStatus'
+import ResourceStatus from '@/components/resources/resourceStatus'
 
 Vue.use(VueRouter)
 
@@ -59,6 +60,14 @@ export default new VueRouter({
       path: '/nodeStatus',
       components: {
         default: NodeStatus,
+        'top-navbar': TopNavbar,
+        'left-sidebar': LeftSidebar
+      }
+    },
+    {
+      path: '/resourceStatus',
+      components: {
+        default: ResourceStatus,
         'top-navbar': TopNavbar,
         'left-sidebar': LeftSidebar
       }
