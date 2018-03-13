@@ -1,10 +1,47 @@
-
-
 .panel-trubleshooting .panel-heading {
   padding: 15px 20px;
+  background-color: transparent;
 
   > .panel-title {
     font-size: 14px;
-    color: red;
+
+    span {
+      color: $gray--lighter;
+    }
   }
 }
+
+.trubleshooting-container{
+  .reports-container {
+    padding: 30px 20px;
+  }
+
+  span {
+    width: 50px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .search-panel {
+    border-top: 1px solid;
+    border-color: #ccc; 
+    padding: 20px;
+    overflow: auto;
+    border-bottom-style: double;
+    .search {
+      max-width: 200px;
+      float: left;
+    }
+    a {
+      float: right;
+      margin-top: 8px;
+      display: inline-block;
+      color: inherit;
+    }
+  }
+}
+
+.reports-table a {
+  color: inherit;
+}
+
