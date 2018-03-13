@@ -10,7 +10,7 @@
             <a class="btn btn-default dropdown language-btn" data-toggle="dropdown">
               English <span class="caret"></span>
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu dropdown-menu-login">
               <li><a href="#">English</a></li>
               <li><a href="#">Deutsch</a></li>
               <li><a href="#">Français</a></li>
@@ -83,6 +83,4 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '../assets/css/common.scss';
-  @import '../assets/css/login.scss';
 </style>
