@@ -1,3 +1,33 @@
+.trubleshooting-tabs {
+  > ul.nav-pills li:first-child {
+    margin-left: 32px;
+  }
+  > ul.nav-pills li a {
+    .material-icons {
+      margin-right: 5px;
+      vertical-align: sub;
+    }
+  }
+
+  > ul.nav-pills li.active > a {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 3px solid $brand-green;
+  }
+
+  .tab-content {
+    padding: 32px; 
+  }
+}
+
+ul.history-log {
+  padding-left: 0;
+
+  li {
+    padding: 20px;
+  }
+}
+
 .panel-trubleshooting .panel-heading {
   padding: 15px 20px;
   background-color: transparent;

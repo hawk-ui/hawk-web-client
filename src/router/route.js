@@ -11,6 +11,7 @@ import TopNavbar from '@/components/shared/top_navbar/TopNavbar'
 // Main sections
 import Monitoring from '@/components/monitoring/Monitoring'
 import Troubleshooting from '@/components/troubleshooting/Troubleshooting'
+import CommandLog from '@/components/troubleshooting/CommandLog'
 import Configuration from '@/components/configuration/Configuration'
 import NodeStatus from '@/components/node/NodeStatus'
 import ResourceStatus from '@/components/resources/resourceStatus'
@@ -41,9 +42,17 @@ export default new VueRouter({
       }
     },
     {
-      path: '/troubleshooting',
+      path: '/troubleshooting/reports',
       components: {
         default: Troubleshooting,
+        'top-navbar': TopNavbar,
+        'left-sidebar': LeftSidebar
+      }
+    },
+    {
+      path: '/troubleshooting/commandLog',
+      components: {
+        default: CommandLog,
         'top-navbar': TopNavbar,
         'left-sidebar': LeftSidebar
       }
