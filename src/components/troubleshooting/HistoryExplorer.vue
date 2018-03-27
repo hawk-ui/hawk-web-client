@@ -8,7 +8,7 @@
     <div class="trubleshooting-container">
       <div class="reports-container">
         <button class="btn btn-primary"><i class="material-icons md-16">event_note</i>Oct 12,2017 - Dec12,2017</button> 
-        <span>or</span>
+        <span class="or-span">or</span>
         <button class="btn btn-primary">Upload Report</button>
       </div>
       <div class="search-panel">

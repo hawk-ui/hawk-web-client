@@ -46,7 +46,7 @@ ul.history-log {
     padding: 30px 20px;
   }
 
-  span {
+  .or-span {
     width: 50px;
     text-align: center;
     display: inline-block;
@@ -67,6 +67,15 @@ ul.history-log {
       margin-top: 8px;
       display: inline-block;
       color: inherit;
+    }
+  }
+
+  .history-log .date-time-block {
+    font-size: 12px;
+    margin-top: 8px;
+    
+    .material-icons {
+      vertical-align: sub;
     }
   }
 }
