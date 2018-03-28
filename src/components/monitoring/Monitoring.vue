@@ -10,7 +10,7 @@
 
       <div class="panel panel-default">
         <!-- Tabs start -->
-        <div id="exTab1" class="default-tabs"> 
+        <div id="exTab1" class="default-tabs">
           <ul  class="nav nav-pills">
             <li class="active">
               <a href="#1a" data-toggle="tab">Overview<span class="status-circle status-green"></span></a>
@@ -155,33 +155,33 @@
         nodeList: {
           listType: 'iconList',
           liItems: [
-            { listIcion: 'info', listItem: 'Details' },
-            { listIcion: 'build', listItem: 'Maintenance' },
-            { listIcion: 'power_settings_new', listItem: 'Standby' },
-            { listIcion: 'delete_forever', listItem: 'Cleanup' }
+            { listIcon: 'info', listItem: 'Details' },
+            { listIcon: 'build', listItem: 'Maintenance' },
+            { listIcon: 'power_settings_new', listItem: 'Standby' },
+            { listIcon: 'delete_forever', listItem: 'Cleanup' }
           ]
         },
         resourceList: {
           listType: 'iconList',
           liItems: [
-            { listIcion: 'stop', listItem: 'Stop' },
-            { listIcion: 'info', listItem: 'Details' },
-            { listIcion: 'build', listItem: 'Maintenance' },
-            { listIcion: 'power_settings_new', listItem: 'Migrate' },
-            { listIcion: 'delete_forever', listItem: 'Cleanup' }
+            { listIcon: 'stop', listItem: 'Stop' },
+            { listIcon: 'info', listItem: 'Details' },
+            { listIcon: 'build', listItem: 'Maintenance' },
+            { listIcon: 'power_settings_new', listItem: 'Migrate' },
+            { listIcon: 'delete_forever', listItem: 'Cleanup' }
           ]
         },
         legendList: {
           listType: 'iconList',
           liItems: [
-            { listIcion: 'fiber_manual_record', colorClass: 'green', listItem: 'Working resource/node' },
-            { listIcion: 'settings_remote', listItem: 'Remote node' },
-            { listIcion: 'fiber_manual_record', colorClass: 'red', listItem: 'Failing resource/node' },
-            { listIcion: 'build', listItem: 'Maintenance mode' },
-            { listIcion: 'fiber_manual_record', colorClass: 'gray', listItem: 'Offline/standby mode' },
-            { listIcion: 'star', listItem: 'Double state (master/slave)' },
-            { listIcion: 'fiber_manual_record', colorClass: 'gray', listItem: 'Not working resource/node' },
-            { listIcion: 'linear_scale', listItem: 'Designated coordinator' }
+            { listIcon: 'fiber_manual_record', colorClass: 'green', listItem: 'Working resource/node' },
+            { listIcon: 'settings_remote', listItem: 'Remote node' },
+            { listIcon: 'fiber_manual_record', colorClass: 'red', listItem: 'Failing resource/node' },
+            { listIcon: 'build', listItem: 'Maintenance mode' },
+            { listIcon: 'fiber_manual_record', colorClass: 'gray', listItem: 'Offline/standby mode' },
+            { listIcon: 'star', listItem: 'Double state (master/slave)' },
+            { listIcon: 'fiber_manual_record', colorClass: 'gray', listItem: 'Not working resource/node' },
+            { listIcon: 'linear_scale', listItem: 'Designated coordinator' }
           ]
         }
       }
