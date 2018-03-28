@@ -145,7 +145,7 @@
         pageTitle: this.$t('pages.monitoring_page.page-title'),
         filterList: {
           listType: 'radioList',
-          liItems: [
+          lisItems: [
             { listItem: 'Online nodes' },
             { listItem: 'Offline nodes' },
             { listItem: 'Maintenance nodes' },
@@ -154,26 +154,26 @@
         },
         nodeList: {
           listType: 'iconList',
-          liItems: [
-            { listIcon: 'info', listItem: 'Details' },
-            { listIcon: 'build', listItem: 'Maintenance' },
-            { listIcon: 'power_settings_new', listItem: 'Standby' },
-            { listIcon: 'delete_forever', listItem: 'Cleanup' }
+          lisItems: [
+            { listIcon: 'info', listItem: 'Details' , listHref: "#" },
+            { listIcon: 'build', listItem: 'Maintenance' , listHref: "#" },
+            { listIcon: 'power_settings_new', listItem: 'Standby' , listHref: "#" },
+            { listIcon: 'delete_forever', listItem: 'Cleanup', listHref: "#" }
           ]
         },
         resourceList: {
           listType: 'iconList',
-          liItems: [
-            { listIcon: 'stop', listItem: 'Stop' },
-            { listIcon: 'info', listItem: 'Details' },
-            { listIcon: 'build', listItem: 'Maintenance' },
-            { listIcon: 'power_settings_new', listItem: 'Migrate' },
-            { listIcon: 'delete_forever', listItem: 'Cleanup' }
+          lisItems: [
+            { listIcon: 'stop', listItem: 'Stop' , listHref: "#" },
+            { listIcon: 'info', listItem: 'Details' , listHref: "#" },
+            { listIcon: 'build', listItem: 'Maintenance' , listHref: "#" },
+            { listIcon: 'power_settings_new', listItem: 'Migrate' , listHref: "#" },
+            { listIcon: 'delete_forever', listItem: 'Cleanup', listHref: "#" }
           ]
         },
         legendList: {
           listType: 'iconList',
-          liItems: [
+          lisItems: [
             { listIcon: 'fiber_manual_record', colorClass: 'green', listItem: 'Working resource/node' },
             { listIcon: 'settings_remote', listItem: 'Remote node' },
             { listIcon: 'fiber_manual_record', colorClass: 'red', listItem: 'Failing resource/node' },
