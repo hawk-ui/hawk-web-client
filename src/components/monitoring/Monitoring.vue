@@ -155,20 +155,20 @@
         nodeList: {
           listType: 'iconList',
           lisItems: [
-            { listIcon: 'info', listItem: 'Details' , listHref: "#" },
-            { listIcon: 'build', listItem: 'Maintenance' , listHref: "#" },
-            { listIcon: 'power_settings_new', listItem: 'Standby' , listHref: "#" },
-            { listIcon: 'delete_forever', listItem: 'Cleanup', listHref: "#" }
+            { listIcon: 'info', listItem: 'Details', listHref: '#' },
+            { listIcon: 'build', listItem: 'Maintenance', listHref: '#' },
+            { listIcon: 'power_settings_new', listItem: 'Standby', listHref: '#' },
+            { listIcon: 'delete_forever', listItem: 'Cleanup', listHref: '#' }
           ]
         },
         resourceList: {
           listType: 'iconList',
           lisItems: [
-            { listIcon: 'stop', listItem: 'Stop' , listHref: "#" },
-            { listIcon: 'info', listItem: 'Details' , listHref: "#" },
-            { listIcon: 'build', listItem: 'Maintenance' , listHref: "#" },
-            { listIcon: 'power_settings_new', listItem: 'Migrate' , listHref: "#" },
-            { listIcon: 'delete_forever', listItem: 'Cleanup', listHref: "#" }
+            { listIcon: 'stop', listItem: 'Stop', listHref: '#' },
+            { listIcon: 'info', listItem: 'Details', listHref: '#' },
+            { listIcon: 'build', listItem: 'Maintenance', listHref: '#' },
+            { listIcon: 'power_settings_new', listItem: 'Migrate', listHref: '#' },
+            { listIcon: 'delete_forever', listItem: 'Cleanup', listHref: '#' }
           ]
         },
         legendList: {
