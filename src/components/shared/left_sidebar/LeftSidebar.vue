@@ -9,7 +9,7 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/troubleshooting">
+            <router-link to="/troubleshooting/reports">
               <i class="material-icons md-18 leftnav_icon">tune</i>
               <span>{{ $t("leftnav_bar.links.trubleshooting") }}</span>
             </router-link>
@@ -39,5 +39,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-  @import '../../../assets/css/left-navbar.scss';
 </style>

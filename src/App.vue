@@ -37,6 +37,5 @@
 </script>
 
 <style lang="scss">
-  @import './assets/css/layout.scss';
-  @import './assets/css/common.scss';
+  @import './assets/css/index.scss';
 </style>

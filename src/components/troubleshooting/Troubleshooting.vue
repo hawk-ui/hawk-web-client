@@ -1,17 +1,46 @@
 <template>
-  <div>
-    <h1>{{ $t("pages.trubleshooting_page.page-title") }}</h1>
-    <p>{{ $t("pages.trubleshooting_page.description") }}</p>
+   <div>
+    <app-page-header :pageTitle="pageTitle"></app-page-header>
+    <div id="exTab1" class="default-tabs trubleshooting-tabs"> 
+      <ul  class="nav nav-pills">
+        <li class="active">
+          <a href="#historyExplorer" data-toggle="tab"><i class="material-icons md-16">history</i>History Explorer</a>
+        </li>
+        <li>
+          <a href="#commandLog" data-toggle="tab"><i class="material-icons md-16">assignment</i>Command Log</span></a>
+        </li>
+      </ul>
+      <div class="tab-content clearfix">
+        <div class="tab-pane active" id="historyExplorer">
+          <app-history-explorer></app-history-explorer>
+        </div>
+        <div class="tab-pane" id="commandLog">
+          <app-command-log></app-command-log>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
+  import PageHeader from '../shared/page_header/PageHeader.vue'
+  import HistoryExplorer from './HistoryExplorer.vue'
+  import CommandLog from './CommandLog.vue'
 
-}
+  export default {
+    data: function () {
+      return {
+        pageTitle: this.$t('pages.trubleshooting_page.page-title')
+      }
+    },
+    components: {
+      'app-command-log': CommandLog,
+      'app-history-explorer': HistoryExplorer,
+      'app-page-header': PageHeader
+    }
+  }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 </style>

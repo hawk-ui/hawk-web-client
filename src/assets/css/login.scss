@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500');
-@import "variables.scss";
 
 .login-bg {
   height: 100%;
@@ -41,9 +39,12 @@ header {
   border-bottom-right-radius: 4px;
 }
 
-.open .dropdown-menu {
+
+
+.open .dropdown-menu-login {
   border-radius: 4px;
   background-color: $brand-blue;
+  border-color: $brand-blue;
   color: $gray-text;
   box-shadow: 0 0 0;
   min-width: 100px;
@@ -58,6 +59,7 @@ header {
     }
   }
 }
+
 
 #content {
   padding-top: 10em;

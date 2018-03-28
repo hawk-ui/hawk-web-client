@@ -1,0 +1,86 @@
+.trubleshooting-tabs {
+  > ul.nav-pills li:first-child {
+    margin-left: 32px;
+  }
+  > ul.nav-pills li a {
+    .material-icons {
+      margin-right: 5px;
+      vertical-align: sub;
+    }
+  }
+
+  > ul.nav-pills li.active > a {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 3px solid $brand-green;
+  }
+
+  .tab-content {
+    padding: 32px; 
+  }
+}
+
+ul.history-log {
+  padding-left: 0;
+
+  li {
+    padding: 20px;
+  }
+}
+
+.panel-trubleshooting .panel-heading {
+  padding: 15px 20px;
+  background-color: transparent;
+
+  > .panel-title {
+    font-size: 14px;
+
+    span {
+      color: $gray--lighter;
+    }
+  }
+}
+
+.trubleshooting-container{
+  .reports-container {
+    padding: 30px 20px;
+  }
+
+  .or-span {
+    width: 50px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .search-panel {
+    border-top: 1px solid;
+    border-color: #ccc; 
+    padding: 20px;
+    overflow: auto;
+    border-bottom-style: double;
+    .search {
+      max-width: 200px;
+      float: left;
+    }
+    a {
+      float: right;
+      margin-top: 8px;
+      display: inline-block;
+      color: inherit;
+    }
+  }
+
+  .history-log .date-time-block {
+    font-size: 12px;
+    margin-top: 8px;
+    
+    .material-icons {
+      vertical-align: sub;
+    }
+  }
+}
+
+.reports-table a {
+  color: inherit;
+}
+
