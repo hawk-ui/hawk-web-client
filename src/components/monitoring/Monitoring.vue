@@ -43,15 +43,16 @@
                   <input class="form-control search" type="text" value="search...">
                   <ul class="pull-right filters-settings">
                     <!-- Tickets section -->
-                    <li>
-                      <div class="dropdown cluster-ticket">
-                          <button type="button" class="btn filters-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li class="cluster-ticket">
+                      <div class="dropdown">
+                          <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Tickets
                           </button>
+                          <span>2</span>
                         <ul  v-if='cib.tickets' class="dropdown-menu filters-menu-dropdown">
-                          <li class="cluster-ticket" v-for="(ticket, index) in cib.tickets" v-bind:key="index">
-                            <span>{{ ticket.id }} </span> : {{ ticket.state }} <br>
-                            <span>standby : </span> {{ ticket.standby? "true": "false" }}
+                          <li v-for="(ticket, index) in cib.tickets" v-bind:key="index">
+                            <div>{{ ticket.id }} : {{ ticket.state }} <br>
+                            standby : {{ ticket.standby? "true": "false" }}</div>
                           </li>
                         </ul>
                       </div>
@@ -65,6 +66,7 @@
                         <app-dropdown :lists="filterList"></app-dropdown>
                       </div>
                     </li>
+                    <li><a href=""><i class="material-icons md-18">link</i></a></li>
                   </ul>
                 </div>
                 <table class="table dashboard-table">
@@ -105,7 +107,7 @@
                           </ul>
                         </div>
                       </td>
-                      <td>
+                      <td class="resource-col">
                         <div class="dropdown">
                           <div class="btn dropdown-toggle" data-toggle="dropdown">
                             <span class="resource-status gray" v-bind:class="resourceBarStyle(resource)"></span>{{ resource.id }}

@@ -39,7 +39,6 @@
   }
 }
 
-
 .constraint-heading {
   font-size: 18px;
   margin-bottom: 10px;
@@ -50,6 +49,8 @@
 
 .resource-panel {
   > .panel-heading {
+    background-color: transparent;
+    padding: 15px;
 
     h4.panel-title {
       font-size: 14px;
