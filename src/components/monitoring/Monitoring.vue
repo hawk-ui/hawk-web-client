@@ -10,7 +10,7 @@
 
       <div class="panel panel-default">
         <!-- Tabs start -->
-        <div id="exTab1" class="default-tabs">
+        <div id="exTab1" class="default-tabs"> 
           <ul  class="nav nav-pills">
             <li class="active">
               <a href="#1a" data-toggle="tab">Overview<span class="status-circle status-green"></span></a>
@@ -27,7 +27,7 @@
             <button type="button" class="btn legend-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Legend <span class="caret"></span>
             </button>
-              <app-dropdown class="legend-options" :lists="legendList" :listType="listType"></app-dropdown>
+              <app-dropdown class="legend-options" :lists="legendList"></app-dropdown>
             </div>
 
           <div class="tab-content clearfix">
@@ -62,7 +62,7 @@
                         <button type="button" class="btn filters-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <i class="material-icons md-18 filter-list">filter_list</i>
                         </button>
-                        <app-dropdown :lists="filterList" :listType="listType"></app-dropdown>
+                        <app-dropdown :lists="filterList"></app-dropdown>
                       </div>
                     </li>
                   </ul>
@@ -88,7 +88,7 @@
                               <li v-if="node.fence_history !== ''"><i class="material-icons md-14">cached</i></li>
                             </ul>
                           </div>
-                          <app-dropdown :lists="nodeList" :listType="listType"></app-dropdown>
+                          <app-dropdown :lists="nodeList"></app-dropdown>
                         </div>
                       </th>
                     </tr>
@@ -110,7 +110,7 @@
                           <div class="btn dropdown-toggle" data-toggle="dropdown">
                             <span class="resource-status gray" v-bind:class="resourceBarStyle(resource)"></span>{{ resource.id }}
                           </div>
-                          <app-dropdown :lists="resourceList" :listType="listType"></app-dropdown>
+                          <app-dropdown :lists="resourceList"></app-dropdown>
                         </div>
                       </td>
                       <td v-for="node in cib.nodes" v-bind:key="node.id">
@@ -145,7 +145,7 @@
         pageTitle: this.$t('pages.monitoring_page.page-title'),
         filterList: {
           listType: 'radioList',
-          lisItems: [
+          liItems: [
             { listItem: 'Online nodes' },
             { listItem: 'Offline nodes' },
             { listItem: 'Maintenance nodes' },
@@ -154,34 +154,34 @@
         },
         nodeList: {
           listType: 'iconList',
-          lisItems: [
-            { listIcon: 'info', listItem: 'Details', listHref: '#' },
-            { listIcon: 'build', listItem: 'Maintenance', listHref: '#' },
-            { listIcon: 'power_settings_new', listItem: 'Standby', listHref: '#' },
-            { listIcon: 'delete_forever', listItem: 'Cleanup', listHref: '#' }
+          liItems: [
+            { listIcion: 'info', listItem: 'Details', listHref: '/nodeStatus' },
+            { listIcion: 'build', listItem: 'Maintenance', listHref: '#' },
+            { listIcion: 'power_settings_new', listItem: 'Standby', listHref: '#' },
+            { listIcion: 'delete_forever', listItem: 'Cleanup', listHref: '#' }
           ]
         },
         resourceList: {
           listType: 'iconList',
-          lisItems: [
-            { listIcon: 'stop', listItem: 'Stop', listHref: '#' },
-            { listIcon: 'info', listItem: 'Details', listHref: '#' },
-            { listIcon: 'build', listItem: 'Maintenance', listHref: '#' },
-            { listIcon: 'power_settings_new', listItem: 'Migrate', listHref: '#' },
-            { listIcon: 'delete_forever', listItem: 'Cleanup', listHref: '#' }
+          liItems: [
+            { listIcion: 'stop', listItem: 'Stop', listHref: '#' },
+            { listIcion: 'info', listItem: 'Details', listHref: '/resourceStatus' },
+            { listIcion: 'build', listItem: 'Maintenance', listHref: '#' },
+            { listIcion: 'power_settings_new', listItem: 'Migrate', listHref: '#' },
+            { listIcion: 'delete_forever', listItem: 'Cleanup', listHref: '#' }
           ]
         },
         legendList: {
           listType: 'iconList',
-          lisItems: [
-            { listIcon: 'fiber_manual_record', colorClass: 'green', listItem: 'Working resource/node' },
-            { listIcon: 'settings_remote', listItem: 'Remote node' },
-            { listIcon: 'fiber_manual_record', colorClass: 'red', listItem: 'Failing resource/node' },
-            { listIcon: 'build', listItem: 'Maintenance mode' },
-            { listIcon: 'fiber_manual_record', colorClass: 'gray', listItem: 'Offline/standby mode' },
-            { listIcon: 'star', listItem: 'Double state (master/slave)' },
-            { listIcon: 'fiber_manual_record', colorClass: 'gray', listItem: 'Not working resource/node' },
-            { listIcon: 'linear_scale', listItem: 'Designated coordinator' }
+          liItems: [
+            { listIcion: 'fiber_manual_record', colorClass: 'green', listItem: 'Working resource/node' },
+            { listIcion: 'settings_remote', listItem: 'Remote node' },
+            { listIcion: 'fiber_manual_record', colorClass: 'red', listItem: 'Failing resource/node' },
+            { listIcion: 'build', listItem: 'Maintenance mode' },
+            { listIcion: 'fiber_manual_record', colorClass: 'gray', listItem: 'Offline/standby mode' },
+            { listIcion: 'star', listItem: 'Double state (master/slave)' },
+            { listIcion: 'fiber_manual_record', colorClass: 'gray', listItem: 'Not working resource/node' },
+            { listIcion: 'linear_scale', listItem: 'Designated coordinator' }
           ]
         }
       }

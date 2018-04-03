@@ -1,13 +1,13 @@
 <template>
   <ul class="dropdown-menu filters-menu-dropdown" v-if="lists.listType == 'radioList'">
-    <li v-for="item in lists.listItems">
+    <li v-for="item in lists.liItems">
       <label><input type="radio"> {{ item.listItem }} </label>
     </li>
   </ul>
   <ul class="dropdown-menu nodes-menu-dropdown" v-else-if="lists.listType == 'iconList'">
-    <li v-for="item in lists.listItems">
-      <a href="#">
-        <i class="material-icons md-16" :class="item.colorClass">{{ item.listIcion }}</i>
+    <li v-for="item in lists.liItems">
+      <a :href="item.listHref">
+        <i class="material-icons md-16" :class="item.colorClass">{{ item.listIcion }}</i> 
         {{ item.listItem }}
       </a>
     </li>
@@ -22,5 +22,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-
 </style>
