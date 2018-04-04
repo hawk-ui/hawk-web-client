@@ -75,7 +75,7 @@
                     <tr>
                       <th colspan="2"></th>
                       <th v-for="node in cib.nodes" v-bind:key="node.id">
-                        <div class="dropdown">
+                        <div class="dropdown nodes-dropdown">
                           <span class="resource-status gray" v-bind:class="NodeBarClass(node.state)"></span>
                           <div class="node-name btn dropdown-toggle" data-toggle="dropdown" v-bind:title="'Node id: ' + node.id">{{ node.name }}
                             <span class="table-cluster-name">

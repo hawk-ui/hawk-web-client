@@ -1,5 +1,7 @@
 <template>
   <ul class="dropdown-menu filters-menu-dropdown" v-if="lists.listType == 'radioList'">
+    <li class="heading">Show</li>
+    <li role="separator" class="divider"></li>
     <li v-for="item in lists.liItems">
       <label><input type="radio"> {{ item.listItem }} </label>
     </li>

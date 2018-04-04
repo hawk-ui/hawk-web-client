@@ -117,7 +117,6 @@
 
       .filters-settings {
         margin-bottom: 0;
-        margin-top: 8px;
 
         > li {
           display: inline-block;
@@ -126,19 +125,23 @@
           
           &.cluster-ticket {
             border-right: 1px solid $border-color;
-            padding-right: 15px;
+            padding-right: 7px;
+
+            .btn {
+              padding: 0 12px; 
+            }
 
             span {
               background: #a32a00;
               font-size: 10px;
               text-align: center;
               position: absolute;
-              top: 0px;
-              right: -6px;
+              top: -4px;
+              right: -3px;
               border-radius: 8px;
               color: #fff;
-              width: 16px;
-              height: 16px;
+              width: 15px;
+              height: 15px;
             }
             .ticket-dropdown {
               padding: 15px 15px 10px 15px;
@@ -165,6 +168,14 @@
 
             > li {
               margin-bottom: 12px;
+              
+              &.heading{
+                margin-bottom: 6px;
+              }
+
+              &.divider {
+                margin: 0px -15px 10px -15px;
+              }
 
               label {
                 font-weight: normal;
@@ -226,11 +237,18 @@
   margin-right: 5px;
 }
 
+.nodes-dropdown {
+  display: -webkit-inline-box;
+}
+
 .status-icon {
   display: inline-block;
   ul {
     margin: 0;
     padding: 0;
+    li {
+      display: inline-block;
+    }
   }
 }
 
