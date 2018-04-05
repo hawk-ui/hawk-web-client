@@ -41,7 +41,7 @@
         <div class="col-sm-4">
           <div class="panel panel-default">
             <div class="panel-body">
-              <h3>Cluster</h3>
+              <h3>Resources</h3>
               <p>230</p>
             </div>
           </div>
