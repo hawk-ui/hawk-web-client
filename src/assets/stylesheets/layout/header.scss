@@ -1,0 +1,26 @@
+/* Header styles
+   ========================================================================== */
+.main-menu {
+  nav {
+    align-items: center;
+    border-bottom: 1px solid $header-hr-color;
+    display: flex;
+    height: $header-height;
+    width: $header-width;
+    margin-bottom: $header-spacing;
+    padding-left: $header-spacing;
+
+    img {
+      height: 25px;
+    }
+
+    .hawk-logo {
+      color: $header-text-color;
+      display: inline-block;
+      font-size: $header-font-size;
+      font-weight: $font-weight-light-base;
+      padding-left: $header-spacing;
+      vertical-align: middle;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+/* Titles
+   ========================================================================== */
+/**
+* Titles
+*
+* Typography variables: /assets/stylesheets/base/variables/typography.scss
+* Titles variables: /assets/stylesheets/base/variables/titles.scss
+* Spacing variables: /assets/stylesheets/base/variables/spacings.scss
+*/
+h1,
+h2,
+h3 {
+  font-weight: $font-weight-normal-base;
+}
+
+h4,
+h5,
+h6 {
+  font-weight: $font-weight-light-base;
+  line-height: 1.5em;
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+
+h2 {
+  font-size: $h2-font-size;
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+h5 {
+  font-size: $h5-font-size;
+}
+
+h6 {
+  font-size: $h6-font-size;
+  font-weight: $font-weight-bold-base;
+}
+
+.title-strong {
+  font-weight: $font-weight-bold-base;
+}
+
+.title-no-margings {
+  margin: 0;
+}

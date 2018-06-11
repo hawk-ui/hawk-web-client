@@ -1,0 +1,42 @@
+/* Main menu
+   ========================================================================== */
+/* Variables file: assets/stylesheets/base/variables/main-menu.scss */
+
+.main-menu {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 55px;
+  height: 100%;
+  margin-left: $main-menu-margin-left-negative;
+  overflow: hidden;
+  background-color: $main-menu-bg;
+  border-right: $main-menu-border;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+
+  ul,
+  li {
+    padding: 0;
+  }
+
+  li a,
+  .li-no-link {
+    color: $main-menu-link-color;
+    display: block;
+    font-weight: $font-weight-normal-base;
+    margin: $main-menu-li-no-link-margin;
+    padding: $main-menu-li-no-link-padding;
+    position: relative;
+    width: $main-menu-li-no-link-width;
+
+    > .material-icons {
+      display: inline-block;
+      text-indent: initial;
+      margin: $main-menu-icon-margin;
+      vertical-align: bottom;
+    }
+  }
+}

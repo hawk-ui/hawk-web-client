@@ -1,0 +1,15 @@
+/* Main menu variables
+   ========================================================================== */
+/* Colors variables: /assets/stylesheets/base/variables/branding.scss */
+$main-menu-border: 1px solid $sb-gray-100;
+$main-menu-bg: $sb-blue-500;
+$main-menu-link-color: $sb-white;
+
+
+/* Spacing variables: /assets/stylesheets/base/variables/spacings.scss */
+
+$main-menu-li-no-link-margin: $m $m 0 0;
+$main-menu-li-no-link-padding: $s 0 $s $m;
+$main-menu-icon-margin: 0 $m 0 0;
+$main-menu-margin-left-negative: -250px;
+$main-menu-li-no-link-width: 230px;

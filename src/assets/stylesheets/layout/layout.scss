@@ -1,47 +1,55 @@
-
-body {
-  overflow-x: hidden;
-  background: #eee;
-}
-
+/* Post styles
+   ========================================================================== */
+/**
+*  Use it in HTML as
+*  <section class='post'></section>
+*
+*  This rule wraps a section with a max width of 1116px and applies a box box-shadow
+*/
+body,
 html {
   height: 100%;
 }
 
+body {
+  
+  background: $body-bg;
+  color: $body-color;
+  font-family: $font-type-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal-base;
+  line-height: $line-height;
+  overflow-x: hidden;
+}
+
 #wrapper {
   height: 100%;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
  
- .dashboard-view { 
-    padding-left: 55px;
+  .sidebar-view { 
+    padding-left: $sidebar-view-padding-left;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
   }
 
   &.toggled {
-    padding-left: 196px;
 
-    & #sidebar-wrapper {
-      width: 250px;
+    .sidebar-view { 
+      padding-left: $sidebar-width;
     }
 
-    > #page-content-wrapper {
-      position: absolute;
-      margin-right: -250px;
-      background-color: red;
-      margin-left: 0px;
-
-      .logo-header {
-        display: none;
-        -webkit-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
-        transition: all 0.5s ease;
-      }
+    & #sidebar-wrapper {
+      width: $sidebar-width;
     }
   }
 }
+
+/**
+*  main header
+*
+*  Need to create seperate scss file for this
+*/
 
 
 .top-navbar {

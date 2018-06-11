@@ -5,7 +5,7 @@ import VueRouter from 'vue-router'
 import Login from '@/components/Login'
 
 // Main structure (once logged in)
-import LeftSidebar from '@/components/shared/left_sidebar/LeftSidebar'
+import LeftSidebar from '@/components/shared/left_sidebar/leftSidebar'
 import TopNavbar from '@/components/shared/top_navbar/TopNavbar'
 
 // Main sections

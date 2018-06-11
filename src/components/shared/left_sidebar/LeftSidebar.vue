@@ -1,23 +1,23 @@
 <template>
-    <div id="sidebar-wrapper" class="menu-side">
-      <app-top-navbar></app-top-navbar>
-      <ul class="sidebar-nav">
+    <div id="sidebar-wrapper" class="main-menu">
+      <app-header></app-header>
+      <ul class="no-list-style">
           <li>
             <router-link to="/monitoring">
               <i class="material-icons md-18 leftnav_icon">desktop_mac</i>
-              <span>{{ $t("leftnav_bar.links.monitoring") }}</span>
+              {{ $t("leftnav_bar.links.monitoring") }}
             </router-link>
           </li>
           <li>
             <router-link to="/troubleshooting/reports">
               <i class="material-icons md-18 leftnav_icon">tune</i>
-              <span>{{ $t("leftnav_bar.links.trubleshooting") }}</span>
+              {{ $t("leftnav_bar.links.trubleshooting") }}
             </router-link>
           </li>
           <li>
             <router-link to="/configuration">
               <i class="material-icons md-18 leftnav_icon">settings</i>
-              <span>{{ $t("leftnav_bar.links.configuration") }}</span>
+              {{ $t("leftnav_bar.links.configuration") }}
             </router-link>
           </li>
         </ul>
@@ -26,13 +26,13 @@
 </template>
 
 <script>
-import Footer from './Footer.vue'
-import TopNavbar from './TopNavbar.vue'
+import Footer from './footer.vue'
+import Header from './header.vue'
 
 export default {
   components: {
     'appFooter': Footer,
-    'appTopNavbar': TopNavbar
+    'appHeader': Header
   }
 }
 </script>
