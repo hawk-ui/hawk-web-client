@@ -1,17 +1,18 @@
 <template>
   <header class="top-navbar">
-    <i class="material-icons md-18 menu-btn" id="menu-toggle">menu</i>
-    <div class="header-cluster-status">
-      <i class="material-icons md-18 cluster-icon">check_circle</i>
-      <div class="header-cluster-details">{{ $t("page_header.cluster-status.details") }}
-      </div>
+    <div class="sidebar-toggle clickable" id="menu-toggle">
+      <i class="material-icons md-18">menu</i>
     </div>
-    <div class="dropdown user-details pull-right">
+    <div class="cluster-status">
+      <i class="material-icons md-18">check_circle</i>
+      {{ $t("page_header.cluster-status.details") }}
+    </div>
+    <div class="dropdown user-details clickable">
       <div class="dropdown-toggle" data-toggle="dropdown">
         <i class="material-icons md-16">account_circle</i>
-        <span class="user-name">Hacluste</span>
+        Hacluste
       </div>
-      <ul class="dropdown-menu user-details-dropdown">
+      <ul class="dropdown-menu dropdown-menu-right">
         <li>Account Setting</li>
         <li>Help</li>
         <li>Logout</li>
