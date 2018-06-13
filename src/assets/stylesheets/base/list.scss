@@ -1,0 +1,56 @@
+/* List styles
+   ========================================================================== */
+/* Spacing variables: /assets/stylesheets/base/variables/spacings.scss */
+/* Reset list styles */
+.no-list-style {
+  list-style: none;
+  padding-left: 0;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    padding-top: $s;
+
+    li {
+
+      a {
+        padding-left: $xl;
+      }
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+/* List without padding */
+.list-no-padding {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.ul-horizontal {
+
+  &.no-list-style {
+    li {
+      margin-right: $m;
+    }
+  }
+
+  li {
+    display: inline-block;
+  }
+}
+
+li {
+  padding: $s 0 $s;
+}
+
+ol > li {
+  padding-left: $m;
+
+  .fa {
+    margin-right: $s;
+  }
+}

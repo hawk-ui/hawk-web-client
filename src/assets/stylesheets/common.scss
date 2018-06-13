@@ -1,29 +1,6 @@
 
 @import "variables.scss";
 
-ul, li {
-  list-style: none;
-}
-
-h1, .h1, h2, .h2, h3, .h3 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.panel {
-  border-radius: 3px;
-}
-.panel-default {
-  > .panel-heading{
-    background-color: transparent;
-  }
-  a.collapsed .icon-up{
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    transform: rotate(-180deg);
-  }
-}
-
 .material-icons.md-14 {
   font-size: 14px;
   width: 14px;

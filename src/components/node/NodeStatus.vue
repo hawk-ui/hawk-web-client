@@ -51,7 +51,7 @@
       <div class="row">
         <div class="col-sm-6">
           <div class="panel panel-default">
-            <div class="panel-heading panel-graphs">
+            <div class="panel-heading panel-graphs panel-heading-no-bg">
               <h4 class="panel-title">
                 <span>CPU Usage</span>
                 <a data-toggle="collapse" href="#graph1" class='pull-right'>
@@ -66,7 +66,7 @@
         </div>
         <div class="col-sm-6">
           <div class="panel panel-default">
-            <div class="panel-heading panel-graphs">
+            <div class="panel-heading panel-graphs panel-heading-no-bg">
               <h4 class="panel-title">
                 <span>Disk & Memory Usage</span>
                 <a data-toggle="collapse" href="#graph2" class='pull-right'>
@@ -191,7 +191,7 @@
 </template>
 
 <script>
-import PageHeader from '../shared/page_header/PageHeader.vue'
+import PageHeader from '../shared/page-title.vue'
 import Dropdown from '../shared/Dropdown.vue'
 
 export default {

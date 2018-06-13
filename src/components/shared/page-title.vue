@@ -1,7 +1,7 @@
 <template>
   <div class="page-title">
     <div class="row">
-     <div class="col-sm-10"><h1>{{ pageTitle }}</h1></div>
+     <div class="col-sm-10"><h1 class="title-no-margings">{{ pageTitle }}</h1></div>
       <div class="col-sm-2"><slot></slot></div>
     </div>
   </div>

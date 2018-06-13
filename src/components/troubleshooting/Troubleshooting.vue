@@ -23,7 +23,7 @@
 </template>
 
 <script>
-  import PageHeader from '../shared/page_header/PageHeader.vue'
+  import PageHeader from '../shared/page-title.vue'
   import HistoryExplorer from './HistoryExplorer.vue'
   import CommandLog from './CommandLog.vue'
 

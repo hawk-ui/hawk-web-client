@@ -6,7 +6,7 @@
       <label><input type="radio"> {{ item.listItem }} </label>
     </li>
   </ul>
-  <ul class="dropdown-menu nodes-menu-dropdown" v-else-if="lists.listType == 'iconList'">
+  <ul class="dropdown-menu" v-else-if="lists.listType == 'iconList'">
     <li v-for="item in lists.liItems">
       <a :href="item.listHref">
         <i class="material-icons md-16" :class="item.colorClass">{{ item.listIcion }}</i> 
