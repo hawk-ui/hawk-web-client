@@ -7,47 +7,36 @@
 */
 .legend {
   position: relative;
-  margin-right: 10px;
 
-  .legend-btn {
+  > .btn {
     background: transparent;
   }
 
-
-
+  &.open {
     > ul {
-    left: auto;
-    right: 5px;
-    width: 455px;
-    margin: 0;
-    padding: 16px;
-
-    > li {
-      width: 50%;
-      display: inline-block;
+      width: $legend-ul-width;
       margin: 0;
-      padding: 0;
+      padding: $legend-ul-padding;
 
-      a {
-        padding: 4px 8px;
-        
-        &:hover {
-          background: none;
-        }
+      > li {
+        width: $legend-li-width;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
 
-        > .node-circle {
-          width: 10px;
-          height: 10px;
-          margin-right: 10px;
-        }
+        a {
+          padding: $legend-li-a-padding;
 
-        > .material-icons {
-          vertical-align: bottom;
-          margin-right: 10px
+          &:hover {
+            background: none;
+          }
+
+          > .material-icons {
+            vertical-align: bottom;
+            margin-right: $legend-icons-margin-right;
+          }
         }
       }
     }
   }
-
-  
 }

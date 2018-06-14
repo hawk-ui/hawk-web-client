@@ -2,12 +2,6 @@
    ========================================================================== */
 /* Variables: /assets/stylesheets/base/variables/pages/dashboard.scss */
 
-.add-cluster-bt {
-  float: left;
-  margin-left: 25px;
-  line-height: 40px;
-}
-
 .dashboard-header {
   margin: 0;
   padding: 0 30px 10px 30px;
@@ -212,27 +206,7 @@
   }
 }
 
-.error-container {
-  padding: 0 25px 20px 25px;
-  border-bottom: 1px solid $border-color;
-  margin-bottom: 12px;
 
-  .error-list {
-    padding: 0;
-    li {
-      color: $red;
-      font-size: 13px;
-      > .material-icons {
-        margin-right: 8px;
-        vertical-align: text-bottom;
-      }
-
-      span {
-        font-weight: bold;
-      }
-    }
-  }
-}
   
 .collapsed .icon-up{
   -webkit-transform: rotate(180deg);

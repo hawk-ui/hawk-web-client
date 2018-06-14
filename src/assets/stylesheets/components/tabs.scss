@@ -20,8 +20,10 @@
         background-color: $tabs-inactive-bg;
         margin-bottom: -1px;
 
-        > span {
-          margin-left: 5px;
+        > .material-icons {
+          margin-left: 8px;
+          font-size: 10px;
+          vertical-align: middle;
         }
       }
 
@@ -39,4 +41,5 @@
   clear: both;
   border: 1px solid $tabs-border-color;
   padding: $tab-content-padding;
+  background: $tab-content-bg;
 }

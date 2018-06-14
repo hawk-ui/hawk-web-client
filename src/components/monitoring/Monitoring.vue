@@ -12,21 +12,21 @@
       <div id="tabs" class="dashboard-tabs"> 
         <ul class="nav nav-pills">
           <li class="active">
-            <a href="#1a" data-toggle="tab">HA Cluster<span class="status-circle status-green"></span></a>
+            <a href="#1a" data-toggle="tab">HA Cluster<i class="material-icons green">fiber_manual_record</i></a>
           </li>
           <li>
-            <a href="#2a" data-toggle="tab">Web Cluster<span class="status-circle status-gray"></span></a>
+            <a href="#2a" data-toggle="tab">Web Cluster<i class="material-icons red">fiber_manual_record</i></a>
           </li>
           <li>
-            <a href="#3a" data-toggle="tab">HA web Cluster<span class="status-circle status-gray"></span></a>
+            <a href="#3a" data-toggle="tab">HA web Cluster<i class="material-icons gray">fiber_manual_record</i></a>
           </li>
         </ul>
 
-        <div class="add-cluster-bt clickable" data-toggle="modal" data-target="#addCluster">+ Add Cluster</div>
+        <a class="add-cluster-bt clickable" data-toggle="modal" data-target="#addCluster">+ Add Cluster</a>
         <app-add-cluster id="addCluster"></app-add-cluster>
 
         <div class="dropdown legend pull-right">
-          <button type="button" class="btn legend-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Legend <span class="caret"></span>
           </button>
             <app-dropdown class="legend-options" :lists="legendList"></app-dropdown>
@@ -34,8 +34,8 @@
 
         <div class="tab-content clearfix">
           <div class="tab-pane active" id="1a">
-              <div class="error-container">
-                <ul class="error-list no-list-style">
+              <div class="dashboard-error">
+                <ul class="no-list-style">
                   <li><i class="material-icons md-16">error</i>2017-10-06 15:43: <span>Operation monitor</span>  failed for resource <span>ted</span> on node webui: call-id=96, rc-code=not running (7), exit-reason=</li>
                   <li><i class="material-icons md-16">error</i>2017-10-06 15:43: <span>Operation monitor</span>  failed for resource <span>ted</span> on node webui: call-id=96, rc-code=not running (7), exit-reason=</li>
                 </ul>
