@@ -8,6 +8,14 @@ const appService = {
       axios.get(path)
         .then(response => { resolve(response.data) })
     })
+  },
+  login (path, UserInput) {
+    return new Promise((resolve) => {
+      axios.post(path, {
+        'username': UserInput.username,
+        'password': UserInput.password
+      }).then(response => { resolve(response.data) })
+    })
   }
 }
 
