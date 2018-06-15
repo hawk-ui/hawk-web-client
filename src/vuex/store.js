@@ -6,9 +6,11 @@ import Service from '../service/app_service.js'
 
 const state = {
   cib: {},
-  userName: '',
-  apiToken: '',
-  loggedInStatus: true
+  user: {
+    userName: '',
+    apiToken: '', // hardcode api token here to test changes
+    loggedInStatus: true
+  }
 }
 
 const store = new Vuex.Store({
@@ -20,7 +22,7 @@ const store = new Vuex.Store({
   },
   actions: {
     updateCib (context) {
-      Service.getCib('/db').then((data) => context.commit('updateCib', data))
+      Service.getCib('/status', state.user.apiToken).then((data) => context.commit('updateCib', data)) // points to '/status' to test changes
     },
     login (context, userInput) {
       Service.login('/register', userInput).then((data) => context.commit('addApiToken', data))
