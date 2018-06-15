@@ -24,6 +24,9 @@ const store = new Vuex.Store({
     },
     login (context, userInput) {
       Service.login('/register', userInput).then((data) => context.commit('addApiToken', data))
+    },
+    logout (context) {
+      context.commit('deleteApiToken')
     }
   },
   mutations: {
@@ -33,7 +36,7 @@ const store = new Vuex.Store({
     addApiToken (state, token) {
       state.user.apiToken = token
     },
-    removeApiToken (state) {
+    deleteApiToken (state) {
       state.user.apiToken = ''
     }
   }
