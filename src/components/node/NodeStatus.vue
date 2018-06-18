@@ -41,7 +41,7 @@
         <div class="col-sm-4">
           <div class="panel panel-default">
             <div class="panel-body">
-              <h3>Cluster</h3>
+              <h3>Resources</h3>
               <p>230</p>
             </div>
           </div>
@@ -96,27 +96,62 @@
                 <tr>
                   <td class="status-text"><span class="status-circle status-green"></span>stonith-sbd</td>
                   <td>Running since 3 hrs</td>
-                  <td class="col-sm-1"><i class="material-icons">more_vert</i></td>
+                  <td class="col-sm-1">
+                    <div class="dropdown pull-right">
+                      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="material-icons md-16">more_vert</i>
+                      </button>
+                      <app-dropdown :lists="resourceList" :listType="iconList"></app-dropdown>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td class="status-text"><span class="status-circle status-gray"></span>base-clone</td>
                   <td>On maintanenece since 16 hrs</td>
-                  <td><i class="material-icons">more_vert</i></td>
+                  <td>
+                    <div class="dropdown pull-right">
+                      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="material-icons md-16">more_vert</i>
+                      </button>
+                      <app-dropdown :lists="resourceList" :listType="iconList"></app-dropdown>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td class="status-text"><span class="status-circle status-red"></span>c-clusterfs</td>
                   <td>Stooped since 18.10.2017</td>
-                  <td><i class="material-icons">more_vert</i></td>
+                  <td>
+                    <div class="dropdown pull-right">
+                      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="material-icons md-16">more_vert</i>
+                      </button>
+                      <app-dropdown :lists="resourceList" :listType="iconList"></app-dropdown>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td class="status-text"><span class="status-circle status-red"></span>g-proxy</td>
                   <td>Stopped since 3 hrs</td>
-                  <td><i class="material-icons">more_vert</i></td>
+                  <td>
+                    <div class="dropdown pull-right">
+                      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="material-icons md-16">more_vert</i>
+                      </button>
+                      <app-dropdown :lists="resourceList" :listType="iconList"></app-dropdown>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td class="status-text"><span class="status-circle status-green"></span>cl-servers</td>
                   <td>Running since 12 hrs</td>
-                  <td><i class="material-icons">more_vert</i></td>
+                  <td>
+                    <div class="dropdown pull-right">
+                      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="material-icons md-16">more_vert</i>
+                      </button>
+                      <app-dropdown :lists="resourceList" :listType="iconList"></app-dropdown>
+                    </div>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -170,6 +205,16 @@ export default {
           { listIcion: 'build', listItem: 'Maintenance' },
           { listIcion: 'power_settings_new', listItem: 'Standby' },
           { listIcion: 'delete_forever', listItem: 'Cleanup' }
+        ]
+      },
+      resourceList: {
+        listType: 'iconList',
+        liItems: [
+          { listIcion: 'stop', listItem: 'Stop', listHref: '#' },
+          { listIcion: 'info', listItem: 'Details', listHref: '/resourceStatus' },
+          { listIcion: 'build', listItem: 'Maintenance', listHref: '#' },
+          { listIcion: 'power_settings_new', listItem: 'Migrate', listHref: '#' },
+          { listIcion: 'delete_forever', listItem: 'Cleanup', listHref: '#' }
         ]
       }
     }

@@ -20,21 +20,14 @@ h1, .h1, h2, .h2, h3, .h3 {
 .panel {
   border-radius: 3px;
 }
-
-.panel-heading a.collapsed .icon-up{
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  transform: rotate(-180deg);
-}
-
-.node-status {
-  h3 {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 5px;
+.panel-default {
+  > .panel-heading{
+    background-color: transparent;
   }
-  p {
-    margin-bottom: 0;
+  a.collapsed .icon-up{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(-180deg);
   }
 }
 
@@ -183,7 +176,6 @@ h1, .h1, h2, .h2, h3, .h3 {
   box-shadow: none;
 }
 
-
 .btn-group.open .dropdown-toggle {
   box-shadow: none;
 }
@@ -193,6 +185,7 @@ h1, .h1, h2, .h2, h3, .h3 {
   background-color: $brand-green;
   border-color: $brand-green;
   font-weight: lighter;
+
   > .material-icons {
     vertical-align: sub;
   }

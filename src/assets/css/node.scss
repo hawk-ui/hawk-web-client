@@ -19,6 +19,19 @@
   } 
 } 
   
+.node-status {
+  h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: $brand-blue--light;
+  }
+  p {
+    margin-bottom: 0;
+    color: $gray--lighter;
+  }
+}
+
 .status-text {
   color: $gray--darker;
   font-weight: normal;
@@ -39,7 +52,6 @@
   }
 }
 
-
 .constraint-heading {
   font-size: 18px;
   margin-bottom: 10px;
@@ -50,6 +62,8 @@
 
 .resource-panel {
   > .panel-heading {
+    background-color: transparent;
+    padding: 15px;
 
     h4.panel-title {
       font-size: 14px;
