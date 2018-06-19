@@ -1,0 +1,28 @@
+/* Dropdown variables
+   ========================================================================== */
+/* Colors variables: /assets/stylesheets/base/variables/branding.scss */
+/* Colors variables: /assets/stylesheets/base/variables/shadows.scss */
+/* Spacing variables: /assets/stylesheets/base/variables/spacings.scss */
+$dropdown-box-shadow: 0 1px 3px $shadow-color;
+$dropdown-background: $sb-white;
+$dropdown-padding: $s;
+
+/* User Details Dropdown */
+$user-details-ul-margin-top: $m - 3;
+
+/* Tickets Dropdown */
+$cluster-ticket-border-right: 1px solid $sb-gray-80;
+$cluster-ticket-padding-right: $m - 2;
+$cluster-ticket-count-bg: $sb-red-900;
+$cluster-ticket-count-font: $s + 2;
+$cluster-ticket-count-color: $sb-white;
+$cluster-ticket-count-width-height: $m - 2;
+$cluster-ticket-count-line-height: $m - 2;
+$cluster-ticket-ul-min-width: 170px;
+$cluster-ticket-ul-padding: $s $m;
+$cluster-ticket-li-margin-bottom: $s;
+
+/* Filters Dropdown */
+$filters-dropdown-ul-min-width: 180px;
+$filters-dropdown-li-padding: $xs $m;
+$filters-label-margin-left: $xs;

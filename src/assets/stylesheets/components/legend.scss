@@ -15,7 +15,7 @@
   &.open {
     > ul {
       width: $legend-ul-width;
-      margin: 0;
+      margin: $legend-ul-margin-top;
       padding: $legend-ul-padding;
 
       > li {

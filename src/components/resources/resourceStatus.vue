@@ -171,7 +171,7 @@
 
 <script>
 import PageHeader from '../shared/page-title.vue'
-import Dropdown from '../shared/Dropdown.vue'
+import Dropdown from '../shared/dropdown.vue'
 
 export default {
   data: function () {

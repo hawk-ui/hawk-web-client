@@ -13,9 +13,9 @@
         Hacluste
       </div>
       <ul class="dropdown-menu dropdown-menu-right">
-        <li>Account Setting</li>
-        <li>Help</li>
-        <li>Logout</li>
+        <li><a>Account Setting</a></li>
+        <li><a>Help</a></li>
+        <li><a>Logout</a></li>
       </ul>
     </div>
   </header>

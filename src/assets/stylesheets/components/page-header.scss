@@ -34,16 +34,6 @@
         vertical-align: text-bottom;
         margin-right: $pg-header-user-icon-margin;
       }
-
-      > ul {
-        border: 0;
-        margin-top: $pg-header-user-ul-margin-top;
-        padding: $pg-header-user-ul-padding;
-
-        > li {
-          padding: $pg-header-user-li-padding;
-        }
-      }
     }
   }
 }

@@ -1,9 +1,7 @@
 <template>
-  <ul class="dropdown-menu filters-menu-dropdown" v-if="lists.listType == 'radioList'">
-    <li class="heading">Show</li>
-    <li role="separator" class="divider"></li>
+  <ul class="dropdown-menu dropdown-menu-right" v-if="lists.listType == 'radioList'">
     <li v-for="item in lists.liItems">
-      <label><input type="radio"> {{ item.listItem }} </label>
+      <input type="radio"> <label>{{ item.listItem }} </label>
     </li>
   </ul>
   <ul class="dropdown-menu" v-else-if="lists.listType == 'iconList'">

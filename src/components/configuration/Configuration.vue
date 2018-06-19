@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import PageHeader from '../shared/page_header/PageHeader.vue'
+import PageHeader from '../shared/page-header.vue'
 
 export default {
   data: function () {

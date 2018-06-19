@@ -20,80 +20,15 @@
     height: auto;
   }
 
-  .filters-settings {
+  .header-toolbox {
     margin-bottom: 0;
 
     > li {
       display: inline-block;
       margin: 0 5px;
       vertical-align: middle;
-      
-      &.cluster-ticket {
-        border-right: 1px solid $border-color;
-        padding-right: 7px;
+      padding: 0;
 
-        .btn {
-          padding: 0 12px; 
-        }
-
-        span {
-          background: #a32a00;
-          font-size: 10px;
-          text-align: center;
-          position: absolute;
-          top: -4px;
-          right: -3px;
-          border-radius: 8px;
-          color: #fff;
-          width: 15px;
-          height: 15px;
-        }
-        .ticket-dropdown {
-          padding: 15px 15px 10px 15px;
-          > li > div {
-            margin-bottom: 8px;
-          }
-        } 
-      }
-
-      .filters-menu-btn {
-        background-color: transparent;
-        padding: 6px;
-        
-        > .filter-list { 
-          vertical-align: sub;
-        }
-      }
-
-      .filters-menu-dropdown {
-        right: 0;
-        left: auto;
-        min-width: 185px;
-        padding: 15px 15px 10px 15px;
-
-        > li {
-          margin-bottom: 12px;
-          
-          &.heading{
-            margin-bottom: 6px;
-          }
-
-          &.divider {
-            margin: 0px -15px 10px -15px;
-          }
-
-          label {
-            font-weight: normal;
-            display: inline-block;
-            max-width: 100%;
-            margin-bottom: 0px;
-            
-            input {
-              margin-right: 7px;
-            }
-          }
-        }
-      }
       .dropdown-toggle::after {
         border: 0;
       }

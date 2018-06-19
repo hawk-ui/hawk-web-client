@@ -42,25 +42,25 @@
               </div>
               <div class="dashboard-header">
                 <input class="form-control search" type="text" value="search...">
-                <ul class="pull-right filters-settings">
+                <ul class="pull-right header-toolbox">
                   <!-- Tickets section -->
-                  <li class="cluster-ticket">
-                    <div class="dropdown">
+                  <li>
+                    <div class="dropdown cluster-ticket">
                         <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Tickets
                         </button>
-                        <span>2</span>
-                      <ul  v-if='cib.tickets' class="dropdown-menu filters-menu-dropdown">
+                        <span class="cluster-ticket-count">2</span>
+                      <ul  v-if='cib.tickets' class="dropdown-menu">
                         <li v-for="(ticket, index) in cib.tickets" v-bind:key="index">
                           <div>{{ ticket.id }} : {{ ticket.state }} <br>
-                          standby : {{ ticket.standby? "true": "false" }}</div>
+                          Standby : {{ ticket.standby? "true": "false" }}</div>
                         </li>
                       </ul>
                     </div>
                   </li>
                   <!-- End Ticket Section -->
                   <li>
-                    <div class="dropdown">
+                    <div class="dropdown filters-dropdown">
                       <button type="button" class="btn filters-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="material-icons md-18 filter-list">filter_list</i>
                       </button>

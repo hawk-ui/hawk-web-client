@@ -1,0 +1,78 @@
+/* Dropdown
+   ========================================================================== */
+/* Dropdowns */
+/* Variables: /assets/stylesheets/base/variables/dropdown.scss */
+.open .dropdown-menu {
+  border-radius: 0;
+  box-shadow: $dropdown-box-shadow;
+  background-color: $dropdown-background;
+}
+
+
+/* User Details Dropdown */
+
+ .user-details {
+  > ul {
+    margin-top: $user-details-ul-margin-top;
+  }
+}
+
+/* Tickets Dropdown */
+
+.cluster-ticket {
+  border-right: $cluster-ticket-border-right;
+  padding-right: $cluster-ticket-padding-right;
+
+  .btn {
+       padding: 8px 4px;
+  }
+
+  > .cluster-ticket-count {
+    background: $cluster-ticket-count-bg;
+    font-size: $cluster-ticket-count-font;
+    text-align: center;
+    border-radius: 50%;
+    color: $cluster-ticket-count-color;
+    width: $cluster-ticket-count-width-height;
+    height: $cluster-ticket-count-width-height;
+    display: inline-block;
+    line-height: $cluster-ticket-count-line-height;
+  }
+
+  > ul {
+    right: 0;
+    left: auto;
+    min-width: $cluster-ticket-ul-min-width;
+    padding: $cluster-ticket-ul-padding;
+
+    > li {
+      margin-bottom: $cluster-ticket-li-margin-bottom;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+/* Filter Dropdown */
+
+.filters-dropdown {
+  
+  > ul {
+    min-width: $filters-dropdown-ul-min-width;
+
+    li {
+      padding: $filters-dropdown-li-padding;
+
+      &.heading {
+        font-weight: bold;
+      }
+
+      label {
+        font-weight: normal;
+        margin-left: $filters-label-margin-left;
+      }
+    }
+  }
+}
