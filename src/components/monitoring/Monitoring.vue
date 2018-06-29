@@ -62,7 +62,7 @@
                   <li>
                     <div class="dropdown filters-dropdown">
                       <button type="button" class="btn filters-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="material-icons md-18 filter-list">filter_list</i>
+                        <i class="material-icons md-14 filter-list">filter_list</i>
                       </button>
                       <app-dropdown :lists="filterList"></app-dropdown>
                     </div>
@@ -77,7 +77,7 @@
                     <th colspan="2"></th>
                     <th v-for="node in cib.nodes" v-bind:key="node.id">
                       <div class="dropdown nodes-dropdown">
-                        <span class="resource-status gray" v-bind:class="NodeBarClass(node.state)"></span>
+                        <span class="status-line gray" v-bind:class="NodeBarClass(node.state)"></span>
                         <div class="node-name btn dropdown-toggle" data-toggle="dropdown" v-bind:title="'Node id: ' + node.id">{{ node.name }}
                           <span class="table-cluster-name">
                             {{ cib.crm_config.cluster_name}}
@@ -111,7 +111,7 @@
                     <td class="resource-col">
                       <div class="dropdown">
                         <div class="btn dropdown-toggle" data-toggle="dropdown">
-                          <span class="resource-status gray" v-bind:class="resourceBarStyle(resource)"></span>{{ resource.id }}
+                          <span class="status-line gray" v-bind:class="resourceBarStyle(resource)"></span>{{ resource.id }}
                         </div>
                         <app-dropdown :lists="resourceList"></app-dropdown>
                       </div>

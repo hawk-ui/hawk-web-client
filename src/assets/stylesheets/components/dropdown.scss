@@ -24,10 +24,10 @@
   padding-right: $cluster-ticket-padding-right;
 
   .btn {
-       padding: 8px 4px;
+    padding-right: $cluster-ticket-btn-padding-right;
   }
 
-  > .cluster-ticket-count {
+  .cluster-ticket-count {
     background: $cluster-ticket-count-bg;
     font-size: $cluster-ticket-count-font;
     text-align: center;
