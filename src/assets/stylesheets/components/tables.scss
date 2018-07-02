@@ -2,6 +2,16 @@
    ========================================================================== */
 /* Tables */
 /* Variables: /assets/stylesheets/base/variables/tables.scss */
+.table { 
+  border-color: $base-border-color;
+  > thead > tr > th {
+    border-color: $base-border-color;
+  }
+  
+  tbody > tr > td {
+    border-color: $base-border-color;
+  }
+}
 
 /* Dashboard Table */
 .dashboard-table {
@@ -10,7 +20,7 @@
   > thead > tr > th {
     font-weight: 400;
     text-align: center;
-    border-right: 1px solid $border-color;
+    border-right: 1px solid $base-border-color;
 
     &:last-child {
       border-right: 0;
@@ -18,7 +28,7 @@
   }
 
   > tbody > tr > td {
-    border-right: 1px solid $border-color;
+    border-right: 1px solid $base-border-color;
     text-align: center;
 
     &:last-child {

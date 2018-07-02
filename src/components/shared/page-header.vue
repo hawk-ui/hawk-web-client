@@ -9,7 +9,7 @@
     </div>
     <div class="dropdown user-details clickable">
       <div class="dropdown-toggle" data-toggle="dropdown">
-        <i class="material-icons md-16">account_circle</i>
+        <i class="material-icons md-18">account_circle</i>
         Hacluste
       </div>
       <ul class="dropdown-menu dropdown-menu-right">

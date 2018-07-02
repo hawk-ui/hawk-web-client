@@ -36,8 +36,8 @@
           <div class="tab-pane active" id="1a">
               <div class="dashboard-error">
                 <ul class="no-list-style">
-                  <li><i class="material-icons md-16">error</i>2017-10-06 15:43: <span>Operation monitor</span>  failed for resource <span>ted</span> on node webui: call-id=96, rc-code=not running (7), exit-reason=</li>
-                  <li><i class="material-icons md-16">error</i>2017-10-06 15:43: <span>Operation monitor</span>  failed for resource <span>ted</span> on node webui: call-id=96, rc-code=not running (7), exit-reason=</li>
+                  <li><i class="material-icons md-18">error</i>2017-10-06 15:43: <span>Operation monitor</span>  failed for resource <span>ted</span> on node webui: call-id=96, rc-code=not running (7), exit-reason=</li>
+                  <li><i class="material-icons md-18">error</i>2017-10-06 15:43: <span>Operation monitor</span>  failed for resource <span>ted</span> on node webui: call-id=96, rc-code=not running (7), exit-reason=</li>
                 </ul>
               </div>
               <div class="dashboard-header">
@@ -62,7 +62,7 @@
                   <li>
                     <div class="dropdown filters-dropdown">
                       <button type="button" class="btn filters-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="material-icons md-14 filter-list">filter_list</i>
+                        <i class="material-icons md-18 filter-list">filter_list</i>
                       </button>
                       <app-dropdown :lists="filterList"></app-dropdown>
                     </div>
@@ -81,14 +81,14 @@
                         <div class="node-name btn dropdown-toggle" data-toggle="dropdown" v-bind:title="'Node id: ' + node.id">{{ node.name }}
                           <span class="table-cluster-name">
                             {{ cib.crm_config.cluster_name}}
-                            <i v-if="node.name === cib.meta.dc" class="material-icons md-14">home</i>
                           </span>
                         </div>
                         <div class="status-icon">
                           <ul>
-                            <li v-if="node.maintenance == true"><i class="material-icons md-14">build</i></li>
-                            <li v-if="node.remote == true"><i class="material-icons md-14">cloud_queue</i></li>
-                            <li v-if="node.fence_history !== ''"><i class="material-icons md-14">cached</i></li>
+                            <li><i v-if="node.name === cib.meta.dc" class="material-icons md-18">home</i></li>
+                            <li v-if="node.maintenance == true"><i class="material-icons md-18">build</i></li>
+                            <li v-if="node.remote == true"><i class="material-icons md-18">cloud_queue</i></li>
+                            <li v-if="node.fence_history !== ''"><i class="material-icons md-18">cached</i></li>
                           </ul>
                         </div>
                         <app-dropdown :lists="nodeList"></app-dropdown>
@@ -103,8 +103,8 @@
                     <td class="status-icon-col">
                       <div class="status-icon">
                         <ul>
-                          <li v-if="resource.type == 'master'"><i class="material-icons md-14">star_rate</i></li>
-                          <li v-if="resource.maintenance == true"><i class="material-icons md-14">build</i></li>
+                          <li v-if="resource.type == 'master'"><i class="material-icons md-18">star_rate</i></li>
+                          <li v-if="resource.maintenance == true"><i class="material-icons md-18">build</i></li>
                         </ul>
                       </div>
                     </td>

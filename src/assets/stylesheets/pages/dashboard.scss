@@ -5,13 +5,13 @@
 .dashboard-header {
   margin: 0;
   padding: 0 30px 10px 30px;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid $base-border-color;
 
   .search {
     width: 200px;
     display: inline-block;
     background-color: transparent;
-    border: 1px solid #ccc;
+    border: 1px solid $base-border-color;
     color: #ccc;
     border-radius: 3px;
     padding: 6px 10px;
@@ -26,6 +26,10 @@
       display: inline-block;
       vertical-align: middle;
       padding: 0;
+
+      i {
+        display: block;
+      }
     }
   }
 }
@@ -44,6 +48,8 @@
 
 .status-icon {
   display: inline-block;
+  vertical-align: bottom;
+
   ul {
     margin: 0;
     padding: 0;
@@ -56,7 +62,7 @@
 .node-name {
   display: inline-block;
   text-align: left;
-  line-height: 13px;
+  line-height: 14px;
   margin-right: 5px;
   vertical-align: bottom;
   padding: 0;

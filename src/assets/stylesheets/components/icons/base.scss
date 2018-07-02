@@ -1,0 +1,77 @@
+/* Base classes for icons
+   ========================================================================== */
+/**
+* Dependencies:
+*   - helpers/mixins.scss
+*   - base/variables/icons.scss
+*   - base/variables/spacings.scss
+*/
+.material-icons,
+.eos-icons {
+  margin-right: $s;
+  vertical-align: bottom;
+}
+
+/* Rules for sizing the icon. */
+.md-18 {
+  font-size: $md-18;
+}
+
+.md-24 {
+  font-size: $md-24;
+}
+
+.md-36 {
+  font-size: $md-36;
+}
+
+.md-48 {
+  font-size: $md-48;
+}
+
+/* Allow image icons, like svg, to use the icon size classes */
+img {
+  &.md-18 {
+    @include img-md($md-18)
+  }
+
+  &.md-24 {
+    @include img-md($md-24)
+  }
+
+  &.md-36 {
+    @include img-md($md-36)
+  }
+
+  &.md-48 {
+    @include img-md($md-48)
+  }
+}
+
+/* Rules for icon colors. */
+.md-light {
+  color: $md-light;
+
+  &.md-inactive {
+    color: $md-light-inactive;
+  }
+}
+
+.md-dark {
+  color: $md-dark;
+
+  &.md-inactive {
+    color: $md-dark-inactive;
+  }
+}
+
+/* Icons - general (not material-icons classes) */
+.main-menu {
+
+  .active {
+
+    .icon-new {
+      color: $icon-new-active-color;
+    }
+  }
+}
