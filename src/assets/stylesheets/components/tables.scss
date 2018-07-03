@@ -3,13 +3,22 @@
 /* Tables */
 /* Variables: /assets/stylesheets/base/variables/tables.scss */
 .table { 
-  border-color: $base-border-color;
-  > thead > tr > th {
-    border-color: $base-border-color;
-  }
+  border-color: $table-border-color;
   
-  tbody > tr > td {
-    border-color: $base-border-color;
+  > thead > tr > th {
+    border-color: $table-border-color;
+    font-weight: normal;
+    border-bottom: $table-th-border-bottom;
+    background-color: $table-th-background;
+    padding: $table-th-padding;
+  }
+
+  > tbody > tr > td {
+    border-color: $table-border-color;
+
+    .btn {
+      padding: 0;
+    }
   }
 }
 
@@ -20,7 +29,7 @@
   > thead > tr > th {
     font-weight: 400;
     text-align: center;
-    border-right: 1px solid $base-border-color;
+    border-right: $dashboard-table-border-right;
 
     &:last-child {
       border-right: 0;
@@ -36,7 +45,7 @@
     }
 
     &.status-icon-col {
-      width: 40px;
+      width: 70px;
       border-right: 0;
     }
     &.resource-col {

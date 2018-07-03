@@ -5,7 +5,7 @@
         <button class="btn btn-default">Back</button>
         <div class="dropdown pull-right">
           <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="material-icons md-16">settings</i>
+            <i class="material-icons md-18">settings</i>
           </button>
           <app-dropdown :lists="nodeList" :listType="iconList"></app-dropdown>
         </div>
@@ -58,8 +58,8 @@
             <div id="location" class="panel-collapse collapse">
              <div class="panel-body">
               <ul>
-                <li>base-colone@web-server <a href=""><i class="material-icons md-16">mode_edit</i></a></li>
-                <li>base-colone@web-server <a href=""><i class="material-icons md-16">mode_edit</i></a></li>
+                <li>base-colone@web-server <a href=""><i class="material-icons md-18">mode_edit</i></a></li>
+                <li>base-colone@web-server <a href=""><i class="material-icons md-18">mode_edit</i></a></li>
               </ul>
              </div>
               <div class="panel-footer text-right">

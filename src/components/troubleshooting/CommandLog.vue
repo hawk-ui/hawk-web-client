@@ -1,16 +1,13 @@
 <template>
-  <div class="panel panel-default panel-trubleshooting">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        List crm commands recently executed by Hawk, most recent first
-      </h4>
-    </div>
+  <div class="panel-trubleshooting">
+    <h6>List crm commands recently executed by Hawk, most recent first</h6>
+
     <div class="trubleshooting-container">
       <ul class="history-log">
         <li>
           <div class="row">
             <div class="col-sm-10">
-              <h5>crm configure</h5>
+              <strong>crm configure</strong>
               <p>primitive <span class="red">ted</span> @web-server ocf:heartbeat:Dummy op start <span class="green">timeout=20</span> op stop timeout=20 op monit or 
 timeout=20 interval=10 meta  target-role=started</p>
             </div>
@@ -24,7 +21,7 @@ timeout=20 interval=10 meta  target-role=started</p>
         <li>
           <div class="row">
             <div class="col-sm-10">
-              <h5>crm configure</h5>
+              <strong>crm configure</strong>
               <p><span class="blue">primitive ted @web-server ocf:heartbeat:Dummy op start timeout=20 op stop timeout=20 op monit or 
 timeout=20 interval=10 meta  target-role=started</span></p>
             </div>
@@ -38,7 +35,7 @@ timeout=20 interval=10 meta  target-role=started</span></p>
         <li>
           <div class="row">
             <div class="col-sm-10">
-              <h5>crm configure</h5>
+              <strong>crm configure</strong>
               <p>primitive ted @web-server ocf:heartbeat:Dummy op start timeout=20 op stop timeout=20 op monit or 
 timeout=20 interval=10 meta  target-role=started</p>
             </div>

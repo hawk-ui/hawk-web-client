@@ -2,3 +2,10 @@
    ========================================================================== */
 /* Colors variables: /assets/stylesheets/base/variables/branding.scss */
 /* Spacing variables: /assets/stylesheets/base/variables/spacings.scss */
+
+$table-border-color: $base-border-color;
+$table-th-border-bottom: 2px solid $base-border-color;
+$table-th-background: rgba($sb-gray-80, 0.3);
+$table-th-padding: $s + 2 $s;
+
+$dashboard-table-border-right: 1px solid $base-border-color;

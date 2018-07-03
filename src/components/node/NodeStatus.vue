@@ -5,7 +5,7 @@
         <button class="btn btn-default">Back</button>
         <div class="dropdown pull-right">
           <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="material-icons md-16">settings</i>
+            <i class="material-icons md-18">settings</i>
           </button>
           <app-dropdown :lists="nodeList" :listType="iconList"></app-dropdown>
         </div>
@@ -99,7 +99,7 @@
                   <td class="col-sm-1">
                     <div class="dropdown pull-right">
                       <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="material-icons md-16">more_vert</i>
+                        <i class="material-icons md-18">more_vert</i>
                       </button>
                       <app-dropdown :lists="resourceList" :listType="iconList"></app-dropdown>
                     </div>
@@ -111,7 +111,7 @@
                   <td>
                     <div class="dropdown pull-right">
                       <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="material-icons md-16">more_vert</i>
+                        <i class="material-icons md-18">more_vert</i>
                       </button>
                       <app-dropdown :lists="resourceList" :listType="iconList"></app-dropdown>
                     </div>
@@ -123,7 +123,7 @@
                   <td>
                     <div class="dropdown pull-right">
                       <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="material-icons md-16">more_vert</i>
+                        <i class="material-icons md-18">more_vert</i>
                       </button>
                       <app-dropdown :lists="resourceList" :listType="iconList"></app-dropdown>
                     </div>
@@ -135,7 +135,7 @@
                   <td>
                     <div class="dropdown pull-right">
                       <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="material-icons md-16">more_vert</i>
+                        <i class="material-icons md-18">more_vert</i>
                       </button>
                       <app-dropdown :lists="resourceList" :listType="iconList"></app-dropdown>
                     </div>
@@ -147,7 +147,7 @@
                   <td>
                     <div class="dropdown pull-right">
                       <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="material-icons md-16">more_vert</i>
+                        <i class="material-icons md-18">more_vert</i>
                       </button>
                       <app-dropdown :lists="resourceList" :listType="iconList"></app-dropdown>
                     </div>

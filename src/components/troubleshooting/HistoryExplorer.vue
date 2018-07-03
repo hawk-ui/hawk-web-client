@@ -1,10 +1,7 @@
 <template>
-  <div class="panel panel-default panel-trubleshooting">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        Generate <span>Or</span> Upload Report
-      </h4>
-    </div>
+  <div>
+    <h6>Generate <span>Or</span> Upload Report</h6>
+
     <div class="trubleshooting-container">
       <div class="reports-container">
         <button class="btn btn-primary"><i class="material-icons md-16">event_note</i>Oct 12,2017 - Dec12,2017</button> 
@@ -53,6 +50,7 @@
       </table>
     </div>
   </div>
+
 </template>
 
 <script>

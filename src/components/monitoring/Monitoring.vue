@@ -76,14 +76,14 @@
                   <tr>
                     <th colspan="2"></th>
                     <th v-for="node in cib.nodes" v-bind:key="node.id">
-                      <div class="dropdown nodes-dropdown">
-                        <span class="status-line gray" v-bind:class="NodeBarClass(node.state)"></span>
+                      <div class="dropdown dashboard-table-nodes">
+                        <span class="dashboard-table-status-line gray" v-bind:class="NodeBarClass(node.state)"></span>
                         <div class="node-name btn dropdown-toggle" data-toggle="dropdown" v-bind:title="'Node id: ' + node.id">{{ node.name }}
                           <span class="table-cluster-name">
                             {{ cib.crm_config.cluster_name}}
                           </span>
                         </div>
-                        <div class="status-icon">
+                        <div class="dashboard-table-status-icon">
                           <ul>
                             <li><i v-if="node.name === cib.meta.dc" class="material-icons md-18">home</i></li>
                             <li v-if="node.maintenance == true"><i class="material-icons md-18">build</i></li>
@@ -101,9 +101,9 @@
                 <tbody>
                   <tr v-for="resource in cib.resources" v-bind:key="resource.id">
                     <td class="status-icon-col">
-                      <div class="status-icon">
+                      <div class="dashboard-table-status-icon">
                         <ul>
-                          <li v-if="resource.type == 'master'"><i class="material-icons md-18">star_rate</i></li>
+                          <li v-if="resource.type == 'master'"><i class="material-icons md-18">grade</i></li>
                           <li v-if="resource.maintenance == true"><i class="material-icons md-18">build</i></li>
                         </ul>
                       </div>
@@ -111,7 +111,7 @@
                     <td class="resource-col">
                       <div class="dropdown">
                         <div class="btn dropdown-toggle" data-toggle="dropdown">
-                          <span class="status-line gray" v-bind:class="resourceBarStyle(resource)"></span>{{ resource.id }}
+                          <span class="dashboard-table-status-line gray" v-bind:class="resourceBarStyle(resource)"></span>{{ resource.id }}
                         </div>
                         <app-dropdown :lists="resourceList"></app-dropdown>
                       </div>

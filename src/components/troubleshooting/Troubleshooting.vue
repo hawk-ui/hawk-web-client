@@ -1,13 +1,13 @@
 <template>
    <div>
     <app-page-header :pageTitle="pageTitle"></app-page-header>
-    <div id="exTab1" class="default-tabs trubleshooting-tabs"> 
+    <div id="tabs" class="default-tabs trubleshooting-tabs"> 
       <ul  class="nav nav-pills">
         <li class="active">
-          <a href="#historyExplorer" data-toggle="tab"><i class="material-icons md-16">history</i>History Explorer</a>
+          <a href="#historyExplorer" data-toggle="tab"><i class="material-icons md-18">history</i>History Explorer</a>
         </li>
         <li>
-          <a href="#commandLog" data-toggle="tab"><i class="material-icons md-16">assignment</i>Command Log</span></a>
+          <a href="#commandLog" data-toggle="tab"><i class="material-icons md-18">assignment</i>Command Log</span></a>
         </li>
       </ul>
       <div class="tab-content clearfix">

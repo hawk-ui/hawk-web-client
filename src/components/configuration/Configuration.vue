@@ -1,6 +1,5 @@
 <template>
   <div>
-    <app-page-header :pageTitle="pageTitle"></app-page-header>
     <div class="container-fluid configuration">
       <div class="row">
         <div class="col-sm-3">

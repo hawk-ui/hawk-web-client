@@ -21,9 +21,8 @@
         margin-bottom: -1px;
 
         > .material-icons {
-          margin-left: 8px;
-          font-size: 10px;
-          vertical-align: middle;
+          vertical-align: sub;
+          margin-right: 6px;
         }
       }
 
@@ -43,3 +42,6 @@
   padding: $tab-content-padding;
   background: $tab-content-bg;
 }
+
+/* Trubleshooting Tab */
+

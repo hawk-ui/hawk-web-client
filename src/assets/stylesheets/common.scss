@@ -5,30 +5,7 @@
   color: $brand-green;
 }
 
-.table > thead > tr > th {
-  color: $table-header-color;
-  font-weight: normal;
-  border-bottom: 2px solid $border-color;
-  background-color: #fafafa;
-  padding: 10px 8px 10px 20px;
-  height: 50px;
-}
 
-.table > tbody > tr > td {
-  border-top: 1px solid #ddd;
-    color: #5E5E5E;
-    padding: 10px 8px 10px 20px;
-    height: 50px;
-    vertical-align: middle;
-
-  > span {
-    margin-right: 20px;
-  }
-
-  .material-icons {
-    vertical-align: bottom;
-  }
-}
 
 .open .dropdown-menu {
   border-radius: 0;
@@ -152,13 +129,7 @@
   border-color: darken($brand-green, 16%);
 }
 
-.status-circle {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  border: 2px solid;
-  display: inline-block;
-}
+
 
 .status-gray {
   border-color: #a5a5a5;
