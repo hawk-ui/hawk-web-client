@@ -7,3 +7,11 @@ $color-info: $sb-cerulean-500;
 $color-danger: $sb-red-500;
 $color-success: $sb-green-500;
 $color-warning: $sb-yellow-500;
+
+/* Status circle colors  */
+$status-stopped: $color-danger;
+$status-not-running: $color-default;
+$status-started: $color-main;
+$status-slave: $color-warning;
+$status-master: $sb-orange-300;
+$status-offline: $sb-gray-100;

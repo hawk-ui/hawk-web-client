@@ -43,5 +43,13 @@
   background: $tab-content-bg;
 }
 
-/* Trubleshooting Tab */
+/* Monitoring Tab */
+.dashboard-tabs .nav-pills li a {
+
+  .status-circle {
+    margin-left: 6px;
+    width: 6px;
+    height: 6px;
+  }
+}
 

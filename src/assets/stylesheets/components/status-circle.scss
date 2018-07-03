@@ -8,3 +8,12 @@
   display: inline-block;
   background: gray;
 }
+
+.status-line {
+  width: $dashboard-status-line-width;
+  height: $dashboard-status-line-height;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: $dashboard-status-line-margin-right;
+}
+

@@ -12,13 +12,13 @@
       <div id="tabs" class="dashboard-tabs"> 
         <ul class="nav nav-pills">
           <li class="active">
-            <a href="#1a" data-toggle="tab">HA Cluster<i class="material-icons green">fiber_manual_record</i></a>
+            <a href="#1a" data-toggle="tab">HA Cluster<span class="status-circle"></span></a>
           </li>
           <li>
-            <a href="#2a" data-toggle="tab">Web Cluster<i class="material-icons red">fiber_manual_record</i></a>
+            <a href="#2a" data-toggle="tab">Web Cluster<span class="status-circle"></span></a>
           </li>
           <li>
-            <a href="#3a" data-toggle="tab">HA web Cluster<i class="material-icons gray">fiber_manual_record</i></a>
+            <a href="#3a" data-toggle="tab">HA web Cluster<span class="status-circle"></span></a>
           </li>
         </ul>
 
@@ -77,7 +77,7 @@
                     <th colspan="2"></th>
                     <th v-for="node in cib.nodes" v-bind:key="node.id">
                       <div class="dropdown dashboard-table-nodes">
-                        <span class="dashboard-table-status-line gray" v-bind:class="NodeBarClass(node.state)"></span>
+                        <span class="status-line" v-bind:class="NodeBarClass(node.state)"></span>
                         <div class="node-name btn dropdown-toggle" data-toggle="dropdown" v-bind:title="'Node id: ' + node.id">{{ node.name }}
                           <span class="table-cluster-name">
                             {{ cib.crm_config.cluster_name}}
@@ -111,13 +111,13 @@
                     <td class="resource-col">
                       <div class="dropdown">
                         <div class="btn dropdown-toggle" data-toggle="dropdown">
-                          <span class="dashboard-table-status-line gray" v-bind:class="resourceBarStyle(resource)"></span>{{ resource.id }}
+                          <span class="status-line" v-bind:class="resourceBarStyle(resource)"></span>{{ resource.id }}
                         </div>
                         <app-dropdown :lists="resourceList"></app-dropdown>
                       </div>
                     </td>
                     <td v-for="node in cib.nodes" v-bind:key="node.id">
-                      <i class="material-icons md-18 gray" v-bind:class="ResourceStateClass(resource, node)">fiber_manual_record</i>
+                      <span class="status-circle" v-bind:class="ResourceStateClass(resource, node)"></span>
                     </td>
                   </tr>
                 <!-- End Resources Row -->
@@ -178,13 +178,13 @@
         legendList: {
           listType: 'iconList',
           liItems: [
-            { listIcion: 'fiber_manual_record', colorClass: 'green', listItem: 'Working resource/node' },
+            { listIcion: 'fiber_manual_record', colorClass: 'Legend-started', listItem: 'Working resource/node' },
             { listIcion: 'settings_remote', listItem: 'Remote node' },
-            { listIcion: 'fiber_manual_record', colorClass: 'red', listItem: 'Failing resource/node' },
+            { listIcion: 'fiber_manual_record', colorClass: 'Legend-stopped', listItem: 'Failing resource/node' },
             { listIcion: 'build', listItem: 'Maintenance mode' },
-            { listIcion: 'fiber_manual_record', colorClass: 'gray', listItem: 'Offline/standby mode' },
+            { listIcion: 'fiber_manual_record', colorClass: 'Legend-offline', listItem: 'Offline/standby mode' },
             { listIcion: 'star', listItem: 'Double state (master/slave)' },
-            { listIcion: 'fiber_manual_record', colorClass: 'gray', listItem: 'Not working resource/node' },
+            { listIcion: 'fiber_manual_record', colorClass: 'Legend-not-running', listItem: 'Not working resource/node' },
             { listIcion: 'linear_scale', listItem: 'Designated coordinator' }
           ]
         }
@@ -201,41 +201,41 @@
     methods: {
       NodeBarClass: function (state) {
         if (state === 'unclean') {
-          return 'red-bar'
+          return 'status-stopped'
         } else if (state === 'online') {
-          return 'green-bar'
+          return 'status-started'
         } else if (state === 'offline') {
-          return 'gray-bar'
+          return 'status-offline'
         } else if (state === 'standby') {
-          return 'red-bar'
+          return 'status-offline'
         } else if (state === 'pending') {
-          return 'red-bar'
+          return 'status-stopped'
         }
       },
       resourceBarStyle: function (resource) {
         if (resource.state === 'stopped' && resource['attributes']['target-role'] === 'Stopped') {
-          return 'gray-bar'
+          return 'status-not-running'
         } else if (resource.state === 'stopped') {
-          return 'red-bar'
+          return 'status-stopped'
         } else if (resource.state !== 'stopped') {
-          return 'green-bar'
+          return 'status-started'
         }
       },
       ResourceStateClass: function (resource, node = '') {
         if (node.state === 'unclean') {
-          return 'red'
+          return 'status-stopped'
         } else if (resource.state === 'stopped') {
-          return 'red'
+          return 'status-stopped'
         } else if (resource.state === 'offline') {
-          return 'gray'
+          return 'status-offline'
         } else if (node.name in resource.running_on && resource.running_on[node.name] === 'started') {
-          return 'green'
+          return 'status-started'
         } else if (node.name in resource.running_on && resource.running_on[node.name] === 'slave') {
-          return 'yellow'
+          return 'status-slave'
         } else if (node.name in resource.running_on && resource.running_on[node.name] === 'master') {
-          return 'blue'
+          return 'status-master'
         } else if (node.name in resource.running_on && resource.running_on[node.name] === 'not_running') {
-          return 'gray'
+          return 'status-not-running'
         }
       }
     }
