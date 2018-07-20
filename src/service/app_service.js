@@ -10,17 +10,12 @@ const appService = {
     })
   },
   login (path, UserInput) {
-    axios({
-      method: 'post',
-      url: path,
-      params: {
-        'username': UserInput.username,
-        'password': UserInput.password
-      }
-    }).then(response => {
+    axios.post(path, { username: UserInput.username, password: UserInput.password })
+    .then(function (response) {
+      console.log('saved successfully')
       this.$store.commit('addApiToken', response)
     }).catch(error => {
-      console.log("Login error")
+      console.log('Login error')
       console.log(error)
     })
   }
