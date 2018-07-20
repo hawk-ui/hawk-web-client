@@ -35,8 +35,8 @@ const store = new Vuex.Store({
     updateCib (state, data) {
       state.cib = data
     },
-    addApiToken (state, token) {
-      state.user.apiToken = token
+    addApiToken (state, data) {
+      state.user.apiToken = data
     },
     deleteApiToken (state) {
       state.user.apiToken = ''

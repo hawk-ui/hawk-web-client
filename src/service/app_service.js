@@ -11,9 +11,13 @@ const appService = {
   },
   login (path, UserInput) {
     return new Promise((resolve) => {
-      axios.post(path, {
-        'username': UserInput.username,
-        'password': UserInput.password
+      axios({
+        method: 'post',
+        url: path,
+        params: {
+          'username': UserInput.username,
+          'password': UserInput.password
+        }
       }).then(response => { resolve(response.data) })
     })
   }
