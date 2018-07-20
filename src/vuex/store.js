@@ -8,7 +8,7 @@ const state = {
   cib: {},
   user: {
     userName: '',
-    apiToken: '', // hardcode api token here to test changes
+    apiToken: '',
     loggedInStatus: true
   }
 }
@@ -36,7 +36,7 @@ const store = new Vuex.Store({
       state.cib = data
     },
     addApiToken (state, data) {
-      state.user.apiToken = data
+      state.user.apiToken = data // Now you can fetch the token by using: this.$store.state.user.apiToken
     },
     deleteApiToken (state) {
       state.user.apiToken = ''

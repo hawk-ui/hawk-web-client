@@ -10,15 +10,18 @@ const appService = {
     })
   },
   login (path, UserInput) {
-    return new Promise((resolve) => {
-      axios({
-        method: 'post',
-        url: path,
-        params: {
-          'username': UserInput.username,
-          'password': UserInput.password
-        }
-      }).then(response => { resolve(response.data) })
+    axios({
+      method: 'post',
+      url: path,
+      params: {
+        'username': UserInput.username,
+        'password': UserInput.password
+      }
+    }).then(response => {
+      this.$store.commit('addApiToken', response)
+    }).catch(error => {
+      console.log("Login error")
+      console.log(error)
     })
   }
 }
