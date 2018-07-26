@@ -1,21 +1,23 @@
 <template>
    <div>
-    <app-page-header :pageTitle="pageTitle"></app-page-header>
-    <div id="tabs" class="default-tabs trubleshooting-tabs"> 
-      <ul  class="nav nav-pills">
-        <li class="active">
-          <a href="#historyExplorer" data-toggle="tab"><i class="material-icons md-18">history</i>History Explorer</a>
-        </li>
-        <li>
-          <a href="#commandLog" data-toggle="tab"><i class="material-icons md-18">assignment</i>Command Log</span></a>
-        </li>
-      </ul>
-      <div class="tab-content clearfix">
-        <div class="tab-pane active" id="historyExplorer">
-          <app-history-explorer></app-history-explorer>
-        </div>
-        <div class="tab-pane" id="commandLog">
-          <app-command-log></app-command-log>
+    <app-page-title :pageTitle="pageTitle"></app-page-title>
+    <div class="container-fluid">
+      <div id="tabs" class="default-tabs trubleshooting-tabs"> 
+        <ul  class="nav nav-pills">
+          <li class="active">
+            <a href="#historyExplorer" data-toggle="tab"><i class="material-icons md-18">history</i>History Explorer</a>
+          </li>
+          <li>
+            <a href="#commandLog" data-toggle="tab"><i class="material-icons md-18">assignment</i>Command Log</span></a>
+          </li>
+        </ul>
+        <div class="tab-content clearfix">
+          <div class="tab-pane active" id="historyExplorer">
+            <app-history-explorer></app-history-explorer>
+          </div>
+          <div class="tab-pane" id="commandLog">
+            <app-command-log></app-command-log>
+          </div>
         </div>
       </div>
     </div>
@@ -23,7 +25,7 @@
 </template>
 
 <script>
-  import PageHeader from '../shared/page-title.vue'
+  import PageTitle from '../shared/page-title.vue'
   import HistoryExplorer from './HistoryExplorer.vue'
   import CommandLog from './CommandLog.vue'
 
@@ -36,7 +38,7 @@
     components: {
       'app-command-log': CommandLog,
       'app-history-explorer': HistoryExplorer,
-      'app-page-header': PageHeader
+      'app-page-title': PageTitle
     }
   }
 </script>

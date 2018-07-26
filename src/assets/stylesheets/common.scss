@@ -1,84 +1,9 @@
 
 @import "variables.scss";
 
-.brand-colors {
-  color: $brand-green;
-}
-
-
-
-.open .dropdown-menu {
-  border-radius: 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ddd;
-  background-color: #fff;
-
-  > li {
-    color: $gray--darker;
-    font-weight: 400;
-    font-size: 13px;
-
-    > a {
-      padding: 6px 20px;
-      > .material-icons {
-        margin-right: 8px;
-        vertical-align: bottom;
-      }
-    }
-  }
-}
-
-
-
-.gray {
-  color: #a5a5a5;
-}
-
-.red {
-   color: red;
-}
-
-.green {
-   color: green;
-}
-
-// temporary style for dashboard table
-.blue {
-  color: #83afe4;
-}
-
-.yellow {
-   color: rgb(196, 171, 31);
-}
-.yellow-bar {
-  background-color: rgb(196, 171, 31);
-}
-.green-bar {
-  background-color: green;
-}
-.red-bar {
-  background-color: red;
-}
-.gray-bar {
-  background-color: #a5a5a5;
-}
-.blue-bar {
-  background-color: #83afe4;
-}
-
-
-// End temporary style for dashboard table
-
-
-
 .form-control:focus {
   outline: 0;
 }
-
-.md-green {
-  color: green;
-}
-
 
 .btn:focus,
 .btn:active:focus,

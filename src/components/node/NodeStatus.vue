@@ -1,7 +1,7 @@
 <template>
   <div>
-    <app-page-header :pageTitle="pageTitle">
-      <div class="back-btn-group">
+    <app-page-title :pageTitle="pageTitle">
+      <div class="back-setting-btn-group">
         <button class="btn btn-default">Back</button>
         <div class="dropdown pull-right">
           <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -10,7 +10,7 @@
           <app-dropdown :lists="nodeList" :listType="iconList"></app-dropdown>
         </div>
       </div>
-    </app-page-header>
+    </app-page-title>
     <div class="container-fluid">
       <div class="panel panel-danger">
         <div class="panel-heading">
@@ -25,15 +25,15 @@
         <div class="col-sm-4">
           <div class="panel panel-default">
             <div class="panel-body">
-              <h3>Node</h3>
-              <p><span class="status-circle status-green"></span> Hawk node1</p>
+              <h5>Node</h5>
+              <p><span class="status-circle status-started"></span> Hawk node1</p>
             </div>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="panel panel-default">
             <div class="panel-body">
-              <h3>Cluster</h3>
+              <h5>Cluster</h5>
               <p>@Web-server</p>
             </div>
           </div>
@@ -41,7 +41,7 @@
         <div class="col-sm-4">
           <div class="panel panel-default">
             <div class="panel-body">
-              <h3>Resources</h3>
+              <h5>Resources</h5>
               <p>230</p>
             </div>
           </div>
@@ -84,7 +84,7 @@
       <div class="row">
         <div class="col-sm-8">
           <div class="panel panel-default">
-            <table class="table">
+            <table class="table table-node-resources">
               <thead>
                 <tr>
                   <th>Resources</th>
@@ -94,7 +94,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td class="status-text"><span class="status-circle status-green"></span>stonith-sbd</td>
+                  <td class="status-text"><span class="status-circle status-started"></span>stonith-sbd</td>
                   <td>Running since 3 hrs</td>
                   <td class="col-sm-1">
                     <div class="dropdown pull-right">
@@ -106,7 +106,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="status-text"><span class="status-circle status-gray"></span>base-clone</td>
+                  <td class="status-text"><span class="status-circle status-not-running"></span>base-clone</td>
                   <td>On maintanenece since 16 hrs</td>
                   <td>
                     <div class="dropdown pull-right">
@@ -118,7 +118,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="status-text"><span class="status-circle status-red"></span>c-clusterfs</td>
+                  <td class="status-text"><span class="status-circle status-stopped"></span>c-clusterfs</td>
                   <td>Stooped since 18.10.2017</td>
                   <td>
                     <div class="dropdown pull-right">
@@ -130,7 +130,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="status-text"><span class="status-circle status-red"></span>g-proxy</td>
+                  <td class="status-text"><span class="status-circle status-stopped"></span>g-proxy</td>
                   <td>Stopped since 3 hrs</td>
                   <td>
                     <div class="dropdown pull-right">
@@ -142,7 +142,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="status-text"><span class="status-circle status-green"></span>cl-servers</td>
+                  <td class="status-text"><span class="status-circle status-started"></span>cl-servers</td>
                   <td>Running since 12 hrs</td>
                   <td>
                     <div class="dropdown pull-right">
@@ -159,7 +159,7 @@
         </div>
         <div class="col-sm-4">
           <div class="panel panel-default">
-            <table class="table">
+            <table class="table table-node-events">
               <thead>
                 <tr>
                   <th>Events</th>
@@ -167,19 +167,19 @@
               </thead>
               <tbody>
                 <tr>
-                  <td ><span class="status-circle status-green"></span>Running since 3 hrs</td>
+                  <td ><span class="status-circle status-started"></span>Running since 3 hrs</td>
                 </tr>
                 <tr>
-                  <td><span class="status-circle status-gray"></span>On maintanenece since 16 hrs</td>
+                  <td><span class="status-circle status-not-running"></span>On maintanenece since 16 hrs</td>
                 </tr>
                 <tr>
-                  <td><span class="status-circle status-red"></span>Stooped since 18.10.2017</td>
+                  <td><span class="status-circle status-stopped"></span>Stooped since 18.10.2017</td>
                 </tr>
                 <tr>
-                  <td><span class="status-circle status-red"></span>Stopped since 3 hrs</td>
+                  <td><span class="status-circle status-stopped"></span>Stopped since 3 hrs</td>
                 </tr>
                 <tr>
-                  <td><span class="status-circle status-green"></span>Running since 12 hrs</td>
+                  <td><span class="status-circle status-started"></span>Running since 12 hrs</td>
                 </tr>
               </tbody>
             </table>
@@ -191,7 +191,7 @@
 </template>
 
 <script>
-import PageHeader from '../shared/page-title.vue'
+import PageTitle from '../shared/page-title.vue'
 import Dropdown from '../shared/dropdown.vue'
 
 export default {
@@ -220,7 +220,7 @@ export default {
     }
   },
   components: {
-    'app-page-header': PageHeader,
+    'app-page-title': PageTitle,
     'app-dropdown': Dropdown
   }
 }

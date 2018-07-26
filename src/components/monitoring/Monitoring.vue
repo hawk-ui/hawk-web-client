@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-page-header :pageTitle="pageTitle"></app-page-header>
+    <app-page-title :pageTitle="pageTitle"></app-page-title>
     <div class="container-fluid">
       <h4 class="error-section">
         <ul v-for="(error, index) in cib.errors" v-bind:key="index">
@@ -12,7 +12,7 @@
       <div id="tabs" class="dashboard-tabs"> 
         <ul class="nav nav-pills">
           <li class="active">
-            <a href="#1a" data-toggle="tab">HA Cluster<span class="status-circle"></span></a>
+            <a href="#1a" data-toggle="tab">HA Cluster<span class="status-circle status-started"></span></a>
           </li>
           <li>
             <a href="#2a" data-toggle="tab">Web Cluster<span class="status-circle"></span></a>
@@ -139,7 +139,7 @@
 
 <script>
   import { mapGetters } from 'vuex'
-  import PageHeader from '../shared/page-title.vue'
+  import PageTitle from '../shared/page-title.vue'
   import Dropdown from '../shared/dropdown.vue'
   import AddCluster from './AddCluster.vue'
 
@@ -191,7 +191,7 @@
       }
     },
     components: {
-      'app-page-header': PageHeader,
+      'app-page-title': PageTitle,
       'app-dropdown': Dropdown,
       'app-add-cluster': AddCluster
     },

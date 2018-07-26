@@ -1,0 +1,24 @@
+/* Trubleshooting
+   ========================================================================== */
+/* Colors variables: /assets/stylesheets/base/variables/branding.scss */
+/* Colors variables: /assets/stylesheets/base/variables/spacing.scss */
+/* ts = trubleshooting */
+/* cld = command-log-data */
+
+$ts-reports-padding: 0 $l $xl $l;
+$ts-reports-h6-margin-bottom: $m;
+$ts-reports-h6-font-weight: $font-weight-normal-base;
+$ts-or-span-width: 50px;
+$ts-search-panel-border-top: 1px solid $base-border-color;
+$ts-search-panel-padding: $s $m;
+$ts-search-panel-border-bottom: double $base-border-color;
+$ts-search-box-max-width: 200px;
+$ts-search-panel-a-margin-top: $s;
+
+$ts-cld-li-margin-bottom: $m;
+$ts-cld-li-p-margin-bottom: $xs + 1;
+$ts-log-date-time-color: $sb-gray-500;
+$ts-log-date-time-font-size: $s + 4;
+
+$ts-log-red: $sb-red-500;
+$ts-log-green: $sb-green-700;

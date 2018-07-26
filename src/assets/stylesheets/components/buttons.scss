@@ -15,3 +15,12 @@
     color: $add-cluster-bt-color-hover;
   }
 }
+
+/* Back and setting button group */
+.back-setting-btn-group {
+  float: right;
+
+  > .btn {
+    margin-right: 10px
+  }
+}

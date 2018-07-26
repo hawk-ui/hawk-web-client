@@ -1,69 +1,64 @@
-.trubleshooting-tabs {
-  padding: 32px;
-}
-
-.history-log {
-  padding-left: 0;
-
-  li {
-    padding: 20px;
-    list-style: none;
-  }
-}
-
-.panel-trubleshooting .panel-heading {
-  padding: 15px 20px;
-  background-color: transparent;
-
-  > .panel-title {
-    font-size: 14px;
-
-    span {
-      color: $gray--lighter;
-    }
-  }
-}
-
+/* Trubleshooting
+   ========================================================================== */
+/* Variables: /assets/stylesheets/base/variables/pages/trubleshooting.scss */ 
 .trubleshooting-container{
-  .reports-container {
-    padding: 30px 20px;
+
+  .tab-inner-container {
+    padding: $ts-reports-padding;
+
+    h6 {
+      margin-bottom: $ts-reports-h6-margin-bottom;
+      font-weight: $ts-reports-h6-font-weight;
+    }
   }
 
   .or-span {
-    width: 50px;
+    width: $ts-or-span-width;
     text-align: center;
     display: inline-block;
   }
 
   .search-panel {
-    border-top: 1px solid;
-    border-color: #ccc; 
-    padding: 20px;
+    border-top: $ts-search-panel-border-top;
+    padding: $ts-search-panel-padding;
     overflow: auto;
-    border-bottom-style: double;
+    border-bottom: $ts-search-panel-border-bottom;
+    
     .search {
-      max-width: 200px;
+      max-width: $ts-search-box-max-width;
       float: left;
     }
+    
     a {
       float: right;
-      margin-top: 8px;
+      margin-top: $ts-search-panel-a-margin-top;
       display: inline-block;
       color: inherit;
     }
   }
 
-  .history-log .date-time-block {
-    font-size: 12px;
-    margin-top: 8px;
-    
-    .material-icons {
-      vertical-align: sub;
+  .command-log-data {
+    padding-left: 0;
+
+    li {
+      margin-bottom: $ts-cld-li-margin-bottom;
+      list-style: none;
+
+      p {
+        margin-bottom: $ts-cld-li-p-margin-bottom;
+      }
+      .log-date-time {
+        color: $ts-log-date-time-color;
+        font-size: $ts-log-date-time-font-size;
+      }
     }
   }
 }
 
-.reports-table a {
-  color: inherit;
+.log-red {
+  color: $ts-log-red;
+}
+.log-green {
+  color: $ts-log-green;
 }
 

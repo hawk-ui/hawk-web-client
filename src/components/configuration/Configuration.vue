@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="container-fluid configuration">
+    <app-page-title :pageTitle="pageTitle"></app-page-title>
+    <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3">
           <div class="panel panel-default config-card">
@@ -59,7 +60,7 @@
 </template>
 
 <script>
-import PageHeader from '../shared/page-header.vue'
+import PageTitle from '../shared/page-title.vue'
 
 export default {
   data: function () {
@@ -68,7 +69,7 @@ export default {
     }
   },
   components: {
-    'app-page-header': PageHeader
+    'app-page-title': PageTitle
   }
 }
 </script>
