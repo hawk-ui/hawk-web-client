@@ -1,10 +1,11 @@
-
+/* Application
+   ========================================================================== */
+/**
+* This folder holds all scss files for Application
+* 
+*/
 @import 'base/index';
 @import "helpers/index";
-@import "variables";
-@import "common";
 @import "layout/index";
 @import "components/index";
 @import "pages/index";
-@import "login";
-

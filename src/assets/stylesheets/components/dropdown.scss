@@ -8,6 +8,23 @@
   background-color: $dropdown-background;
 }
 
+/* Login language button Dropdown */
+.open .dropdown-menu-login {
+  background-color: $login-lang-btn-bg;
+  border-color: $login-lang-btn-bg;
+  box-shadow: 0 0 0;
+  min-width: $login-lang-btn-min-width;
+
+  > li > a {
+    color: $login-lang-btn-li-a-color;
+    font-weight: $font-weight-light-base;
+
+    &:hover{
+      background-color: transparent;
+      color: $login-lang-btn-li-a-hover-color;
+    }
+  }
+}
 
 /* User Details Dropdown */
 

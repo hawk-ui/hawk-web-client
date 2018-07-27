@@ -7,6 +7,13 @@ $dropdown-box-shadow: 0 1px 3px $shadow-color;
 $dropdown-background: $sb-white;
 $dropdown-padding: $s;
 
+/* Login language button Dropdown */
+/* lang-btn = language-button*/
+$login-lang-btn-bg: $sb-blue-700;
+$login-lang-btn-min-width: 100px;
+$login-lang-btn-li-a-color: $sb-gray-300;
+$login-lang-btn-li-a-hover-color: $sb-green-500;
+
 /* User Details Dropdown */
 $user-details-ul-margin-top: $m - 3;
 

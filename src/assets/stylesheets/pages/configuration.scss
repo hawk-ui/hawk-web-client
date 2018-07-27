@@ -2,12 +2,11 @@
    ========================================================================== */
 /* Variables: /assets/stylesheets/base/variables/pages/configuration.scss */ 
 .config-card {
-  padding: 30px 20px;
+  padding: $config-card-padding;
 
-  &-icon {
-    font-size: 40px;
-    margin-right: 15px;
-    color: $brand-green;
+  > i {
+    margin-right: $config-card-i-margin-right;
+    color: $config-card-i-color;
     vertical-align: bottom;
   }
 
@@ -15,27 +14,12 @@
     display: inline-block;
 
     > h4 {
-      margin: 0 0 5px 0;
-      color: $gray--lighter;
-    }
-
-    > span {
-      color: lighten($gray--lighter, 20%);
+      margin: $config-card-h4-margin;
     }
   }
 }
 
 .setting-card {
-  padding: 40px;
+  padding: $config-setting-card-padding;
   text-align: center;
-
-  &-icon {
-    font-size: 40px;
-    color: $gray--lighter;
-  }
-
-  > h4 {
-    color: lighten($gray--lighter, 20%);
-    margin-bottom: 0; 
-  }
 }

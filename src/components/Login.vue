@@ -6,7 +6,7 @@
           <div class="navbar-header" role="navigation">
             <a class="navbar-brand" href="/">SUSE Hawk</a>
           </div>
-          <div class="btn-group pull-right">
+          <div class="dropdown pull-right">
             <a class="btn btn-default dropdown language-btn" data-toggle="dropdown">
               English <span class="caret"></span>
             </a>
@@ -24,20 +24,20 @@
       </div>
     </header>
     <section>
-      <div class="container" id="content">
+      <div class="container login">
         <div class="row">
-          <div class="col-sm-6 hidden-xs">
+          <div class="col-sm-6 hidden-xs login-intro">
              <h2>
               SUSE <span>High Availability</span>
             </h2>
              <p>Hawk simplifies the management and configuration of High Availability clusters, making it easy to eliminate downtime and maximizing service availability.
             </p>
           </div>
-          <div class="col-sm-4 col-sm-offset-1">
-            <h3>Sign in</h3>
+          <div class="col-sm-4 col-sm-offset-1 login-form">
+            <h3 class="sign-in-text">Sign in</h3>
             <div class="row" id="flashes"></div>
 
-            <form class="form-simple login-panel">
+            <form class="form-simple">
               <div class="form-group">
                 <input placeholder="Enter your username..." class="form-control" type="text" />
               </div>
@@ -56,11 +56,11 @@
           <div class="col-sm-9">
             <div class="other-links">
               <a href="https://github.com/ClusterLabs/hawk" target="_blank">
-                <i class="material-icons md-16">device_hub</i></a>
+                <i class="material-icons md-18">device_hub</i></a>
               <a href="http://hawk-ui.github.io/" target="_blank">
-                <i class="material-icons md-16">description</i></a>
+                <i class="material-icons md-18">description</i></a>
               <a href="http://hawk-guide.readthedocs.io/en/latest/" target="_blank">
-                <i class="material-icons md-16">book</i></a>
+                <i class="material-icons md-18">book</i></a>
             </div>
             <div class="copyright">Copyright © 2009-2017. SUSE, LLC</div>
           </div>
