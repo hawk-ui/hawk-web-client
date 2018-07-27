@@ -13,12 +13,6 @@ h3 {
   font-weight: $font-weight-normal-base;
 }
 
-h4,
-h5,
-h6 {
-  font-weight: $font-weight-light-base;
-}
-
 h1 {
   font-size: $h1-font-size;
 }
@@ -41,7 +35,6 @@ h5 {
 
 h6 {
   font-size: $h6-font-size;
-  font-weight: $font-weight-bold-base;
 }
 
 .title-strong {
