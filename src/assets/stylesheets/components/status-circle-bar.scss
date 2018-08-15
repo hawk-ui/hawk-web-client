@@ -1,19 +1,19 @@
 /* Status Circle
    ========================================================================== */
-/* Variables file: assets/stylesheets/base/variables/status-circle.scss */
+/* Variables file: assets/stylesheets/base/variables/status-circle-bar.scss */
 .status-circle {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   display: inline-block;
   background: gray;
 }
 
 .status-line {
-  width: $dashboard-status-line-width;
-  height: $dashboard-status-line-height;
+  width: $status-circle-bar-width;
+  height: $status-circle-bar-height;
   display: inline-block;
   vertical-align: middle;
-  margin-right: $dashboard-status-line-margin-right;
+  margin-right: $status-circle-bar-margin-right;
 }
 
