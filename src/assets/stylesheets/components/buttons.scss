@@ -1,0 +1,26 @@
+/* Button styling
+   ========================================================================== */
+
+/* Add Cluster button */
+/* Variables file: assets/stylesheets/base/variables/buttons.scss */
+
+.add-cluster-bt {
+  float: left;
+  margin-left: $add-cluster-bt-margin-left;
+  line-height: $add-cluster-bt-line-height;
+  color: $add-cluster-bt-color;
+  
+  &:hover {
+    text-decoration: none;
+    color: $add-cluster-bt-color-hover;
+  }
+}
+
+/* Back and setting button group */
+.back-setting-btn-group {
+  float: right;
+
+  > .btn {
+    margin-right: 10px
+  }
+}

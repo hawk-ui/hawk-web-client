@@ -1,53 +1,24 @@
 <template>
-  <div class="panel panel-default panel-trubleshooting">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        List crm commands recently executed by Hawk, most recent first
-      </h4>
-    </div>
-    <div class="trubleshooting-container">
-      <ul class="history-log">
+  <div class="trubleshooting-container">
+    <div class="tab-inner-container">
+      <h6>List crm commands recently executed by Hawk, most recent first</h6>
+      <ul class="command-log-data">
         <li>
-          <div class="row">
-            <div class="col-sm-10">
-              <h5>crm configure</h5>
-              <p>primitive <span class="red">ted</span> @web-server ocf:heartbeat:Dummy op start <span class="green">timeout=20</span> op stop timeout=20 op monit or 
-timeout=20 interval=10 meta  target-role=started</p>
-            </div>
-            <div class="col-sm-2">
-              <div class="date-time-block">
-                <i class="material-icons md-14">access_time</i> July 06, 2015 8:30am
-              </div>
-            </div>
-          </div>
+          <strong>crm configure </strong>
+          <p>primitive <span class="log-red">ted</span> @web-server ocf:heartbeat:Dummy op start <span class="log-green">timeout=20</span> op stop timeout=20 op monit or 
+timeout=20 interval=10 meta  target-role=started op stop timeout=20 op monit or </p>
+          <div class="log-date-time">July 06, 2015 8:30am</div>  
         </li>
         <li>
-          <div class="row">
-            <div class="col-sm-10">
-              <h5>crm configure</h5>
-              <p><span class="blue">primitive ted @web-server ocf:heartbeat:Dummy op start timeout=20 op stop timeout=20 op monit or 
-timeout=20 interval=10 meta  target-role=started</span></p>
-            </div>
-            <div class="col-sm-2">
-              <div class="date-time-block">
-                <i class="material-icons md-14">access_time</i> July 06, 2015 8:30am
-              </div>
-            </div>
-          </div>
+          <strong>crm configure </strong>
+          <p>primitive <span class="log-red">ted</span> @web-server ocf:heartbeat:Dummy op start <span class="log-green">timeout=20</span> op stop timeout=20 op monit or 
+timeout=20 interval=10 meta  target-role=started @web-server ocf:heartbeat:Dummy op start</p>
+          <div class="log-date-time">July 06, 2015 8:30am</div>  
         </li>
         <li>
-          <div class="row">
-            <div class="col-sm-10">
-              <h5>crm configure</h5>
-              <p>primitive ted @web-server ocf:heartbeat:Dummy op start timeout=20 op stop timeout=20 op monit or 
-timeout=20 interval=10 meta  target-role=started</p>
-            </div>
-            <div class="col-sm-2">
-              <div class="date-time-block">
-                <i class="material-icons md-14">access_time</i> July 06, 2015 8:30am
-              </div>
-            </div>
-          </div>
+          <strong>crm configure </strong>
+          <p>@web-server ocf:heartbeat:Dummy op start <span class="log-green">timeout=20</span> op stop timeout=20 op monit or primitive <span class="log-red">ted</span> timeout=20 interval=10 meta  target-role=started</p>
+          <div class="log-date-time">July 06, 2015 8:30am</div>  
         </li>
       </ul>
     </div>

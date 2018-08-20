@@ -1,31 +1,31 @@
 <template>
   <div>
-    <app-page-header :pageTitle="pageTitle">
-      <div class="back-btn-group">
+    <app-page-title :pageTitle="pageTitle">
+      <div class="back-setting-btn-group">
         <button class="btn btn-default">Back</button>
         <div class="dropdown pull-right">
           <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="material-icons md-16">settings</i>
+            <i class="material-icons md-18">settings</i>
           </button>
           <app-dropdown :lists="nodeList" :listType="iconList"></app-dropdown>
         </div>
       </div>
-    </app-page-header>
+    </app-page-title>
     <div class="container-fluid">
       <!-- node cluster and resources status start -->
       <div class="row node-status">
         <div class="col-sm-4">
           <div class="panel panel-default">
             <div class="panel-body">
-              <h3>Resource</h3>
-              <p><span class="status-circle status-green"></span> stonith-sbd</p>
+              <h5>Resource</h5>
+              <p><span class="status-circle status-started"></span> stonith-sbd</p>
             </div>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="panel panel-default">
             <div class="panel-body">
-              <h3>Groups</h3>
+              <h5>Groups</h5>
               <p>G-proxy</p>
             </div>
           </div>
@@ -33,7 +33,7 @@
         <div class="col-sm-4">
           <div class="panel panel-default">
             <div class="panel-body">
-              <h3>Node</h3>
+              <h5>Node</h5>
               <p><a href="">webui</a> <a href="">Hawk-webui</a></p>
             </div>
           </div>
@@ -41,9 +41,9 @@
       </div>
       <!-- graphs start -->
       <div class="row">
-        <div class="col-sm-6">
-        <h3 class="constraint-heading">Constraint</h3>
-          <div class="panel panel-default resource-panel">
+        <div class="col-sm-6 resource-panel">
+        <h4>Constraint</h4>
+          <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
                 <span><i class="material-icons md-18">location_on</i>Location</span>
@@ -58,8 +58,8 @@
             <div id="location" class="panel-collapse collapse">
              <div class="panel-body">
               <ul>
-                <li>base-colone@web-server <a href=""><i class="material-icons md-16">mode_edit</i></a></li>
-                <li>base-colone@web-server <a href=""><i class="material-icons md-16">mode_edit</i></a></li>
+                <li>base-colone@web-server <a href=""><i class="material-icons md-18">mode_edit</i></a></li>
+                <li>base-colone@web-server <a href=""><i class="material-icons md-18">mode_edit</i></a></li>
               </ul>
              </div>
               <div class="panel-footer text-right">
@@ -128,7 +128,7 @@
           </div>
         </div>
         <div class="col-sm-6">
-          <div class="panel panel-default">
+          <div class="panel panel-default table-event-resources">
            <table class="table">
               <thead>
                 <tr>
@@ -137,28 +137,28 @@
               </thead>
               <tbody>
                 <tr>
-                  <td ><span class="status-circle status-green"></span>Running since 3 hrs</td>
+                  <td ><span class="status-circle status-started"></span>Running since 3 hrs</td>
                 </tr>
                 <tr>
-                  <td><span class="status-circle status-gray"></span>On maintanenece since 16 hrs</td>
+                  <td><span class="status-circle status-not-running"></span>On maintanenece since 16 hrs</td>
                 </tr>
                 <tr>
-                  <td><span class="status-circle status-red"></span>Stooped since 18.10.2017</td>
+                  <td><span class="status-circle status-stopped"></span>Stooped since 18.10.2017</td>
                 </tr>
                 <tr>
-                  <td><span class="status-circle status-red"></span>Stopped since 3 hrs</td>
+                  <td><span class="status-circle status-stopped"></span>Stopped since 3 hrs</td>
                 </tr>
                 <tr>
-                  <td><span class="status-circle status-green"></span>Running since 12 hrs</td>
+                  <td><span class="status-circle status-started"></span>Running since 12 hrs</td>
                 </tr>
                 <tr>
-                  <td ><span class="status-circle status-green"></span>Running since 3 hrs</td>
+                  <td ><span class="status-circle status-started"></span>Running since 3 hrs</td>
                 </tr>
                 <tr>
-                  <td><span class="status-circle status-gray"></span>On maintanenece since 16 hrs</td>
+                  <td><span class="status-circle status-not-running"></span>On maintanenece since 16 hrs</td>
                 </tr>
                 <tr>
-                  <td><span class="status-circle status-red"></span>Stooped since 18.10.2017</td>
+                  <td><span class="status-circle status-stopped"></span>Stooped since 18.10.2017</td>
                 </tr>
               </tbody>
             </table>
@@ -170,8 +170,8 @@
 </template>
 
 <script>
-import PageHeader from '../shared/page_header/PageHeader.vue'
-import Dropdown from '../shared/Dropdown.vue'
+import PageTitle from '../shared/page-title.vue'
+import Dropdown from '../shared/dropdown.vue'
 
 export default {
   data: function () {
@@ -189,7 +189,7 @@ export default {
     }
   },
   components: {
-    'app-page-header': PageHeader,
+    'app-page-title': PageTitle,
     'app-dropdown': Dropdown
   }
 }

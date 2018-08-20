@@ -5,8 +5,8 @@ import VueRouter from 'vue-router'
 import Login from '@/components/Login'
 
 // Main structure (once logged in)
-import LeftSidebar from '@/components/shared/left_sidebar/LeftSidebar'
-import TopNavbar from '@/components/shared/top_navbar/TopNavbar'
+import LeftSidebar from '@/components/shared/left_sidebar/leftSidebar'
+import PageHeader from '@/components/shared/page-header'
 
 // Main sections
 import Monitoring from '@/components/monitoring/Monitoring'
@@ -29,7 +29,7 @@ export default new VueRouter({
       path: '/',
       components: {
         default: Monitoring,
-        'top-navbar': TopNavbar,
+        'page-header': PageHeader,
         'left-sidebar': LeftSidebar
       }
     },
@@ -37,7 +37,7 @@ export default new VueRouter({
       path: '/monitoring',
       components: {
         default: Monitoring,
-        'top-navbar': TopNavbar,
+        'page-header': PageHeader,
         'left-sidebar': LeftSidebar
       }
     },
@@ -45,7 +45,7 @@ export default new VueRouter({
       path: '/troubleshooting/reports',
       components: {
         default: Troubleshooting,
-        'top-navbar': TopNavbar,
+        'page-header': PageHeader,
         'left-sidebar': LeftSidebar
       }
     },
@@ -53,7 +53,7 @@ export default new VueRouter({
       path: '/troubleshooting/commandLog',
       components: {
         default: CommandLog,
-        'top-navbar': TopNavbar,
+        'page-header': PageHeader,
         'left-sidebar': LeftSidebar
       }
     },
@@ -61,7 +61,7 @@ export default new VueRouter({
       path: '/configuration',
       components: {
         default: Configuration,
-        'top-navbar': TopNavbar,
+        'page-header': PageHeader,
         'left-sidebar': LeftSidebar
       }
     },
@@ -69,7 +69,7 @@ export default new VueRouter({
       path: '/nodeStatus',
       components: {
         default: NodeStatus,
-        'top-navbar': TopNavbar,
+        'page-header': PageHeader,
         'left-sidebar': LeftSidebar
       }
     },
@@ -77,7 +77,7 @@ export default new VueRouter({
       path: '/resourceStatus',
       components: {
         default: ResourceStatus,
-        'top-navbar': TopNavbar,
+        'page-header': PageHeader,
         'left-sidebar': LeftSidebar
       }
     }

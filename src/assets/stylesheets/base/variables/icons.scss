@@ -1,0 +1,20 @@
+/* Base variables for icons
+   ========================================================================== */
+/* Colors variables: /assets/stylesheets/base/variables/branding.scss */
+
+/* Icons */
+$icon-new-size: $font-size-base;
+$icon-new-color: $sb-green-500;
+$icon-new-active-color: $sb-white;
+
+/* Material icons variables */
+// colors
+$md-light: $sb-white;
+$md-light-inactive: rgba($md-light, 0.3);
+$md-dark: rgba($sb-black, 0.54);
+$md-dark-inactive: rgba($sb-black, 0.26);
+// sizes
+$md-18: 18px;
+$md-24: 24px;
+$md-36: 36px;
+$md-48: 48px;

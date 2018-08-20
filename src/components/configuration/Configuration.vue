@@ -1,11 +1,11 @@
 <template>
   <div>
-    <app-page-header :pageTitle="pageTitle"></app-page-header>
-    <div class="container-fluid configuration">
+    <app-page-title :pageTitle="pageTitle"></app-page-title>
+    <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3">
           <div class="panel panel-default config-card">
-            <i class="material-icons config-card-icon">settings_input_hdmi</i>
+            <i class="eos-icons md-48">resource</i>
             <div class="config-card-contain">
               <h4>Resource</h4>
               <span>Total: 2</span>
@@ -14,7 +14,7 @@
         </div>
         <div class="col-sm-3">
           <div class="panel panel-default config-card">
-            <i class="material-icons config-card-icon">group_work</i>
+            <i class="material-icons md-48">group_work</i>
             <div class="config-card-contain">
               <h4>Group</h4>
               <span>Total: 2</span>
@@ -23,7 +23,7 @@
         </div>
         <div class="col-sm-3">
           <div class="panel panel-default config-card">
-            <i class="material-icons config-card-icon">local_offer</i>
+            <i class="material-icons md-48">local_offer</i>
             <div class="config-card-contain">
               <h4>Tag</h4>
               <span>Total: 2</span>
@@ -32,7 +32,7 @@
         </div>
         <div class="col-sm-3">
           <div class="panel panel-default config-card">
-            <i class="material-icons config-card-icon">remove_red_eye</i>
+            <i class="material-icons md-48">remove_red_eye</i>
             <div class="config-card-contain">
               <h4>Constraints</h4>
               <span>Total: 2</span>
@@ -44,13 +44,13 @@
       <div class="row">
         <div class="col-sm-3">
           <div class="panel panel-default setting-card">
-            <i class="material-icons setting-card-icon">lock_outline</i>
+            <i class="material-icons md-48">lock_outline</i>
             <h4>Access Control</h4>
           </div>
         </div>
         <div class="col-sm-3">
           <div class="panel panel-default setting-card">
-            <i class="material-icons setting-card-icon">list</i>
+            <i class="material-icons md-48">list</i>
             <h4>Options</h4>
           </div>
         </div>
@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import PageHeader from '../shared/page_header/PageHeader.vue'
+import PageTitle from '../shared/page-title.vue'
 
 export default {
   data: function () {
@@ -69,7 +69,7 @@ export default {
     }
   },
   components: {
-    'app-page-header': PageHeader
+    'app-page-title': PageTitle
   }
 }
 </script>

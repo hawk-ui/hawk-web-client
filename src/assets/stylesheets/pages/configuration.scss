@@ -1,0 +1,25 @@
+/* Configuration Status
+   ========================================================================== */
+/* Variables: /assets/stylesheets/base/variables/pages/configuration.scss */ 
+.config-card {
+  padding: $config-card-padding;
+
+  > i {
+    margin-right: $config-card-i-margin-right;
+    color: $config-card-i-color;
+    vertical-align: bottom;
+  }
+
+  &-contain {
+    display: inline-block;
+
+    > h4 {
+      margin: $config-card-h4-margin;
+    }
+  }
+}
+
+.setting-card {
+  padding: $config-setting-card-padding;
+  text-align: center;
+}

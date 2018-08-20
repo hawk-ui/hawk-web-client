@@ -1,11 +1,11 @@
 <template>
   <div id="wrapper">
     <router-view v-if="this.$route.path === '/login'"></router-view>
-    <div class="dashboard-view" v-else>
+    <div class="sidebar-view" v-else>
       <router-view name="left-sidebar"></router-view>
       <div id="page-content-wrapper">
         <div class="page-content">
-          <router-view name="top-navbar"></router-view>
+          <router-view name="page-header"></router-view>
             <router-view></router-view>
         </div>
       </div>
@@ -37,5 +37,5 @@
 </script>
 
 <style lang="scss">
-  @import './assets/css/index.scss';
+  @import './assets/stylesheets/index.scss';
 </style>

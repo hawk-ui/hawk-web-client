@@ -1,0 +1,125 @@
+/* Login
+   ========================================================================== */
+/* Variables: /assets/stylesheets/base/variables/pages/login.scss */ 
+
+.login-bg {
+  height: 100%;
+  background: $login-bg;
+  height: 100%;
+  min-height: 100%;
+}
+
+header {
+  background: $login-header-bg;
+  
+  .navbar-brand {
+    height: auto;
+    color: $login-header-color;
+    font-size: $login-header-font-size;
+  }
+
+  .language-btn {
+    margin-top: $login-lang-btn-margin-top;
+    background: none;
+    color: $login-lang-btn-color;
+    border: 0;
+
+    &:hover, &:active, &:active:hover {
+      background: $login-lang-btn-hover-bg;
+      color: $login-lang-btn-hover-color;
+    }
+    .caret {
+      border-top-color: $login-lang-btn-caret-color;
+      border-bottom-color: $login-lang-btn-caret-color;
+    }
+  }
+}
+
+.login {
+  padding-top: $login-padding-top;
+}
+
+.login-intro {
+
+  h2 {
+    font-size: $login-intro-h2-font-size;
+    display: block;
+    position: relative;
+    margin: $login-intro-h2-margin;
+    font-weight: $login-intro-h2-font-weight;
+    color: $login-intro-h2-color;
+
+    span {
+      display: block;
+      font-size: $login-intro-h2-span-font-size;
+      font-weight: $login-intro-h2-span-font-weight;
+    }
+  }
+  
+  p {
+    color: $login-intro-p-color;
+    font-size: $login-intro-p-font-size;
+  } 
+}
+
+.login-form {
+  margin-left: $login-form-margin-left;
+
+  h3 {
+    font-size: $login-sign-h3-font-size;
+    color: $login-sign-h3-color;
+    margin: $login-sign-h3-margin;
+    font-weight: $login-sign-h3-font-weight;
+  }
+
+  input[type="text"], input[type="password"] {
+    background: $login-input-bg;
+    border-color: $login-input-border-color;
+    box-shadow: none;
+    color: $login-input-color;
+
+    &:focus{
+      color: $login-input-focus-color;
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: $login-footer-padding;
+
+  .bottom-line {
+    height: $login-footer-bottom-line-height;
+    background: $login-footer-bottom-line-bg;
+    margin-top: $login-footer-bottom-line-margin-top;
+  }
+
+  .other-links {
+    display: block;
+
+    a {
+      margin: $login-footer-links-margin;
+      float: left;
+      display: block;
+      width: $login-footer-links-width-height;
+      background: $login-footer-links-bg;
+      height: $login-footer-links-width-height;
+      border-radius: 50%;
+      text-align: center;
+      &:hover {
+        background: $login-footer-links-hover-bg;
+      }
+
+      > .material-icons {
+        color: $login-footer-links-icons-color;
+      }
+    }
+  }
+
+  .copyright {
+    color: $login-footer-copyright-color;
+    clear: both;
+  }
+}

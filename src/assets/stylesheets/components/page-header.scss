@@ -1,0 +1,39 @@
+/* Page Header
+   ========================================================================== */
+/* Variables file: assets/stylesheets/base/variables/page-header.scss */
+
+.page-content {
+
+  header {
+    background-color: $pg-header-bg;
+    margin: 0;
+    border: 0;
+    box-shadow: 0px 0px 2px $shadow-color;
+
+    .sidebar-toggle {
+      display: inline-flex;
+      margin: 16px;
+    }
+
+    > .cluster-status {
+      display: inline-flex;
+      padding-left: $pg-header-cluster-padding;
+      line-height: $pg-header-cluster-line-height;
+
+      > .material-icons {
+        float: left;
+        margin: $pg-header-cluster-icon-margin;
+      }
+    }
+
+    .user-details {
+      margin: $pg-header-user-margin;
+      float: right;
+
+      .material-icons {
+        vertical-align: text-bottom;
+        margin-right: $pg-header-user-icon-margin;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.footer {
+  position: absolute;
+  bottom: 0px;
+  display: block;
+  width: $footer-width;
+  padding: $footer-padding;
+  background: $footer-bg;
+  border: 0;
+
+  .footer-copyright {
+    float: left;
+
+    span {
+      margin-right: $footer-copyright-span-margin;
+    }
+  }
+
+  .more-btn {
+    cursor: pointer;
+  }
+
+  .footer-dropdown {
+
+    > ul {
+      background: $footer-dropdown-bg;
+      margin: $footer-dropdown-margin;
+      width: $footer-width;
+      padding: $footer-dropdown-padding;
+      border: 0;
+      left: $footer-dropdown-left;
+      box-shadow: none;
+
+      li {
+        list-style: none;
+        padding: $footer-dropdown-li-padding;
+        color: $footer-dropdown-color;
+
+        i {
+          margin-right: $s;
+          vertical-align: text-bottom;
+        }
+      }
+    }
+  }
+}

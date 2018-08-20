@@ -13,6 +13,9 @@ import 'bootstrap/dist/js/bootstrap.js'
 // Material design icon
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
+// EOS icon
+import 'eos-icons/dist/css/eos-icons.css'
+
 // Load the Main component
 import App from './App'
 

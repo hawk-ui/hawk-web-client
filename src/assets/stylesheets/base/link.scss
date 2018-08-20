@@ -1,0 +1,19 @@
+/* Links
+   ========================================================================== */
+/**
+* Colors and links
+*
+* Meaningful colors: /assets/stylesheets/base/variables/colors.scss
+* Links variables: /assets/stylesheets/base/variables/links.scss
+*/
+.main-menu {
+  .router-link-active {
+    background: $color-main;
+    border-radius: $active-border-radius;
+    color: $active-color;
+
+    &:hover {
+      color: $active-hover-color;
+    }
+  }
+}
