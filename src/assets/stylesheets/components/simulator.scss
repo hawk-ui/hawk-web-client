@@ -57,6 +57,10 @@
 
    &.toggled {
     margin-right: 0px;
+
+    .simulator-alert-count {
+      visibility: hidden;
+    }
     
     .simulator-header {
       border-bottom: $simulator-header-border-bottom;
