@@ -1,0 +1,26 @@
+/* Simulator
+   ========================================================================== */
+/* Colors variables: /assets/stylesheets/base/variables/spacings.scss */
+/* Colors variables: /assets/stylesheets/base/variables/branding.scss */
+
+$simulator-bg: $sb-white;
+$simulator-border-left: 1px solid $sb-gray-100;
+$simulator-width: 300px;
+$simulator-height: 100%;
+$simulator-margin-right: -275px;
+
+$simulator-alert-count-width: $m;
+$simulator-alert-count-height: $m;
+$simulator-alert-count-bg: $sb-red-500;
+$simulator-alert-count-color: $sb-white;
+$simulator-alert-count-font-size: $s + 3;
+$simulator-alert-count-left: -13px;
+$simulator-alert-count-top: $s + 2;
+$simulator-alert-count-line-height: $m;
+
+$simulator-header-border-top: 3px solid $sb-orange-500;
+$simulator-header-padding: $s + 2 $l;
+$simulator-header-border-bottom: 1px solid $sb-gray-100;
+
+$simulator-toggle-icon-margin: 0 $xs $s $xs;
+$simulator-toggle-icon-top: $m;
