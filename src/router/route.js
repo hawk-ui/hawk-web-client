@@ -7,6 +7,7 @@ import Login from '@/components/Login'
 // Main structure (once logged in)
 import LeftSidebar from '@/components/shared/left_sidebar/leftSidebar'
 import PageHeader from '@/components/shared/page-header'
+import SimulatorPanel from '@/components/shared/simulator'
 
 // Main sections
 import Monitoring from '@/components/monitoring/Monitoring'
@@ -30,7 +31,8 @@ export default new VueRouter({
       components: {
         default: Monitoring,
         'page-header': PageHeader,
-        'left-sidebar': LeftSidebar
+        'left-sidebar': LeftSidebar,
+        'simulator-panel': SimulatorPanel
       }
     },
     {
@@ -38,7 +40,8 @@ export default new VueRouter({
       components: {
         default: Monitoring,
         'page-header': PageHeader,
-        'left-sidebar': LeftSidebar
+        'left-sidebar': LeftSidebar,
+        'simulator-panel': SimulatorPanel
       }
     },
     {
@@ -46,7 +49,8 @@ export default new VueRouter({
       components: {
         default: Troubleshooting,
         'page-header': PageHeader,
-        'left-sidebar': LeftSidebar
+        'left-sidebar': LeftSidebar,
+        'simulator-panel': SimulatorPanel
       }
     },
     {
@@ -54,7 +58,8 @@ export default new VueRouter({
       components: {
         default: CommandLog,
         'page-header': PageHeader,
-        'left-sidebar': LeftSidebar
+        'left-sidebar': LeftSidebar,
+        'simulator-panel': SimulatorPanel
       }
     },
     {
@@ -62,7 +67,8 @@ export default new VueRouter({
       components: {
         default: Configuration,
         'page-header': PageHeader,
-        'left-sidebar': LeftSidebar
+        'left-sidebar': LeftSidebar,
+        'simulator-panel': SimulatorPanel
       }
     },
     {
@@ -70,7 +76,8 @@ export default new VueRouter({
       components: {
         default: NodeStatus,
         'page-header': PageHeader,
-        'left-sidebar': LeftSidebar
+        'left-sidebar': LeftSidebar,
+        'simulator-panel': SimulatorPanel
       }
     },
     {
@@ -78,7 +85,8 @@ export default new VueRouter({
       components: {
         default: ResourceStatus,
         'page-header': PageHeader,
-        'left-sidebar': LeftSidebar
+        'left-sidebar': LeftSidebar,
+        'simulator-panel': SimulatorPanel
       }
     }
   ]

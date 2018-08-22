@@ -4,7 +4,8 @@
     <div class="sidebar-view" v-else>
       <router-view name="left-sidebar"></router-view>
       <div id="page-content-wrapper">
-        <div class="page-content">
+        <router-view name="simulator-panel"></router-view>
+        <div class="page-content page-content-right">
           <router-view name="page-header"></router-view>
             <router-view></router-view>
         </div>
