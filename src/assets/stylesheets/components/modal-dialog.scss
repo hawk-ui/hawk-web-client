@@ -1,0 +1,18 @@
+/* Tables
+   ========================================================================== */
+/* Tables */
+/* Variables: /assets/stylesheets/base/variables/modal-dialog.scss */
+.modal-dialog {
+
+  .modal-body {
+    padding: $modal-body-padding;
+
+    .form-group > label {
+      font-weight: $modal-body-font-weight;
+
+      span {
+        color: $modal-asterisk-color;
+      }
+    }
+  }
+}

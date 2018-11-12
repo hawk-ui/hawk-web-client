@@ -1,13 +1,76 @@
 <template>
   <div>
-    <h1>{{ $t("pages.configuration_page.page-title") }}</h1>
-    <p>{{ $t("pages.configuration_page.description") }}</p>
+    <app-page-title :pageTitle="pageTitle"></app-page-title>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="panel panel-default config-card">
+            <i class="eos-icons md-48">resource</i>
+            <div class="config-card-contain">
+              <h4>Resource</h4>
+              <span>Total: 2</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="panel panel-default config-card">
+            <i class="material-icons md-48">group_work</i>
+            <div class="config-card-contain">
+              <h4>Group</h4>
+              <span>Total: 2</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="panel panel-default config-card">
+            <i class="material-icons md-48">local_offer</i>
+            <div class="config-card-contain">
+              <h4>Tag</h4>
+              <span>Total: 2</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="panel panel-default config-card">
+            <i class="material-icons md-48">remove_red_eye</i>
+            <div class="config-card-contain">
+              <h4>Constraints</h4>
+              <span>Total: 2</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h4>Settings</h4>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="panel panel-default setting-card">
+            <i class="material-icons md-48">lock_outline</i>
+            <h4>Access Control</h4>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="panel panel-default setting-card">
+            <i class="material-icons md-48">list</i>
+            <h4>Options</h4>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
+import PageTitle from '../shared/page-title.vue'
 
+export default {
+  data: function () {
+    return {
+      pageTitle: 'Configuration'
+    }
+  },
+  components: {
+    'app-page-title': PageTitle
+  }
 }
 </script>
 

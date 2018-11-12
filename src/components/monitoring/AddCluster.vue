@@ -1,5 +1,5 @@
 <template>
-  <app-model titleIcon="add" title="Add Cluster">
+  <app-model title="Add Cluster">
     <div class="form-group row">
       <label for="colFormLabelSm" class="col-sm-3 col-form-label col-form-label-sm">Cluster Name<span>*</span></label>
       <div class="col-sm-9">
@@ -38,5 +38,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-  @import '../../assets/css/common.scss';
+
 </style>

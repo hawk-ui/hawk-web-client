@@ -5,8 +5,9 @@ import VueRouter from 'vue-router'
 import Login from '@/components/Login'
 
 // Main structure (once logged in)
-import LeftSidebar from '@/components/shared/left_sidebar/LeftSidebar'
-import TopNavbar from '@/components/shared/top_navbar/TopNavbar'
+import LeftSidebar from '@/components/shared/left_sidebar/leftSidebar'
+import PageHeader from '@/components/shared/page-header'
+import SimulatorPanel from '@/components/shared/simulator'
 
 // Main sections
 import Monitoring from '@/components/monitoring/Monitoring'
@@ -29,56 +30,63 @@ export default new VueRouter({
       path: '/',
       components: {
         default: Monitoring,
-        'top-navbar': TopNavbar,
-        'left-sidebar': LeftSidebar
+        'page-header': PageHeader,
+        'left-sidebar': LeftSidebar,
+        'simulator-panel': SimulatorPanel
       }
     },
     {
       path: '/monitoring',
       components: {
         default: Monitoring,
-        'top-navbar': TopNavbar,
-        'left-sidebar': LeftSidebar
+        'page-header': PageHeader,
+        'left-sidebar': LeftSidebar,
+        'simulator-panel': SimulatorPanel
       }
     },
     {
       path: '/troubleshooting/reports',
       components: {
         default: Troubleshooting,
-        'top-navbar': TopNavbar,
-        'left-sidebar': LeftSidebar
+        'page-header': PageHeader,
+        'left-sidebar': LeftSidebar,
+        'simulator-panel': SimulatorPanel
       }
     },
     {
       path: '/troubleshooting/commandLog',
       components: {
         default: CommandLog,
-        'top-navbar': TopNavbar,
-        'left-sidebar': LeftSidebar
+        'page-header': PageHeader,
+        'left-sidebar': LeftSidebar,
+        'simulator-panel': SimulatorPanel
       }
     },
     {
       path: '/configuration',
       components: {
         default: Configuration,
-        'top-navbar': TopNavbar,
-        'left-sidebar': LeftSidebar
+        'page-header': PageHeader,
+        'left-sidebar': LeftSidebar,
+        'simulator-panel': SimulatorPanel
       }
     },
     {
       path: '/nodeStatus',
       components: {
         default: NodeStatus,
-        'top-navbar': TopNavbar,
-        'left-sidebar': LeftSidebar
+        'page-header': PageHeader,
+        'left-sidebar': LeftSidebar,
+        'simulator-panel': SimulatorPanel
       }
     },
     {
       path: '/resourceStatus',
       components: {
         default: ResourceStatus,
-        'top-navbar': TopNavbar,
-        'left-sidebar': LeftSidebar
+        'page-header': PageHeader,
+        'left-sidebar': LeftSidebar,
+        'simulator-panel': SimulatorPanel
       }
     }
   ]

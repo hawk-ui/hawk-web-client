@@ -1,0 +1,73 @@
+/* Simulator
+   ========================================================================== */
+/* Variables file: assets/stylesheets/base/variables/simulator.scss */
+.simulator-panel {
+  position: absolute;
+  position: fixed;
+  background: $simulator-bg;
+  border-left: $simulator-border-left;
+  z-index: 1000;
+  right: 0;
+  top: 0;
+  width: $simulator-width;
+  height: $simulator-height;
+  margin-right: $simulator-margin-right;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+
+  .simulator-alert-count {
+    width: $simulator-alert-count-width;
+    height: $simulator-alert-count-height;
+    background: $simulator-alert-count-bg;
+    border-radius: 50%;
+    text-align: center;
+    color: $simulator-alert-count-color;
+    font-size: $simulator-alert-count-font-size;
+    position: absolute;
+    left: $simulator-alert-count-left;
+    top: $simulator-alert-count-top;
+    line-height: $simulator-alert-count-line-height;
+    font-weight: bold;
+  }
+
+  .table-simulator {
+    visibility: hidden;
+  }
+
+  .simulator-header {
+    border-top: $simulator-header-border-top;
+    padding: $simulator-header-padding;
+    border-bottom: 0;
+
+    h2 {
+      margin: 0;
+      display: inline-block;
+    }
+
+    .simulator-toggle-icon {
+      margin: $simulator-toggle-icon-margin;
+      float: right;
+      position: fixed;
+      right: 0;
+      top: $simulator-toggle-icon-top;
+    }
+  }
+
+   &.toggled {
+    margin-right: 0px;
+
+    .simulator-alert-count {
+      visibility: hidden;
+    }
+    
+    .simulator-header {
+      border-bottom: $simulator-header-border-bottom;
+    }
+
+    .table-simulator {
+      visibility: visible;
+    }
+  }
+}

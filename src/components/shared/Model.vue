@@ -4,7 +4,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel" >
-            <i class="material-icons md-24">{{ titleIcon }}</i>{{ title }}
+            {{ title }}
           </h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -21,7 +21,7 @@
 <script>
 
 export default {
-  props: ['titleIcon', 'title']
+  props: ['title']
 }
 </script>
 

@@ -1,0 +1,29 @@
+/* Error styling
+   ========================================================================== */
+
+/* Dashboard Error section */
+/* Variables file: assets/stylesheets/base/variables/error.scss */
+.dashboard-error {
+  padding: $dashboard-error-padding;
+  border-bottom: 1px solid $dashboard-error-border-color;
+  margin-bottom: $dashboard-error-margin-bottom;
+
+  > ul {
+    padding: 0;
+    margin-bottom: 0;
+
+    li {
+      color: $dashboard-error-li-color;
+      padding: $dashboard-error-li-padding;
+      
+      .material-icons {
+        margin-right: $dashboard-error-icon-margin-right;
+        vertical-align: text-bottom;
+      }
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}

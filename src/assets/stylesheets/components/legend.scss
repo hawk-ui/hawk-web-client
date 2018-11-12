@@ -1,0 +1,42 @@
+/* Tabs
+   ========================================================================== */
+/**
+*
+* Variables file: assets/stylesheets/base/variables/legend.scss
+*
+*/
+.legend {
+  position: relative;
+
+  > .btn {
+    background: transparent;
+  }
+
+  &.open {
+    > ul {
+      width: $legend-ul-width;
+      margin: $legend-ul-margin-top;
+      padding: $legend-ul-padding;
+
+      > li {
+        width: $legend-li-width;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+
+        a {
+          padding: $legend-li-a-padding;
+
+          &:hover {
+            background: none;
+          }
+
+          > .material-icons {
+            vertical-align: bottom;
+            margin-right: $legend-icons-margin-right;
+          }
+        }
+      }
+    }
+  }
+}

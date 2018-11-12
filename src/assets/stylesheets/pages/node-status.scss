@@ -1,0 +1,12 @@
+/* Node Status
+   ========================================================================== */
+/* Variables: /assets/stylesheets/base/variables/pages/node-status.scss */ 
+.node-status {
+  h3 {
+    color: $node-h3-color;
+  }
+
+  .status-circle {
+    margin-right: $node-status-circle-margin-right;
+  }
+}

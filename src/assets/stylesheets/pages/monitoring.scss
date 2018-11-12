@@ -1,0 +1,68 @@
+/* Dashboard
+   ========================================================================== */
+/* Variables: /assets/stylesheets/base/variables/pages/dashboard.scss */
+
+.dashboard-header {
+  margin: 0;
+  padding: $dashboard-header-padding;
+  border-bottom: $dashboard-header-border-bottom;
+
+  .search {
+    width: $dashboard-search-width;
+    display: inline-block;
+    background-color: transparent;
+    border: $dashboard-header-border-bottom;
+    color: $dashboard-search-color;
+  }
+
+  .header-toolbox {
+    margin-bottom: 0;
+
+    > li {
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0;
+
+      i {
+        display: block;
+      }
+    }
+  }
+}
+
+.dashboard-table-nodes {
+  display: inline-block;
+
+  .node-name {
+    display: inline-block;
+    text-align: left;
+    line-height: $dashboard-nodes-line-height;
+    margin-right: $dashboard-nodes-margin-right;
+    vertical-align: bottom;
+    padding: 0;
+  
+    span {
+      font-size: $dashboard-nodes-span-font-size;
+      color: $dashboard-nodes-span-color;
+      display: block;
+
+      > .material-icons {
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.dashboard-table-status-icon {
+  display: inline-block;
+  vertical-align: bottom;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+    }
+  }
+}

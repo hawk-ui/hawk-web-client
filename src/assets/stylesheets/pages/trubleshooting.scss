@@ -1,0 +1,63 @@
+/* Trubleshooting
+   ========================================================================== */
+/* Variables: /assets/stylesheets/base/variables/pages/trubleshooting.scss */ 
+.trubleshooting-container{
+
+  .tab-inner-container {
+    padding: $ts-reports-padding;
+
+    h6 {
+      margin-bottom: $ts-reports-h6-margin-bottom;
+    }
+  }
+
+  .or-span {
+    width: $ts-or-span-width;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .search-panel {
+    border-top: $ts-search-panel-border-top;
+    padding: $ts-search-panel-padding;
+    overflow: auto;
+    border-bottom: $ts-search-panel-border-bottom;
+    
+    .search {
+      max-width: $ts-search-box-max-width;
+      float: left;
+    }
+    
+    a {
+      float: right;
+      margin-top: $ts-search-panel-a-margin-top;
+      display: inline-block;
+      color: inherit;
+    }
+  }
+
+  .command-log-data {
+    padding-left: 0;
+
+    li {
+      margin-bottom: $ts-cld-li-margin-bottom;
+      list-style: none;
+
+      p {
+        margin-bottom: $ts-cld-li-p-margin-bottom;
+      }
+      .log-date-time {
+        color: $ts-log-date-time-color;
+        font-size: $ts-log-date-time-font-size;
+      }
+    }
+  }
+}
+
+.log-red {
+  color: $ts-log-red;
+}
+.log-green {
+  color: $ts-log-green;
+}
+

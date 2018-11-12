@@ -1,0 +1,48 @@
+/* Resources Status
+   ========================================================================== */
+/* Variables: /assets/stylesheets/base/variables/pages/resources-status.scss */ 
+
+.resource-panel >.panel {
+  
+  .panel-title {
+    
+    .material-icons {
+      margin-right: $resource-p-icons-margin-right;
+      vertical-align: text-bottom;
+    }
+
+    .rightside-icon {
+      float: right;
+
+      span {
+        background-color: $resource-p-counter-bg;
+        font-size: $resource-p-counter-font-size;
+        color: $resource-p-counter-color;
+        padding: $resource-p-counter-padding;
+        border-radius: $resource-p-counter-border-radius;
+        line-height: $resource-p-counter-line-height;
+        vertical-align: top;
+        margin-right: $resource-p-counter-margin-right;
+      }
+
+      a {
+        color: inherit;
+        .material-icons {
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  ul li {
+    padding: $resource-p-li-padding;
+
+    a {
+      float: right;
+    }
+  }
+
+  .panel-footer {
+    background-color: transparent;
+  }
+}

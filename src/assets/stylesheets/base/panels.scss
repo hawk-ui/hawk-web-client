@@ -1,0 +1,16 @@
+/* Panels
+   ========================================================================== */
+/**
+* Colors and links
+*
+* Links variables: /assets/stylesheets/base/variables/panels.scss
+*/
+.panel {
+  border-radius: $panel-border-radius;
+}
+
+.panel-default {
+  > .panel-heading-no-bg {
+    background-color: transparent;
+  }
+}
