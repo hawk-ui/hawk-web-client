@@ -5,7 +5,12 @@ Vue.use(Vuex)
 import Service from '../service/app_service.js'
 
 const state = {
-  cib: {}
+  cib: {},
+  user: {
+    userName: '',
+    apiToken: '',
+    loggedInStatus: true
+  }
 }
 
 const store = new Vuex.Store({
@@ -17,12 +22,24 @@ const store = new Vuex.Store({
   },
   actions: {
     updateCib (context) {
-      Service.getCib('/db').then((data) => context.commit('updateCib', data))
+      Service.getCib('/status', state.user.apiToken).then((data) => context.commit('updateCib', data)) // points to '/status' to test changes
+    },
+    login (context, userInput) {
+      Service.login('/register', userInput).then((data) => context.commit('addApiToken', data))
+    },
+    logout (context) {
+      context.commit('deleteApiToken')
     }
   },
   mutations: {
     updateCib (state, data) {
       state.cib = data
+    },
+    addApiToken (state, data) {
+      state.user.apiToken = data // Now you can fetch the token by using: this.$store.state.user.apiToken
+    },
+    deleteApiToken (state) {
+      state.user.apiToken = ''
     }
   }
 })

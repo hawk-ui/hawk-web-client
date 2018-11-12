@@ -36,16 +36,15 @@
           <div class="col-sm-4 col-sm-offset-1 login-form">
             <h3 class="sign-in-text">Sign in</h3>
             <div class="row" id="flashes"></div>
-
-            <form class="form-simple">
-              <div class="form-group">
-                <input placeholder="Enter your username..." class="form-control" type="text" />
+            <form class="form-simple login-panel" @submit.prevent="login">
+                <div class="form-group">
+                  <input class="form-control" placeholder="Enter your username..." type="text" v-model="user.username"/>
+                </div>
+                <div class="form-group">
+                <input class="form-control" placeholder="Enter your password..." type="password" v-model="user.password"/>
               </div>
-              <div class="form-group">
-                <input placeholder="Enter your password..." class="form-control" type="password" />
-              </div>
-              <input type="submit" name="commit" value="Login" class="btn btn-primary btn-block" />
-            </form>
+              <button class="btn btn-primary btn-block" type="submit">Submit</button>
+            </form>           
           </div>
         </div>
       </div>
@@ -79,6 +78,21 @@
 <script>
 
 export default {
+
+  data () {
+    return {
+      user: {
+        username: '',
+        password: ''
+      }
+    }
+  },
+
+  methods: {
+    login: function () {
+      this.$store.dispatch('login', {username: this.user.username, password: this.user.password})
+    }
+  }
 }
 </script>
 
