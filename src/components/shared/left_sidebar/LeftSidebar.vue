@@ -8,7 +8,7 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/troubleshooting/reports">
+            <router-link to="/troubleshooting">
               <i class="material-icons md-18 leftnav_icon">tune</i>{{ $t("leftnav_bar.links.trubleshooting") }}
             </router-link>
           </li>

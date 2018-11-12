@@ -45,30 +45,19 @@ body {
   }
 }
 
-/**
-*  page title
-*
-*  Need to create seperate scss file for this
-*/
-
-
 #page-content-wrapper {
   width: 100%;
   height: 100%;
   position: relative;
 
   .page-content-right {
-    margin-right: 25px;
+    margin-right: $l;
   }
 
   .container-fluid {
     height: 100%;
-    padding: 32px;
+    padding: $xl;
   }
-}
-
-.inner {
-  padding: 20px 60px;
 }
 
 
