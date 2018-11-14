@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import PageTitle from '../shared/page-title.vue'
+import PageTitle from '../shared/PageTitle.vue'
 
 export default {
   data: function () {

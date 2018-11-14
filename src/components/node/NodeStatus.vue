@@ -191,8 +191,8 @@
 </template>
 
 <script>
-import PageTitle from '../shared/page-title.vue'
-import Dropdown from '../shared/dropdown.vue'
+import PageTitle from '../shared/PageTitle.vue'
+import Dropdown from '../shared/Dropdown.vue'
 
 export default {
   data: function () {

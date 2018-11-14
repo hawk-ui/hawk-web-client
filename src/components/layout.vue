@@ -13,8 +13,8 @@
 
 <script>
   import LeftSidebar from './shared/left_sidebar/LeftSidebar.vue'
-  import PageHeader from './shared/page-header.vue'
-  import Simulator from './shared/simulator.vue'
+  import PageHeader from './shared/PageHeader.vue'
+  import Simulator from './shared/Simulator.vue'
 
 export default {
     components: {

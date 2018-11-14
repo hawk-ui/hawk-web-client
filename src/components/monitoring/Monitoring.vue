@@ -9,7 +9,7 @@
       </h4>
 
       <!-- Tabs start -->
-      <div id="tabs" class="dashboard-tabs"> 
+      <div id="tabs" class="dashboard-tabs">
         <ul class="nav nav-pills">
           <li class="active">
             <a href="#1a" data-toggle="tab">HA Cluster<span class="status-circle status-started"></span></a>
@@ -139,8 +139,8 @@
 
 <script>
   import { mapGetters } from 'vuex'
-  import PageTitle from '../shared/page-title.vue'
-  import Dropdown from '../shared/dropdown.vue'
+  import PageTitle from '../shared/PageTitle.vue'
+  import Dropdown from '../shared/Dropdown.vue'
   import AddCluster from './AddCluster.vue'
 
   export default {

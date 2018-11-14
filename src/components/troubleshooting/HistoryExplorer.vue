@@ -2,7 +2,7 @@
   <div class="trubleshooting-container">
     <div class="tab-inner-container">
       <h6>Generate <span>Or</span> Upload Report</h6>
-      <button class="btn btn-primary"><i class="material-icons md-18">event_note</i>Oct 12,2017 - Dec12,2017</button> 
+      <button class="btn btn-primary"><i class="material-icons md-18">event_note</i>Oct 12,2017 - Dec12,2017</button>
       <span class="or-span">or</span>
       <button class="btn btn-primary">Upload Report</button>
     </div>
@@ -51,7 +51,7 @@
 </template>
 
 <script>
-  import PageHeader from '../shared/page-title.vue'
+  import PageHeader from '../shared/PageTitle.vue'
 
   export default {
     data: function () {

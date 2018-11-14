@@ -2,7 +2,7 @@
    <div>
     <app-page-title :pageTitle="pageTitle"></app-page-title>
     <div class="container-fluid">
-      <div id="tabs" class="default-tabs trubleshooting-tabs"> 
+      <div id="tabs" class="default-tabs trubleshooting-tabs">
         <ul  class="nav nav-pills">
           <li class="active">
             <a href="#historyExplorer" data-toggle="tab"><i class="material-icons md-18">history</i>History Explorer</a>
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-  import PageTitle from '../shared/page-title.vue'
+  import PageTitle from '../shared/PageTitle.vue'
   import HistoryExplorer from './HistoryExplorer.vue'
   import CommandLog from './CommandLog.vue'
 
