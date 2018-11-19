@@ -26,11 +26,19 @@
 export default {
   methods: {
     toggleMenu: function () {
-      if ($('#menu-toggle')) {
-        $('#menu-toggle').click(function (e) {
-          e.preventDefault()
-          $('#wrapper').toggleClass('toggled')
-        })
+      $('#sidebar-wrapper li').tooltip()
+      $('#menu-toggle').click(function (e) {
+        e.preventDefault()
+        $('#wrapper').toggleClass('toggled')
+        toggleTooltip()
+      })
+      function toggleTooltip () {
+        // if the menu is not collapsed (meaning, it is open) we dont need to show the tooltips
+        if ($('.main-menu').width() === 54) {
+          $('#sidebar-wrapper li').tooltip()
+        } else {
+          $('#sidebar-wrapper li').tooltip('destroy')
+        }
       }
     }
   },

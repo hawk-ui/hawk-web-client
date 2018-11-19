@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <div class="footer-copyright"><span>©</span> {{ $t("leftnav_bar.footer.copy_right") }}</div>
+    <div class="footer-copyright">©<span>{{ $t("leftnav_bar.footer.copy_right") }}</span> </div>
     <div class="dropup more-btn footer-dropdown">
       <div class="dropdown-toggle" data-toggle="dropdown">
         <i class="material-icons md-18 pull-right">more_vert</i>

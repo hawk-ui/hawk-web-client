@@ -2,6 +2,10 @@
    ========================================================================== */
 /* Variables file: assets/stylesheets/base/variables/main-menu.scss */
 
+.sidebar-view {
+  padding-left: $sidebar-view-padding-left;
+}
+
 .main-menu {
   z-index: 1000;
   position: fixed;
@@ -9,13 +13,22 @@
   width: 55px;
   height: 100%;
   margin-left: $main-menu-margin-left-negative;
-  overflow: hidden;
   background-color: $main-menu-bg;
   border-right: $main-menu-border;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+
+  .router-link-active {
+    width: 54px;
+    border-radius: 0;
+  }
+
+  nav {
+    width: 54px;
+
+    .hawk-logo {
+      display: none;
+      white-space: nowrap;
+    }
+  }
 
   ul,
   li {
@@ -30,7 +43,12 @@
     margin: $main-menu-li-no-link-margin;
     padding: $main-menu-li-no-link-padding;
     position: relative;
-    width: $main-menu-li-no-link-width;
+    width: auto;
+
+    span {
+      display: none;
+      white-space: nowrap;
+    }
 
     > .material-icons {
       display: inline-block;
@@ -40,3 +58,32 @@
     }
   }
 }
+
+.toggled {
+  .sidebar-view { 
+    padding-left: $sidebar-width;
+
+    .main-menu {
+      .router-link-active {
+        width: 230px;
+        border-radius: 0 2px 2px 0;
+      }
+      nav {
+        width: 249px;
+
+        .hawk-logo {
+          display: inline-block;
+        }
+      }
+    }
+    ul li a span {
+      display: inline-block;
+      white-space: nowrap;
+    }
+  }
+
+  & #sidebar-wrapper {
+    width: $sidebar-width;
+  }
+}
+
