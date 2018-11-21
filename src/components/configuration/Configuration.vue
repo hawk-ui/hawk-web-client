@@ -32,7 +32,7 @@
         </div>
         <div class="col-sm-3">
           <div class="panel panel-default config-card">
-            <i class="material-icons md-48">remove_red_eye</i>
+            <i class="eos-icons md-48">constraint</i>
             <div class="config-card-contain">
               <h4>Constraints</h4>
               <span>Total: 2</span>
