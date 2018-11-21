@@ -2,7 +2,7 @@
   position: absolute;
   bottom: 0px;
   display: block;
-  width: $footer-width;
+  width: 54px;
   padding: $footer-padding;
   background: $footer-bg;
   border: 0;
@@ -11,7 +11,8 @@
     float: left;
 
     span {
-      margin-right: $footer-copyright-span-margin;
+      margin-left: $footer-copyright-span-margin;
+      display: none;
     }
   }
 
@@ -20,6 +21,7 @@
   }
 
   .footer-dropdown {
+    display: none;
 
     > ul {
       background: $footer-dropdown-bg;
@@ -41,5 +43,19 @@
         }
       }
     }
+  }
+}
+
+.toggled {
+  .footer {
+    width: 249px;
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  .footer-dropdown {
+    display: block;
   }
 }
