@@ -1,4 +1,4 @@
-# vue
+# hawk-web-client
 
 ## Project setup
 ```
