@@ -12,7 +12,7 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
-    "api": "json-server --watch src/api/db.json --port 3004"
+    "api": "node src/api/fake_data_server.js"
   },
   "dependencies": {
     "axios": "^0.16.2",
