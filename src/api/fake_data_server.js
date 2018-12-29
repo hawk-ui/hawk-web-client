@@ -26,10 +26,13 @@ const other_routers = {
   "/api/v1/configuration/nodes/:id": "/nodes/:id",
   "/api/v1/configuration/constraints": "/constraints",
   "/api/v1/configuration/constraints/:id": "/constraints/:id",
+  "/api/v1/status/summary": "/status_summary",
   "/api/v1/status/nodes": "/nodes_status",
   "/api/v1/status/nodes/:id": "/nodes_status/:id",
   "/api/v1/status/resources": "/resources_status",
-  "/api/v1/status/resources/:id": "/resources_status/:id"
+  "/api/v1/status/resources/:id": "/resources_status/:id",
+  "/api/v1/status/failures": "/failures",
+  "/api/v1/status/failures/:node": "/failures?node=:node"
 }
 
 server.use(middlewares)
