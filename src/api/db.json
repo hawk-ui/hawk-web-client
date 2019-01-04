@@ -4,14 +4,7 @@
     "validate_with": "pacemaker-2.9",
     "epoch": "0:30:2",
     "num_updates": "2",
-    "admin_epoch": "0",
-    "cib_last_written": "Wed Oct 25 14:54:15 2017",
-    "update_origin": "webui",
-    "update_client": "cibadmin",
-    "update_user": "hacluster",
-    "have_quorum": "1",
-    "dc_uuid": "168633610",
-    "dc_uname": "webui"
+    "admin_epoch": "0"
   },
   "cluster_property": {
     "cluster_infrastructure": "corosync",
@@ -55,7 +48,7 @@
     "provider": "heartbeat",
     "type": "IPaddr2",
     "meta": [{
-      "target-role": "Stopped",
+      "target-role": "Started",
       "description": "Fake resource"
     }],
     "param": [{
@@ -389,41 +382,101 @@
     "uname": "node1"
   },
   {
-    "id": "168430211",
+    "id": "168430212",
     "uname": "node2"
   }],
+  "status_summary":{
+    "stack": "corosync",
+    "last_change": "Wed Oct 25 14:54:15 2017",
+    "update_origin": "node1",
+    "update_client": "cibadmin",
+    "update_user": "root",
+    "with_quorum": "true",
+    "dc_uuid": "168430211",
+    "dc_uname": "node1",
+    "nodes_configured": "2",
+    "resources_configured": {
+      "number": "1",
+      "disabled": "1",
+      "blocked": "0"
+    }
+  },
   "nodes_status": [{
     "id": "168430211",
     "uname": "node1",
-    "state": "online"
+    "oneline": "true",
+    "standby": "false",
+    "maintenance": "false",
+    "pending": "false",
+    "unclean": "false",
+    "shutdown": "false",
+    "is_dc": "true",
+    "resources_running": "3",
+    "type": "member"
   },
   {
-    "id": "168430211",
+    "id": "168430212",
     "uname": "node2",
-    "state": "online"
+    "oneline": "true",
+    "standby": "false",
+    "maintenance": "false",
+    "pending": "false",
+    "unclean": "false",
+    "shutdown": "false",
+    "is_dc": "false",
+    "resources_running": "0",
+    "type": "member"
   }],
   "resources_status": [{
     "id": "vip1",
-    "state": "Stopped"
+    "resource_agent": "ocf::heartbeat:IPaddr2",
+    "role": "Started",
+    "target_role": "Started",
+    "active": "true",
+    "orphaned": "false",
+    "blocked": "false",
+    "managed": "true",
+    "failed": "false",
+    "failure_ignored": "false",
+    "nodes_running_on": [{
+      "name": "node1",
+      "id": "168430211"
+    }]
   },
   {
-    "id": "sql",
-    "state": "Started",
-    "where": "node1"
+    "id": "d1",
+    "resource_agent": "ocf::heartbeat:Dummy",
+    "role": "Started",
+    "active": "true",
+    "orphaned": "false",
+    "blocked": "false",
+    "managed": "true",
+    "failed": "false",
+    "failure_ignored": "false",
+    "nodes_running_on": [{
+      "name": "node2",
+      "id": "168430212"
+    }]
+  }],
+  "failures": [{
+    "op_key": "httpd_start_0",
+    "node": "node2",
+    "exit_status": "not installed",
+    "exit_reason": "environment is invalid, resource considered stopped",
+    "exit_code": "5",
+    "last_rc_chage": "Wed Jan  2 10:30:42 2019",
+    "task": "start",
+    "call": "19"
   },
   {
-    "id": "Email",
-    "state": "Started",
-    "where": "node2"
-  },
-  {
-    "id": "group1",
-    "state": "Started",
-    "where": "node1"
-  },
-  {
-    "id": "group2",
-    "state": "Stopped"
+    "op_key": "httpd_start_0",
+    "node": "node1",
+    "exit_status": "not installed",
+    "exit_reason": "environment is invalid, resource considered stopped",
+    "exit_code": "5",
+    "last_rc_chage": "Wed Jan  2 10:30:42 2019",
+    "task": "start",
+    "call": "20"
   }],
   "constraints": [{
     "id": "loc-1",
