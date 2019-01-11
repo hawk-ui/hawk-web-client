@@ -28,13 +28,13 @@
     "id": "stonith_libvirt",
     "class": "stonith",
     "type": "external/libvirt",
-    "meta": [{
+    "meta": {
       "target-role": "Started"
-    }],
-    "param": [{
+    },
+    "param": {
       "hostlist": "node1,node2",
       "hypervisor_uri": "qemu+tcp://10.67.19.57/system"
-    }],
+    },
     "op": [{
       "name": "monitor",
       "interval": "60",
@@ -47,14 +47,14 @@
     "class": "ocf",
     "provider": "heartbeat",
     "type": "IPaddr2",
-    "meta": [{
+    "meta": {
       "target-role": "Started",
       "description": "Fake resource"
-    }],
-    "param": [{
+    },
+    "param": {
       "ip": "10.10.10.123",
       "nic": "eth1"
-    }],
+    },
     "op": [{
       "name": "monitor",
       "interval": "10s",
@@ -122,9 +122,9 @@
     "class": "ocf",
     "provider": "linbit",
     "type": "drbd",
-    "param": [{
+    "param": {
       "drbd_resource": "drbd0"
-    }],
+    },
     "op": [{
       "name": "monitor",
       "interval": "10s",
@@ -147,9 +147,9 @@
     "class": "ocf",
     "provider": "linbit",
     "type": "drbd",
-    "param": [{
+    "param": {
       "drbd_resource": "drbd1"
-    }],
+    },
     "op": [{
       "name": "monitor",
       "interval": "10s",
@@ -184,12 +184,12 @@
     "class": "ocf",
     "provider": "heartbeat",
     "type": "clvm",
-    "meta": [{
+    "meta": {
       "target-role": "Started"
-    }],
-    "param": [{
+    },
+    "param": {
       "with_cmirrord": "1"
-    }],
+    },
     "op": [{
       "name": "monitor",
       "interval": "20",
@@ -212,12 +212,12 @@
     "class": "ocf",
     "provider": "heartbeat",
     "type": "LVM",
-    "meta": [{
+    "meta": {
       "target-role": "Started"
-    }],
-    "param": [{
+    },
+    "param": {
       "volgrpname": "cluster-vg2"
-    }],
+    },
     "op": [{
       "name": "monitor",
       "interval": "60",
@@ -230,11 +230,11 @@
     "provider": "pacemaker",
     "class": "ocf",
     "type": "ping",
-    "param": [{
+    "param": {
       "dampen": "5s",
       "multiplier": "1000",
       "host_list": "my.gateway.com www.bigcorp.com"
-    }],
+    },
     "op": [{
       "name": "monitor",
       "interval": "60s"
@@ -253,10 +253,10 @@
   },
   {
     "id": "group2",
-    "meta": [{
+    "meta": {
       "target-role": "Stopped",
       "is-managed": "true"
-    }]
+    }
   },
   {
     "id": "base-group",
@@ -264,34 +264,34 @@
   }],
   "clones": [{
     "id": "base-clone",
-    "meta": [{
+    "meta": {
       "interleave": "true"
-    }]
+    }
   },
   {
     "id": "Connected"
   }],
   "masters": [{
     "id": "master1",
-    "meta": [{
+    "meta": {
       "master-max": "1",
       "master-node-max": "1",
       "clone-max": "3",
       "clone-node-max": "1",
       "notify": "true",
       "target-role": "Started"
-    }]
+    }
   },
   {
     "id": "master2",
-    "meta": [{
+    "meta": {
       "master-max": "1",
       "master-node-max": "1",
       "clone-max": "3",
       "clone-node-max": "1",
       "notify": "true",
       "target-role": "Started"
-    }]
+    }
   }],
   "bundles": [{
     "id": "httpd-bundle",
