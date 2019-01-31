@@ -6,23 +6,25 @@
 *
 */
 .legend {
-  position: relative;
+  float: right;
 
   > .btn {
     background: transparent;
+    padding: 6px 3px;
   }
 
-  &.open {
+  &.show {
     > ul {
       width: $legend-ul-width;
-      margin: $legend-ul-margin-top;
       padding: $legend-ul-padding;
+      border-radius: 0;
 
       > li {
         width: $legend-li-width;
         display: inline-block;
         margin: 0;
         padding: 0;
+        font-size: 14px;
 
         a {
           padding: $legend-li-a-padding;

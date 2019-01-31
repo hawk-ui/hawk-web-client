@@ -7,40 +7,36 @@
           <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="material-icons md-18">settings</i>
           </button>
-          <app-dropdown :lists="nodeList" :listType="iconList"></app-dropdown>
+          <app-dropdown class="dropdown-menu-right" :lists="nodeList" :listType="iconList"></app-dropdown>
         </div>
       </div>
     </app-page-title>
     <div class="container-fluid">
-      <div class="panel panel-danger">
-        <div class="panel-heading">
-          <h3 class="panel-title">Errors</h3>
-        </div>
-        <div class="panel-body">
-          panel content
-        </div>
+      <div class="alert alert-danger">
+        <h3 class="panel-title">Errors</h3>
+        <p> panel content</p>
       </div>
       <!-- node cluster and resources status start -->
       <div class="row node-status">
         <div class="col-sm-4">
-          <div class="panel panel-default">
-            <div class="panel-body">
+          <div class="card">
+            <div class="card-body">
               <h5>Node</h5>
               <p><span class="status-circle status-started"></span> Hawk node1</p>
             </div>
           </div>
         </div>
         <div class="col-sm-4">
-          <div class="panel panel-default">
-            <div class="panel-body">
+          <div class="card">
+            <div class="card-body">
               <h5>Cluster</h5>
               <p>@Web-server</p>
             </div>
           </div>
         </div>
         <div class="col-sm-4">
-          <div class="panel panel-default">
-            <div class="panel-body">
+          <div class="card">
+            <div class="card-body">
               <h5>Resources</h5>
               <p>230</p>
             </div>
@@ -50,9 +46,9 @@
       <!-- graphs start -->
       <div class="row">
         <div class="col-sm-6">
-          <div class="panel panel-default">
-            <div class="panel-heading panel-graphs panel-heading-no-bg">
-              <h4 class="panel-title">
+          <div class="card">
+            <div class="card-heading panel-graphs panel-heading-no-bg">
+              <h4 class="card-title">
                 <span>CPU Usage</span>
                 <a data-toggle="collapse" href="#graph1" class='pull-right'>
                   <i class="material-icons icon-up">keyboard_arrow_up</i>
@@ -65,9 +61,9 @@
           </div>
         </div>
         <div class="col-sm-6">
-          <div class="panel panel-default">
-            <div class="panel-heading panel-graphs panel-heading-no-bg">
-              <h4 class="panel-title">
+          <div class="card">
+            <div class="card-heading panel-graphs panel-heading-no-bg">
+              <h4 class="card-title">
                 <span>Disk & Memory Usage</span>
                 <a data-toggle="collapse" href="#graph2" class='pull-right'>
                   <i class="material-icons icon-up">keyboard_arrow_up</i>
@@ -83,7 +79,7 @@
       <!-- events start -->
       <div class="row">
         <div class="col-sm-8">
-          <div class="panel panel-default">
+          <div class="card">
             <table class="table table-node-resources">
               <thead>
                 <tr>
@@ -96,7 +92,7 @@
                 <tr>
                   <td class="status-text"><span class="status-circle status-started"></span>stonith-sbd</td>
                   <td>Running since 3 hrs</td>
-                  <td class="col-sm-1">
+                  <td >
                     <div class="dropdown pull-right">
                       <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="material-icons md-18">more_vert</i>
@@ -158,7 +154,7 @@
           </div>
         </div>
         <div class="col-sm-4">
-          <div class="panel panel-default">
+          <div class="card">
             <table class="table table-node-events">
               <thead>
                 <tr>

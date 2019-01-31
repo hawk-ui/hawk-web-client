@@ -3,12 +3,14 @@
     <app-page-title :pageTitle="pageTitle"></app-page-title>
     <div class="container-fluid">
       <div id="tabs" class="default-tabs trubleshooting-tabs">
-        <ul  class="nav nav-pills">
-          <li class="active">
-            <a href="#historyExplorer" data-toggle="tab"><i class="material-icons md-18">history</i>History Explorer</a>
+        <ul  class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" href="#historyExplorer" data-toggle="tab">
+              <i class="material-icons md-18">history</i>History Explorer</a>
           </li>
-          <li>
-            <a href="#commandLog" data-toggle="tab"><i class="material-icons md-18">assignment</i>Command Log</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="#commandLog" data-toggle="tab">
+              <i class="material-icons md-18">assignment</i>Command Log</span></a>
           </li>
         </ul>
         <div class="tab-content clearfix">

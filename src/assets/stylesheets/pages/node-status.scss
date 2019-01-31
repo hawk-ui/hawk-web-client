@@ -10,3 +10,11 @@
     margin-right: $node-status-circle-margin-right;
   }
 }
+
+.panel-graphs {
+  .card-title {
+    a {
+      float: right;
+    }
+  }
+}

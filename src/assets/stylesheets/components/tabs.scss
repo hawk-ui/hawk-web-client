@@ -5,28 +5,32 @@
 *
 * Variables file: assets/stylesheets/base/variables/tabs.scss
 */
-#tabs {
-  > ul.nav-pills {
-    display: inline-block;
-    float: left;
 
-    li {
-      padding: 0;
+ul.nav-tabs {
+  display: inline-flex;
+  border-bottom: 0;
 
-      a { 
-        color: $tabs-text-color;
-        border-radius: 0;
-        border-top: 3px solid transparent;
-        background-color: $tabs-inactive-bg;
-        margin-bottom: -1px;
+  li {
+    padding: 0;
 
-        > .material-icons {
-          vertical-align: sub;
-          margin-right: 6px;
-        }
+    a.nav-link { 
+      color: $tabs-text-color;
+      border-radius: 0;
+      border-top: 3px solid transparent;
+      background-color: $tabs-inactive-bg;
+
+      .status-circle {
+        margin-left: 5px;
+        width: 8px;
+        height: 8px;
       }
 
-      &.active > a {
+      > .material-icons {
+        vertical-align: sub;
+        margin-right: 6px;
+      }
+
+      &.active {
         background-color: white;
         border: 1px solid $tabs-border-color;
         border-top: 3px solid $tabs-active-border-color;
@@ -36,20 +40,16 @@
   }
 }
 
+
 .tab-content {
   clear: both;
   border: 1px solid $tabs-border-color;
   padding: $tab-content-padding;
   background: $tab-content-bg;
-}
+  margin-top: -1px;
 
-/* Monitoring Tab */
-.dashboard-tabs .nav-pills li a {
-
-  .status-circle {
-    margin-left: 6px;
-    width: 6px;
-    height: 6px;
+  .container {
+    padding: 0;
   }
 }
 

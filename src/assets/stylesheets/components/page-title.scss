@@ -4,3 +4,17 @@
 .page-title {
   padding: 32px;
 }
+
+/* Back and setting button group */
+.back-setting-btn-group {
+  float: right;
+  display: flex;
+
+  .btn {
+    margin-right: 15px;
+  }
+
+  :last-child .btn {
+    margin-right: 0;
+  }
+}

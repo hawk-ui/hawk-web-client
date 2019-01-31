@@ -2,6 +2,11 @@
    ========================================================================== */
 /* Variables: /assets/stylesheets/base/variables/pages/dashboard.scss */
 
+.dashboard-tabs {
+  .nav-tabs {
+    display: inline-flex;
+  }
+}
 .dashboard-header {
   margin: 0;
   padding: $dashboard-header-padding;
@@ -17,6 +22,7 @@
 
   .header-toolbox {
     margin-bottom: 0;
+    float: right;
 
     > li {
       display: inline-block;
@@ -24,7 +30,7 @@
       padding: 0;
 
       i {
-        display: block;
+        display: inline-block;
       }
     }
   }
