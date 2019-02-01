@@ -7,16 +7,15 @@
       <i class="material-icons md-18">check_circle</i>
       {{ $t("page_header.cluster-status.details") }}
     </div>
-    <div class="dropdown user-details clickable">
-      <div class="dropdown-toggle" data-toggle="dropdown">
+    <div class="dropdown user-details">
+      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
         <i class="material-icons md-18">account_circle</i>
         Hacluste
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a class="dropdown-item" href="#">Account Setting</a>
+        <a class="dropdown-item" href="#">Logout</a>
       </div>
-      <ul class="dropdown-menu dropdown-menu-right">
-        <li><a>Account Setting</a></li>
-        <li><a>Help</a></li>
-        <li><a>Logout</a></li>
-      </ul>
     </div>
   </header>
 </template>

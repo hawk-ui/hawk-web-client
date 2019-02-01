@@ -2,37 +2,37 @@
   <div>
     <app-page-title :pageTitle="pageTitle">
       <div class="back-setting-btn-group">
-        <button class="btn btn-default">Back</button>
-        <div class="dropdown pull-right">
+        <button class="btn">Back</button>
+        <div class="dropdown">
           <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="material-icons md-18">settings</i>
           </button>
-          <app-dropdown :lists="nodeList" :listType="iconList"></app-dropdown>
+          <app-dropdown class="dropdown-menu-right" :lists="nodeList" :listType="iconList"></app-dropdown>
         </div>
       </div>
     </app-page-title>
-    <div class="container-fluid">
+    <div class="container-fluid resource-status">
       <!-- node cluster and resources status start -->
       <div class="row node-status">
         <div class="col-sm-4">
-          <div class="panel panel-default">
-            <div class="panel-body">
+          <div class="card">
+            <div class="card-body">
               <h5>Resource</h5>
               <p><span class="status-circle status-started"></span> stonith-sbd</p>
             </div>
           </div>
         </div>
         <div class="col-sm-4">
-          <div class="panel panel-default">
-            <div class="panel-body">
+          <div class="card">
+            <div class="card-body">
               <h5>Groups</h5>
               <p>G-proxy</p>
             </div>
           </div>
         </div>
         <div class="col-sm-4">
-          <div class="panel panel-default">
-            <div class="panel-body">
+          <div class="card">
+            <div class="card-body">
               <h5>Node</h5>
               <p><a href="">webui</a> <a href="">Hawk-webui</a></p>
             </div>
@@ -43,9 +43,9 @@
       <div class="row">
         <div class="col-sm-6 resource-panel">
         <h4>Constraint</h4>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
+          <div class="card">
+            <div class="card-heading">
+              <h5 class="card-title">
                 <span><i class="material-icons md-18">location_on</i>Location</span>
                 <div class='rightside-icon'>
                   <span>2</span>
@@ -53,24 +53,24 @@
                     <i class="material-icons icon-up">keyboard_arrow_up</i>
                   </a>
                 </div>
-              </h4>
+              </h5>
             </div>
-            <div id="location" class="panel-collapse collapse">
-             <div class="panel-body">
+            <div id="location" class="collapse">
+             <div class="card-body">
               <ul>
                 <li>base-colone@web-server <a href=""><i class="material-icons md-18">mode_edit</i></a></li>
                 <li>base-colone@web-server <a href=""><i class="material-icons md-18">mode_edit</i></a></li>
               </ul>
              </div>
-              <div class="panel-footer text-right">
+              <div class="card-footer text-right">
                 <button class="btn btn-primary">+ Add</button>
               </div>
             </div>
           </div>
 
-          <div class="panel panel-default resource-panel">
-            <div class="panel-heading">
-              <h4 class="panel-title">
+          <div class="card">
+            <div class="card-heading">
+              <h5 class="card-title">
                 <span><i class="material-icons md-18">swap_vert</i>Order</span>
                 <div class='rightside-icon'>
                   <span>0</span>
@@ -78,19 +78,19 @@
                     <i class="material-icons icon-up">keyboard_arrow_up</i>
                   </a>
                 </div>
-              </h4>
+              </h5>
             </div>
-            <div id="order" class="panel-collapse collapse">
-              <div class="panel-body">No order</div>
-              <div class="panel-footer text-right">
+            <div id="order" class="collapse">
+              <div class="card-body">No order</div>
+              <div class="card-footer text-right">
                 <button class="btn btn-primary">+ Add</button>
               </div>
             </div>
           </div>
 
-          <div class="panel panel-default resource-panel">
-            <div class="panel-heading">
-              <h4 class="panel-title">
+          <div class="card">
+            <div class="card-heading">
+              <h5 class="card-title">
                 <span><i class="material-icons md-18">add_location</i>Collocation</span>
                 <div class='rightside-icon'>
                   <span>0</span>
@@ -98,18 +98,18 @@
                     <i class="material-icons icon-up">keyboard_arrow_up</i>
                   </a>
                 </div>
-              </h4>
+              </h5>
             </div>
-            <div id="collocation" class="panel-collapse collapse">
-              <div class="panel-body">No collocation</div>
-              <div class="panel-footer text-right">
+            <div id="collocation" class="collapse">
+              <div class="card-body">No collocation</div>
+              <div class="card-footer text-right">
                 <button class="btn btn-primary">+ Add</button>
               </div>
             </div>
           </div>
-          <div class="panel panel-default resource-panel">
-            <div class="panel-heading">
-              <h4 class="panel-title">
+          <div class="card">
+            <div class="card-heading">
+              <h5 class="card-title">
                 <span><i class="material-icons md-18">local_activity</i>Ticket</span>
                 <div class='rightside-icon'>
                   <span>0</span>
@@ -117,18 +117,18 @@
                     <i class="material-icons icon-up">keyboard_arrow_up</i>
                   </a>
                 </div>
-              </h4>
+              </h5>
             </div>
-            <div id="ticket" class="panel-collapse collapse">
-              <div class="panel-body">No tickets</div>
-              <div class="panel-footer text-right">
+            <div id="ticket" class="collapse">
+              <div class="card-body">No tickets</div>
+              <div class="card-footer text-right">
                 <button class="btn btn-primary">+ Add</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-sm-6">
-          <div class="panel panel-default table-event-resources">
+        <div class="col-sm-6 events">
+          <div class="card table-event-resources">
            <table class="table">
               <thead>
                 <tr>

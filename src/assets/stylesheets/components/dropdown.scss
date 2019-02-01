@@ -2,6 +2,10 @@
    ========================================================================== */
 /* Dropdowns */
 /* Variables: /assets/stylesheets/base/variables/dropdown.scss */
+.dropdown-menu {
+  font-size: 14px;
+}
+
 .open .dropdown-menu {
   border-radius: 0;
   box-shadow: $dropdown-box-shadow;
@@ -89,6 +93,7 @@
       label {
         font-weight: normal;
         margin-left: $filters-label-margin-left;
+        margin-bottom: 0;
       }
     }
   }

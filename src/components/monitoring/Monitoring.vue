@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="dashboard">
     <app-page-title :pageTitle="pageTitle"></app-page-title>
     <div class="container-fluid">
       <h4 class="error-section">
@@ -7,132 +7,126 @@
           <li>{{ error.type }} {{ error.msg }}</li>
         </ul>
       </h4>
-
-      <!-- Tabs start -->
-      <div id="tabs" class="dashboard-tabs">
-        <ul class="nav nav-pills">
-          <li class="active">
-            <a href="#1a" data-toggle="tab">HA Cluster<span class="status-circle status-started"></span></a>
+      
+      <div class="dashboard-tab">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#home">Web Cluster<span class="status-circle"></span></a>
           </li>
-          <li>
-            <a href="#2a" data-toggle="tab">Web Cluster<span class="status-circle"></span></a>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#menu1">Ha Cluster<span class="status-circle"></span> </a>
           </li>
-          <li>
-            <a href="#3a" data-toggle="tab">HA web Cluster<span class="status-circle"></span></a>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#menu2">HA web Cluster<span class="status-circle"></span></a>
           </li>
+          <a class="add-cluster-bt clickable" data-toggle="modal" data-target="#addCluster">+ Add Cluster</a>
+          <app-add-cluster id="addCluster"></app-add-cluster> 
         </ul>
+        <div class="dropdown legend">
+            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Legend <span class="caret"></span>
+            </button>
+              <app-dropdown class="dropdown-menu-right legend-options" :lists="legendList"></app-dropdown>
+          </div>
 
-        <a class="add-cluster-bt clickable" data-toggle="modal" data-target="#addCluster">+ Add Cluster</a>
-        <app-add-cluster id="addCluster"></app-add-cluster>
-
-        <div class="dropdown legend pull-right">
-          <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Legend <span class="caret"></span>
-          </button>
-            <app-dropdown class="legend-options" :lists="legendList"></app-dropdown>
-        </div>
-
-        <div class="tab-content clearfix">
-          <div class="tab-pane active" id="1a">
-              <div class="dashboard-error">
-                <ul class="no-list-style">
-                  <li><i class="material-icons md-18">error</i>2017-10-06 15:43: <span>Operation monitor</span>  failed for resource <span>ted</span> on node webui: call-id=96, rc-code=not running (7), exit-reason=</li>
-                  <li><i class="material-icons md-18">error</i>2017-10-06 15:43: <span>Operation monitor</span>  failed for resource <span>ted</span> on node webui: call-id=96, rc-code=not running (7), exit-reason=</li>
-                </ul>
-              </div>
-              <div class="dashboard-header">
-                <input class="form-control search" type="text" value="search...">
-                <ul class="pull-right header-toolbox">
-                  <!-- Tickets section -->
-                  <li>
-                    <div class="dropdown cluster-ticket">
-                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Tickets
-                        </button>
-                        <span class="cluster-ticket-count">2</span>
-                      <ul  v-if='cib.tickets' class="dropdown-menu">
-                        <li v-for="(ticket, index) in cib.tickets" v-bind:key="index">
-                          <div>{{ ticket.id }} : {{ ticket.state }} <br>
-                          Standby : {{ ticket.standby? "true": "false" }}</div>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <!-- End Ticket Section -->
-                  <li>
-                    <div class="dropdown filters-dropdown">
-                      <button type="button" class="btn filters-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="material-icons md-18 filter-list">filter_list</i>
+      </div>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-pane active container" id="home"> 
+            <div class="dashboard-error">
+              <ul class="no-list-style">
+                <li><i class="material-icons md-18">error</i>2017-10-06 15:43: <span>Operation monitor</span>  failed for resource <span>ted</span> on node webui: call-id=96, rc-code=not running (7), exit-reason=</li>
+                <li><i class="material-icons md-18">error</i>2017-10-06 15:43: <span>Operation monitor</span>  failed for resource <span>ted</span> on node webui: call-id=96, rc-code=not running (7), exit-reason=</li>
+              </ul>
+            </div>
+            <div class="dashboard-header">
+              <input class="form-control search" type="text" value="search...">
+              <ul class="pull-right header-toolbox">
+                <!-- Tickets section -->
+                <li>
+                  <div class="dropdown cluster-ticket">
+                      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Tickets
                       </button>
-                      <app-dropdown :lists="filterList"></app-dropdown>
-                    </div>
-                  </li>
-                  <li><a href=""><i class="material-icons md-18">link</i></a></li>
-                </ul>
-              </div>
-              <table class="table dashboard-table">
-                <thead>
-                  <!-- Nodes Row -->
-                  <tr>
-                    <th colspan="2"></th>
-                    <th v-for="node in cib.nodes" v-bind:key="node.id">
-                      <div class="dropdown dashboard-table-nodes">
-                        <span class="status-line" v-bind:class="NodeBarClass(node.state)"></span>
-                        <div class="node-name btn dropdown-toggle" data-toggle="dropdown" v-bind:title="'Node id: ' + node.id">{{ node.name }}
-                          <span class="table-cluster-name">
-                            {{ cib.crm_config.cluster_name}}
-                          </span>
-                        </div>
-                        <div class="dashboard-table-status-icon">
-                          <ul>
-                            <li><i v-if="node.name === cib.meta.dc" class="material-icons md-18">home</i></li>
-                            <li v-if="node.maintenance == true"><i class="material-icons md-18">build</i></li>
-                            <li v-if="node.remote == true"><i class="material-icons md-18">cloud_queue</i></li>
-                            <li v-if="node.fence_history !== ''"><i class="material-icons md-18">cached</i></li>
-                          </ul>
-                        </div>
-                        <app-dropdown :lists="nodeList"></app-dropdown>
+                      <span class="cluster-ticket-count">2</span>
+                    <ul  v-if='cib.tickets' class="dropdown-menu">
+                      <li v-for="(ticket, index) in cib.tickets" v-bind:key="index">
+                        <div>{{ ticket.id }} : {{ ticket.state }} <br>
+                        Standby : {{ ticket.standby? "true": "false" }}</div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- End Ticket Section -->
+                <li>
+                  <div class="dropdown filters-dropdown">
+                    <button type="button" class="btn filters-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="material-icons md-18 filter-list">filter_list</i>
+                    </button>
+                    <app-dropdown class="dropdown-menu-right" :lists="filterList"></app-dropdown>
+                  </div>
+                </li>
+                <li><a href=""><i class="material-icons md-18">link</i></a></li>
+              </ul>
+            </div>
+            <table class="table dashboard-table">
+              <thead>
+                <!-- Nodes Row -->
+                <tr>
+                  <th colspan="2"></th>
+                  <th v-for="node in cib.nodes" v-bind:key="node.id">
+                    <div class="dropdown dashboard-table-nodes">
+                      <span class="status-line" v-bind:class="NodeBarClass(node.state)"></span>
+                      <div class="node-name btn dropdown-toggle" data-toggle="dropdown" v-bind:title="'Node id: ' + node.id">{{ node.name }}
+                        <span class="table-cluster-name">
+                          {{ cib.crm_config.cluster_name}}
+                        </span>
                       </div>
-                    </th>
-                  </tr>
-                 </thead>
-                  <!-- End Nodes Row -->
-                  <!-- Resources Row -->
-                <tbody>
-                  <tr v-for="resource in cib.resources" v-bind:key="resource.id">
-                    <td class="status-icon-col">
                       <div class="dashboard-table-status-icon">
                         <ul>
-                          <li v-if="resource.type == 'master'"><i class="material-icons md-18">grade</i></li>
-                          <li v-if="resource.maintenance == true"><i class="material-icons md-18">build</i></li>
+                          <li><i v-if="node.name === cib.meta.dc" class="material-icons md-18">home</i></li>
+                          <li v-if="node.maintenance == true"><i class="material-icons md-18">build</i></li>
+                          <li v-if="node.remote == true"><i class="material-icons md-18">cloud_queue</i></li>
+                          <li v-if="node.fence_history !== ''"><i class="material-icons md-18">cached</i></li>
                         </ul>
                       </div>
-                    </td>
-                    <td class="resource-col">
-                      <div class="dropdown">
-                        <div class="btn dropdown-toggle" data-toggle="dropdown">
-                          <span class="status-line" v-bind:class="resourceBarStyle(resource)"></span>{{ resource.id }}
-                        </div>
-                        <app-dropdown :lists="resourceList"></app-dropdown>
+                      <app-dropdown :lists="nodeList"></app-dropdown>
+                    </div>
+                  </th>
+                </tr>
+               </thead>
+                <!-- End Nodes Row -->
+                <!-- Resources Row -->
+              <tbody>
+                <tr v-for="resource in cib.resources" v-bind:key="resource.id">
+                  <td class="status-icon-col">
+                    <div class="dashboard-table-status-icon">
+                      <ul>
+                        <li v-if="resource.type == 'master'"><i class="material-icons md-18">grade</i></li>
+                        <li v-if="resource.maintenance == true"><i class="material-icons md-18">build</i></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td class="resource-col">
+                    <div class="dropdown">
+                      <div class="btn dropdown-toggle" data-toggle="dropdown">
+                        <span class="status-line" v-bind:class="resourceBarStyle(resource)"></span>{{ resource.id }}
                       </div>
-                    </td>
-                    <td v-for="node in cib.nodes" v-bind:key="node.id">
-                      <span class="status-circle" v-bind:class="ResourceStateClass(resource, node)"></span>
-                    </td>
-                  </tr>
-                <!-- End Resources Row -->
-                </tbody>
-              </table>
+                      <app-dropdown :lists="resourceList"></app-dropdown>
+                    </div>
+                  </td>
+                  <td v-for="node in cib.nodes" v-bind:key="node.id">
+                    <span class="status-circle" v-bind:class="ResourceStateClass(resource, node)"></span>
+                  </td>
+                </tr>
+              <!-- End Resources Row -->
+              </tbody>
+            </table>
           </div>
-          <div class="tab-pane" id="2a">
-            <p>Tab 2</p>
-          </div>
-          <div class="tab-pane" id="3a">
-            <p>Tab 3</p>
-          </div>
+          <div class="tab-pane container" id="menu1"> Tab 2 </div>
+          <div class="tab-pane container" id="menu2"> Tab 3 </div>
         </div>
-      </div>
-       <!-- Tabs end -->
     </div>
   </div>
 </template>
