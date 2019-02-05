@@ -14,6 +14,8 @@
       </button>
       <div class="dropdown-menu dropdown-menu-right">
         <a class="dropdown-item" href="#">Account Setting</a>
+        <a class="dropdown-item" href="#">Role</a>
+        <a class="dropdown-item" href="#">Target</a>
         <a class="dropdown-item" href="#">Logout</a>
       </div>
     </div>

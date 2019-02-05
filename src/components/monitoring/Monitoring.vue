@@ -1,7 +1,7 @@
 <template>
-  <div class="dashboard">
+  <div class="container-fluid">
     <app-page-title :pageTitle="pageTitle"></app-page-title>
-    <div class="container-fluid">
+    <div>
       <h4 class="error-section">
         <ul v-for="(error, index) in cib.errors" v-bind:key="index">
           <li>{{ error.type }} {{ error.msg }}</li>
