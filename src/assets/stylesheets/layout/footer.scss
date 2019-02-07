@@ -1,61 +1,73 @@
-.footer {
+#page-content-wrapper footer {
+  padding: 0;
+  position: inherit;
+  }
+
+.footer-side-menu {
   position: absolute;
   bottom: 0px;
   display: block;
   width: 54px;
-  padding: $footer-padding;
   background: $footer-bg;
   border: 0;
+  padding: 0;
+  display: none;
 
-  .footer-copyright {
-    float: left;
-
-    span {
-      margin-left: $footer-copyright-span-margin;
-      display: none;
-    }
+  ul.footer-list {
+    display: flex;
+    flex-direction: row;
+    font-size: $footer-side-menu-font-size;
+    margin: 0;
+    padding: $footer-padding;
+    color: $sb-gray-200;
   }
 
-  .more-btn {
-    cursor: pointer;
-  }
+  li.footer-list-item {
+    list-style: none;
+    padding: $footer-list-padding;
 
-  .footer-dropdown {
-    display: none;
-
-    > ul {
-      background: $footer-dropdown-bg;
-      margin: $footer-dropdown-margin;
-      width: $footer-width;
-      padding: $footer-dropdown-padding;
-      border: 0;
-      left: $footer-dropdown-left;
-      box-shadow: none;
-
-      li {
-        list-style: none;
-        padding: $footer-dropdown-li-padding;
-        color: $footer-dropdown-color;
-
-        i {
-          margin-right: $s;
-          vertical-align: text-bottom;
-        }
-      }
+    a {
+      padding: 0;
+      margin: 0
     }
+  }
+}
+
+.footer-content {
+    align-items: center;
+    border-top: 1px solid #f4f4f4;
+    box-shadow: 0px -2px 3px rgba(226, 226, 226, 0.11);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    background: white;
+
+    ul.footer-list {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    justify-content: center;
+    margin: 0;
+    padding: 8px 16px;
+
+    li.footer-list-item {
+    list-style: none;
+    padding: 0 8px;
+}
   }
 }
 
 .toggled {
-  .footer {
+  .footer-side-menu {
     width: 249px;
-
-    span {
-      display: inline-block;
-    }
-  }
-
-  .footer-dropdown {
     display: block;
   }
+
+  .display-collapsed {
+    display: none
+  }
 }
+
+

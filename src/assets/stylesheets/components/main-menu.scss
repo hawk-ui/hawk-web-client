@@ -14,7 +14,6 @@
   height: 100%;
   margin-left: $main-menu-margin-left-negative;
   background-color: $main-menu-bg;
-  border-right: $main-menu-border;
 
   .router-link-active {
     width: 54px;
@@ -29,13 +28,13 @@
       white-space: nowrap;
     }
   }
+  .navigation-container {
+    ul,
+    li {
+      padding: 0;
+    }
 
-  ul,
-  li {
-    padding: 0;
-  }
-
-  li a,
+    li > a,
   .li-no-link {
     color: $main-menu-link-color;
     display: block;
@@ -57,6 +56,8 @@
       vertical-align: bottom;
     }
   }
+  }
+ 
 }
 
 .toggled {

@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="container-fluid">
     <app-page-title :pageTitle="pageTitle"></app-page-title>
-    <div class="container-fluid configuration-page">
+    <div class="configuration-page">
       <div class="row">
         <div class="col-sm-3">
           <div class="card config-card">

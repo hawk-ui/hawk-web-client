@@ -1,7 +1,7 @@
 <template>
-   <div>
+   <div class="container-fluid">
     <app-page-title :pageTitle="pageTitle"></app-page-title>
-    <div class="container-fluid">
+    <div>
       <div id="tabs" class="default-tabs trubleshooting-tabs">
         <ul  class="nav nav-tabs">
           <li class="nav-item">

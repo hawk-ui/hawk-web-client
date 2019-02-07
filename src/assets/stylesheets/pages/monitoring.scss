@@ -2,6 +2,10 @@
    ========================================================================== */
 /* Variables: /assets/stylesheets/base/variables/pages/dashboard.scss */
 
+.dashboard {
+  min-height: calc(100vh - 88px);
+}
+
 .dashboard-tabs {
   .nav-tabs {
     display: inline-flex;

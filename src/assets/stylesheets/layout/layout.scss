@@ -33,11 +33,12 @@ body {
 
   .page-content-right {
     margin-right: $l;
+    min-height: calc(100vh);
   }
 
   .container-fluid {
-    height: 100%;
     padding: $xl;
+    min-height: calc(100vh - 88px);
   }
 }
 
