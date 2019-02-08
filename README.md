@@ -28,3 +28,5 @@ npm test
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+Hawk client's UI is built using [EOS Design System](https://www.eosdesignsystem.com/), the open source solution for cohesive UX/UI across products.
