@@ -17,3 +17,14 @@
     }
   }
 }
+
+/* Set the link color to our blue and not the bootstrap default */
+a,
+a:visited,
+.btn-link {
+  color: $default-color;
+}
+
+a:hover {
+  color: $default-color-hover;
+}

@@ -1,0 +1,45 @@
+/* Colors
+   ========================================================================== */
+/* Variables file: assets/stylesheets/base/variables/colors.scss */
+
+/* Status colors */
+.status-stopped { 
+  background: $status-stopped;
+}
+
+.status-not-running { 
+  background: $status-not-running;
+}
+
+.status-started { 
+  background: $status-started;
+}
+
+.status-slave { 
+  background: $status-slave;
+}
+
+.status-master { 
+  background: $status-master;
+}
+
+.status-offline { 
+  background: $status-offline;
+}
+
+/* Legend colors */
+.Legend-stopped { 
+  color: $status-stopped;
+}
+
+.Legend-not-running { 
+  color: $status-not-running;
+}
+
+.Legend-started { 
+  color: $status-started;
+}
+
+.Legend-offline { 
+  color: $status-offline;
+}
