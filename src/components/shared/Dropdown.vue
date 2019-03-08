@@ -1,12 +1,12 @@
 <template>
-  <ul class="dropdown-menu dropdown-menu-right" v-if="lists.listType == 'radioList'">
+  <ul class="dropdown-menu" v-if="lists.listType == 'radioList'">
     <li v-for="item in lists.liItems">
       <input type="radio"> <label>{{ item.listItem }} </label>
     </li>
   </ul>
   <ul class="dropdown-menu" v-else-if="lists.listType == 'iconList'">
     <li v-for="item in lists.liItems">
-      <a :href="item.listHref">
+      <a class="dropdown-item" :href="item.listHref">
         <i class="material-icons md-18" :class="item.colorClass">{{ item.listIcion }}</i> 
         {{ item.listItem }}
       </a>

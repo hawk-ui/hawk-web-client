@@ -2,5 +2,19 @@
    ========================================================================== */
 /* Variables file: assets/stylesheets/base/variables/page-title.scss */
 .page-title {
-  padding: 32px;
+  margin: 0 0 48px 0;
+}
+
+/* Back and setting button group */
+.back-setting-btn-group {
+  float: right;
+  display: flex;
+
+  .btn {
+    margin-right: 15px;
+  }
+
+  :last-child .btn {
+    margin-right: 0;
+  }
 }

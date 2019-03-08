@@ -6,6 +6,14 @@
       <div class="page-content page-content-right">
         <app-page-header></app-page-header>
           <router-view></router-view>
+        <footer class="footer-content display-collapsed">
+          <ul class="footer-list">
+            <li class="footer-list-item">© SUSE 2017</li>
+            <li class="footer-list-item">
+              <a class="footer-link" href="#">Help</a>
+            </li>
+          </ul>
+        </footer>
       </div>
     </div>
   </div>

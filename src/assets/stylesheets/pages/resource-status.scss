@@ -1,10 +1,21 @@
 /* Resources Status
    ========================================================================== */
 /* Variables: /assets/stylesheets/base/variables/pages/resources-status.scss */ 
+.resource-status h4{
+  margin: 0 0 16px 0;
+}
+.node-status {
+  margin-bottom: 42px;
+}
 
-.resource-panel >.panel {
+/* need to move in cards scss */
+ .card {
+  margin-bottom: 16px;
   
-  .panel-title {
+  .card-title {
+    padding: 10px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #eee;
     
     .material-icons {
       margin-right: $resource-p-icons-margin-right;
