@@ -1,8 +1,10 @@
 <template>
   <nav>
-    <img src="../../../assets/images/hawk-logo.png">
     <div class="hawk-logo">
       {{ $t("leftnav_bar.header.hawk") }}
+    </div>
+    <div class="sidebar-toggle clickable" id="menu-toggle">
+      <i class="material-icons md-18 md-light">menu</i>
     </div>
   </nav>
 </template>

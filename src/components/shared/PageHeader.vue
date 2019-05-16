@@ -1,8 +1,5 @@
 <template>
   <header class="top-navbar">
-    <div class="sidebar-toggle clickable" id="menu-toggle">
-      <i class="material-icons md-18">menu</i>
-    </div>
     <div class="dropdown user-details">
       <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
         <i class="material-icons md-18">account_circle</i>
