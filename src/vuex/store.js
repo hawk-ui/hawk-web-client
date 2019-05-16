@@ -22,7 +22,7 @@ const store = new Vuex.Store({
   },
   actions: {
     updateCib (context) {
-      Service.getCib('/status', state.user.apiToken).then((data) => context.commit('updateCib', data)) // points to '/status' to test changes
+      Service.getCib('/nodes', state.user.apiToken).then((data) => context.commit('updateCib', data)) // points to '/status' to test changes
     },
     login (context, userInput) {
       Service.login('/register', userInput).then((data) => context.commit('addApiToken', data))

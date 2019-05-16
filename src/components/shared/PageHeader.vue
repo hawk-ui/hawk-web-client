@@ -35,10 +35,11 @@ export default {
       })
       function toggleTooltip () {
         // if the menu is not collapsed (meaning, it is open) we dont need to show the tooltips
-        if ($('.main-menu').width() === 54) {
-          $('#sidebar-wrapper li').tooltip()
+        if ($('.main-menu').width() < 55) {
+          $('#sidebar-wrapper li').tooltip('show')
+          console.log($('.main-menu').width())
         } else {
-          $('#sidebar-wrapper li').tooltip('destroy')
+          $('#sidebar-wrapper li').tooltip('hide')
         }
       }
     }

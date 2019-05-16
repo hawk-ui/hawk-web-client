@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = 'https://localhost:3000/api/v1/'
+axios.defaults.baseURL = 'http://localhost:3004/'
 
 const appService = {
   getCib (path, token) {
