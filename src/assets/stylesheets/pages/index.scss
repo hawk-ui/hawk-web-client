@@ -4,10 +4,9 @@
 * This folder holds all pages
 * 
 */
-@import 'monitoring';
-@import 'trubleshooting';
-@import 'resource-status';
-@import 'node-status';
-@import 'node-status';
-@import 'configuration';
-@import 'login';
+@import 'monitoring/index';
+@import 'trubleshooting/index';
+@import 'resource-status/index';
+@import 'node-status/index';
+@import 'configuration/index';
+@import 'login/index';

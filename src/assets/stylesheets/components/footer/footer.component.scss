@@ -28,7 +28,8 @@
 
     a {
       padding: 0;
-      margin: 0
+      margin: 0;
+      color: $footer-link-color;
     }
   }
 }
@@ -44,18 +45,18 @@
     background: white;
 
     ul.footer-list {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    font-size: 12px;
-    justify-content: center;
-    margin: 0;
-    padding: 8px 16px;
+      align-items: center;
+      display: flex;
+    fontlex-direction: row;
+      font-size: 12px;
+      justify-content: center;
+      margin: 0;
+      padding: 8px 16px;
 
     li.footer-list-item {
-    list-style: none;
-    padding: 0 8px;
-}
+      list-style: none;
+      padding: 0 8px;
+    }
   }
 }
 
