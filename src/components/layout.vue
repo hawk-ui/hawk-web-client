@@ -2,7 +2,6 @@
   <div class="sidebar-view">
     <app-left-sidebar></app-left-sidebar>
     <div id="page-content-wrapper">
-      <app-simulator></app-simulator>
       <div class="page-content page-content-right">
         <app-page-header></app-page-header>
           <router-view></router-view>
