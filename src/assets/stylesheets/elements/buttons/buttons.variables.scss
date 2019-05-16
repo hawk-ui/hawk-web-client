@@ -1,9 +1,41 @@
 /* Buttons variables
    ========================================================================== */
 /* Colors variables: /assets/stylesheets/base/variables/branding.scss */
-$add-cluster-bt-color: $sb-gray-900;
-$add-cluster-bt-color-hover: $sb-gray-900;
+/* Spacing variables: /assets/stylesheets/base/variables/spacing.scss */
 
-/* Spacing variables: /assets/stylesheets/base/variables/Spacing.scss */
-$add-cluster-bt-margin-left: $m;
-$add-cluster-bt-line-height: 37px;
+/* btn */
+$btn-border-radius: 2px;
+$btn-line-height: $m + 2px;
+$btn-padding: $s $m;
+
+/* Default button */
+$btn-default-color: $bc-gray-900;
+$btn-default-color-hover: $bc-gray-600;
+$btn-default-color-active: $bc-gray-500;
+
+/* Default button inverse */
+$btn-default-inverse-color: $bc-white;
+$btn-default-inverse-color-hover: $bc-gray-200;
+$btn-default-inverse-color-active: $bc-gray-400;
+
+/* Primary button and outline primary button */
+$btn-primary-color: $bc-green-500;
+$btn-primary-text-color: $bc-white;
+$btn-primary-color-hover: $bc-green-900;
+$btn-primary-color-active: $bc-green-700;
+
+/* Danger button */
+$btn-danger-color: $bc-red-500;
+$btn-danger-text-color: $bc-white;
+$btn-danger-color-hover: $bc-red-900;
+$btn-danger-color-active: $bc-red-700;
+
+/* Small button */
+$btn-xs-padding: $xs - 2 $xs;
+
+/* Small button */
+$btn-sm-padding: $xs $s;
+
+/* Large button */
+$btn-lg-line-height: $l;
+$btn-lg-padding: $s $m;

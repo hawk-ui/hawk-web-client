@@ -5,7 +5,7 @@ import VueRouter from 'vue-router'
 import Login from '@/components/Login'
 
 // Main sections
-import Monitoring from '@/components/monitoring/Monitoring'
+import Monitoring from '@/components/monitoring/Cluster'
 import NodeStatus from '@/components/node/NodeStatus'
 import ResourceStatus from '@/components/resources/resourceStatus'
 
