@@ -3,10 +3,6 @@
     <div class="sidebar-toggle clickable" id="menu-toggle">
       <i class="material-icons md-18">menu</i>
     </div>
-    <div class="cluster-status">
-      <i class="material-icons md-18">check_circle</i>
-      {{ $t("page_header.cluster-status.details") }}
-    </div>
     <div class="dropdown user-details">
       <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
         <i class="material-icons md-18">account_circle</i>
@@ -35,11 +31,10 @@ export default {
       })
       function toggleTooltip () {
         // if the menu is not collapsed (meaning, it is open) we dont need to show the tooltips
-        if ($('.main-menu').width() < 55) {
-          $('#sidebar-wrapper li').tooltip('show')
-          console.log($('.main-menu').width())
+        if ($('.main-menu').width() > 55) {
+          $('#sidebar-wrapper li').tooltip('dispose')
         } else {
-          $('#sidebar-wrapper li').tooltip('hide')
+          $('#sidebar-wrapper li').tooltip()
         }
       }
     }
