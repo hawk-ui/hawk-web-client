@@ -1,0 +1,31 @@
+/* Clusters Page
+   ========================================================================== */
+/* Variables: /assets/stylesheets/pages/monitoring/clusters.page.scss */
+
+.clusters-status {
+  margin: 32px 0;
+
+  > .status-box {
+    text-align: center;
+    font-size: 12px;
+    padding: 0 8px;
+
+    > i {
+      margin-right: 5px;
+      vertical-align: text-bottom;
+    }
+  }
+  span {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 14px;
+  }
+}
+
+.nodes-resources-box img {
+  width: 80%;
+}
+
+.graph-box img {
+    width: 60%;
+  }

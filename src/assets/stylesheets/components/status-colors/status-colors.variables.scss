@@ -1,5 +1,13 @@
 /* Status circle colors  */
-$status-stopped: $color-danger;
+/* Colors variables: /assets/stylesheets/base/variables/colors.scss */
+
+$status-warning: $color-warning;
+$status-critical: $color-danger;
+$status-running: $color-success;
+
+
+/* TODO -- need to clean --- */
+$status-stopped: $color-warning;
 $status-not-running: $color-default;
 $status-started: $color-main;
 $status-slave: $color-warning;

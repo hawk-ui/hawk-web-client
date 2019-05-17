@@ -1,0 +1,20 @@
+/* Cluster-summary
+   ========================================================================== */
+/* Variables file: assets/stylesheets/components/cluster-summary/cluster-summary.variables.scss */
+
+.status-summary-section {
+  background: #fff;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+
+  .summary-box {
+    padding: 8px 16px
+  }
+
+  .clusters-box { 
+    border-right: 1px solid #eee;
+   }
+
+   .nodes-resources-box {
+    border-right: 1px solid #eee;
+   }
+}

@@ -5,21 +5,39 @@
         <i class="material-icons md-18">add</i> Add new cluster
       </button>
     </app-page-title>
-    <div class="breadcrumbs">Overview</div>
+    <div class="breadcrumbs">Clusters overview</div>
     
-    <div class="status-summary-section">
+    <section class="status-summary-section">
       <div class="row">
-        <div class="col-sm">
-          One of three columns
+        <div class="col-4 clusters-box">
+          <div class="summary-box ">
+            <h5>Clusetr status summary</h5>
+            <div class="row clusters-status">
+              <div class="col-3 status-box total-box"> <span>32</span>Total</div>
+              <div class="col-3 status-box critical-box"> <span>2</span><i class="material-icons md-18 critical-status">error</i>Critical</div>
+              <div class="col-3 status-box warning-box"><span>0</span><i class="material-icons md-18 warning-status">warning</i>Warning</div>
+              <div class="col-3 status-box running-box"><span>2</span><i class="material-icons md-18 running-status">check_circle</i>Running</div>
+            </div>
+          </div>
+
         </div>
-        <div class="col-sm">
-          One of three columns
+        <div class="col-4 nodes-resources-box">
+          <div class="summary-box">
+            <img src="../../assets/images/graph.png">
+          </div>
         </div>
-        <div class="col-sm">
-          One of three columns
+        <div class="col-4 graph-box">
+         <div class="summary-box">
+           <img src="../../assets/images/graph2.png">
+         </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section>
+      <h3>Clusters list</h3>
+    </section>
+
   </div>
 </template>
 
