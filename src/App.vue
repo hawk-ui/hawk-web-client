@@ -17,13 +17,13 @@
     computed: {
       ...mapGetters(['cib'])
     },
+    mounted: function () {
+      this.updateCib()
+    },
     methods: {
       ...mapActions({
         updateCib: 'updateCib'
       })
-    },
-    mounted: function () {
-      this.updateCib()
     },
     components: {
       'app-layout': Layout

@@ -50,48 +50,7 @@
   export default {
     data: function () {
       return {
-        pageTitle: this.$t('pages.monitoring_page.page-title'),
-        filterList: {
-          listType: 'radioList',
-          liItems: [
-            { listItem: 'Online nodes' },
-            { listItem: 'Offline nodes' },
-            { listItem: 'Maintenance nodes' },
-            { listItem: 'Standby nodes' }
-          ]
-        },
-        nodeList: {
-          listType: 'iconList',
-          liItems: [
-            { listIcion: 'info', listItem: 'Details', listHref: '/nodeStatus' },
-            { listIcion: 'build', listItem: 'Maintenance', listHref: '#' },
-            { listIcion: 'power_settings_new', listItem: 'Standby', listHref: '#' },
-            { listIcion: 'delete_forever', listItem: 'Cleanup', listHref: '#' }
-          ]
-        },
-        resourceList: {
-          listType: 'iconList',
-          liItems: [
-            { listIcion: 'stop', listItem: 'Stop', listHref: '#' },
-            { listIcion: 'info', listItem: 'Details', listHref: '/resourceStatus' },
-            { listIcion: 'build', listItem: 'Maintenance', listHref: '#' },
-            { listIcion: 'power_settings_new', listItem: 'Migrate', listHref: '#' },
-            { listIcion: 'delete_forever', listItem: 'Cleanup', listHref: '#' }
-          ]
-        },
-        legendList: {
-          listType: 'iconList',
-          liItems: [
-            { listIcion: 'fiber_manual_record', colorClass: 'Legend-started', listItem: 'Working resource/node' },
-            { listIcion: 'settings_remote', listItem: 'Remote node' },
-            { listIcion: 'fiber_manual_record', colorClass: 'Legend-stopped', listItem: 'Failing resource/node' },
-            { listIcion: 'build', listItem: 'Maintenance mode' },
-            { listIcion: 'fiber_manual_record', colorClass: 'Legend-offline', listItem: 'Offline/standby mode' },
-            { listIcion: 'star', listItem: 'Double state (master/slave)' },
-            { listIcion: 'fiber_manual_record', colorClass: 'Legend-not-running', listItem: 'Not working resource/node' },
-            { listIcion: 'linear_scale', listItem: 'Designated coordinator' }
-          ]
-        }
+        pageTitle: this.$t('pages.monitoring_page.page-title')
       }
     },
     components: {
