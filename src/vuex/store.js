@@ -6,6 +6,8 @@ import Service from '../service/app_service.js'
 
 const state = {
   cib: {
+    cluster_property: [],
+    nodes_status: []
   },
   user: {
     userName: '',
@@ -30,9 +32,6 @@ const store = new Vuex.Store({
     },
     logout (context) {
       context.commit('deleteApiToken')
-    },
-    test (context, data) {
-      context.commit('test', data)
     }
   },
   mutations: {

@@ -9,24 +9,42 @@
     
     <section class="status-summary-section">
       <div class="row">
-        <div class="col-4 clusters-box">
+        <div class="col-xl-4 col-sm-12 clusters-box">
           <div class="summary-box ">
             <h5>Clusetr status summary</h5>
             <div class="row clusters-status">
-              <div class="col-3 status-box total-box"> <span>32</span>Total</div>
-              <div class="col-3 status-box critical-box"> <span>2</span><i class="material-icons md-18 critical-status">error</i>Critical</div>
-              <div class="col-3 status-box warning-box"><span>0</span><i class="material-icons md-18 warning-status">warning</i>Warning</div>
-              <div class="col-3 status-box running-box"><span>2</span><i class="material-icons md-18 running-status">check_circle</i>Running</div>
+              <div class="col-3 status-box total-box"> <span>{{ cib.cluster_property.length }}</span>Total</div>
+              <div class="col-3 status-box running-box"><span>1</span><i class="material-icons md-18 running-status">check_circle</i>Running</div>
+              <div class="col-3 status-box critical-box"> <span>0</span><i class="material-icons md-18 critical-status">error</i>Critical</div>
+              <div class="col-3 status-box warning-box"><span>0</span><i class="material-icons md-18 warning-status">warning</i>Warning</div>        
             </div>
           </div>
 
         </div>
-        <div class="col-4 nodes-resources-box">
+        <div class="col-xl-4 col-sm-12 nodes-resources-box">
           <div class="summary-box">
-            <img src="../../assets/images/graph.png">
+             <graph-pie
+            :width="150"
+            :height="150"
+            :padding-top="5"
+            :padding-right="5"
+            :padding-bottom="5"
+            :padding-left="5"
+            :values="values"
+            :names="names"
+            :active-index="[ 0, 2 ]"
+            :active-event="'click'"
+            :show-text-type="'outside'"
+            :data-format="dataFormat"
+            :shape="'donut'"
+            :show-total-value="true">
+        <note :text="'Donut Chart'"></note>
+        <legends :names="names"></legends>
+        <tooltip :names="names"></tooltip>
+    </graph-pie>
           </div>
         </div>
-        <div class="col-4 graph-box">
+        <div class="col-xl-4 col-sm-12 graph-box">
          <div class="summary-box">
            <img src="../../assets/images/graph2.png">
          </div>
@@ -34,8 +52,39 @@
       </div>
     </section>
 
-    <section>
+    <section class="margin-top-xxl">
       <h3>Clusters list</h3>
+      <div class="shadow-container margin-top-l">
+        <div class="search-section">
+          <input class="form-control search" type="text" value="search...">
+        </div>
+        <table class="table">
+          <thead>
+            <!-- Nodes Row -->
+            <tr>
+              <th width="5"></th>
+              <th>Cluster name</th>
+              <th>Availability</th>
+              <th>Nodes</th>
+              <th>Resources</th>
+              <th>Type</th>
+            </tr>
+           </thead>
+            <!-- End Nodes Row -->
+            <!-- Resources Row -->
+          <tbody>
+            <tr v-for="cluster in cib.cluster_property">
+              <td> <span class="status-circle"></span></td>
+              <td>{{ cluster.cluster_name }}</td>
+              <td>99.56%</td>
+              <td>{{ cib.nodes_status.length }}</td>
+              <td>{{ NodesCount(cib.nodes_status) }}</td>
+              <td>{{ cluster.cluster_infrastructure }}</td>
+            </tr>
+          <!-- End Resources Row -->
+          </tbody>
+        </table>
+      </div>
     </section>
 
   </div>
@@ -46,60 +95,40 @@
   import PageTitle from '../shared/PageTitle.vue'
   import Dropdown from '../shared/Dropdown.vue'
   import AddCluster from './AddCluster.vue'
+  import GraphLine3D from 'vue-graph/src/components/line3d.js'
+  import NoteWidget from 'vue-graph/src/widgets/note.js'
+  import LegendWidget from 'vue-graph/src/widgets/legends.js'
 
   export default {
     data: function () {
       return {
-        pageTitle: this.$t('pages.monitoring_page.page-title')
+        pageTitle: this.$t('pages.monitoring_page.page-title'),
+        values: [ 10, 5, 5 ],
+        names: [ 'Running', 'Critical', 'Warning' ]
       }
     },
     components: {
       'app-page-title': PageTitle,
       'app-dropdown': Dropdown,
-      'app-add-cluster': AddCluster
+      'app-add-cluster': AddCluster,
+      'GraphLine3D.name': GraphLine3D,
+      'NoteWidget.name': NoteWidget,
+      'LegendWidget.name': LegendWidget
     },
     computed: {
       ...mapGetters(['cib'])
     },
     methods: {
-      NodeBarClass: function (state) {
-        if (state === 'unclean') {
-          return 'status-stopped'
-        } else if (state === 'online') {
-          return 'status-started'
-        } else if (state === 'offline') {
-          return 'status-offline'
-        } else if (state === 'standby') {
-          return 'status-offline'
-        } else if (state === 'pending') {
-          return 'status-stopped'
+      NodesCount: function (nodes) {
+        var nodesCounts = 0
+        for (var i = 0; i < nodes.length; i++) {
+          var integer = parseInt(nodes[i].resources_running, 10)
+          nodesCounts += integer
         }
+        return nodesCounts
       },
-      resourceBarStyle: function (resource) {
-        if (resource.state === 'stopped' && resource['attributes']['target-role'] === 'Stopped') {
-          return 'status-not-running'
-        } else if (resource.state === 'stopped') {
-          return 'status-stopped'
-        } else if (resource.state !== 'stopped') {
-          return 'status-started'
-        }
-      },
-      ResourceStateClass: function (resource, node = '') {
-        if (node.state === 'unclean') {
-          return 'status-stopped'
-        } else if (resource.state === 'stopped') {
-          return 'status-stopped'
-        } else if (resource.state === 'offline') {
-          return 'status-offline'
-        } else if (node.name in resource.running_on && resource.running_on[node.name] === 'started') {
-          return 'status-started'
-        } else if (node.name in resource.running_on && resource.running_on[node.name] === 'slave') {
-          return 'status-slave'
-        } else if (node.name in resource.running_on && resource.running_on[node.name] === 'master') {
-          return 'status-master'
-        } else if (node.name in resource.running_on && resource.running_on[node.name] === 'not_running') {
-          return 'status-not-running'
-        }
+      dataFormat: function () {
+        return 25
       }
     }
   }

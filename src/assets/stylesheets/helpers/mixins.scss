@@ -4,3 +4,23 @@
   height: $size;
   width: $size;
 }
+
+/* Margin rules */
+$sizes-collection: (m: $m, xs: $xs, s: $s, l: $l, xl: $xl, xxl: $xxl, xxxl: $xxxl);
+
+@mixin margins($direction) {
+  @each $key, $value in $sizes-collection {
+    .margin-#{$direction}-#{$key} {
+      margin-#{$direction}: $value;
+    }
+  }
+}
+
+/* Padding rules */
+@mixin paddings($direction) {
+  @each $key, $value in $sizes-collection {
+    .padding-#{$direction}-#{$key} {
+      padding-#{$direction}: $value;
+    }
+  }
+}

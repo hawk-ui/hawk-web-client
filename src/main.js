@@ -5,7 +5,9 @@ import Vue from 'vue'
 import router from './router/route.js'
 import store from './vuex/store.js'
 import i18n from './i18n/local.js'
+import VueGraph from 'vue-graph'
 
+Vue.use(VueGraph)
 //  Twitter Bootstrap
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'

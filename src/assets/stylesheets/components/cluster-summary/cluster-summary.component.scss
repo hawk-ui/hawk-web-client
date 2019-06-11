@@ -2,19 +2,22 @@
    ========================================================================== */
 /* Variables file: assets/stylesheets/components/cluster-summary/cluster-summary.variables.scss */
 
-.status-summary-section {
+.shadow-container {
   background: #fff;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+}
+
+.status-summary-section {
 
   .summary-box {
-    padding: 8px 16px
+    padding: 8px 16px;
+    background: #fff;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+    height: 100%;
   }
-
-  .clusters-box { 
-    border-right: 1px solid #eee;
-   }
-
-   .nodes-resources-box {
-    border-right: 1px solid #eee;
-   }
 }
+
+.search-section{
+  padding: 14px 24px;
+}
+
