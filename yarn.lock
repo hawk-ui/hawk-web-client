@@ -3461,18 +3461,20 @@ http-proxy-agent@1:
     debug "2"
     extend "3"
 
-http-proxy-middleware@^0.17.3:
-  version "0.17.4"
-  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-0.17.4.tgz#642e8848851d66f09d4f124912846dbaeb41b833"
+http-proxy-middleware@^0.19.1:
+  version "0.19.1"
+  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-0.19.1.tgz#183c7dc4aa1479150306498c210cdaf96080a43a"
+  integrity sha512-yHYTgWMQO8VvwNS22eLLloAkvungsKdKTLO8AJlftYIKNfJr3GK3zK0ZCfzDDGUBttdGc8xFy1mCitvNKQtC3Q==
   dependencies:
-    http-proxy "^1.16.2"
-    is-glob "^3.1.0"
-    lodash "^4.17.2"
-    micromatch "^2.3.11"
+    http-proxy "^1.17.0"
+    is-glob "^4.0.0"
+    lodash "^4.17.11"
+    micromatch "^3.1.10"
 
-http-proxy@^1.13.0, http-proxy@^1.16.2:
+http-proxy@^1.13.0, http-proxy@^1.17.0:
   version "1.17.0"
   resolved "https://registry.yarnpkg.com/http-proxy/-/http-proxy-1.17.0.tgz#7ad38494658f84605e2f6db4436df410f4e5be9a"
+  integrity sha512-Taqn+3nNvYRfJ3bGvKfBSRwy1v6eePlm3oc/aWVxZp57DQr5Eq3xhKJi7Z4hZpS8PC3H4qI+Yly5EmFacGuA/g==
   dependencies:
     eventemitter3 "^3.0.0"
     follow-redirects "^1.0.0"
@@ -4133,6 +4135,18 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
+juijs-chart@2.5.9:
+  version "2.5.9"
+  resolved "https://registry.yarnpkg.com/juijs-chart/-/juijs-chart-2.5.9.tgz#c6a28c4be441e8f1823caa7a07806b5cde9e3dac"
+  integrity sha512-dQnrB+fHBFxjokbAmxiDgCRp2zzL2q5iK9K6oiDX+6oU4O4EtKQo3sDy3Dh2GOyua2A5BXJpUBknB1uZFqYIEA==
+  dependencies:
+    juijs-graph "1.1.2"
+
+juijs-graph@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/juijs-graph/-/juijs-graph-1.1.2.tgz#2d075fe8c622b72bc77525b2b46d27ceb43008cb"
+  integrity sha512-utevVoxsUs2THj+uWxzSSu7i0l/UIHQDjNScwW+bgyHDiyRyr1H8+469NRPRwwl8L9qcX+dGNDjFVCiRC69W+g==
+
 karma-coverage@^1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/karma-coverage/-/karma-coverage-1.1.2.tgz#cc09dceb589a83101aca5fe70c287645ef387689"
@@ -4469,7 +4483,7 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@4, lodash@^4.0.0, lodash@^4.0.1, lodash@^4.11.2, lodash@^4.17.0, lodash@^4.17.10, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.5.0, lodash@~4.17.10:
+lodash@4, lodash@^4.0.0, lodash@^4.0.1, lodash@^4.11.2, lodash@^4.17.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.5.0, lodash@~4.17.10:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
@@ -7305,6 +7319,21 @@ void-elements@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
 
+vue-css-donut-chart@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/vue-css-donut-chart/-/vue-css-donut-chart-1.1.3.tgz#ac326f0ec4a70f22e38b14ab267a9ec810260b38"
+  integrity sha512-aQX4qQ8uvDEgOBHq5hJcNdrfRy8ZNaldcxiuCpor6TGKr1RHovRaQ76kcp/oRb906y+yLGg1HPp1YwiC0r3zLQ==
+  dependencies:
+    vue "^2.5.17"
+
+vue-graph@^0.8.4:
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/vue-graph/-/vue-graph-0.8.4.tgz#e0589e7803c542e411e0c8415c0f9b9af2752cd2"
+  integrity sha512-wpBKggtHQBGF/cU+/WOITuY6YVz50RMTp6jEDphZlJo181hCnTJUvRhUMIv1rR9MiokE9XYrut8lx4UTEN3E4w==
+  dependencies:
+    juijs-chart "2.5.9"
+    vue "^2.6.7"
+
 vue-hot-reload-api@^2.1.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.1.tgz#b2d3d95402a811602380783ea4f566eb875569a2"
@@ -7356,6 +7385,11 @@ vue-template-es2015-compiler@^1.2.2:
 vue@^2.3.3:
   version "2.5.17"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.17.tgz#0f8789ad718be68ca1872629832ed533589c6ada"
+
+vue@^2.5.17, vue@^2.6.7:
+  version "2.6.10"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
+  integrity sha512-ImThpeNU9HbdZL3utgMCq0oiMzAkt1mcgy3/E6zWC/G6AaQoeuFdsl9nDhTDU3X1R6FK7nsIUuRACVcjI+A2GQ==
 
 vuex@^3.0.0:
   version "3.0.1"

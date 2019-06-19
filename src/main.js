@@ -5,9 +5,12 @@ import Vue from 'vue'
 import router from './router/route.js'
 import store from './vuex/store.js'
 import i18n from './i18n/local.js'
-import VueGraph from 'vue-graph'
 
-Vue.use(VueGraph)
+import Donut from 'vue-css-donut-chart'
+import 'vue-css-donut-chart/dist/vcdonut.css'
+
+Vue.use(Donut)
+
 //  Twitter Bootstrap
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'

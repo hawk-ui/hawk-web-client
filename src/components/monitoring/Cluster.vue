@@ -23,25 +23,17 @@
         </div>
         <div class="col-xl-4 col-sm-12 nodes-resources-box">
           <div class="summary-box">
-             <graph-pie
-            :width="150"
-            :height="150"
-            :padding-top="5"
-            :padding-right="5"
-            :padding-bottom="5"
-            :padding-left="5"
-            :values="values"
-            :names="names"
-            :active-index="[ 0, 2 ]"
-            :active-event="'click'"
-            :show-text-type="'outside'"
-            :data-format="dataFormat"
-            :shape="'donut'"
-            :show-total-value="true">
-        <note :text="'Donut Chart'"></note>
-        <legends :names="names"></legends>
-        <tooltip :names="names"></tooltip>
-    </graph-pie>
+            <!-- graph Row -->
+            <vc-donut
+              background="white" foreground="grey"
+              :size="150" unit="px" :thickness="20"
+              has-legend legend-placement="top"
+              :sections="sections" :total="100"
+              :start-angle="0"
+              @section-click="handleSectionClick"
+            >
+              <h1>100%</h1>
+            </vc-donut>
           </div>
         </div>
         <div class="col-xl-4 col-sm-12 graph-box">
@@ -75,7 +67,7 @@
           <tbody>
             <tr v-for="cluster in cib.cluster_property">
               <td> <span class="status-circle"></span></td>
-              <td>{{ cluster.cluster_name }}</td>
+              <td>{{ cluster.cluster_name }}test</td>
               <td>99.56%</td>
               <td>{{ cib.nodes_status.length }}</td>
               <td>{{ NodesCount(cib.nodes_status) }}</td>
@@ -95,40 +87,33 @@
   import PageTitle from '../shared/PageTitle.vue'
   import Dropdown from '../shared/Dropdown.vue'
   import AddCluster from './AddCluster.vue'
-  import GraphLine3D from 'vue-graph/src/components/line3d.js'
-  import NoteWidget from 'vue-graph/src/widgets/note.js'
-  import LegendWidget from 'vue-graph/src/widgets/legends.js'
 
   export default {
     data: function () {
       return {
-        pageTitle: this.$t('pages.monitoring_page.page-title'),
-        values: [ 10, 5, 5 ],
-        names: [ 'Running', 'Critical', 'Warning' ]
+        pageTitle: this.$t('pages.monitoring_page.page-title')
       }
     },
     components: {
       'app-page-title': PageTitle,
       'app-dropdown': Dropdown,
-      'app-add-cluster': AddCluster,
-      'GraphLine3D.name': GraphLine3D,
-      'NoteWidget.name': NoteWidget,
-      'LegendWidget.name': LegendWidget
+      'app-add-cluster': AddCluster
     },
     computed: {
-      ...mapGetters(['cib'])
+      ...mapGetters(['cib', 'sections'])
     },
     methods: {
       NodesCount: function (nodes) {
         var nodesCounts = 0
-        for (var i = 0; i < nodes.length; i++) {
-          var integer = parseInt(nodes[i].resources_running, 10)
-          nodesCounts += integer
-        }
+        // for (var i = 0; i < nodes.length; i++) {
+        //   var integer = parseInt(nodes[i].resources_running, 10)
+        //   nodesCounts += integer
+        //   console.log(nodes)
+        // }
         return nodesCounts
       },
-      dataFormat: function () {
-        return 25
+      handleSectionClick (section) {
+        console.log(`${section.label} clicked.`)
       }
     }
   }
