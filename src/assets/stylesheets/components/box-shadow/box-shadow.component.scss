@@ -1,0 +1,16 @@
+/* Cluster-summary
+   ========================================================================== */
+/* Variables file: assets/stylesheets/components/box-shadow/box-shadow.variables.scss */
+
+.box-shadow {
+  padding: $box-shadow-padding;
+  background: $box-shadow-background;
+  box-shadow: $box-shadow;
+  width: $box-shadow-height;
+}
+
+.box-shadow-no-padding {
+  background: $box-shadow-background;
+  box-shadow: $box-shadow;
+  height: $box-shadow-height;
+}

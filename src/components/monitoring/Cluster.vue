@@ -7,13 +7,16 @@
     </app-page-title>
     <div class="breadcrumbs">Clusters overview</div>
     
-    <section class="status-summary-section">
+    <section>
+      <h5>Clusetr status summary</h5>
       <div class="row">
-        <div class="col-xl-4 col-sm-12 clusters-box">
-          <div class="summary-box ">
-            <h5>Clusetr status summary</h5>
-            <div class="row clusters-status">
+
+        <div class="col-xl-6 col-sm-12 clusters-box">
+          <div class="box-shadow">
+            
+            <div class="clusters-status">
               <div class="col-3 status-box total-box"> <span>{{ cib.cluster_property.length }}</span>Total</div>
+              <!-- Todo Cluster count for Running Critical and Warning -->
               <div class="col-3 status-box running-box"><span>1</span><i class="material-icons md-18 running-status">check_circle</i>Running</div>
               <div class="col-3 status-box critical-box"> <span>0</span><i class="material-icons md-18 critical-status">error</i>Critical</div>
               <div class="col-3 status-box warning-box"><span>0</span><i class="material-icons md-18 warning-status">warning</i>Warning</div>        
@@ -21,34 +24,55 @@
           </div>
 
         </div>
-        <div class="col-xl-4 col-sm-12 nodes-resources-box">
-          <div class="summary-box">
-            <!-- graph Row -->
-            <vc-donut
-              background="white" foreground="grey"
-              :size="150" unit="px" :thickness="20"
-              has-legend legend-placement="top"
-              :sections="sections" :total="100"
-              :start-angle="0"
-              @section-click="handleSectionClick"
-            >
-              <h1>100%</h1>
-            </vc-donut>
+        <div class="col-xl-3 col-sm-6 nodes-box">
+          <div class="box-shadow">
+            <div class="nodes-graph text-center">
+              <!-- graph Row -->
+              <vc-donut
+                background="white" foreground="grey"
+                :size="110" unit="px" :thickness="18"
+                has-legend legend-placement="bottom"
+                :sections="nodesSections" :total="totalNodes"
+                :start-angle="0">
+                <div class="total-count">
+                  {{ totalNodes }}
+                  <span>Nodes</span>
+                </div>
+              </vc-donut>
+            </div>
+            <!-- <ul class="no-list-style graph-legend">
+                <li><i class="material-icons md-18 running-status">check_circle</i>Running</li>
+                <li><i class="material-icons md-18 critical-status">error</i>Critical</li>
+                <li><i class="material-icons md-18 warning-status">warning</i>Warning</li>
+              </ul> -->
           </div>
         </div>
-        <div class="col-xl-4 col-sm-12 graph-box">
-         <div class="summary-box">
-           <img src="../../assets/images/graph2.png">
+        <div class="col-xl-3 col-sm-6 resources-box">
+         <div class="box-shadow">
+           <div class="resource-graph text-center">
+              <!-- graph Row -->
+              <vc-donut
+                background="white" foreground="grey"
+                :size="110" unit="px" :thickness="18"
+                has-legend legend-placement="bottom"
+                :sections="resourceSections" :total="totalResource"
+                :start-angle="0">
+                <div class="total-count">
+                  {{ totalResource }}
+                  <span>Resources</span>
+                </div>
+              </vc-donut>
+            </div>
          </div>
         </div>
       </div>
     </section>
 
     <section class="margin-top-xxl">
-      <h3>Clusters list</h3>
-      <div class="shadow-container margin-top-l">
+      <h3>Clusters list </h3>
+      <div class="box-shadow-no-padding margin-top-l">
         <div class="search-section">
-          <input class="form-control search" type="text" value="search...">
+          <input class="form-control" type="text" v-model="search" placeholder="Search cluster..">
         </div>
         <table class="table">
           <thead>
@@ -65,12 +89,12 @@
             <!-- End Nodes Row -->
             <!-- Resources Row -->
           <tbody>
-            <tr v-for="cluster in cib.cluster_property">
+            <tr v-for="cluster in filterCluster">
               <td> <span class="status-circle"></span></td>
-              <td>{{ cluster.cluster_name }}test</td>
+              <td>{{ cluster.cluster_name }}</td>
               <td>99.56%</td>
               <td>{{ cib.nodes_status.length }}</td>
-              <td>{{ NodesCount(cib.nodes_status) }}</td>
+              <td>{{ cib.resources_status.length }}</td>
               <td>{{ cluster.cluster_infrastructure }}</td>
             </tr>
           <!-- End Resources Row -->
@@ -91,7 +115,8 @@
   export default {
     data: function () {
       return {
-        pageTitle: this.$t('pages.monitoring_page.page-title')
+        pageTitle: this.$t('pages.monitoring_page.page-title'),
+        search: ''
       }
     },
     components: {
@@ -100,20 +125,11 @@
       'app-add-cluster': AddCluster
     },
     computed: {
-      ...mapGetters(['cib', 'sections'])
-    },
-    methods: {
-      NodesCount: function (nodes) {
-        var nodesCounts = 0
-        // for (var i = 0; i < nodes.length; i++) {
-        //   var integer = parseInt(nodes[i].resources_running, 10)
-        //   nodesCounts += integer
-        //   console.log(nodes)
-        // }
-        return nodesCounts
-      },
-      handleSectionClick (section) {
-        console.log(`${section.label} clicked.`)
+      ...mapGetters(['cib', 'nodesSections', 'totalNodes', 'resourceSections', 'totalResource']),
+      filterCluster: function () {
+        return this.cib.cluster_property.filter((cluster) => {
+          return cluster.cluster_name.match(this.search)
+        })
       }
     }
   }

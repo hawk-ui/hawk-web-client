@@ -424,7 +424,7 @@
     "unclean": "false",
     "shutdown": "false",
     "is_dc": "false",
-    "resources_running": "4",
+    "resources_running": "0",
     "type": "member"
   }],
   "resources_status": [{

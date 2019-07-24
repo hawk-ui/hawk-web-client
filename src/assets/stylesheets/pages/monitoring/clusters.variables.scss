@@ -1,0 +1,21 @@
+/* Clusters page variables
+   ========================================================================== */
+/* Colors variables: /assets/stylesheets/base/variables/branding.scss */
+/* Colors variables: /assets/stylesheets/base/variables/spacing.scss */
+
+$clusters-box-margin-bottom: $l;
+$clusters-status-box-border-right: 1px solid $bc-gray-100;
+$clusters-status-box-i-margin-right: $xs;
+$clusters-status-total-box-font-size: $m + 2;
+$clusters-total-box-span-font-size: $xl;
+$clusters-total-box-span-margin-bottom: $m - 2;
+$clusters-total-count-font-size: $xl + 6;
+$clusters-total-count-span-font-size: $m - 2;
+$clusters-total-count-span-margin-top: $xs;
+$clusters-cdc-legend-margin-top: $s;
+$clusters-cdc-legend-item-font-size: $m - 4;
+$clusters-cdc-legend-item-color-height: $m - 4;
+$clusters-search-section-padding: $m - 2 $l;
+$clusters-search-input-width: 250px;
+$clusters-cdc-legend-item-margin: 0 $xs;
+$clusters-status-box-padding: $m 0;

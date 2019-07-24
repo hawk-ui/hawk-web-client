@@ -2,30 +2,81 @@
    ========================================================================== */
 /* Variables: /assets/stylesheets/pages/monitoring/clusters.page.scss */
 
-.clusters-status {
-  margin: 48px 0 32px 0;
+.clusters-box {
+  display: inline-grid;
+  margin-bottom: $clusters-box-margin-bottom; 
+    
+  > .box-shadow {
+    display: flex;
+    align-items: center;
+  }
 
-  > .status-box {
-    text-align: center;
-    font-size: 12px;
-    padding: 0 8px;
+  .clusters-status {
+    display: contents;
 
-    > i {
-      margin-right: 5px;
-      vertical-align: text-bottom;
+    > .status-box {
+      text-align: center;
+      border-right: $clusters-status-box-border-right;
+      padding: $clusters-status-box-padding;
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      > i {
+        margin-right: $clusters-status-box-i-margin-right;
+        vertical-align: text-bottom;
+      }
+    }
+
+    .total-box {
+      font-weight: bold;
+      font-size: $clusters-status-total-box-font-size;
+    }
+
+    span {
+      font-size: $clusters-total-box-span-font-size;
+      display: block;
+      margin-bottom: $clusters-total-box-span-margin-bottom;
+      font-weight: normal;
     }
   }
-  span {
-    font-size: 32px;
-    display: block;
-    margin-bottom: 14px;
+}
+
+.nodes-box,
+.resources-box {
+  margin-bottom: $clusters-box-margin-bottom;
+
+  .total-count{
+    font-size: $clusters-total-count-font-size;
+
+    span {
+      font-size: $clusters-total-count-span-font-size;
+      display: flex;
+      margin-top: $clusters-total-count-span-margin-top; 
+    }
+  }
+  .cdc-legend {
+    margin-top: $clusters-cdc-legend-margin-top;
+
+    .cdc-legend-item {
+      font-size: $clusters-cdc-legend-item-font-size;
+      margin: $clusters-cdc-legend-item-margin;
+
+      .cdc-legend-item-color {
+        height: $clusters-cdc-legend-item-color-height;
+        width: $clusters-cdc-legend-item-color-height;
+        border-radius: 50%;
+      }
+    }
   }
 }
 
-.nodes-resources-box img {
-  width: 80%;
+.search-section{
+  padding: $clusters-search-section-padding;
+
+  input {
+    width: $clusters-search-input-width;
+  }
 }
 
-.graph-box img {
-    width: 60%;
-  }
