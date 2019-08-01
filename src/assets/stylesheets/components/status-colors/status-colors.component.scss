@@ -3,6 +3,21 @@
 /* Variables file: assets/stylesheets/base/variables/colors.scss */
 
 /* Status colors */
+.warning-status {
+  color: $status-warning;
+}
+
+.critical-status {
+  color: $status-critical;
+}
+
+.running-status {
+  color: $status-running;
+}
+
+
+
+/* Status colors in bg  ---- need to clean*/
 .status-stopped { 
   background: $status-stopped;
 }

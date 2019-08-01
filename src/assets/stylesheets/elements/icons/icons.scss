@@ -4,15 +4,15 @@
 
 /* Icons */
 $icon-new-size: $font-size-base;
-$icon-new-color: $sb-green-500;
-$icon-new-active-color: $sb-white;
+$icon-new-color: $bc-green-500;
+$icon-new-active-color: $bc-white;
 
 /* Material icons variables */
 // colors
-$md-light: $sb-white;
+$md-light: $bc-white;
 $md-light-inactive: rgba($md-light, 0.3);
-$md-dark: rgba($sb-black, 0.54);
-$md-dark-inactive: rgba($sb-black, 0.26);
+$md-dark: rgba($bc-black, 0.54);
+$md-dark-inactive: rgba($bc-black, 0.26);
 // sizes
 $md-18: 18px;
 $md-24: 24px;

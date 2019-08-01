@@ -5,8 +5,8 @@
 /*  dashboard-t = dashboard-table */
 
 $table-border-color: $base-border-color;
-$table-th-border-bottom: 2px solid $base-border-color;
-$table-th-background: rgba($sb-gray-80, 0.3);
+$table-th-border-bottom: 1px solid $base-border-color;
+$table-th-background: rgba($bc-gray-80, 0.3);
 $table-th-padding: $s + 2 $s;
 $table-td-height: 37px;
 

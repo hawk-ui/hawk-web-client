@@ -5,9 +5,7 @@ import VueRouter from 'vue-router'
 import Login from '@/components/Login'
 
 // Main sections
-import Monitoring from '@/components/monitoring/Monitoring'
-import Troubleshooting from '@/components/troubleshooting/Troubleshooting'
-import Configuration from '@/components/configuration/Configuration'
+import Monitoring from '@/components/monitoring/Cluster'
 import NodeStatus from '@/components/node/NodeStatus'
 import ResourceStatus from '@/components/resources/resourceStatus'
 
@@ -23,18 +21,6 @@ export default new VueRouter({
     {
       path: '/',
       component: Monitoring
-    },
-    {
-      path: '/monitoring',
-      component: Monitoring
-    },
-    {
-      path: '/troubleshooting',
-      component: Troubleshooting
-    },
-    {
-      path: '/configuration',
-      component: Configuration
     },
     {
       path: '/nodeStatus',

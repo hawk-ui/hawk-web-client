@@ -6,7 +6,7 @@
     "num_updates": "2",
     "admin_epoch": "0"
   },
-  "cluster_property": {
+  "cluster_property": [{
     "cluster_infrastructure": "corosync",
     "dc_version": "1.1.17-279.35-d134f83b4",
     "stonith_enabled": true,
@@ -15,7 +15,7 @@
     "have_watchdog": true,
     "cluster_name": "hawkdev",
     "placement_strategy": "balanced"
-  },
+  }],
   "rsc_defaults": {
     "resource_stickiness": "1",
     "migration_threshold": "3"

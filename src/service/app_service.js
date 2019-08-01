@@ -1,12 +1,20 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = 'https://localhost:3000/api/v1/'
+axios.defaults.baseURL = 'http://localhost:3004/'
 
 const appService = {
   getCib (path, token) {
-    return new Promise((resolve) => {
-      axios({method: 'get', url: path, crossDomain: true, headers: { 'Authorization': 'Bearer ' + token }})
-        .then(response => { resolve(response.data) })
+    return new Promise((resolve, reject) => {
+      axios({
+        method: 'get',
+        url: path,
+        crossDomain: true,
+        headers: {
+          'Authorization': 'Bearer ' + token
+        }
+      }).then(response => {
+        resolve(response.data)
+      })
     })
   },
 

@@ -8,19 +8,15 @@
     height: $header-height;
     width: $header-width;
     margin-bottom: $header-spacing;
-    padding-left: $header-spacing;
-
-    img {
-      height: 25px;
-    }
+    padding: $header-spacing;
+    justify-content: space-between;
 
     .hawk-logo {
       color: $header-text-color;
       display: inline-block;
       font-size: $header-font-size;
-      font-weight: $font-weight-light-base;
-      padding-left: $header-spacing;
       vertical-align: middle;
+
     }
   }
 }

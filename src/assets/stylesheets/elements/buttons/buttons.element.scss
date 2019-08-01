@@ -1,21 +1,208 @@
 /* Button styling
    ========================================================================== */
+/* button */
+.btn {
+  border-radius: $btn-border-radius;
+  font-weight: bold;
+  line-height: $btn-line-height;
+  padding: $btn-padding;
 
-/* Add Cluster button */
-/* Variables file: assets/stylesheets/base/variables/buttons.scss */
+  &:active,
+  &.active {
+    box-shadow: none;
+  }
 
-.add-cluster-bt {
-  margin-left: $add-cluster-bt-margin-left;
-  line-height: $add-cluster-bt-line-height;
-  color: $add-cluster-bt-color;
-  
-  &:hover {
-    text-decoration: none;
-    color: $add-cluster-bt-color-hover;
+  .material-icons,
+  .eos-icons {
+    margin-right: 0;
   }
 }
 
-.btn:focus, .btn.focus {
-  outline: 0;
-  box-shadow: none;
+/* Default button */
+.btn-default {
+  background-color: transparent;
+  border-color: $btn-default-color;
+  color: $btn-default-color;
+
+  &:hover,
+  &:active:hover {
+    background-color: transparent;
+    border-color: $btn-default-color-hover;
+    color: $btn-default-color-hover;
+  }
+
+  &:active,
+  &.active,
+  &:focus,
+  &.focus,
+  &.active.focus,
+  &.active:focus,
+  &:active:focus,
+  &:active.focus {
+    background-color: transparent;
+    border-color: $btn-default-color-active;
+    color: $btn-default-color-active;
+  }
+
+  &.disabled,
+  &.disabled:hover,
+  &.disabled:focus {
+    border-color: $btn-default-color;
+    color: $btn-default-color;
+    opacity: .60;
+  }
+}
+
+/* Default button inverse */
+.btn-default-inverse {
+  background-color: transparent;
+  border-color: $btn-default-inverse-color;
+  color: $btn-default-inverse-color;
+
+  &:hover,
+  &:active:hover {
+    border-color: $btn-default-inverse-color-hover;
+    color: $btn-default-inverse-color-hover;
+  }
+
+  &:active,
+  &.active,
+  &:focus,
+  &.focus,
+  &.active.focus,
+  &.active:focus,
+  &:active:focus,
+  &:active.focus {
+    border-color: $btn-default-inverse-color-active;
+    color: $btn-default-inverse-color-active;
+  }
+
+  &.disabled,
+  &.disabled:hover,
+  &.disabled:focus {
+    border-color: $btn-default-inverse-color;
+    color: $btn-default-inverse-color;
+    opacity: .55;
+  }
+}
+
+/* Primary button */
+.btn-primary {
+  background-color: $btn-primary-color;
+  border-color: $btn-primary-color;
+  color: $btn-primary-text-color;
+
+  &:hover,
+  &:active:hover {
+    background-color: $btn-primary-color-hover;
+    border-color: $btn-primary-color-hover;
+    color: $btn-primary-text-color;
+  }
+
+  &:active,
+  &.active,
+  &:focus,
+  &.focus,
+  &.active.focus,
+  &.active:focus,
+  &:active:focus,
+  &:active.focus {
+    background-color: $btn-primary-color-active;
+    border-color: $btn-primary-color-active;
+    color: $btn-primary-text-color;
+  }
+
+  &.disabled,
+  &.disabled:hover,
+  &.disabled:focus {
+    background-color: $btn-primary-color;
+    border-color: $btn-primary-color;
+    color: $btn-primary-text-color;
+    opacity: .60;
+  }
+}
+
+/* Outline primary button */
+.btn-outline-primary {
+  background-color: transparent;
+  border-color: $btn-primary-color;
+  color: $btn-primary-color;
+
+  &:hover,
+  &:active:hover {
+    border-color: $btn-primary-color-hover;
+    color: $btn-primary-color-hover;
+  }
+
+  &:active,
+  &.active,
+  &:focus,
+  &.focus,
+  &.active.focus,
+  &.active:focus,
+  &:active:focus,
+  &:active.focus {
+    border-color: $btn-primary-color-active;
+    color: $btn-primary-color-active;
+  }
+
+  &.disabled,
+  &.disabled:hover,
+  &.disabled:focus {
+    border-color: $btn-primary-color;
+    color: $btn-primary-color;
+    opacity: .60;
+  }
+}
+
+/* Danger button */
+.btn-danger {
+  background-color: $btn-danger-color;
+  border-color: $btn-danger-color;
+  color: $btn-danger-text-color;
+
+  &:hover,
+  &:active:hover {
+    background-color: $btn-danger-color-hover;
+    border-color: $btn-danger-color-hover;
+    color: $btn-danger-text-color;
+  }
+
+  &:active,
+  &.active,
+  &:focus,
+  &.focus,
+  &.active.focus,
+  &.active:focus,
+  &:active:focus,
+  &:active.focus {
+    background-color: $btn-danger-color-active;
+    border-color: $btn-danger-color-active;
+    color: $btn-danger-text-color;
+  }
+
+  &.disabled,
+  &.disabled:hover,
+  &.disabled:focus {
+    background-color: $btn-danger-color;
+    border-color: $btn-danger-color;
+    color: $btn-danger-text-color;
+    opacity: .60;
+  }
+}
+
+/* Extra small button */
+.btn-xs {
+  padding: $btn-xs-padding;
+}
+
+/* Small button */
+.btn-sm {
+  padding: $btn-sm-padding;
+}
+
+/* Large button */
+.btn-lg {
+  line-height: $btn-lg-line-height;
+  padding: $btn-lg-padding;
 }
