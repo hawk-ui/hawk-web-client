@@ -8,7 +8,7 @@
     <div class="breadcrumbs">Clusters overview</div>
     
     <section>
-      <h5>clusters status summary</h5>
+      <h5>Clusters status summary</h5>
       <div class="row">
 
         <div class="col-xl-6 col-sm-12 clusters-box">
