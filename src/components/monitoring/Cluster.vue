@@ -8,7 +8,7 @@
     <div class="breadcrumbs">Clusters overview</div>
     
     <section>
-      <h5>Clusetr status summary</h5>
+      <h5>clusters status summary</h5>
       <div class="row">
 
         <div class="col-xl-6 col-sm-12 clusters-box">
@@ -40,11 +40,6 @@
                 </div>
               </vc-donut>
             </div>
-            <!-- <ul class="no-list-style graph-legend">
-                <li><i class="material-icons md-18 running-status">check_circle</i>Running</li>
-                <li><i class="material-icons md-18 critical-status">error</i>Critical</li>
-                <li><i class="material-icons md-18 warning-status">warning</i>Warning</li>
-              </ul> -->
           </div>
         </div>
         <div class="col-xl-3 col-sm-6 resources-box">
